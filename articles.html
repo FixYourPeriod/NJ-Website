@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles — Nicole Jardim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .article-card {
+      background: var(--ivory);
+      border-radius: 4px;
+      padding: 32px 28px;
+      border-top: 3px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .article-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .article-category {
+      font-family: var(--body-font);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+    .article-read-time {
+      font-size: 12px;
+      color: var(--charcoal);
+      opacity: 0.5;
+    }
+    .article-card h3 {
+      font-family: var(--head-font);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--plum);
+      line-height: 1.25;
+    }
+    .article-card p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--charcoal);
+      opacity: 0.75;
+      flex: 1;
+    }
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .article-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--plum);
+      background: rgba(92,45,79,0.08);
+      padding: 3px 10px;
+      border-radius: 40px;
+    }
+    .article-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--plum);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.15s;
+    }
+    .article-link:hover { gap: 8px; }
+
+    .category-intro {
+      max-width: 560px;
+    }
+    .category-intro h2 {
+      font-family: var(--head-font);
+      font-size: clamp(30px, 3.5vw, 42px);
+      font-weight: 400;
+      color: var(--plum);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .category-intro p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.75;
+    }
+    .category-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      gap: 40px;
+    }
+    .article-count {
+      font-family: var(--head-font);
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--plum);
+      opacity: 0.18;
+      white-space: nowrap;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="homepage.html" class="nav-logo">Nicole Jardim</a>
+      <nav class="nav-links">
+        <a href="homepage.html">Home</a>
+        <a href="start-here.html">Start Here</a>
+        <a href="collective.html">Fix Your Period</a>
+        <a href="imh.html">Professional Training</a>
+        <div class="nav-dropdown">
+          <a href="resources.html" class="nav-dropdown-trigger active">Resources</a>
+          <div class="nav-dropdown-menu">
+            <a href="book.html">The Book</a>
+            <a href="articles.html" class="active">Articles</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="start-here.html" class="nav-cta">Start Here</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── PAGE HERO ──────────────────────────────────────────────────────── -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="label">In-Depth Guides</span>
+      <h1 class="page-hero-heading">Articles</h1>
+      <p class="page-hero-sub">Evidence-informed guides on the most common menstrual health conditions and hormonal issues — written by Nicole Jardim and grounded in the latest research.</p>
+    </div>
+  </section>
+
+  <!-- ── CONDITIONS ────────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner">
+      <div class="category-header">
+        <div class="category-intro">
+          <span class="label" style="color:var(--terra);display:block;margin-bottom:14px;">Conditions</span>
+          <h2>Hormonal Conditions Explained</h2>
+          <p>Deep-dive guides into the most common diagnoses — what's actually happening in your body, why conventional medicine often falls short, and where to start addressing root causes.</p>
+        </div>
+        <div class="article-count">11</div>
+      </div>
+      <div class="article-grid">
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">12 min read</span>
+          </div>
+          <h3>PCOS: What It Really Is, What Causes It &amp; How to Actually Address It</h3>
+          <p>PCOS is the most common hormonal disorder in women of reproductive age — yet it remains one of the most misunderstood. Here's what's actually driving it and where to start.</p>
+          <div class="article-tags">
+            <span class="article-tag">PCOS</span>
+            <span class="article-tag">Irregular Periods</span>
+            <span class="article-tag">Androgens</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">12 min read</span>
+          </div>
+          <h3>Estrogen Dominance: What It Is, What Causes It &amp; How to Address It</h3>
+          <p>Estrogen dominance drives some of the most common period problems women face — from heavy periods to PMS to fibroids. Here's everything you need to know.</p>
+          <div class="article-tags">
+            <span class="article-tag">Estrogen Dominance</span>
+            <span class="article-tag">Estrogen</span>
+            <span class="article-tag">Progesterone</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">11 min read</span>
+          </div>
+          <h3>Low Progesterone: The Most Overlooked Hormone Imbalance in Women</h3>
+          <p>Progesterone is the calming, balancing counterpart to estrogen — and most women have too little of it. Here's what low progesterone looks like and what actually helps.</p>
+          <div class="article-tags">
+            <span class="article-tag">Low Progesterone</span>
+            <span class="article-tag">Progesterone</span>
+            <span class="article-tag">PMS</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>High Androgens in Women: Signs, Causes &amp; Natural Solutions</h3>
+          <p>Elevated androgens show up as acne, hair loss, facial hair, and irregular periods — and they're more common than most women realise. Here's what's driving them.</p>
+          <div class="article-tags">
+            <span class="article-tag">High Androgens</span>
+            <span class="article-tag">Testosterone</span>
+            <span class="article-tag">PCOS</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">14 min read</span>
+          </div>
+          <h3>Endometriosis: What It Is, Why It's Missed &amp; How to Support Your Body</h3>
+          <p>Endometriosis affects 1 in 10 women but takes an average of 7–10 years to diagnose. Here's everything you need to know about this complex, whole-body condition.</p>
+          <div class="article-tags">
+            <span class="article-tag">Endometriosis</span>
+            <span class="article-tag">Pelvic Pain</span>
+            <span class="article-tag">Inflammation</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">11 min read</span>
+          </div>
+          <h3>Uterine Fibroids: What They Are, Why They Grow &amp; How to Support Your Body</h3>
+          <p>Fibroids affect over 70% of women before menopause — yet most women know very little about what causes them or how to support their body.</p>
+          <div class="article-tags">
+            <span class="article-tag">Fibroids</span>
+            <span class="article-tag">Uterine Fibroids</span>
+            <span class="article-tag">Estrogen Dominance</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">9 min read</span>
+          </div>
+          <h3>Ovarian Cysts: Types, Causes &amp; When to Take Action</h3>
+          <p>Most ovarian cysts are harmless and resolve on their own — but understanding why they form and what they signal is key to your hormonal health.</p>
+          <div class="article-tags">
+            <span class="article-tag">Ovarian Cysts</span>
+            <span class="article-tag">PCOS</span>
+            <span class="article-tag">Estrogen Dominance</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">11 min read</span>
+          </div>
+          <h3>PMDD: When Premenstrual Symptoms Become Debilitating</h3>
+          <p>PMDD is more than bad PMS — it's a severe neuroendocrine condition that can derail the entire second half of your month. Here's what's happening and what genuinely helps.</p>
+          <div class="article-tags">
+            <span class="article-tag">PMDD</span>
+            <span class="article-tag">Premenstrual Dysphoric Disorder</span>
+            <span class="article-tag">Progesterone</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Adenomyosis: The Overlooked Cause of Heavy, Painful Periods</h3>
+          <p>Adenomyosis is one of the least-discussed conditions in women's health — yet it's behind some of the most debilitating heavy, painful periods women experience.</p>
+          <div class="article-tags">
+            <span class="article-tag">Adenomyosis</span>
+            <span class="article-tag">Heavy Periods</span>
+            <span class="article-tag">Period Pain</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">12 min read</span>
+          </div>
+          <h3>Thyroid Issues &amp; Your Menstrual Cycle: The Connection You Need to Know</h3>
+          <p>The thyroid is one of the most powerful hormonal players affecting your cycle — yet thyroid dysfunction is routinely missed with standard testing.</p>
+          <div class="article-tags">
+            <span class="article-tag">Thyroid</span>
+            <span class="article-tag">Hypothyroidism</span>
+            <span class="article-tag">Hashimoto's</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Condition</span>
+            <span class="article-read-time">13 min read</span>
+          </div>
+          <h3>Perimenopause: What's Actually Happening &amp; What to Expect</h3>
+          <p>Perimenopause can start a decade before your last period — yet most women aren't warned about the wide range of symptoms it brings or how to navigate them.</p>
+          <div class="article-tags">
+            <span class="article-tag">Perimenopause</span>
+            <span class="article-tag">Menopause</span>
+            <span class="article-tag">Estrogen</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SYMPTOMS & CYCLE ───────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div class="category-header">
+        <div class="category-intro">
+          <span class="label" style="color:var(--terra);display:block;margin-bottom:14px;">Symptoms &amp; Cycle</span>
+          <h2>What Your Symptoms Are Telling You</h2>
+          <p>Symptom-by-symptom guides that go beyond surface-level advice — connecting what you're experiencing to its hormonal root causes and giving you a clear place to start.</p>
+        </div>
+        <div class="article-count">19</div>
+      </div>
+      <div class="article-grid">
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Fatigue &amp; Your Hormones: Why You're Always Tired</h3>
+          <p>Persistent fatigue that doesn't improve with sleep is one of the most common hormonal complaints — and one of the most overlooked in conventional medicine.</p>
+          <div class="article-tags">
+            <span class="article-tag">Fatigue</span>
+            <span class="article-tag">Cortisol</span>
+            <span class="article-tag">Thyroid</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Sleep Problems &amp; Your Hormones: Why You Can't Sleep (And What to Do)</h3>
+          <p>Hormonal fluctuations throughout your cycle — and at key life stages — can seriously disrupt your sleep. Here's the full picture and practical solutions.</p>
+          <div class="article-tags">
+            <span class="article-tag">Insomnia</span>
+            <span class="article-tag">Sleep</span>
+            <span class="article-tag">Progesterone</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">11 min read</span>
+          </div>
+          <h3>Hormonal Weight Gain: Why Your Body Holds On Despite Doing Everything Right</h3>
+          <p>When you eat well, exercise regularly and still can't lose weight, it's almost always hormonal. Here's what's really going on and where to start.</p>
+          <div class="article-tags">
+            <span class="article-tag">Weight Gain</span>
+            <span class="article-tag">Insulin Resistance</span>
+            <span class="article-tag">Cortisol</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Cycle</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Irregular Periods: What They're Telling You About Your Hormones</h3>
+          <p>An irregular cycle is one of the most common signs that something is off hormonally — but what counts as irregular, and what's actually driving it?</p>
+          <div class="article-tags">
+            <span class="article-tag">Irregular Periods</span>
+            <span class="article-tag">PCOS</span>
+            <span class="article-tag">Thyroid</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Cycle</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Missing Periods (Amenorrhea): Causes, Concerns &amp; What to Do</h3>
+          <p>A missing period outside of pregnancy, breastfeeding, or menopause is your body's way of saying something important needs attention.</p>
+          <div class="article-tags">
+            <span class="article-tag">Amenorrhea</span>
+            <span class="article-tag">Missing Period</span>
+            <span class="article-tag">Hypothalamic Amenorrhea</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Cycle</span>
+            <span class="article-read-time">8 min read</span>
+          </div>
+          <h3>Short Cycles &amp; Frequent Periods: What a Cycle Under 25 Days Means</h3>
+          <p>A cycle shorter than 25 days often means ovulation is happening too early or the luteal phase is too short — and it almost always points to low progesterone.</p>
+          <div class="article-tags">
+            <span class="article-tag">Short Cycles</span>
+            <span class="article-tag">Frequent Periods</span>
+            <span class="article-tag">Low Progesterone</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Cycle</span>
+            <span class="article-read-time">11 min read</span>
+          </div>
+          <h3>Heavy &amp; Long Periods: Root Causes and Natural Solutions</h3>
+          <p>Soaking through products every hour or bleeding for more than 7 days isn't normal — but it is common. Here's what's driving it and where to start.</p>
+          <div class="article-tags">
+            <span class="article-tag">Heavy Periods</span>
+            <span class="article-tag">Estrogen Dominance</span>
+            <span class="article-tag">Fibroids</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Cycle</span>
+            <span class="article-read-time">8 min read</span>
+          </div>
+          <h3>Light Periods &amp; Spotting: When Your Flow Is Too Little</h3>
+          <p>A light period or spotting between cycles can signal low estrogen, low progesterone, or something else entirely. Here's how to read the signs.</p>
+          <div class="article-tags">
+            <span class="article-tag">Light Periods</span>
+            <span class="article-tag">Spotting</span>
+            <span class="article-tag">Low Estrogen</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Cycle</span>
+            <span class="article-read-time">9 min read</span>
+          </div>
+          <h3>Period Blood: What the Color, Consistency &amp; Clots Are Telling You</h3>
+          <p>The color, texture, and consistency of your period blood are actually powerful clues about what's happening in your body hormonally.</p>
+          <div class="article-tags">
+            <span class="article-tag">Period Blood</span>
+            <span class="article-tag">Blood Clots</span>
+            <span class="article-tag">Period Color</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">11 min read</span>
+          </div>
+          <h3>Period Pain &amp; Cramps (Dysmenorrhea): Why It Happens &amp; How to Get Relief</h3>
+          <p>Cramps that disrupt your life aren't a normal part of having a period. Here's what's causing your pain and what you can actually do about it.</p>
+          <div class="article-tags">
+            <span class="article-tag">Period Pain</span>
+            <span class="article-tag">Cramps</span>
+            <span class="article-tag">Dysmenorrhea</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Pelvic Pain Throughout the Month: When to Pay Attention</h3>
+          <p>Pelvic pain outside of your period is often dismissed or misdiagnosed. Here's what might be driving it and how to advocate for yourself.</p>
+          <div class="article-tags">
+            <span class="article-tag">Pelvic Pain</span>
+            <span class="article-tag">Endometriosis</span>
+            <span class="article-tag">Adenomyosis</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">7 min read</span>
+          </div>
+          <h3>Breast Tenderness Before Your Period: The Hormone Connection</h3>
+          <p>Sore breasts before your period are uncomfortable and often worrying — but they're also one of the clearest signs of a hormonal imbalance that's very addressable.</p>
+          <div class="article-tags">
+            <span class="article-tag">Breast Tenderness</span>
+            <span class="article-tag">PMS</span>
+            <span class="article-tag">Estrogen Dominance</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">12 min read</span>
+          </div>
+          <h3>PMS: What's Really Causing It and How to Fix It</h3>
+          <p>PMS isn't just 'hormones' — it's a specific hormonal imbalance in the second half of your cycle that you can actually address. Here's what's driving your symptoms.</p>
+          <div class="article-tags">
+            <span class="article-tag">PMS</span>
+            <span class="article-tag">Premenstrual Syndrome</span>
+            <span class="article-tag">Low Progesterone</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">9 min read</span>
+          </div>
+          <h3>Hormonal Headaches &amp; Migraines: The Cycle Connection</h3>
+          <p>Headaches that show up reliably before your period or around ovulation aren't a coincidence — they're a hormonal signal worth understanding.</p>
+          <div class="article-tags">
+            <span class="article-tag">Hormonal Headaches</span>
+            <span class="article-tag">Menstrual Migraines</span>
+            <span class="article-tag">Estrogen</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Hormonal Hair Loss in Women: Causes and Solutions</h3>
+          <p>Hair loss in women is almost always hormonal. Understanding which hormones are involved is the key to actually addressing it.</p>
+          <div class="article-tags">
+            <span class="article-tag">Hair Loss</span>
+            <span class="article-tag">Androgens</span>
+            <span class="article-tag">Thyroid</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Hormonal Acne: Why It Happens and How to Clear It Naturally</h3>
+          <p>Hormonal acne — especially on the chin, jaw, and back — is one of the most telling signs of androgen excess and blood sugar dysregulation.</p>
+          <div class="article-tags">
+            <span class="article-tag">Hormonal Acne</span>
+            <span class="article-tag">Androgens</span>
+            <span class="article-tag">Insulin</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">8 min read</span>
+          </div>
+          <h3>Bloating &amp; Your Hormones: Why You Swell Before Your Period</h3>
+          <p>That uncomfortable before-period bloat isn't just water retention — it's a signal from your gut and hormones that something is out of balance.</p>
+          <div class="article-tags">
+            <span class="article-tag">Bloating</span>
+            <span class="article-tag">PMS</span>
+            <span class="article-tag">Progesterone</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">10 min read</span>
+          </div>
+          <h3>Anxiety &amp; Your Hormones: The Connection Most People Miss</h3>
+          <p>If your anxiety spikes in the second half of your cycle or feels tied to your period, it almost certainly has a hormonal driver — and that's actually good news.</p>
+          <div class="article-tags">
+            <span class="article-tag">Anxiety</span>
+            <span class="article-tag">Progesterone</span>
+            <span class="article-tag">Cortisol</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card-meta">
+            <span class="article-category">Symptoms</span>
+            <span class="article-read-time">9 min read</span>
+          </div>
+          <h3>Low Libido in Women: The Hormonal and Beyond-Hormonal Reasons</h3>
+          <p>A low or absent sex drive is incredibly common — and incredibly underaddressed in women's health. Here's the full picture of what might be driving it.</p>
+          <div class="article-tags">
+            <span class="article-tag">Low Libido</span>
+            <span class="article-tag">Testosterone</span>
+            <span class="article-tag">Estrogen</span>
+          </div>
+          <a href="https://fixyourperiod.app" target="_blank" class="article-link">Read on Fix Your Period &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────────────── -->
+  <section class="section-pad bg-gradient">
+    <div class="section-inner-narrow" style="text-align:center;">
+      <h2 style="font-family:var(--head-font);font-size:clamp(34px,4vw,50px);font-weight:300;color:var(--ivory);line-height:1.15;margin-bottom:20px;">Ready to go beyond the article?</h2>
+      <p style="font-size:17px;line-height:1.75;color:var(--ivory);opacity:0.8;max-width:520px;margin:0 auto 36px;">Take the free Fix Your Period quiz to get a personalized protocol based on your specific symptoms — supplements, nutrition, and lifestyle guidance built for your body.</p>
+      <a href="https://fixyourperiod.app" target="_blank" class="btn btn-outline-ivory">Take the Free Period Quiz &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Nicole Jardim</div>
+          <p class="footer-tagline">Your cycle is a vital sign.<br>Let's learn to read it.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Ig</a>
+            <a href="#" class="social-link">Tk</a>
+            <a href="#" class="social-link">Yt</a>
+            <a href="#" class="social-link">&#9835;</a>
+          </div>
+        </div>
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <div class="footer-col-title">Fix Your Period</div>
+            <ul><li><a href="https://fixyourperiod.app" target="_blank">Take the Period Quiz</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Professional Training</div>
+            <ul><li><a href="imh.html">The Institute for Menstrual Health</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <ul>
+            <li><a href="book.html">Fix Your Period (Book)</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="#">The Period Party Podcast</a></li>
+            <li><a href="about.html">About Nicole</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nicole Jardim. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

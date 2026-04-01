@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicole Jardim — Women's Hormonal Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --plum:      #5C2D4F;
+      --plum-dark: #3E1D36;
+      --plum-mid:  #6e3860;
+      --terra:     #B55A3A;
+      --ivory:     #FAF5EF;
+      --sand:      #EAE0D5;
+      --gold:      #C4984A;
+      --sage:      #7A9B7E;
+      --charcoal:  #2C2520;
+      --rose:      #D4A097;
+      --body-font: 'DM Sans', sans-serif;
+      --head-font: 'Cormorant Garamond', serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body-font);
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* ─── UTILITY ──────────────────────────────────────────────────────── */
+    .container {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .label {
+      font-family: var(--body-font);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--body-font);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 34px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1.5px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--plum);
+      color: var(--ivory);
+      border-color: var(--plum);
+    }
+    .btn-primary:hover {
+      background: var(--plum-dark);
+      border-color: var(--plum-dark);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--plum);
+      border-color: var(--plum);
+    }
+    .btn-outline:hover {
+      background: var(--plum);
+      color: var(--ivory);
+    }
+
+    .btn-outline-ivory {
+      background: transparent;
+      color: var(--ivory);
+      border-color: var(--ivory);
+    }
+    .btn-outline-ivory:hover {
+      background: var(--ivory);
+      color: var(--plum);
+    }
+
+    .btn-terra {
+      background: var(--terra);
+      color: var(--ivory);
+      border-color: var(--terra);
+    }
+    .btn-terra:hover {
+      background: #9e4d31;
+      border-color: #9e4d31;
+    }
+
+    .hero-image img,
+    .meet-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    /* ─── NAVIGATION ───────────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--ivory);
+      border-bottom: 1px solid rgba(92,45,79,0.1);
+      padding: 0 40px;
+    }
+
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      font-family: var(--head-font);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--plum);
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+    .nav-links a:hover { color: var(--plum); }
+
+    .nav-cta,
+    .nav-links a.nav-cta {
+      font-family: var(--body-font);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      background: var(--plum);
+      color: var(--ivory) !important;
+      border-radius: 40px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a.nav-cta:hover { background: var(--plum-dark); color: var(--ivory) !important; }
+    .nav-dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown-trigger {
+      font-size: 13.5px; font-weight: 500; color: var(--charcoal);
+      letter-spacing: 0.02em; transition: color 0.15s;
+      cursor: default; display: flex; align-items: center; gap: 5px;
+      white-space: nowrap; user-select: none;
+    }
+    .nav-dropdown-trigger::after { content: '▾'; font-size: 10px; opacity: 0.55; }
+    .nav-dropdown:hover .nav-dropdown-trigger { color: var(--plum); }
+    .nav-dropdown-menu {
+      position: absolute; top: calc(100% + 16px); left: 50%;
+      transform: translateX(-50%) translateY(-4px);
+      background: var(--ivory);
+      border: 1px solid rgba(92,45,79,0.12);
+      border-radius: 6px;
+      box-shadow: 0 8px 28px rgba(44,37,32,0.13);
+      min-width: 160px; padding: 6px 0;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
+      z-index: 200;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1; visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+    .nav-dropdown-menu a {
+      display: block; padding: 10px 20px;
+      font-size: 13.5px; font-weight: 500; color: var(--charcoal);
+      transition: color 0.15s, background 0.15s; white-space: nowrap;
+    }
+    .nav-dropdown-menu a:hover { color: var(--plum); background: rgba(92,45,79,0.05); }
+
+    /* ─── HERO ─────────────────────────────────────────────────────────── */
+    .hero {
+      background: var(--ivory);
+      padding: 96px 40px 80px;
+    }
+
+    .hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hero-content { max-width: 540px; }
+
+    .hero-eyebrow {
+      color: var(--terra);
+      margin-bottom: 20px;
+    }
+
+    .hero-headline {
+      font-family: var(--head-font);
+      font-size: clamp(52px, 6vw, 76px);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--plum);
+      margin-bottom: 24px;
+    }
+
+    .hero-subhead {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.85;
+      margin-bottom: 40px;
+      max-width: 460px;
+    }
+
+    .hero-image {
+      height: 580px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* ─── MEDIA BAR ────────────────────────────────────────────────────── */
+    .media-bar {
+      background: var(--sand);
+      padding: 28px 40px;
+      border-top: 1px solid rgba(92,45,79,0.07);
+      border-bottom: 1px solid rgba(92,45,79,0.07);
+    }
+
+    .media-bar-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .media-bar-label {
+      color: #9e8e84;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .media-logos {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+
+    .media-logo-item {
+      font-family: var(--head-font);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--charcoal);
+      opacity: 0.45;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+    .media-logo-item:hover { opacity: 0.75; }
+
+    /* ─── MEET NICOLE ──────────────────────────────────────────────────── */
+    .meet-nicole {
+      background: var(--ivory);
+      padding: 112px 40px;
+    }
+
+    .meet-nicole-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: center;
+    }
+
+    .meet-image {
+      height: 620px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .meet-content {}
+
+    .meet-content .label {
+      color: var(--terra);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .meet-heading {
+      font-family: var(--head-font);
+      font-size: clamp(36px, 4vw, 50px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--plum);
+      margin-bottom: 28px;
+    }
+
+    .meet-body {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--charcoal);
+      opacity: 0.85;
+      margin-bottom: 40px;
+    }
+
+    /* ─── PHILOSOPHY ───────────────────────────────────────────────────── */
+    .philosophy {
+      background: var(--plum);
+      padding: 112px 40px;
+    }
+
+    .philosophy-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .philosophy-heading {
+      font-family: var(--head-font);
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ivory);
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 64px;
+    }
+
+    .beliefs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .belief-card {
+      background: var(--plum-mid);
+      padding: 48px 52px;
+      position: relative;
+    }
+
+    .belief-card::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+
+    .belief-card p {
+      font-family: var(--head-font);
+      font-size: 24px;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.4;
+      color: var(--ivory);
+    }
+
+    /* ─── PATHWAYS ─────────────────────────────────────────────────────── */
+    .pathways {
+      background: var(--ivory);
+      padding: 112px 40px;
+    }
+
+    .pathways-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-heading {
+      font-family: var(--head-font);
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--plum);
+      margin-bottom: 16px;
+    }
+
+    .section-subhead {
+      font-size: 17px;
+      color: var(--charcoal);
+      opacity: 0.7;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    .pathway-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .pathway-card {
+      background: var(--sand);
+      border-radius: 4px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      border-top: 3px solid var(--gold);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pathway-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(92,45,79,0.1);
+    }
+
+    .pathway-number {
+      font-family: var(--head-font);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .pathway-title {
+      font-family: var(--head-font);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .pathway-body {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--charcoal);
+      opacity: 0.8;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+
+    .pathway-link {
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--terra);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.15s;
+    }
+    .pathway-link:hover { gap: 10px; }
+
+    /* ─── TESTIMONIALS ─────────────────────────────────────────────────── */
+    .testimonials {
+      background: var(--sand);
+      padding: 112px 40px;
+    }
+
+    .testimonials-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .testimonials .section-header { margin-bottom: 56px; }
+
+    .testimonials .section-heading {
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .testimonial-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--ivory);
+      border-radius: 4px;
+      padding: 44px 40px;
+      box-shadow: 0 2px 12px rgba(44,37,32,0.06);
+    }
+
+    .quote-mark {
+      font-family: var(--head-font);
+      font-size: 64px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 0.6;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .testimonial-text {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--charcoal);
+      opacity: 0.85;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    .testimonial-attr {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--plum);
+      letter-spacing: 0.02em;
+    }
+
+    .testimonial-location {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--charcoal);
+      opacity: 0.5;
+    }
+
+    /* ─── CLOSING CTA ──────────────────────────────────────────────────── */
+    .closing-cta {
+      background: linear-gradient(135deg, var(--plum) 0%, var(--terra) 100%);
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .closing-cta-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .closing-heading {
+      font-family: var(--head-font);
+      font-size: clamp(38px, 5vw, 60px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ivory);
+      margin-bottom: 20px;
+    }
+
+    .closing-subhead {
+      font-size: 17px;
+      color: var(--ivory);
+      opacity: 0.75;
+      margin-bottom: 48px;
+      line-height: 1.65;
+    }
+
+    /* ─── FOOTER ───────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--charcoal);
+      padding: 72px 40px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1.2fr;
+      gap: 64px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(250,245,239,0.1);
+      margin-bottom: 36px;
+    }
+
+    .footer-col-group {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer-brand {}
+
+    .footer-logo {
+      font-family: var(--head-font);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ivory);
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      font-family: var(--head-font);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ivory);
+      opacity: 0.5;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(250,245,239,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ivory);
+      opacity: 0.6;
+      transition: opacity 0.2s, border-color 0.2s;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .social-link:hover {
+      opacity: 1;
+      border-color: rgba(250,245,239,0.5);
+    }
+
+    .footer-col-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ivory);
+      opacity: 0.35;
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-col ul li a {
+      font-size: 14.5px;
+      font-weight: 400;
+      color: var(--ivory);
+      opacity: 0.65;
+      transition: opacity 0.15s;
+    }
+    .footer-col ul li a:hover { opacity: 1; }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--ivory);
+      opacity: 0.3;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-legal a {
+      font-size: 13px;
+      color: var(--ivory);
+      opacity: 0.3;
+      transition: opacity 0.15s;
+    }
+    .footer-legal a:hover { opacity: 0.65; }
+
+    /* ─── SECTION DIVIDER ──────────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: rgba(92,45,79,0.08);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Nicole Jardim</a>
+      <nav class="nav-links">
+        <a href="homepage.html" class="active">Home</a>
+        <a href="start-here.html">Start Here</a>
+        <a href="collective.html">Fix Your Period</a>
+        <a href="imh.html">Professional Training</a>
+        <div class="nav-dropdown">
+          <a href="resources.html" class="nav-dropdown-trigger">Resources</a>
+          <div class="nav-dropdown-menu">
+            <a href="book.html">The Book</a>
+            <a href="articles.html">Articles</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+        <a href="start-here.html" class="nav-cta">Start Here</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── HERO ───────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="label hero-eyebrow">Women's Hormonal Health</span>
+        <h1 class="hero-headline">Make Sense of<br>Your Cycle</h1>
+        <p class="hero-subhead">
+          Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
+        </p>
+        <a href="start-here.html" class="btn btn-primary">Start Here &rarr;</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/nicole-1.jpg" alt="Nicole Jardim" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AS SEEN IN ─────────────────────────────────────────────────────── -->
+  <div class="media-bar">
+    <div class="media-bar-inner">
+      <span class="label media-bar-label">As seen in</span>
+      <div class="media-logos">
+        <span class="media-logo-item">The Guardian</span>
+        <span class="media-logo-item">Well+Good</span>
+        <span class="media-logo-item">mindbodygreen</span>
+        <span class="media-logo-item">Healthline</span>
+        <span class="media-logo-item">Shape</span>
+        <span class="media-logo-item">Bustle</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MEET NICOLE ────────────────────────────────────────────────────── -->
+  <section class="meet-nicole">
+    <div class="meet-nicole-inner">
+      <div class="meet-image">
+        <img src="images/nicole-3.jpg" alt="Nicole Jardim — candid" />
+      </div>
+      <div class="meet-content">
+        <span class="label">Meet Nicole Jardim</span>
+        <h2 class="meet-heading">The educator women's health has been waiting for</h2>
+        <p class="meet-body">
+          Nicole Jardim is a women's health educator, writer, and speaker focused on menstrual and hormonal health. Her work centers on helping women understand how their bodies actually function, so they can make informed, empowered decisions about their health.
+        </p>
+        <p class="meet-body">
+          She is the author of <em>Fix Your Period</em>, the creator of the Fix Your Period Collective, and the founder of the Institute for Menstrual Health — a global education platform training practitioners and health professionals worldwide. Her work blends evidence-informed education with body literacy, nuance, and real-life context.
+        </p>
+        <a href="#" class="btn btn-outline">Read Nicole's Story &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── PHILOSOPHY ─────────────────────────────────────────────────────── -->
+  <section class="philosophy">
+    <div class="philosophy-inner">
+      <h2 class="philosophy-heading">A Different Way of Thinking About Menstrual Health</h2>
+      <div class="beliefs-grid">
+        <div class="belief-card">
+          <p>Your cycle is a vital sign, not an inconvenience.</p>
+        </div>
+        <div class="belief-card">
+          <p>Symptoms are signals worth understanding, not suppressing.</p>
+        </div>
+        <div class="belief-card">
+          <p>There is no one-size-fits-all solution.</p>
+        </div>
+        <div class="belief-card">
+          <p>Education and body literacy are foundational to lasting change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PATHWAYS ───────────────────────────────────────────────────────── -->
+  <section class="pathways">
+    <div class="pathways-inner">
+      <div class="section-header">
+        <h2 class="section-heading">How Can I Help You Right Now?</h2>
+        <p class="section-subhead">Whether you're just beginning to ask questions or looking for deeper support, there's a clear place to start.</p>
+      </div>
+      <div class="pathway-cards">
+        <div class="pathway-card">
+          <div class="pathway-number">01 &mdash; Learn</div>
+          <div class="pathway-title">Learn &amp; Understand</div>
+          <p class="pathway-body">Foundational education about menstrual cycles, hormones, and common symptoms — free and always accessible.</p>
+          <a href="book.html" class="pathway-link">Explore Articles &amp; Resources &rarr;</a>
+        </div>
+        <div class="pathway-card">
+          <div class="pathway-number">02 &mdash; Discover</div>
+          <div class="pathway-title">Get Personalized Guidance</div>
+          <p class="pathway-body">Understand what your symptoms may be pointing to and where to begin — with a free personalized Period Quiz.</p>
+          <a href="collective.html" class="pathway-link">Start with the Period Quiz &rarr;</a>
+        </div>
+        <div class="pathway-card">
+          <div class="pathway-number">03 &mdash; Heal</div>
+          <div class="pathway-title">Go Deeper</div>
+          <p class="pathway-body">Ongoing education and structured support through the Fix Your Period Collective — built around your cycle, your symptoms, your life.</p>
+          <a href="collective.html" class="pathway-link">Explore the Collective &rarr;</a>
+        </div>
+        <div class="pathway-card">
+          <div class="pathway-number">04 &mdash; Lead</div>
+          <div class="pathway-title">Educate &amp; Specialize</div>
+          <p class="pathway-body">Professional training and certification in menstrual and hormonal health for practitioners, through the Institute for Menstrual Health.</p>
+          <a href="imh.html" class="pathway-link">Visit the Institute &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────────────────────── -->
+  <section class="testimonials">
+    <div class="testimonials-inner">
+      <div class="section-header">
+        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">What Women Are Saying</span>
+        <h2 class="section-heading">Trusted by tens of thousands<br>of women worldwide</h2>
+      </div>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="testimonial-text">Nicole's work completely changed how I understand my own body. For the first time, I feel like I actually have a roadmap — not just a list of symptoms to manage.</p>
+          <div class="testimonial-attr">Sarah M.</div>
+          <div class="testimonial-location">London, UK</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="testimonial-text">I spent years being dismissed by doctors. Nicole's approach — evidence-based, clear, and compassionate — finally gave me the language and the tools to advocate for myself.</p>
+          <div class="testimonial-attr">Dr. Priya K.</div>
+          <div class="testimonial-location">Toronto, Canada</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="testimonial-text">The IMH certification transformed my practice. My clients see results I couldn't deliver before, and I finally feel like the expert in the room I always wanted to be.</p>
+          <div class="testimonial-attr">Jessica R.</div>
+          <div class="testimonial-location">New York, USA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CLOSING CTA ────────────────────────────────────────────────────── -->
+  <section class="closing-cta">
+    <div class="closing-cta-inner">
+      <h2 class="closing-heading">You don't need to have everything figured out to begin</h2>
+      <p class="closing-subhead">Whether you've been searching for answers for years or just started paying attention to your cycle — there's a clear place to start.</p>
+      <a href="#" class="btn btn-outline-ivory">Start Here &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Nicole Jardim</div>
+          <p class="footer-tagline">Your cycle is a vital sign.<br>Let's learn to read it.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" title="Instagram">Ig</a>
+            <a href="#" class="social-link" title="TikTok">Tk</a>
+            <a href="#" class="social-link" title="YouTube">Yt</a>
+            <a href="#" class="social-link" title="Podcast">&#9835;</a>
+          </div>
+        </div>
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <div class="footer-col-title">Fix Your Period</div>
+            <ul>
+              <li><a href="collective.html">Take the Period Quiz</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Professional Training</div>
+            <ul>
+              <li><a href="imh.html">The Institute for Menstrual Health</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <ul>
+            <li><a href="book.html">Fix Your Period (Book)</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">The Period Party Podcast</a></li>
+            <li><a href="about.html">About Nicole</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nicole Jardim. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

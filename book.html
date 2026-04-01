@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix Your Period — The Book — Nicole Jardim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .book-hero {
+      background: var(--ivory);
+      padding: 96px 40px 80px;
+    }
+    .book-hero-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: center;
+    }
+    .book-cover-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .book-cover-placeholder {
+      width: 340px;
+      height: 460px;
+      background: linear-gradient(145deg, var(--plum) 0%, var(--plum-mid) 100%);
+      border-radius: 4px 12px 12px 4px;
+      box-shadow: -6px 6px 0 rgba(0,0,0,0.12), 12px 20px 40px rgba(92,45,79,0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 36px;
+      text-align: center;
+      position: relative;
+    }
+    .book-cover-placeholder::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 8px;
+      background: rgba(0,0,0,0.18);
+      border-radius: 4px 0 0 4px;
+    }
+    .book-cover-placeholder .book-title {
+      font-family: var(--head-font);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--ivory);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .book-cover-placeholder .book-subtitle {
+      font-family: var(--head-font);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--ivory);
+      opacity: 0.6;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    .book-cover-placeholder .book-author {
+      font-family: var(--body-font);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .book-content { max-width: 520px; }
+    .book-content .label { color: var(--terra); display: block; margin-bottom: 18px; }
+    .book-headline {
+      font-family: var(--head-font);
+      font-size: clamp(40px, 5vw, 60px);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--plum);
+      margin-bottom: 20px;
+    }
+    .book-sub {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--charcoal);
+      opacity: 0.8;
+      margin-bottom: 36px;
+    }
+    .book-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .learn-item {
+      background: var(--sand);
+      border-radius: 4px;
+      padding: 36px 32px;
+      border-top: 3px solid var(--gold);
+    }
+    .learn-item h4 {
+      font-family: var(--head-font);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 10px;
+    }
+    .learn-item p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--charcoal);
+      opacity: 0.8;
+    }
+
+    .for-you-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .for-you-item {
+      background: var(--ivory);
+      border-radius: 4px;
+      padding: 24px 28px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--charcoal);
+      opacity: 0.85;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .for-you-item::before {
+      content: '—';
+      color: var(--gold);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .vital-sign-section {
+      background: var(--plum);
+      padding: 96px 40px;
+      text-align: center;
+    }
+    .vital-sign-inner { max-width: 680px; margin: 0 auto; }
+    .vital-sign-inner h2 {
+      font-family: var(--head-font);
+      font-size: clamp(36px, 4vw, 52px);
+      font-weight: 300;
+      color: var(--ivory);
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+    .vital-sign-inner p {
+      font-size: 17px;
+      color: var(--ivory);
+      opacity: 0.7;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="homepage.html" class="nav-logo">Nicole Jardim</a>
+      <nav class="nav-links">
+        <a href="homepage.html">Home</a>
+        <a href="start-here.html">Start Here</a>
+        <a href="collective.html">Fix Your Period</a>
+        <a href="imh.html">Professional Training</a>
+        <div class="nav-dropdown">
+          <a href="resources.html" class="nav-dropdown-trigger active">Resources</a>
+          <div class="nav-dropdown-menu">
+            <a href="book.html" class="active">The Book</a>
+            <a href="articles.html">Articles</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="start-here.html" class="nav-cta">Start Here</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── BOOK HERO ──────────────────────────────────────────────────────── -->
+  <section class="book-hero">
+    <div class="book-hero-inner">
+      <div class="book-cover-wrap">
+        <div class="book-cover-placeholder">
+          <div class="book-title">Fix Your Period</div>
+          <div class="book-subtitle">Six Weeks to Banish Bloating, Conquer Cramps, Manage Moodiness, and Ignite Lasting Hormone Balance</div>
+          <div class="book-author">Nicole Jardim</div>
+        </div>
+      </div>
+      <div class="book-content">
+        <span class="label">The Book</span>
+        <h1 class="book-headline">Fix Your Period</h1>
+        <p class="book-sub">A practical, evidence-informed guide to understanding your cycle, identifying root causes, and improving your hormonal health — step by step.</p>
+        <p class="book-sub">If you're dealing with period symptoms that feel confusing, frustrating, or dismissed by your doctor, this is where to begin. This book was written to help you understand what your body is communicating — and what you can do next.</p>
+        <div class="book-btns">
+          <a href="#" class="btn btn-primary">Order the Book &rarr;</a>
+          <a href="collective.html" class="btn btn-outline">Explore the Collective</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT YOU'LL LEARN ──────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">Inside the Book</span>
+        <h2 class="section-heading">What You'll Learn</h2>
+        <p class="section-subhead">A structured, step-by-step approach to improving your cycle — building understanding first, so your next steps actually make sense to you.</p>
+      </div>
+      <div class="learn-grid">
+        <div class="learn-item">
+          <h4>Your Period as a Vital Sign</h4>
+          <p>How to understand your period as a key indicator of overall health — and what it can tell you about what's happening across your entire body.</p>
+        </div>
+        <div class="learn-item">
+          <h4>Decoding Your Symptoms</h4>
+          <p>What common symptoms may be signaling beneath the surface — and how to start connecting them to their underlying causes.</p>
+        </div>
+        <div class="learn-item">
+          <h4>The Root Cause Framework</h4>
+          <p>The role of nutrition, stress, gut health, and lifestyle in hormone balance, and how to begin addressing root causes rather than just symptoms.</p>
+        </div>
+        <div class="learn-item">
+          <h4>A 6-Week Protocol</h4>
+          <p>A clear, practical protocol to support meaningful hormonal change over six weeks — evidence-informed and designed for real life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHO IT'S FOR ───────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-heading">Who This Book Is For</h2>
+        <p class="section-subhead">This book is for you if you're experiencing any of the following — or if you've been told everything is "normal" but it definitely doesn't feel that way.</p>
+      </div>
+      <div class="for-you-grid">
+        <div class="for-you-item">PMS or PMDD</div>
+        <div class="for-you-item">Painful, heavy, or irregular periods</div>
+        <div class="for-you-item">Missing periods</div>
+        <div class="for-you-item">Hormonal acne, mood changes, or fatigue</div>
+        <div class="for-you-item">PCOS, endometriosis, or fibroids</div>
+        <div class="for-you-item">A general sense that something isn't right</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VITAL SIGN ─────────────────────────────────────────────────────── -->
+  <section class="vital-sign-section">
+    <div class="vital-sign-inner">
+      <h2>A Different Way to Think About Your Period</h2>
+      <p>Your period is not something to ignore or push through. It's a vital sign — one that reflects what's happening across your entire body. When you understand how to read those signals, you can begin to make decisions that support your health in a more informed, sustainable way.</p>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">Reader Reviews</span>
+        <h2 class="section-heading" style="font-style:italic;font-weight:300;">What readers are saying</h2>
+      </div>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="testimonial-text">This book changed how I think about my body entirely. For the first time, my symptoms made sense — and I actually had a plan for addressing them.</p>
+          <div class="testimonial-attr">Rachel T.</div>
+          <div class="testimonial-location">Verified Reader</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="testimonial-text">Nicole explains complex hormonal concepts in a way that's clear, practical, and never overwhelming. I've recommended this to every woman I know.</p>
+          <div class="testimonial-attr">Megan S.</div>
+          <div class="testimonial-location">Verified Reader</div>
+        </div>
+        <div class="testimonial-card">
+          <span class="quote-mark">&ldquo;</span>
+          <p class="testimonial-text">I wish I'd had this book years ago. It's become my go-to reference — I return to it again and again as my health evolves.</p>
+          <div class="testimonial-attr">Amara L.</div>
+          <div class="testimonial-location">Verified Reader</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHAT COMES NEXT ────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:960px;margin:0 auto;">
+        <div>
+          <span class="label" style="color:var(--terra);display:block;margin-bottom:18px;">What Comes Next</span>
+          <h2 class="split-heading">Ready to go deeper?</h2>
+          <p class="split-body">The book is designed to give you a strong foundation. If you want more personalized guidance, deeper support, and help applying this work to your specific situation, the next step is inside the Fix Your Period Collective.</p>
+          <p class="split-body">There, you'll find structured education, ongoing support, and a clear pathway forward based on your symptoms and goals.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="collective.html" class="btn btn-primary">Explore the Collective &rarr;</a>
+            <a href="collective.html" class="btn btn-outline">Take the Period Quiz</a>
+          </div>
+        </div>
+        <div style="background:var(--sand);border-radius:6px;padding:48px 44px;">
+          <h3 style="font-family:var(--head-font);font-size:26px;font-weight:600;color:var(--plum);margin-bottom:20px;">Also Available</h3>
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div>
+              <div class="label" style="color:var(--terra);margin-bottom:8px;">The Blog</div>
+              <p style="font-size:15px;line-height:1.65;color:var(--charcoal);opacity:0.8;">Hundreds of articles covering menstrual and hormonal health — organized by topic, condition, and life stage.</p>
+            </div>
+            <div style="height:1px;background:rgba(92,45,79,0.1);"></div>
+            <div>
+              <div class="label" style="color:var(--terra);margin-bottom:8px;">The Period Party Podcast</div>
+              <p style="font-size:15px;line-height:1.65;color:var(--charcoal);opacity:0.8;">A top-rated podcast with expert interviews and real answers to your most pressing hormonal health questions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Nicole Jardim</div>
+          <p class="footer-tagline">Your cycle is a vital sign.<br>Let's learn to read it.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Ig</a>
+            <a href="#" class="social-link">Tk</a>
+            <a href="#" class="social-link">Yt</a>
+            <a href="#" class="social-link">&#9835;</a>
+          </div>
+        </div>
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <div class="footer-col-title">Fix Your Period</div>
+            <ul><li><a href="collective.html">Take the Period Quiz</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Professional Training</div>
+            <ul><li><a href="imh.html">The Institute for Menstrual Health</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <ul>
+            <li><a href="book.html">Fix Your Period (Book)</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">The Period Party Podcast</a></li>
+            <li><a href="about.html">About Nicole</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nicole Jardim. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
