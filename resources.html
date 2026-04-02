@@ -29,14 +29,16 @@
       justify-content: center;
     }
     .resource-card-thumb.thumb-book {
-      background: var(--ivory);
-      overflow: hidden;
+      background: #ede8e2;
+      padding: 20px;
     }
     .resource-card-thumb.thumb-book img {
       height: 100%;
       width: auto;
-      object-fit: cover;
+      max-width: 100%;
+      object-fit: contain;
       display: block;
+      margin: 0 auto;
     }
     .resource-card-thumb.thumb-articles {
       background: var(--sand);
@@ -231,8 +233,8 @@
           <p class="split-body">Whether you're brand new to hormonal health or have been searching for answers for years, the book gives you the context, the framework, and a clear plan to follow.</p>
           <a href="book.html" class="btn btn-primary">Learn More About the Book &rarr;</a>
         </div>
-        <div style="display:flex;align-items:center;justify-content:center;background:var(--sand);border-radius:8px;overflow:hidden;padding:40px;">
-          <img src="images/book-side.png" alt="Fix Your Period by Nicole Jardim" style="max-height:320px;width:auto;border-radius:4px;box-shadow:12px 20px 40px rgba(92,45,79,0.2);" />
+        <div style="display:flex;align-items:center;justify-content:center;background:#ede8e2;border-radius:8px;padding:40px;">
+          <img src="images/book-side.png" alt="Fix Your Period by Nicole Jardim" style="max-height:320px;width:auto;display:block;" />
         </div>
       </div>
     </div>
