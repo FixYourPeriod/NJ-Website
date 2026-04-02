@@ -143,12 +143,19 @@
     /* ─── HERO ─────────────────────────────────────────────────────────────── */
     .hero-v2 {
       background: var(--ivory);
-      padding: 72px 40px 0;
+      padding: 80px 40px 0;
       overflow: hidden;
     }
     .hero-v2-inner {
       max-width: 1160px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      gap: 72px;
+      align-items: center;
+    }
+    .hero-v2-left {
+      padding-bottom: 80px;
     }
     .hero-v2-top {
       display: flex;
@@ -168,25 +175,16 @@
     }
     .hero-v2-headline {
       font-family: 'Fraunces', serif;
-      font-size: clamp(64px, 9vw, 108px);
+      font-size: clamp(56px, 7.5vw, 96px);
       font-weight: 300;
-      line-height: 1.0;
+      line-height: 1.02;
       color: var(--plum);
       letter-spacing: -0.02em;
-      margin-bottom: 52px;
+      margin-bottom: 36px;
     }
     .hero-v2-headline em {
       font-style: italic;
       color: var(--terra);
-    }
-    .hero-v2-body {
-      display: grid;
-      grid-template-columns: 1fr 460px;
-      gap: 64px;
-      align-items: end;
-    }
-    .hero-v2-copy {
-      padding-bottom: 96px;
     }
     .hero-v2-sub {
       font-size: 19px;
@@ -772,28 +770,27 @@
   <section class="hero-v2">
     <div class="hero-v2-inner">
 
-      <div class="hero-v2-top">
-        <span class="hero-rule"></span>
-        <span class="label hero-eyebrow">Women's Hormonal Health</span>
+      <!-- Left: all text content -->
+      <div class="hero-v2-left">
+        <div class="hero-v2-top">
+          <span class="hero-rule"></span>
+          <span class="label hero-eyebrow">Women's Hormonal Health</span>
+        </div>
+        <h1 class="hero-v2-headline">
+          Make Sense of<br><em>Your Cycle</em>
+        </h1>
+        <p class="hero-v2-sub">
+          Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
+        </p>
+        <div class="hero-v2-ctas">
+          <a href="start-here.html" class="hero-cta-primary">Start Here &rarr;</a>
+          <a href="https://fixyourperiod.app/quiz" target="_blank" class="hero-cta-text">Take the free period quiz &#x2197;</a>
+        </div>
       </div>
 
-      <h1 class="hero-v2-headline">
-        Make Sense of<br><em>Your Cycle</em>
-      </h1>
-
-      <div class="hero-v2-body">
-        <div class="hero-v2-copy">
-          <p class="hero-v2-sub">
-            Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
-          </p>
-          <div class="hero-v2-ctas">
-            <a href="start-here.html" class="hero-cta-primary">Start Here &rarr;</a>
-            <a href="https://fixyourperiod.app/quiz" target="_blank" class="hero-cta-text">Take the free period quiz &#x2197;</a>
-          </div>
-        </div>
-        <div class="hero-v2-photo">
-          <img src="images/nicole-1.jpg" alt="Nicole Jardim" />
-        </div>
+      <!-- Right: photo -->
+      <div class="hero-v2-photo">
+        <img src="images/nicole-1.jpg" alt="Nicole Jardim" />
       </div>
 
     </div>
