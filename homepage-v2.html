@@ -217,14 +217,13 @@
     .hero-cta-primary:hover { background: var(--plum-dark); }
     .hero-v2-photo {
       height: 600px;
-      border-radius: 6px;
-      overflow: hidden;
       align-self: end;
     }
     .hero-v2-photo img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: bottom;
       object-position: center top;
     }
 
@@ -772,7 +771,7 @@
 
       <!-- Right: photo -->
       <div class="hero-v2-photo">
-        <img src="images/nicole-1.jpg" alt="Nicole Jardim" />
+        <img src="images/nicole-1-nobg.png" alt="Nicole Jardim" />
       </div>
 
     </div>
