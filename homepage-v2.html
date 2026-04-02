@@ -145,7 +145,7 @@
       background: var(--plum);
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 52% 48%;
       overflow: hidden;
     }
     .hero-v2-left {
@@ -196,17 +196,16 @@
       color: var(--ivory);
     }
     .hero-v2-photo {
-      position: relative;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .hero-v2-photo img {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
+      width: 100%;
       height: 100%;
-      width: auto;
-      max-width: none;
+      object-fit: cover;
+      object-position: 35% center;
     }
 
     /* ─── MEDIA BAR ────────────────────────────────────────────────────────── */
@@ -750,7 +749,7 @@
 
     <!-- Right: photo fills full column height -->
     <div class="hero-v2-photo">
-      <img src="images/nicole-hero.png" alt="Nicole Jardim" />
+      <img src="images/nicole-upper.png" alt="Nicole Jardim" />
     </div>
 
   </section>
