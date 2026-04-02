@@ -9,96 +9,92 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .resource-cards {
+    .resource-split {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 96px;
+      align-items: center;
+      max-width: 1060px;
+      margin: 0 auto;
     }
-    .resource-card {
-      background: var(--ivory);
-      border-radius: 6px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgba(92,45,79,0.08);
-    }
-    .resource-card-thumb {
-      height: 240px;
+    .resource-split-visual {
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
-    /* Book */
-    .resource-card-thumb.thumb-book {
-      background: #ede8e2;
-      padding: 20px;
-    }
-    .resource-card-thumb.thumb-book img {
-      height: 100%;
-      width: auto;
-      max-width: 100%;
-      object-fit: contain;
+    .resource-split-content .label {
+      color: var(--terra);
       display: block;
-      margin: 0 auto;
+      margin-bottom: 18px;
     }
-    /* Articles */
-    .resource-card-thumb.thumb-articles {
+    .resource-split-content h2 {
+      font-family: var(--head-font);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 300;
+      color: var(--plum);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .resource-split-content p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--charcoal);
+      opacity: 0.8;
+      margin-bottom: 16px;
+    }
+    .resource-split-content p:last-of-type {
+      margin-bottom: 32px;
+    }
+
+    /* Book visual */
+    .book-visual-wrap {
+      background: #ede8e2;
+      border-radius: 12px;
+      padding: 52px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(92,45,79,0.12);
+      width: 100%;
+    }
+    .book-visual-wrap img {
+      max-height: 380px;
+      width: auto;
+      display: block;
+    }
+
+    /* Articles visual */
+    .articles-visual-wrap {
       background: var(--ivory);
-      padding: 24px;
-      align-items: start;
+      border-radius: 12px;
+      padding: 36px;
+      border: 1px solid rgba(92,45,79,0.08);
+      width: 100%;
     }
-    .articles-topics {
+    .articles-visual-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .articles-topic-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
-      width: 100%;
     }
-    .articles-topics span {
+    .articles-topic-grid span {
       background: var(--sand);
       border-top: 2px solid var(--gold);
       border-radius: 3px;
-      padding: 10px 12px;
+      padding: 12px 14px;
       font-family: var(--head-font);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--plum);
-      text-align: center;
-      line-height: 1.2;
-    }
-    /* Podcast */
-    .resource-card-thumb.thumb-podcast {
-      background: #fff;
-      padding: 28px;
-    }
-    .resource-card-thumb.thumb-podcast img {
-      max-height: 100%;
-      max-width: 100%;
-      width: auto;
-      object-fit: contain;
-      display: block;
-    }
-    .resource-card-body {
-      padding: 32px 28px 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
-    }
-    .resource-card-body .label { color: var(--terra); }
-    .resource-card-body h3 {
-      font-family: var(--head-font);
-      font-size: 26px;
-      font-weight: 600;
-      color: var(--plum);
-      line-height: 1.2;
-    }
-    .resource-card-body p {
       font-size: 15px;
-      line-height: 1.7;
-      color: var(--charcoal);
-      opacity: 0.75;
-      flex: 1;
+      font-weight: 600;
+      color: var(--plum);
+      line-height: 1.2;
     }
   </style>
 </head>
@@ -131,112 +127,56 @@
     <div class="page-hero-inner">
       <span class="label">Learn</span>
       <h1 class="page-hero-heading">Resources</h1>
-      <p class="page-hero-sub">Books, articles, and a podcast — everything Nicole has created to help you understand your hormones and take action with confidence.</p>
+      <p class="page-hero-sub">The book and article library Nicole has built to help you understand your hormones, decode your symptoms, and take action with confidence.</p>
     </div>
   </section>
 
-  <!-- ── RESOURCE CARDS ────────────────────────────────────────────────── -->
-  <section class="section-pad bg-sand">
+  <!-- ── THE BOOK ───────────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
     <div class="section-inner">
-      <div class="resource-cards">
-
-        <!-- Book -->
-        <div class="resource-card">
-          <div class="resource-card-thumb thumb-book">
+      <div class="resource-split">
+        <div class="resource-split-visual">
+          <div class="book-visual-wrap">
             <img src="images/book-front.jpg" alt="Fix Your Period by Nicole Jardim" />
           </div>
-          <div class="resource-card-body">
-            <span class="label">The Book</span>
-            <h3>Fix Your Period</h3>
-            <p>A practical, evidence-informed guide to understanding your cycle, identifying root causes, and improving your hormonal health — step by step. The ideal starting point if you want the full picture in one place.</p>
-            <a href="book.html" class="btn btn-primary">Explore the Book &rarr;</a>
-          </div>
         </div>
+        <div class="resource-split-content">
+          <span class="label">The Book</span>
+          <h2>Fix Your Period</h2>
+          <p>A practical, evidence-informed guide to understanding your cycle, identifying root causes, and improving your hormonal health — step by step.</p>
+          <p>Whether you're brand new to hormonal health or have been searching for answers for years, the book gives you the context, the framework, and a clear plan to follow. It covers nutrition, stress, gut health, liver function, and more — in a way that's actually readable.</p>
+          <a href="book.html" class="btn btn-primary">Explore the Book &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Articles -->
-        <div class="resource-card">
-          <div class="resource-card-thumb thumb-articles">
-            <div class="articles-topics">
+  <!-- ── ARTICLES ───────────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner">
+      <div class="resource-split">
+        <div class="resource-split-content">
+          <span class="label">Articles</span>
+          <h2>In-depth guides on the conditions and symptoms that matter most</h2>
+          <p>The article library covers the most common hormonal conditions and cycle symptoms — each written by Nicole and grounded in current research. Whether you're trying to understand a diagnosis or decode what your body is doing, there's a guide for it.</p>
+          <a href="articles.html" class="btn btn-primary">Browse All Articles &rarr;</a>
+        </div>
+        <div class="resource-split-visual">
+          <div class="articles-visual-wrap">
+            <span class="articles-visual-label">Topics covered</span>
+            <div class="articles-topic-grid">
               <span>PCOS</span>
               <span>PMS &amp; PMDD</span>
               <span>Endometriosis</span>
-              <span>Fatigue</span>
-              <span>Hormonal Acne</span>
               <span>Perimenopause</span>
+              <span>Hormonal Acne</span>
               <span>Heavy Periods</span>
+              <span>Fatigue</span>
               <span>Thyroid</span>
+              <span>Fibroids</span>
+              <span>Low Progesterone</span>
             </div>
           </div>
-          <div class="resource-card-body">
-            <span class="label">Articles</span>
-            <h3>Hormonal Health Guides</h3>
-            <p>In-depth guides on the most common menstrual health conditions and hormonal symptoms — from PCOS and endometriosis to PMS, fatigue, acne, and more. Each article connects your symptoms to their root causes.</p>
-            <a href="articles.html" class="btn btn-primary">Browse Articles &rarr;</a>
-          </div>
-        </div>
-
-        <!-- Podcast -->
-        <div class="resource-card">
-          <div class="resource-card-thumb thumb-podcast">
-            <img src="images/podcast-logo.png" alt="The Period Party Podcast" />
-          </div>
-          <div class="resource-card-body">
-            <span class="label">Podcast</span>
-            <h3>The Period Party</h3>
-            <p>A top-rated podcast breaking down complex hormonal health topics with expert interviews and real answers to the questions women are actually asking. New episodes explore everything from cycle tracking to lab testing.</p>
-            <a href="#" class="btn btn-outline">Listen to the Podcast &rarr;</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FEATURED SPLIT: BOOK ───────────────────────────────────────────── -->
-  <section class="section-pad bg-ivory">
-    <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;max-width:1000px;margin:0 auto;">
-        <div>
-          <span class="label" style="color:var(--terra);display:block;margin-bottom:18px;">Start With the Foundation</span>
-          <h2 class="split-heading">The book that started it all</h2>
-          <p class="split-body">Fix Your Period walks you through the six-week protocol Nicole developed to help women understand and address the root causes of their hormonal symptoms — covering nutrition, stress, gut health, liver function, and more.</p>
-          <p class="split-body">Whether you're brand new to hormonal health or have been searching for answers for years, the book gives you the context, the framework, and a clear plan to follow.</p>
-          <a href="book.html" class="btn btn-primary">Learn More About the Book &rarr;</a>
-        </div>
-        <div style="display:flex;align-items:center;justify-content:center;background:#ede8e2;border-radius:8px;padding:40px;">
-          <img src="images/book-side.png" alt="Fix Your Period by Nicole Jardim" style="max-height:320px;width:auto;display:block;" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── FEATURED SPLIT: ARTICLES ──────────────────────────────────────── -->
-  <section class="section-pad bg-sand">
-    <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center;max-width:1000px;margin:0 auto;">
-        <div style="background:var(--ivory);border-radius:8px;padding:48px 44px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="background:var(--sand);border-radius:4px;padding:20px;border-top:2px solid var(--gold);">
-            <div style="font-family:var(--head-font);font-size:14px;font-weight:600;color:var(--plum);line-height:1.3;">PCOS</div>
-            <div style="font-size:11px;color:var(--charcoal);opacity:0.5;margin-top:4px;">12 min</div>
-          </div>
-          <div style="background:var(--sand);border-radius:4px;padding:20px;border-top:2px solid var(--gold);">
-            <div style="font-family:var(--head-font);font-size:14px;font-weight:600;color:var(--plum);line-height:1.3;">PMS</div>
-            <div style="font-size:11px;color:var(--charcoal);opacity:0.5;margin-top:4px;">12 min</div>
-          </div>
-          <div style="background:var(--sand);border-radius:4px;padding:20px;border-top:2px solid var(--gold);">
-            <div style="font-family:var(--head-font);font-size:14px;font-weight:600;color:var(--plum);line-height:1.3;">Endometriosis</div>
-            <div style="font-size:11px;color:var(--charcoal);opacity:0.5;margin-top:4px;">14 min</div>
-          </div>
-          <div style="background:var(--sand);border-radius:4px;padding:20px;border-top:2px solid var(--gold);">
-            <div style="font-family:var(--head-font);font-size:14px;font-weight:600;color:var(--plum);line-height:1.3;">+ 27 more</div>
-            <div style="font-size:11px;color:var(--charcoal);opacity:0.5;margin-top:4px;">in-depth guides</div>
-          </div>
-        </div>
-        <div>
-          <span class="label" style="color:var(--terra);display:block;margin-bottom:18px;">Go Deeper on Your Symptoms</span>
-          <h2 class="split-heading">30 in-depth guides, organized by condition and symptom</h2>
-          <p class="split-body">The article library covers the most common hormonal conditions and cycle symptoms — each written by Nicole and grounded in the latest research. Whether you're trying to understand a diagnosis or decode a symptom, there's a guide for it.</p>
-          <a href="articles.html" class="btn btn-primary">Browse All Articles &rarr;</a>
         </div>
       </div>
     </div>
@@ -271,7 +211,6 @@
           <ul>
             <li><a href="book.html">Fix Your Period (Book)</a></li>
             <li><a href="articles.html">Articles</a></li>
-            <li><a href="#">The Period Party Podcast</a></li>
             <li><a href="about.html">About Nicole</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
