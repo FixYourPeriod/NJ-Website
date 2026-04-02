@@ -142,89 +142,71 @@
 
     /* ─── HERO ─────────────────────────────────────────────────────────────── */
     .hero-v2 {
-      background: var(--ivory);
-      padding: 80px 40px 80px;
+      background: var(--plum);
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       overflow: hidden;
     }
-    .hero-v2-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 440px;
-      gap: 72px;
-      align-items: center;
-    }
     .hero-v2-left {
-      padding-bottom: 80px;
-    }
-    .hero-v2-top {
       display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 36px;
-    }
-    .hero-rule {
-      display: block;
-      width: 56px;
-      height: 2px;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-    .hero-eyebrow {
-      color: var(--terra);
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 60px 80px 80px;
     }
     .hero-v2-headline {
       font-family: 'Fraunces', serif;
-      font-size: clamp(56px, 7.5vw, 96px);
+      font-size: clamp(52px, 5.5vw, 84px);
       font-weight: 300;
-      line-height: 1.02;
-      color: var(--plum);
-      letter-spacing: -0.02em;
-      margin-bottom: 36px;
+      line-height: 1.05;
+      color: var(--ivory);
+      letter-spacing: -0.01em;
+      margin-bottom: 32px;
     }
     .hero-v2-headline em {
       font-style: italic;
-      color: var(--terra);
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
     }
     .hero-v2-sub {
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 400;
       line-height: 1.75;
-      color: var(--charcoal);
-      opacity: 0.85;
-      max-width: 480px;
-      margin-bottom: 44px;
-    }
-    .hero-v2-ctas {
-      display: flex;
-      align-items: center;
-      gap: 36px;
-      flex-wrap: wrap;
+      color: rgba(250, 245, 239, 0.78);
+      max-width: 440px;
+      margin-bottom: 48px;
     }
     .hero-cta-primary {
       font-family: var(--sans);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      padding: 16px 36px;
-      background: var(--plum);
-      color: var(--ivory);
+      padding: 18px 40px;
+      background: var(--ivory);
+      color: var(--plum);
       border-radius: 40px;
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, color 0.2s ease;
       display: inline-block;
+      align-self: flex-start;
     }
-    .hero-cta-primary:hover { background: var(--plum-dark); }
+    .hero-cta-primary:hover {
+      background: var(--gold);
+      color: var(--ivory);
+    }
     .hero-v2-photo {
-      height: 600px;
-      align-self: end;
+      position: relative;
+      overflow: hidden;
     }
     .hero-v2-photo img {
-      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
       height: 100%;
-      object-fit: contain;
-      object-position: bottom;
-      object-position: center top;
+      width: auto;
+      max-width: none;
     }
 
     /* ─── MEDIA BAR ────────────────────────────────────────────────────────── */
@@ -754,27 +736,23 @@
 
   <!-- ── HERO ───────────────────────────────────────────────────────────── -->
   <section class="hero-v2">
-    <div class="hero-v2-inner">
 
-      <!-- Left: all text content -->
-      <div class="hero-v2-left">
-        <h1 class="hero-v2-headline">
-          Make Sense of<br><em>Your Cycle</em>
-        </h1>
-        <p class="hero-v2-sub">
-          Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
-        </p>
-        <div class="hero-v2-ctas">
-          <a href="start-here.html" class="hero-cta-primary">Start Here &rarr;</a>
-        </div>
-      </div>
-
-      <!-- Right: photo -->
-      <div class="hero-v2-photo">
-        <img src="images/nicole-1-nobg.png" alt="Nicole Jardim" />
-      </div>
-
+    <!-- Left: text content -->
+    <div class="hero-v2-left">
+      <h1 class="hero-v2-headline">
+        Make Sense<br>of Your<br><em>Cycle.</em>
+      </h1>
+      <p class="hero-v2-sub">
+        Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
+      </p>
+      <a href="start-here.html" class="hero-cta-primary">Start Here &rarr;</a>
     </div>
+
+    <!-- Right: photo fills full column height -->
+    <div class="hero-v2-photo">
+      <img src="images/nicole-hero.png" alt="Nicole Jardim" />
+    </div>
+
   </section>
 
   <!-- ── AS SEEN IN ─────────────────────────────────────────────────────── -->
