@@ -6,120 +6,50 @@
   <title>Nicole Jardim — Women's Hormonal Health</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
-    /* ─── RESET & BASE ─────────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* ─── ROOT TOKENS ──────────────────────────────────────────────────────── */
     :root {
-      --plum:      #5C2D4F;
-      --plum-dark: #3E1D36;
-      --plum-mid:  #6e3860;
-      --terra:     #B55A3A;
-      --ivory:     #FAF5EF;
-      --sand:      #EAE0D5;
-      --gold:      #C4984A;
-      --sage:      #7A9B7E;
-      --charcoal:  #2C2520;
-      --rose:      #D4A097;
-      --body-font: 'DM Sans', sans-serif;
-      --head-font: 'Cormorant Garamond', serif;
+      --plum:       #5C2D4F;
+      --plum-dark:  #3E1D36;
+      --plum-mid:   #6e3860;
+      --terra:      #B55A3A;
+      --ivory:      #FAF5EF;
+      --sand:       #EAE0D5;
+      --gold:       #C4984A;
+      --sage:       #7A9B7E;
+      --charcoal:   #2C2520;
+      --display:    'Fraunces', serif;
+      --serif:      'Cormorant Garamond', serif;
+      --sans:       'DM Sans', sans-serif;
     }
 
+    /* ─── RESET & BASE ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: var(--body-font);
+      font-family: var(--sans);
       background-color: var(--ivory);
       color: var(--charcoal);
       font-size: 17px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
-
     img { display: block; max-width: 100%; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
 
-    /* ─── UTILITY ──────────────────────────────────────────────────────── */
-    .container {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 40px;
-    }
-
+    /* ─── SHARED LABEL ─────────────────────────────────────────────────────── */
     .label {
-      font-family: var(--body-font);
-      font-size: 12px;
+      font-family: var(--sans);
+      font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
-    .btn {
-      display: inline-block;
-      font-family: var(--body-font);
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 14px 34px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: 1.5px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--plum);
-      color: var(--ivory);
-      border-color: var(--plum);
-    }
-    .btn-primary:hover {
-      background: var(--plum-dark);
-      border-color: var(--plum-dark);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--plum);
-      border-color: var(--plum);
-    }
-    .btn-outline:hover {
-      background: var(--plum);
-      color: var(--ivory);
-    }
-
-    .btn-outline-ivory {
-      background: transparent;
-      color: var(--ivory);
-      border-color: var(--ivory);
-    }
-    .btn-outline-ivory:hover {
-      background: var(--ivory);
-      color: var(--plum);
-    }
-
-    .btn-terra {
-      background: var(--terra);
-      color: var(--ivory);
-      border-color: var(--terra);
-    }
-    .btn-terra:hover {
-      background: #9e4d31;
-      border-color: #9e4d31;
-    }
-
-    .hero-image img,
-    .meet-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-
-    /* ─── NAVIGATION ───────────────────────────────────────────────────── */
+    /* ─── NAV ──────────────────────────────────────────────────────────────── */
     .nav {
       position: sticky;
       top: 0;
@@ -128,472 +58,575 @@
       border-bottom: 1px solid rgba(92,45,79,0.1);
       padding: 0 40px;
     }
-
     .nav-inner {
       max-width: 1160px;
       margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       height: 72px;
     }
-
     .nav-logo {
-      font-family: var(--head-font);
+      font-family: var(--serif);
       font-size: 22px;
       font-weight: 600;
       color: var(--plum);
-      letter-spacing: 0.01em;
       white-space: nowrap;
     }
-
     .nav-links {
       display: flex;
-      align-items: center;
       gap: 32px;
+      align-items: center;
     }
-
     .nav-links a {
       font-size: 13.5px;
       font-weight: 500;
       color: var(--charcoal);
-      letter-spacing: 0.02em;
       transition: color 0.15s;
     }
     .nav-links a:hover { color: var(--plum); }
-
-    .nav-cta,
-    .nav-links a.nav-cta {
-      font-family: var(--body-font);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+    .nav-links a.active { color: var(--plum); font-weight: 600; }
+    .nav-cta {
+      font-size: 13px !important;
+      font-weight: 600 !important;
       padding: 10px 22px;
       background: var(--plum);
       color: var(--ivory) !important;
       border-radius: 40px;
-      transition: background 0.2s;
-      white-space: nowrap;
+      transition: background 0.2s ease !important;
     }
-    .nav-links a.nav-cta:hover { background: var(--plum-dark); color: var(--ivory) !important; }
+    .nav-cta:hover { background: var(--plum-dark) !important; color: var(--ivory) !important; }
     .nav-dropdown { position: relative; display: flex; align-items: center; }
     .nav-dropdown-trigger {
-      font-size: 13.5px; font-weight: 500; color: var(--charcoal);
-      letter-spacing: 0.02em; transition: color 0.15s;
-      cursor: default; display: flex; align-items: center; gap: 5px;
-      white-space: nowrap; user-select: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
-    .nav-dropdown-trigger::after { content: '▾'; font-size: 10px; opacity: 0.55; }
+    .nav-dropdown-trigger::after {
+      content: '▾';
+      font-size: 10px;
+      opacity: 0.55;
+    }
     .nav-dropdown:hover .nav-dropdown-trigger { color: var(--plum); }
     .nav-dropdown-menu {
-      position: absolute; top: calc(100% + 16px); left: 50%;
-      transform: translateX(-50%) translateY(-4px);
+      position: absolute;
+      top: calc(100% + 16px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
       background: var(--ivory);
       border: 1px solid rgba(92,45,79,0.12);
       border-radius: 6px;
       box-shadow: 0 8px 28px rgba(44,37,32,0.13);
-      min-width: 160px; padding: 6px 0;
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
-      z-index: 200;
+      padding: 8px 0;
+      min-width: 160px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
     }
     .nav-dropdown:hover .nav-dropdown-menu {
-      opacity: 1; visibility: visible;
+      opacity: 1;
+      visibility: visible;
       transform: translateX(-50%) translateY(0);
     }
     .nav-dropdown-menu a {
-      display: block; padding: 10px 20px;
-      font-size: 13.5px; font-weight: 500; color: var(--charcoal);
-      transition: color 0.15s, background 0.15s; white-space: nowrap;
-    }
-    .nav-dropdown-menu a:hover { color: var(--plum); background: rgba(92,45,79,0.05); }
-
-    /* ─── HERO ─────────────────────────────────────────────────────────── */
-    .hero {
-      background: var(--ivory);
-      padding: 96px 40px 80px;
-    }
-
-    .hero-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .hero-content { max-width: 540px; }
-
-    .hero-eyebrow {
-      color: var(--terra);
-      margin-bottom: 20px;
-    }
-
-    .hero-headline {
-      font-family: var(--head-font);
-      font-size: clamp(52px, 6vw, 76px);
-      font-weight: 300;
-      line-height: 1.08;
-      color: var(--plum);
-      margin-bottom: 24px;
-    }
-
-    .hero-subhead {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.7;
+      display: block;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      font-weight: 500;
       color: var(--charcoal);
-      opacity: 0.85;
-      margin-bottom: 40px;
-      max-width: 460px;
+      transition: color 0.15s, background 0.15s;
     }
+    .nav-dropdown-menu a:hover { color: var(--plum); background: rgba(92,45,79,0.04); }
+    .nav-dropdown-menu a.active { color: var(--plum); font-weight: 600; }
 
-    .hero-image {
-      height: 580px;
-      border-radius: 6px;
+    /* ─── HERO ─────────────────────────────────────────────────────────────── */
+    .hero-v2 {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 50% 50%;
       overflow: hidden;
     }
-
-    /* ─── MEDIA BAR ────────────────────────────────────────────────────── */
-    .media-bar {
-      background: var(--sand);
-      padding: 28px 40px;
-      border-top: 1px solid rgba(92,45,79,0.07);
-      border-bottom: 1px solid rgba(92,45,79,0.07);
+    .hero-v2-left {
+      background: var(--terra);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 60px 80px 8vw;
+    }
+    .hero-v2-headline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(52px, 5.5vw, 84px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--ivory);
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+    }
+    .hero-v2-headline em {
+      font-style: italic;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+    }
+    .hero-v2-sub {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.75;
+      color: rgba(250, 245, 239, 0.85);
+      max-width: 420px;
+      margin-bottom: 48px;
+    }
+    .hero-cta-primary {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 40px;
+      background: var(--ivory);
+      color: var(--terra);
+      border-radius: 40px;
+      transition: background 0.2s ease, color 0.2s ease;
+      display: inline-block;
+      align-self: flex-start;
+    }
+    .hero-cta-primary:hover {
+      background: var(--plum);
+      color: var(--ivory);
+    }
+    .hero-v2-photo {
+      overflow: hidden;
+    }
+    .hero-v2-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
     }
 
+    /* ─── MEDIA BAR ────────────────────────────────────────────────────────── */
+    .media-bar {
+      background: var(--charcoal);
+      padding: 22px 40px;
+    }
     .media-bar-inner {
       max-width: 1160px;
       margin: 0 auto;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 20px;
-    }
-
-    .media-bar-label {
-      color: #9e8e84;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .media-logos {
-      display: flex;
-      align-items: center;
+      justify-content: center;
       gap: 48px;
       flex-wrap: wrap;
     }
-
+    .media-bar-label { color: rgba(250,245,239,0.35); }
     .media-logo-item {
-      font-family: var(--head-font);
+      font-family: var(--serif);
       font-size: 17px;
       font-weight: 600;
-      color: var(--charcoal);
-      opacity: 0.45;
+      color: var(--ivory);
+      opacity: 0.4;
       letter-spacing: 0.02em;
       transition: opacity 0.2s;
     }
     .media-logo-item:hover { opacity: 0.75; }
 
-    /* ─── MEET NICOLE ──────────────────────────────────────────────────── */
-    .meet-nicole {
+    /* ─── MEET NICOLE ──────────────────────────────────────────────────────── */
+    .meet-v2 {
       background: var(--ivory);
-      padding: 112px 40px;
+      padding: 120px 40px;
     }
-
-    .meet-nicole-inner {
+    .meet-v2-inner {
       max-width: 1160px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.1fr 1fr;
       gap: 96px;
       align-items: center;
     }
-
-    .meet-image {
-      height: 620px;
+    .meet-v2-photo {
+      height: 660px;
       border-radius: 6px;
       overflow: hidden;
     }
-
-    .meet-content {}
-
-    .meet-content .label {
+    .meet-v2-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .meet-v2-label {
       color: var(--terra);
-      margin-bottom: 20px;
       display: block;
-    }
-
-    .meet-heading {
-      font-family: var(--head-font);
-      font-size: clamp(36px, 4vw, 50px);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--plum);
-      margin-bottom: 28px;
-    }
-
-    .meet-body {
-      font-size: 17px;
-      line-height: 1.75;
-      color: var(--charcoal);
-      opacity: 0.85;
-      margin-bottom: 40px;
-    }
-
-    /* ─── PHILOSOPHY ───────────────────────────────────────────────────── */
-    .philosophy {
-      background: var(--plum);
-      padding: 112px 40px;
-    }
-
-    .philosophy-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
-    .philosophy-heading {
-      font-family: var(--head-font);
-      font-size: clamp(32px, 4vw, 46px);
-      font-weight: 300;
-      line-height: 1.2;
-      color: var(--ivory);
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 64px;
-    }
-
-    .beliefs-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2px;
-    }
-
-    .belief-card {
-      background: var(--plum-mid);
-      padding: 48px 52px;
-      position: relative;
-    }
-
-    .belief-card::before {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 2px;
-      background: var(--gold);
       margin-bottom: 24px;
     }
-
-    .belief-card p {
-      font-family: var(--head-font);
-      font-size: 24px;
-      font-weight: 400;
+    .meet-v2-pullquote {
+      font-family: 'Fraunces', serif;
       font-style: italic;
-      line-height: 1.4;
-      color: var(--ivory);
-    }
-
-    /* ─── PATHWAYS ─────────────────────────────────────────────────────── */
-    .pathways {
-      background: var(--ivory);
-      padding: 112px 40px;
-    }
-
-    .pathways-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .section-heading {
-      font-family: var(--head-font);
-      font-size: clamp(36px, 4vw, 52px);
-      font-weight: 400;
-      line-height: 1.15;
+      font-size: clamp(34px, 4vw, 50px);
+      font-weight: 300;
+      line-height: 1.18;
       color: var(--plum);
-      margin-bottom: 16px;
+      margin-bottom: 32px;
+      quotes: none;
     }
-
-    .section-subhead {
+    .meet-v2-body {
       font-size: 17px;
+      line-height: 1.8;
       color: var(--charcoal);
-      opacity: 0.7;
-      max-width: 520px;
-      margin: 0 auto;
-      line-height: 1.65;
+      opacity: 0.85;
+      margin-bottom: 18px;
     }
-
-    .pathway-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .pathway-card {
-      background: var(--sand);
-      border-radius: 4px;
-      padding: 40px 32px;
-      display: flex;
-      flex-direction: column;
-      border-top: 3px solid var(--gold);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .pathway-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(92,45,79,0.1);
-    }
-
-    .pathway-number {
-      font-family: var(--head-font);
+    .meet-v2-body em { font-style: italic; }
+    .meet-v2-cta {
       font-size: 13px;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      color: var(--gold);
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .pathway-title {
-      font-family: var(--head-font);
-      font-size: 24px;
-      font-weight: 600;
       color: var(--plum);
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-
-    .pathway-body {
-      font-size: 15px;
-      line-height: 1.65;
-      color: var(--charcoal);
-      opacity: 0.8;
-      flex: 1;
-      margin-bottom: 28px;
-    }
-
-    .pathway-link {
-      font-size: 13.5px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--terra);
-      text-transform: uppercase;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: gap 0.15s;
+      margin-top: 12px;
+      border-bottom: 1.5px solid rgba(92,45,79,0.3);
+      padding-bottom: 3px;
+      transition: border-color 0.15s, gap 0.15s;
     }
-    .pathway-link:hover { gap: 10px; }
+    .meet-v2-cta:hover { border-color: var(--plum); gap: 10px; }
 
-    /* ─── TESTIMONIALS ─────────────────────────────────────────────────── */
-    .testimonials {
-      background: var(--sand);
+    /* ─── PHILOSOPHY ───────────────────────────────────────────────────────── */
+    .philosophy-v2 {
+      background: var(--plum);
       padding: 112px 40px;
     }
-
-    .testimonials-inner {
+    .philosophy-v2-inner {
       max-width: 1160px;
       margin: 0 auto;
     }
-
-    .testimonials .section-header { margin-bottom: 56px; }
-
-    .testimonials .section-heading {
+    .philosophy-v2-heading {
+      font-family: 'Fraunces', serif;
       font-style: italic;
+      font-size: clamp(40px, 5vw, 62px);
       font-weight: 300;
+      line-height: 1.1;
+      color: var(--ivory);
+      text-align: center;
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .philosophy-v2-intro {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--ivory);
+      opacity: 0.7;
+      max-width: 640px;
+      margin: 0 auto 64px;
+    }
+    .beliefs-grid-v2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      margin-bottom: 56px;
+    }
+    .belief-card-v2 {
+      background: rgba(255,255,255,0.06);
+      padding: 48px 52px;
+      border-top: 3px solid var(--gold);
+      transition: background 0.2s ease;
+    }
+    .belief-card-v2:hover { background: rgba(255,255,255,0.1); }
+    .belief-card-v2 p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: var(--ivory);
+    }
+    .belief-card-v2 p::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 20px;
+    }
+    .philosophy-v2-closing {
+      text-align: center;
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--ivory);
+      opacity: 0.65;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .testimonial-cards {
+    /* ─── PATHWAYS ─────────────────────────────────────────────────────────── */
+    .pathways-v2 {
+      background: var(--ivory);
+      padding: 112px 40px;
+    }
+    .pathways-v2-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .pathways-v2-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .pathways-v2-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--plum);
+      margin-bottom: 14px;
+    }
+    .pathways-v2-sub {
+      font-size: 17px;
+      color: var(--charcoal);
+      opacity: 0.6;
+    }
+    .pathway-cards-v2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .pc-v2 {
+      border-radius: 4px;
+      padding: 44px 36px 40px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pc-v2:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 44px rgba(44,37,32,0.13);
+    }
+    .pc-learn  { background: var(--ivory); border: 1.5px solid rgba(196,152,74,0.3); border-top: 4px solid var(--gold); }
+    .pc-quiz   { background: var(--plum);  border-top: 4px solid var(--gold); }
+    .pc-fix    { background: var(--plum);  border-top: 4px solid var(--gold); }
+    .pc-imh    { background: var(--terra); border-top: 4px solid rgba(250,245,239,0.45); }
+    .pc-v2-num {
+      font-family: var(--serif);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .pc-learn .pc-v2-num { color: var(--gold); }
+    .pc-quiz  .pc-v2-num { color: rgba(196,152,74,0.8); }
+    .pc-fix   .pc-v2-num { color: rgba(196,152,74,0.8); }
+    .pc-imh   .pc-v2-num { color: rgba(250,245,239,0.65); }
+    .pc-v2-title {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2vw, 28px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .pc-learn .pc-v2-title { color: var(--plum); }
+    .pc-quiz  .pc-v2-title { color: var(--ivory); }
+    .pc-fix   .pc-v2-title { color: var(--ivory); }
+    .pc-imh   .pc-v2-title { color: var(--ivory); }
+    .pc-v2-body {
+      font-size: 14.5px;
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 28px;
+    }
+    .pc-learn .pc-v2-body { color: var(--charcoal); opacity: 0.78; }
+    .pc-quiz  .pc-v2-body { color: var(--ivory); opacity: 0.72; }
+    .pc-fix   .pc-v2-body { color: var(--ivory); opacity: 0.72; }
+    .pc-imh   .pc-v2-body { color: var(--ivory); opacity: 0.85; }
+    .pc-v2-link {
+      font-size: 12.5px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.15s;
+    }
+    .pc-v2-link:hover { gap: 9px; }
+    .pc-learn .pc-v2-link { color: var(--terra); }
+    .pc-quiz  .pc-v2-link { color: var(--ivory); opacity: 0.85; }
+    .pc-fix   .pc-v2-link { color: var(--ivory); opacity: 0.85; }
+    .pc-imh   .pc-v2-link { color: var(--ivory); opacity: 0.85; }
+    .pc-fix   .pc-v2-link:hover,
+    .pc-imh   .pc-v2-link:hover { opacity: 1; }
+
+    /* ─── SOCIAL PROOF ─────────────────────────────────────────────────────── */
+    .social-proof {
+      background: var(--terra);
+      padding: 96px 40px;
+      text-align: center;
+    }
+    .social-proof-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .social-proof-label {
+      color: rgba(250,245,239,0.6);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .social-proof-heading {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ivory);
+      margin-bottom: 24px;
+      letter-spacing: -0.01em;
+    }
+    .social-proof-body {
+      font-size: 18px;
+      line-height: 1.8;
+      color: var(--ivory);
+      opacity: 0.8;
+    }
+
+    /* ─── TESTIMONIALS ─────────────────────────────────────────────────────── */
+    .testimonials-v2 {
+      background: var(--ivory);
+      padding: 112px 40px;
+    }
+    .testimonials-v2-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .testimonials-v2-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .testimonials-v2-label {
+      color: var(--terra);
+      display: block;
+      margin-bottom: 14px;
+    }
+    .testimonials-v2-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(30px, 3.5vw, 46px);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.2;
+      color: var(--plum);
+    }
+    .tcard-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
-    .testimonial-card {
-      background: var(--ivory);
+    .tcard {
+      padding: 48px 40px 44px;
+      background: var(--sand);
       border-radius: 4px;
-      padding: 44px 40px;
-      box-shadow: 0 2px 12px rgba(44,37,32,0.06);
+      display: flex;
+      flex-direction: column;
     }
-
-    .quote-mark {
-      font-family: var(--head-font);
-      font-size: 64px;
+    .tcard-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 88px;
       font-weight: 300;
       color: var(--gold);
-      line-height: 0.6;
+      line-height: 0.75;
       margin-bottom: 24px;
       display: block;
+      flex-shrink: 0;
     }
-
-    .testimonial-text {
+    .tcard-text {
       font-size: 16px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: var(--charcoal);
       opacity: 0.85;
-      margin-bottom: 28px;
       font-style: italic;
+      flex: 1;
+      margin-bottom: 32px;
     }
-
-    .testimonial-attr {
+    .tcard-rule {
+      display: block;
+      width: 28px;
+      height: 1.5px;
+      background: var(--gold);
+      margin-bottom: 10px;
+    }
+    .tcard-name {
       font-size: 14px;
       font-weight: 600;
       color: var(--plum);
       letter-spacing: 0.02em;
+      display: block;
     }
-
-    .testimonial-location {
+    .tcard-location {
       font-size: 13px;
-      font-weight: 400;
       color: var(--charcoal);
-      opacity: 0.5;
+      opacity: 0.45;
+      display: block;
+      margin-top: 2px;
     }
 
-    /* ─── CLOSING CTA ──────────────────────────────────────────────────── */
-    .closing-cta {
+    /* ─── CLOSING CTA ──────────────────────────────────────────────────────── */
+    .closing-v2 {
       background: linear-gradient(135deg, var(--plum) 0%, var(--terra) 100%);
-      padding: 120px 40px;
+      padding: 136px 40px;
       text-align: center;
     }
-
-    .closing-cta-inner {
-      max-width: 680px;
+    .closing-v2-inner {
+      max-width: 760px;
       margin: 0 auto;
     }
-
-    .closing-heading {
-      font-family: var(--head-font);
-      font-size: clamp(38px, 5vw, 60px);
+    .closing-v2-headline {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(44px, 6vw, 76px);
       font-weight: 300;
-      line-height: 1.15;
+      line-height: 1.1;
       color: var(--ivory);
-      margin-bottom: 20px;
+      letter-spacing: -0.015em;
+      margin-bottom: 24px;
     }
-
-    .closing-subhead {
-      font-size: 17px;
+    .closing-v2-headline em {
+      font-style: italic;
+    }
+    .closing-v2-sub {
+      font-size: 18px;
+      line-height: 1.75;
       color: var(--ivory);
       opacity: 0.75;
-      margin-bottom: 48px;
-      line-height: 1.65;
+      margin-bottom: 52px;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .closing-v2-btn {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 17px 44px;
+      background: transparent;
+      color: var(--ivory);
+      border: 1.5px solid rgba(250,245,239,0.55);
+      border-radius: 40px;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .closing-v2-btn:hover {
+      background: var(--ivory);
+      color: var(--plum);
+      border-color: var(--ivory);
     }
 
-    /* ─── FOOTER ───────────────────────────────────────────────────────── */
+    /* ─── FOOTER ───────────────────────────────────────────────────────────── */
     .footer {
       background: var(--charcoal);
       padding: 72px 40px 40px;
     }
-
-    .footer-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-    }
-
+    .footer-inner { max-width: 1160px; margin: 0 auto; }
     .footer-top {
       display: grid;
       grid-template-columns: 1.6fr 1fr 1.2fr;
@@ -602,38 +635,23 @@
       border-bottom: 1px solid rgba(250,245,239,0.1);
       margin-bottom: 36px;
     }
-
-    .footer-col-group {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .footer-brand {}
-
     .footer-logo {
-      font-family: var(--head-font);
+      font-family: var(--serif);
       font-size: 22px;
       font-weight: 600;
       color: var(--ivory);
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
-
     .footer-tagline {
-      font-family: var(--head-font);
+      font-family: var(--serif);
       font-style: italic;
       font-size: 15px;
       color: var(--ivory);
       opacity: 0.5;
-      margin-bottom: 28px;
-      line-height: 1.5;
+      line-height: 1.6;
+      margin-bottom: 24px;
     }
-
-    .social-links {
-      display: flex;
-      gap: 16px;
-    }
-
+    .social-links { display: flex; gap: 12px; }
     .social-link {
       width: 36px;
       height: 36px;
@@ -642,17 +660,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
       color: var(--ivory);
       opacity: 0.6;
-      transition: opacity 0.2s, border-color 0.2s;
-      font-size: 13px;
-      font-weight: 600;
+      transition: opacity 0.15s;
     }
-    .social-link:hover {
-      opacity: 1;
-      border-color: rgba(250,245,239,0.5);
-    }
-
+    .social-link:hover { opacity: 1; }
+    .footer-col-group { display: flex; gap: 48px; }
     .footer-col-title {
       font-size: 11px;
       font-weight: 600;
@@ -662,13 +677,7 @@
       opacity: 0.35;
       margin-bottom: 20px;
     }
-
-    .footer-col ul {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
     .footer-col ul li a {
       font-size: 14.5px;
       font-weight: 400;
@@ -677,24 +686,17 @@
       transition: opacity 0.15s;
     }
     .footer-col ul li a:hover { opacity: 1; }
-
     .footer-bottom {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
-
     .footer-copy {
       font-size: 13px;
       color: var(--ivory);
       opacity: 0.3;
     }
-
-    .footer-legal {
-      display: flex;
-      gap: 24px;
-    }
-
+    .footer-legal { display: flex; gap: 24px; }
     .footer-legal a {
       font-size: 13px;
       color: var(--ivory);
@@ -703,12 +705,6 @@
     }
     .footer-legal a:hover { opacity: 0.65; }
 
-    /* ─── SECTION DIVIDER ──────────────────────────────────────────────── */
-    .divider {
-      height: 1px;
-      background: rgba(92,45,79,0.08);
-    }
-
   </style>
 </head>
 <body>
@@ -716,9 +712,8 @@
   <!-- ── NAVIGATION ─────────────────────────────────────────────────────── -->
   <header class="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">Nicole Jardim</a>
+      <a href="homepage-v2.html" class="nav-logo">Nicole Jardim</a>
       <nav class="nav-links">
-        
         <a href="collective.html">Fix Your Period</a>
         <a href="imh.html">Professional Training</a>
         <div class="nav-dropdown">
@@ -736,27 +731,31 @@
   </header>
 
   <!-- ── HERO ───────────────────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-content">
-        <span class="label hero-eyebrow">Women's Hormonal Health</span>
-        <h1 class="hero-headline">Make Sense of<br>Your Cycle</h1>
-        <p class="hero-subhead">
-          Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
-        </p>
-        <a href="start-here.html" class="btn btn-primary">Start Here &rarr;</a>
-      </div>
-      <div class="hero-image">
-        <img src="images/nicole-1.jpg" alt="Nicole Jardim" />
-      </div>
+  <section class="hero-v2">
+
+    <!-- Text: overlaid left, z-index above photo -->
+    <div class="hero-v2-left">
+      <h1 class="hero-v2-headline">
+        Make Sense<br><em>of Your Cycle.</em>
+      </h1>
+      <p class="hero-v2-sub">
+        Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
+      </p>
+      <a href="start-here.html" class="hero-cta-primary">Start Here &rarr;</a>
     </div>
+
+    <!-- Photo: absolutely positioned right, bleeds into text area -->
+    <div class="hero-v2-photo">
+      <img src="images/nicole-5.jpg" alt="Nicole Jardim" />
+    </div>
+
   </section>
 
   <!-- ── AS SEEN IN ─────────────────────────────────────────────────────── -->
   <div class="media-bar">
     <div class="media-bar-inner">
       <span class="label media-bar-label">As seen in</span>
-      <div class="media-logos">
+      <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
         <span class="media-logo-item">The Guardian</span>
         <span class="media-logo-item">Well+Good</span>
         <span class="media-logo-item">mindbodygreen</span>
@@ -768,114 +767,166 @@
   </div>
 
   <!-- ── MEET NICOLE ────────────────────────────────────────────────────── -->
-  <section class="meet-nicole">
-    <div class="meet-nicole-inner">
-      <div class="meet-image">
-        <img src="images/nicole-3.jpg" alt="Nicole Jardim — candid" />
+  <section class="meet-v2">
+    <div class="meet-v2-inner">
+
+      <div class="meet-v2-photo">
+        <img src="images/nicole-smoothie-crop.jpg" alt="Nicole Jardim" />
       </div>
-      <div class="meet-content">
-        <span class="label">Meet Nicole Jardim</span>
-        <h2 class="meet-heading">The educator women's health has been waiting for</h2>
-        <p class="meet-body">
+
+      <div class="meet-v2-content">
+        <span class="label meet-v2-label">Meet Nicole Jardim</span>
+
+        <blockquote class="meet-v2-pullquote">
+          "I've been where you are."
+        </blockquote>
+
+        <p class="meet-v2-body">
           Nicole Jardim is a women's health educator, writer, and speaker focused on menstrual and hormonal health. Her work centers on helping women understand how their bodies actually function, so they can make informed, empowered decisions about their health.
         </p>
-        <p class="meet-body">
-          She is the author of <em>Fix Your Period</em>, the creator of the Fix Your Period Collective, and the founder of the Institute for Menstrual Health — a global education platform training practitioners and health professionals worldwide. Her work blends evidence-informed education with body literacy, nuance, and real-life context.
+        <p class="meet-v2-body">
+          She is the author of <em>Fix Your Period</em>, the creator of the Fix Your Period Collective, and the founder of the Institute for Menstrual Health — a global education platform training practitioners and health professionals in menstrual and hormonal health.
         </p>
-        <a href="about.html" class="btn btn-outline">Read Nicole's Story &rarr;</a>
+        <p class="meet-v2-body">
+          Nicole's work has reached tens of thousands of women worldwide and has been featured across major media and cultural platforms. Her approach blends evidence-informed education with body literacy, nuance, and real-life context.
+        </p>
+
+        <a href="about.html" class="meet-v2-cta">Read Nicole's Story &rarr;</a>
       </div>
+
     </div>
   </section>
-
-  <div class="divider"></div>
 
   <!-- ── PHILOSOPHY ─────────────────────────────────────────────────────── -->
-  <section class="philosophy">
-    <div class="philosophy-inner">
-      <h2 class="philosophy-heading">A Different Way of Thinking About Menstrual Health</h2>
-      <div class="beliefs-grid">
-        <div class="belief-card">
-          <p>Your cycle is a vital sign, not an inconvenience.</p>
+  <section class="philosophy-v2">
+    <div class="philosophy-v2-inner">
+
+      <h2 class="philosophy-v2-heading">A Different Way of Thinking<br>About Menstrual Health</h2>
+
+      <p class="philosophy-v2-intro">
+        Menstrual and hormonal symptoms aren't random, and they're not something you're meant to &ldquo;just live with.&rdquo;
+      </p>
+
+      <div class="beliefs-grid-v2">
+        <div class="belief-card-v2">
+          <p>Your cycle is a vital sign, not an inconvenience</p>
         </div>
-        <div class="belief-card">
-          <p>Symptoms are signals worth understanding, not suppressing.</p>
+        <div class="belief-card-v2">
+          <p>Symptoms are signals worth understanding, not suppressing</p>
         </div>
-        <div class="belief-card">
-          <p>There is no one-size-fits-all solution.</p>
+        <div class="belief-card-v2">
+          <p>There is no one-size-fits-all solution</p>
         </div>
-        <div class="belief-card">
-          <p>Education and body literacy are foundational to lasting change.</p>
+        <div class="belief-card-v2">
+          <p>Education and body literacy are foundational to lasting change</p>
         </div>
+      </div>
+
+      <p class="philosophy-v2-closing">
+        Nicole's work is here to help you make sense of what your body is communicating — and to support you in choosing what comes next.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ── HOW CAN I HELP YOU ─────────────────────────────────────────────── -->
+  <section class="pathways-v2">
+    <div class="pathways-v2-inner">
+
+      <div class="pathways-v2-header">
+        <h2 class="pathways-v2-heading">How Can I Help You Right Now?</h2>
+        <p class="pathways-v2-sub">Whether you're just beginning to ask questions or looking for deeper support, there's a clear place to start.</p>
+      </div>
+
+      <div class="pathway-cards-v2">
+
+        <div class="pc-v2 pc-learn">
+          <div class="pc-v2-num">01</div>
+          <h3 class="pc-v2-title">Learn &amp; Understand</h3>
+          <p class="pc-v2-body">Foundational education about menstrual cycles, hormones, and common symptoms.</p>
+          <a href="resources.html" class="pc-v2-link">Explore articles &amp; resources &rarr;</a>
+        </div>
+
+        <div class="pc-v2 pc-quiz">
+          <div class="pc-v2-num">02</div>
+          <h3 class="pc-v2-title">Get Personalized Guidance</h3>
+          <p class="pc-v2-body">Understand what your symptoms may be pointing to and where to begin.</p>
+          <a href="https://fixyourperiod.app/quiz" target="_blank" class="pc-v2-link">Start with the Period Quiz &rarr;</a>
+        </div>
+
+        <div class="pc-v2 pc-imh">
+          <div class="pc-v2-num">03</div>
+          <h3 class="pc-v2-title">Educate &amp; Specialize</h3>
+          <p class="pc-v2-body">Professional training and continuing education in menstrual and hormonal health through the Institute for Menstrual Health.</p>
+          <a href="https://instituteformenstrualhealth.com/" target="_blank" class="pc-v2-link">Visit the Institute &rarr;</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- ── PATHWAYS ───────────────────────────────────────────────────────── -->
-  <section class="pathways">
-    <div class="pathways-inner">
-      <div class="section-header">
-        <h2 class="section-heading">How Can I Help You Right Now?</h2>
-        <p class="section-subhead">Whether you're just beginning to ask questions or looking for deeper support, there's a clear place to start.</p>
-      </div>
-      <div class="pathway-cards">
-        <div class="pathway-card">
-          <div class="pathway-number">01 &mdash; Learn</div>
-          <div class="pathway-title">Learn &amp; Understand</div>
-          <p class="pathway-body">Foundational education about menstrual cycles, hormones, and common symptoms — free and always accessible.</p>
-          <a href="resources.html" class="pathway-link">Explore Articles &amp; Resources &rarr;</a>
-        </div>
-        <div class="pathway-card">
-          <div class="pathway-number">02 &mdash; Discover</div>
-          <div class="pathway-title">Get Personalized Guidance</div>
-          <p class="pathway-body">Understand what your symptoms may be pointing to and where to begin — with a free personalized Period Quiz.</p>
-          <a href="https://fixyourperiod.app/quiz" target="_blank" class="pathway-link">Start with the Period Quiz &rarr;</a>
-        </div>
-        <div class="pathway-card">
-          <div class="pathway-number">03 &mdash; Lead</div>
-          <div class="pathway-title">Educate &amp; Specialize</div>
-          <p class="pathway-body">Professional training and certification in menstrual and hormonal health for practitioners, through the Institute for Menstrual Health.</p>
-          <a href="https://instituteformenstrualhealth.com/" target="_blank" class="pathway-link">Visit the Institute &rarr;</a>
-        </div>
-      </div>
+  <!-- ── SOCIAL PROOF ───────────────────────────────────────────────────── -->
+  <section class="social-proof">
+    <div class="social-proof-inner">
+      <span class="label social-proof-label">Reach &amp; Impact</span>
+      <h2 class="social-proof-heading">Trusted by Tens of Thousands Worldwide</h2>
+      <p class="social-proof-body">Nicole's work has supported women across the globe in understanding their cycles, advocating for themselves, and approaching their health with more clarity and confidence.</p>
     </div>
   </section>
 
   <!-- ── TESTIMONIALS ───────────────────────────────────────────────────── -->
-  <section class="testimonials">
-    <div class="testimonials-inner">
-      <div class="section-header">
-        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">What Women Are Saying</span>
-        <h2 class="section-heading">Trusted by tens of thousands<br>of women worldwide</h2>
+  <section class="testimonials-v2">
+    <div class="testimonials-v2-inner">
+
+      <div class="testimonials-v2-header">
+        <span class="label testimonials-v2-label">Women's voices</span>
+        <h2 class="testimonials-v2-heading">Here's What Women Are Saying<br>About Working With Nicole</h2>
       </div>
-      <div class="testimonial-cards">
-        <div class="testimonial-card">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="testimonial-text">Nicole's work completely changed how I understand my own body. For the first time, I feel like I actually have a roadmap — not just a list of symptoms to manage.</p>
-          <div class="testimonial-attr">Sarah M.</div>
-          <div class="testimonial-location">London, UK</div>
+
+      <div class="tcard-grid">
+
+        <div class="tcard">
+          <span class="tcard-quote">&ldquo;</span>
+          <p class="tcard-text">This book changed how I think about my body entirely. For the first time, my symptoms made sense — and I actually had a plan for addressing them.</p>
+          <div>
+            <span class="tcard-rule"></span>
+            <span class="tcard-name">Rachel T.</span>
+            <span class="tcard-location">Verified Reader</span>
+          </div>
         </div>
-        <div class="testimonial-card">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="testimonial-text">I spent years being dismissed by doctors. Nicole's approach — evidence-based, clear, and compassionate — finally gave me the language and the tools to advocate for myself.</p>
-          <div class="testimonial-attr">Dr. Priya K.</div>
-          <div class="testimonial-location">Toronto, Canada</div>
+
+        <div class="tcard">
+          <span class="tcard-quote">&ldquo;</span>
+          <p class="tcard-text">Nicole explains complex hormonal concepts in a way that's clear, practical, and never overwhelming. I've recommended her work to every woman I know.</p>
+          <div>
+            <span class="tcard-rule"></span>
+            <span class="tcard-name">Megan S.</span>
+            <span class="tcard-location">Verified Reader</span>
+          </div>
         </div>
-        <div class="testimonial-card">
-          <span class="quote-mark">&ldquo;</span>
-          <p class="testimonial-text">The IMH certification transformed my practice. My clients see results I couldn't deliver before, and I finally feel like the expert in the room I always wanted to be.</p>
-          <div class="testimonial-attr">Jessica R.</div>
-          <div class="testimonial-location">New York, USA</div>
+
+        <div class="tcard">
+          <span class="tcard-quote">&ldquo;</span>
+          <p class="tcard-text">I wish I'd found Nicole's work years ago. It's become my go-to reference — I return to it again and again as my health evolves.</p>
+          <div>
+            <span class="tcard-rule"></span>
+            <span class="tcard-name">Amara L.</span>
+            <span class="tcard-location">Verified Reader</span>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ── CLOSING CTA ────────────────────────────────────────────────────── -->
-  <section class="closing-cta">
-    <div class="closing-cta-inner">
-      <h2 class="closing-heading">You don't need to have everything figured out to begin</h2>
-      <p class="closing-subhead">Whether you've been searching for answers for years or just started paying attention to your cycle — there's a clear place to start.</p>
-      <a href="start-here.html" class="btn btn-outline-ivory">Start Here &rarr;</a>
+  <section class="closing-v2">
+    <div class="closing-v2-inner">
+      <h2 class="closing-v2-headline">
+        You don't need to have everything<br>figured out <em>to begin.</em>
+      </h2>
+      <p class="closing-v2-sub">Whether you're just starting to pay attention to your cycle or you've been searching for real answers for years — there's a clear place to start.</p>
+      <a href="start-here.html" class="closing-v2-btn">Start Here &rarr;</a>
     </div>
   </section>
 

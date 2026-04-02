@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find '/Users/hadenware/Desktop/NJ Website' -type f -name *.md -o -name *.txt -o -name *.pdf -o -name *.docx)",
+      "Bash(pandoc \"NJ Website/Nicolejardim.com Overview.docx\" -t plain)",
+      "Bash(python3:*)",
+      "Bash(pandoc \"/Users/hadenware/Desktop/NJ Website/Website Copy/Homepage.docx\" -t markdown)",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -q \"/Users/hadenware/Desktop/NJ Website/Website Copy/Homepage.docx\")",
+      "Bash(/tmp/extract_docx.sh \"/Users/hadenware/Desktop/NJ Website/Website Copy/Project Plan.docx\")",
+      "Bash(/tmp/extract_docx.sh \"/Users/hadenware/Desktop/NJ Website/Nicolejardim.com Overview.docx\")",
+      "Bash(head -5 find ~ -maxdepth 4 -type d -name *NICOLE* -o -name '*Media Kit*')",
+      "Bash(ls ~/Downloads/Nicole_*.jpg ~/Downloads/Nicole_*.jpeg)",
+      "Bash(mv ~/Downloads/Nicole_1.jpg \"/Users/hadenware/Desktop/NJ Website/images/nicole-1.jpg\")",
+      "Bash(mv ~/Downloads/Nicole_3.jpg \"/Users/hadenware/Desktop/NJ Website/images/nicole-3.jpg\")",
+      "Bash(mv ~/Downloads/Nicole_5.jpg \"/Users/hadenware/Desktop/NJ Website/images/nicole-5.jpg\")",
+      "Bash(pandoc \"/Users/hadenware/Desktop/NJ Website/Website Copy/Start Here Page.docx\" -t plain)",
+      "WebFetch(domain:fixyourperiod.app)",
+      "Bash(pandoc --track-changes=all \"/Users/hadenware/Desktop/NJ Website/Website Copy/About page.docx\" -o /tmp/about_page.md)",
+      "Read(//tmp/**)",
+      "Bash(textutil -convert txt -stdout \"/Users/hadenware/Desktop/NJ Website/Website Copy/About page.docx\")"
+    ]
+  }
+}

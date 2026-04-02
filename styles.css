@@ -14,6 +14,7 @@
   --rose:      #D4A097;
   --body-font: 'DM Sans', sans-serif;
   --head-font: 'Cormorant Garamond', serif;
+  --display:   'Fraunces', serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -50,7 +51,7 @@ ul { list-style: none; }
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 14px 34px;
-  border-radius: 4px;
+  border-radius: 40px;
   cursor: pointer;
   transition: all 0.2s ease;
   border: 1.5px solid transparent;
@@ -142,7 +143,7 @@ ul { list-style: none; }
 }
 .page-hero .label { color: var(--terra); display: block; margin-bottom: 20px; }
 .page-hero-heading {
-  font-family: var(--head-font);
+  font-family: var(--display);
   font-size: clamp(44px, 6vw, 72px);
   font-weight: 300; line-height: 1.08;
   color: var(--plum); margin-bottom: 24px;
@@ -152,6 +153,15 @@ ul { list-style: none; }
   color: var(--charcoal); opacity: 0.8;
   max-width: 620px; margin: 0 auto 40px;
 }
+.page-hero-bold {
+  background: var(--plum);
+  padding: 96px 40px 80px;
+  border-bottom: none;
+}
+.page-hero-bold .page-hero-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.page-hero-bold .label { color: var(--gold); display: block; margin-bottom: 20px; }
+.page-hero-bold .page-hero-heading { color: var(--ivory); }
+.page-hero-bold .page-hero-sub { color: rgba(250,245,239,0.78); }
 
 /* ─── SECTION SHARED ──────────────────────────────────────────────────── */
 .section-pad { padding: 96px 40px; }
@@ -161,7 +171,7 @@ ul { list-style: none; }
 
 .section-header { text-align: center; margin-bottom: 56px; }
 .section-heading {
-  font-family: var(--head-font);
+  font-family: var(--display);
   font-size: clamp(34px, 4vw, 50px);
   font-weight: 400; line-height: 1.15;
   color: var(--plum); margin-bottom: 16px;
@@ -174,6 +184,7 @@ ul { list-style: none; }
 .bg-ivory  { background: var(--ivory); }
 .bg-sand   { background: var(--sand); }
 .bg-plum   { background: var(--plum); }
+.bg-terra  { background: var(--terra); }
 .bg-gradient { background: linear-gradient(135deg, var(--plum) 0%, var(--terra) 100%); }
 
 /* ─── PROSE BODY TEXT ──────────────────────────────────────────────────── */
@@ -185,7 +196,7 @@ ul { list-style: none; }
 }
 .prose p:last-child { margin-bottom: 0; }
 .prose h3 {
-  font-family: var(--head-font); font-size: 28px; font-weight: 600;
+  font-family: var(--display); font-size: 28px; font-weight: 600;
   color: var(--plum); margin: 40px 0 16px; line-height: 1.2;
 }
 .prose ul {
@@ -216,7 +227,7 @@ ul { list-style: none; }
   color: var(--gold); margin-bottom: 16px;
 }
 .phase-card-label h3 {
-  font-family: var(--head-font); font-size: 32px; font-weight: 400;
+  font-family: var(--display); font-size: 32px; font-weight: 400;
   color: var(--ivory); line-height: 1.2; margin-bottom: 8px;
 }
 .phase-card-label p {
@@ -224,7 +235,7 @@ ul { list-style: none; }
 }
 .phase-card-body { padding: 56px 64px; }
 .phase-card-body h4 {
-  font-family: var(--head-font); font-size: 22px; font-weight: 600;
+  font-family: var(--display); font-size: 22px; font-weight: 600;
   color: var(--plum); margin-bottom: 12px;
 }
 .phase-card-body p {
@@ -250,7 +261,7 @@ ul { list-style: none; }
   border-top: 3px solid var(--gold);
 }
 .feature-card h4 {
-  font-family: var(--head-font); font-size: 22px; font-weight: 600;
+  font-family: var(--display); font-size: 22px; font-weight: 600;
   color: var(--plum); margin-bottom: 12px;
 }
 .feature-card p {
@@ -274,7 +285,7 @@ ul { list-style: none; }
 .split-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .split-text .label { color: var(--terra); display: block; margin-bottom: 18px; }
 .split-heading {
-  font-family: var(--head-font); font-size: clamp(32px, 3.5vw, 46px);
+  font-family: var(--display); font-size: clamp(32px, 3.5vw, 46px);
   font-weight: 400; line-height: 1.15; color: var(--plum); margin-bottom: 24px;
 }
 .split-body {
@@ -295,7 +306,7 @@ ul { list-style: none; }
   text-align: center;
 }
 .credential-num {
-  font-family: var(--head-font); font-size: 38px; font-weight: 300;
+  font-family: var(--display); font-size: 38px; font-weight: 300;
   color: var(--ivory); line-height: 1;
 }
 .credential-desc {
@@ -325,7 +336,7 @@ ul { list-style: none; }
 .closing-cta { padding: 120px 40px; text-align: center; }
 .closing-cta-inner { max-width: 680px; margin: 0 auto; }
 .closing-heading {
-  font-family: var(--head-font); font-size: clamp(38px, 5vw, 60px);
+  font-family: var(--display); font-size: clamp(38px, 5vw, 60px);
   font-weight: 300; line-height: 1.15; color: var(--ivory); margin-bottom: 20px;
 }
 .closing-subhead {
