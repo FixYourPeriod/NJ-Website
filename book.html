@@ -26,52 +26,13 @@
       align-items: center;
       justify-content: center;
     }
-    .book-cover-placeholder {
-      width: 340px;
-      height: 460px;
-      background: linear-gradient(145deg, var(--plum) 0%, var(--plum-mid) 100%);
-      border-radius: 4px 12px 12px 4px;
+    .book-cover-img {
+      max-width: 340px;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
       box-shadow: -6px 6px 0 rgba(0,0,0,0.12), 12px 20px 40px rgba(92,45,79,0.25);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 48px 36px;
-      text-align: center;
-      position: relative;
-    }
-    .book-cover-placeholder::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 8px;
-      background: rgba(0,0,0,0.18);
-      border-radius: 4px 0 0 4px;
-    }
-    .book-cover-placeholder .book-title {
-      font-family: var(--head-font);
-      font-size: 28px;
-      font-weight: 600;
-      color: var(--ivory);
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-    .book-cover-placeholder .book-subtitle {
-      font-family: var(--head-font);
-      font-size: 13px;
-      font-style: italic;
-      color: var(--ivory);
-      opacity: 0.6;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
-    .book-cover-placeholder .book-author {
-      font-family: var(--body-font);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
+      display: block;
     }
     .book-content { max-width: 520px; }
     .book-content .label { color: var(--terra); display: block; margin-bottom: 18px; }
@@ -171,7 +132,6 @@
       <a href="homepage.html" class="nav-logo">Nicole Jardim</a>
       <nav class="nav-links">
         <a href="homepage.html">Home</a>
-        <a href="start-here.html">Start Here</a>
         <a href="collective.html">Fix Your Period</a>
         <a href="imh.html">Professional Training</a>
         <div class="nav-dropdown">
@@ -192,11 +152,7 @@
   <section class="book-hero">
     <div class="book-hero-inner">
       <div class="book-cover-wrap">
-        <div class="book-cover-placeholder">
-          <div class="book-title">Fix Your Period</div>
-          <div class="book-subtitle">Six Weeks to Banish Bloating, Conquer Cramps, Manage Moodiness, and Ignite Lasting Hormone Balance</div>
-          <div class="book-author">Nicole Jardim</div>
-        </div>
+        <img src="images/book-front.jpg" alt="Fix Your Period by Nicole Jardim" class="book-cover-img" />
       </div>
       <div class="book-content">
         <span class="label">The Book</span>
@@ -205,7 +161,7 @@
         <p class="book-sub">If you're dealing with period symptoms that feel confusing, frustrating, or dismissed by your doctor, this is where to begin. This book was written to help you understand what your body is communicating — and what you can do next.</p>
         <div class="book-btns">
           <a href="#" class="btn btn-primary">Order the Book &rarr;</a>
-          <a href="collective.html" class="btn btn-outline">Explore the Collective</a>
+          <a href="https://fixyourperiod.app/quiz" target="_blank" class="btn btn-outline">Take the Period Quiz</a>
         </div>
       </div>
     </div>
@@ -303,11 +259,10 @@
         <div>
           <span class="label" style="color:var(--terra);display:block;margin-bottom:18px;">What Comes Next</span>
           <h2 class="split-heading">Ready to go deeper?</h2>
-          <p class="split-body">The book is designed to give you a strong foundation. If you want more personalized guidance, deeper support, and help applying this work to your specific situation, the next step is inside the Fix Your Period Collective.</p>
-          <p class="split-body">There, you'll find structured education, ongoing support, and a clear pathway forward based on your symptoms and goals.</p>
+          <p class="split-body">The book is designed to give you a strong foundation. If you want more personalized guidance and a protocol tailored to your specific symptoms, the next step is the Fix Your Period app.</p>
+          <p class="split-body">Start with the free quiz — your answers generate a personalized roadmap built around your cycle, symptoms, and lifestyle.</p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;">
-            <a href="collective.html" class="btn btn-primary">Explore the Collective &rarr;</a>
-            <a href="https://fixyourperiod.app/quiz" target="_blank" class="btn btn-outline">Take the Period Quiz</a>
+            <a href="https://fixyourperiod.app/quiz" target="_blank" class="btn btn-primary">Take the Free Period Quiz &rarr;</a>
           </div>
         </div>
         <div style="background:var(--sand);border-radius:6px;padding:48px 44px;">

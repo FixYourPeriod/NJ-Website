@@ -29,7 +29,14 @@
       justify-content: center;
     }
     .resource-card-thumb.thumb-book {
-      background: linear-gradient(145deg, var(--plum) 0%, var(--plum-mid) 100%);
+      background: var(--ivory);
+      overflow: hidden;
+    }
+    .resource-card-thumb.thumb-book img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      display: block;
     }
     .resource-card-thumb.thumb-articles {
       background: var(--sand);
@@ -134,7 +141,6 @@
       <a href="homepage.html" class="nav-logo">Nicole Jardim</a>
       <nav class="nav-links">
         <a href="homepage.html">Home</a>
-        <a href="start-here.html">Start Here</a>
         <a href="collective.html">Fix Your Period</a>
         <a href="imh.html">Professional Training</a>
         <div class="nav-dropdown">
@@ -168,9 +174,7 @@
         <!-- Book -->
         <div class="resource-card">
           <div class="resource-card-thumb thumb-book">
-            <div class="book-spine-mini">
-              <span>Fix Your Period</span>
-            </div>
+            <img src="images/book-front.jpg" alt="Fix Your Period by Nicole Jardim" />
           </div>
           <div class="resource-card-body">
             <span class="label">The Book</span>
@@ -227,12 +231,8 @@
           <p class="split-body">Whether you're brand new to hormonal health or have been searching for answers for years, the book gives you the context, the framework, and a clear plan to follow.</p>
           <a href="book.html" class="btn btn-primary">Learn More About the Book &rarr;</a>
         </div>
-        <div style="background:linear-gradient(145deg,var(--plum) 0%,var(--plum-mid) 100%);border-radius:8px;padding:64px 48px;display:flex;align-items:center;justify-content:center;">
-          <div style="text-align:center;">
-            <div style="font-family:var(--head-font);font-size:32px;font-weight:600;color:var(--ivory);line-height:1.2;margin-bottom:16px;">Fix Your Period</div>
-            <div style="font-family:var(--head-font);font-size:14px;font-style:italic;color:var(--ivory);opacity:0.6;line-height:1.5;margin-bottom:20px;">Six Weeks to Banish Bloating, Conquer Cramps, Manage Moodiness, and Ignite Lasting Hormone Balance</div>
-            <div style="font-family:var(--body-font);font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);">Nicole Jardim</div>
-          </div>
+        <div style="display:flex;align-items:center;justify-content:center;background:var(--sand);border-radius:8px;overflow:hidden;padding:40px;">
+          <img src="images/book-side.png" alt="Fix Your Period by Nicole Jardim" style="max-height:320px;width:auto;border-radius:4px;box-shadow:12px 20px 40px rgba(92,45,79,0.2);" />
         </div>
       </div>
     </div>
