@@ -295,7 +295,7 @@ ul { list-style: none; }
 
 /* ─── CREDENTIAL STRIP ─────────────────────────────────────────────────── */
 .credential-strip {
-  background: var(--plum); padding: 20px 40px;
+  background: var(--charcoal); padding: 32px 40px;
 }
 .credential-strip-inner {
   max-width: 1160px; margin: 0 auto;
