@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Period Party Podcast — Nicole Jardim</title>
+  <meta name="description" content="The Period Party is Nicole Jardim's top-rated podcast featuring expert conversations about menstrual health, hormonal balance, and understanding your cycle." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    /* ── PODCAST HERO ─────────────────────────────────────────────────── */
+    .podcast-hero {
+      background: var(--plum);
+      padding: 100px 40px 90px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .podcast-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(196,152,74,0.12) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 80%, rgba(181,90,58,0.1) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .podcast-hero-inner {
+      position: relative;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .podcast-hero .label {
+      color: var(--gold);
+      opacity: 1;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .podcast-hero-title {
+      font-family: var(--display);
+      font-size: clamp(52px, 8vw, 100px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--ivory);
+      line-height: 1.0;
+      margin-bottom: 8px;
+    }
+    .podcast-hero-subtitle {
+      font-family: var(--display);
+      font-size: clamp(22px, 3.5vw, 36px);
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .podcast-hero-desc {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--ivory);
+      opacity: 0.78;
+      max-width: 580px;
+      margin: 0 auto 40px;
+    }
+    .listen-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .listen-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 4px;
+      font-family: var(--body-font);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: opacity 0.15s;
+    }
+    .listen-link:hover { opacity: 0.8; }
+    .listen-link-apple {
+      background: var(--ivory);
+      color: var(--plum);
+    }
+    .listen-link-spotify {
+      background: rgba(255,255,255,0.12);
+      color: var(--ivory);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .listen-link-rss {
+      background: rgba(255,255,255,0.08);
+      color: var(--ivory);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* ── STATS STRIP ─────────────────────────────────────────────────── */
+    .podcast-stats {
+      background: var(--plum-dark);
+      padding: 22px 40px;
+    }
+    .podcast-stats-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .podcast-stat {
+      text-align: center;
+    }
+    .podcast-stat-num {
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      display: block;
+    }
+    .podcast-stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ivory);
+      opacity: 0.55;
+      margin-top: 4px;
+      display: block;
+    }
+    .podcast-stats-divider {
+      width: 1px;
+      height: 30px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ── ABOUT THE SHOW ───────────────────────────────────────────────── */
+    .about-show-img {
+      border-radius: 4px;
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .about-show-text .label {
+      display: block;
+      margin-bottom: 16px;
+    }
+    .about-show-text h2 {
+      font-family: var(--head-font);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 300;
+      color: var(--plum);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .about-show-text p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--charcoal);
+      opacity: 0.8;
+      margin-bottom: 16px;
+    }
+    .about-show-text p:last-of-type { margin-bottom: 0; }
+
+    /* ── EPISODE GRID ─────────────────────────────────────────────────── */
+    .episode-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 900px) {
+      .episode-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .episode-grid { grid-template-columns: 1fr; }
+    }
+    .episode-card {
+      background: var(--ivory);
+      border-radius: 4px;
+      padding: 30px 26px;
+      border-top: 3px solid var(--plum);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .episode-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .episode-number {
+      font-family: var(--body-font);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+    .episode-date {
+      font-size: 12px;
+      color: var(--charcoal);
+      opacity: 0.4;
+    }
+    .episode-card h3 {
+      font-family: var(--head-font);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--plum);
+      line-height: 1.25;
+    }
+    .episode-guest {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+    .episode-card p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--charcoal);
+      opacity: 0.72;
+      flex: 1;
+    }
+    .episode-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .episode-tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--plum);
+      background: rgba(92,45,79,0.08);
+      padding: 3px 10px;
+      border-radius: 40px;
+    }
+    .episode-link {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--plum);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.15s;
+      margin-top: 4px;
+    }
+    .episode-link:hover { gap: 9px; }
+
+    /* ── SECTION HEADER ───────────────────────────────────────────────── */
+    .episodes-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      gap: 40px;
+    }
+    .episodes-intro h2 {
+      font-family: var(--head-font);
+      font-size: clamp(30px, 3.5vw, 42px);
+      font-weight: 400;
+      color: var(--plum);
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .episodes-intro p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.7;
+      max-width: 480px;
+    }
+    .episode-count {
+      font-family: var(--head-font);
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--plum);
+      opacity: 0.15;
+      white-space: nowrap;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../homepage.html" class="nav-logo">Nicole Jardim</a>
+      <nav class="nav-links">
+        <a href="../collective.html">Fix Your Period</a>
+        <a href="../imh.html">Professional Training</a>
+        <div class="nav-dropdown">
+          <a href="../resources.html" class="nav-dropdown-trigger active">Resources</a>
+          <div class="nav-dropdown-menu">
+            <a href="../book.html">The Book</a>
+            <a href="../articles.html">Articles</a>
+            <a href="/podcast/" class="active">The Podcast</a>
+          </div>
+        </div>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../start-here.html" class="nav-cta">Start Here</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── PODCAST HERO ───────────────────────────────────────────────────── -->
+  <section class="podcast-hero">
+    <div class="podcast-hero-inner">
+      <span class="label">Hosted by Nicole Jardim</span>
+      <h1 class="podcast-hero-title">The Period Party</h1>
+      <p class="podcast-hero-subtitle">Podcast</p>
+      <p class="podcast-hero-desc">Honest, expert conversations about menstrual health, hormonal balance, and everything your body is trying to tell you through your cycle. New episodes every week.</p>
+      <div class="listen-links">
+        <a href="#" class="listen-link listen-link-apple">&#9654;&nbsp; Apple Podcasts</a>
+        <a href="#" class="listen-link listen-link-spotify">&#9654;&nbsp; Spotify</a>
+        <a href="#" class="listen-link listen-link-rss">RSS Feed</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS STRIP ────────────────────────────────────────────────────── -->
+  <div class="podcast-stats">
+    <div class="podcast-stats-inner">
+      <div class="podcast-stat">
+        <span class="podcast-stat-num">300+</span>
+        <span class="podcast-stat-label">Episodes</span>
+      </div>
+      <div class="podcast-stats-divider"></div>
+      <div class="podcast-stat">
+        <span class="podcast-stat-num">Top Rated</span>
+        <span class="podcast-stat-label">Women's Health Podcast</span>
+      </div>
+      <div class="podcast-stats-divider"></div>
+      <div class="podcast-stat">
+        <span class="podcast-stat-num">Weekly</span>
+        <span class="podcast-stat-label">New Episodes</span>
+      </div>
+      <div class="podcast-stats-divider"></div>
+      <div class="podcast-stat">
+        <span class="podcast-stat-num">Since 2015</span>
+        <span class="podcast-stat-label">On the Air</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT THE SHOW ─────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div class="split" style="align-items:center;">
+        <div class="split-img">
+          <img src="../images/nicole-about.jpg" alt="Nicole Jardim, host of The Period Party Podcast" class="about-show-img" />
+        </div>
+        <div class="split-text about-show-text">
+          <span class="label" style="color:var(--terra);">About the Show</span>
+          <h2>Periods, Hormones &amp; the Experts Who Get It</h2>
+          <p>The Period Party is a top-rated podcast hosted by Nicole Jardim — Certified Women's Health Coach and author of <em>Fix Your Period</em>. Each week, Nicole sits down with leading practitioners, researchers, and specialists from functional medicine, naturopathic medicine, nutrition, and beyond.</p>
+          <p>The conversations are honest, science-backed, and refreshingly direct. Expect deep dives into menstrual cycle health, hormonal imbalances, fertility, gut health, thyroid function, perimenopause, and the systems most conventional medicine overlooks. The goal is always the same: give you real information so you can make informed decisions about your own body.</p>
+          <p>Whether you're brand new to cycle health or years into your healing journey, there's an episode here for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ALL EPISODES ───────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner">
+      <div class="episodes-header">
+        <div class="episodes-intro">
+          <span class="label" style="color:var(--terra);display:block;margin-bottom:14px;">All Episodes</span>
+          <h2>Every Episode, Latest First</h2>
+          <p>Browse the full archive of Period Party episodes. Click any episode to read the show notes, guest bio, and resources mentioned.</p>
+        </div>
+        <div class="episode-count">300+</div>
+      </div>
+
+      <div class="episode-grid">
+
+        <div class="episode-card">
+          <div class="episode-card-top">
+            <span class="episode-number">EP 001</span>
+            <span class="episode-date">Coming soon</span>
+          </div>
+          <h3>Episode titles will appear here after migration from the existing site.</h3>
+          <p class="episode-guest"></p>
+          <p>All episodes from the WordPress site will be migrated to this page, preserving the original URLs and show notes for every episode.</p>
+          <div class="episode-tags">
+            <span class="episode-tag">Migration in Progress</span>
+          </div>
+          <a href="#" class="episode-link">Listen to Episode &rarr;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PLATFORM CTA ───────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div style="text-align:center;max-width:600px;margin:0 auto;">
+        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">Listen Anywhere</span>
+        <h2 style="font-family:var(--head-font);font-size:clamp(30px,4vw,46px);font-weight:300;color:var(--plum);line-height:1.15;margin-bottom:16px;">Find The Period Party on Your Favourite Platform</h2>
+        <p style="font-size:16px;line-height:1.75;color:var(--charcoal);opacity:0.7;margin-bottom:32px;">Subscribe so you never miss a new episode. New conversations drop every week.</p>
+        <div class="listen-links">
+          <a href="#" class="btn btn-primary">Apple Podcasts</a>
+          <a href="#" class="btn btn-outline">Spotify</a>
+          <a href="#" class="btn btn-outline">Google Podcasts</a>
+          <a href="#" class="btn btn-outline">RSS Feed</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────────────── -->
+  <section class="section-pad bg-gradient">
+    <div class="section-inner-narrow" style="text-align:center;">
+      <h2 style="font-family:var(--head-font);font-size:clamp(34px,4vw,50px);font-weight:300;color:var(--ivory);line-height:1.15;margin-bottom:20px;">Ready to go beyond the podcast?</h2>
+      <p style="font-size:17px;line-height:1.75;color:var(--ivory);opacity:0.8;max-width:520px;margin:0 auto 36px;">Take the free Fix Your Period quiz to get a personalised protocol based on your specific symptoms — supplements, nutrition, and lifestyle guidance built for your body.</p>
+      <a href="https://fixyourperiod.app/quiz" target="_blank" class="btn btn-outline-ivory">Take the Free Period Quiz &rarr;</a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Nicole Jardim</div>
+          <p class="footer-tagline">Your cycle is a vital sign.<br>Let's learn to read it.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Ig</a>
+            <a href="#" class="social-link">Tk</a>
+            <a href="#" class="social-link">Yt</a>
+            <a href="#" class="social-link">&#9835;</a>
+          </div>
+        </div>
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <div class="footer-col-title">Fix Your Period</div>
+            <ul><li><a href="https://fixyourperiod.app/quiz" target="_blank">Take the Period Quiz</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Professional Training</div>
+            <ul><li><a href="../imh.html">The Institute for Menstrual Health</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <ul>
+            <li><a href="../book.html">Fix Your Period (Book)</a></li>
+            <li><a href="../articles.html">Articles</a></li>
+            <li><a href="/podcast/" class="active">The Period Party Podcast</a></li>
+            <li><a href="../about.html">About Nicole</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nicole Jardim. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
