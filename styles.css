@@ -161,7 +161,7 @@ ul { list-style: none; }
   border-bottom: none;
 }
 .page-hero-bold .page-hero-inner { max-width: 800px; margin: 0 auto; text-align: center; }
-.page-hero-bold .label { color: var(--gold); display: block; margin-bottom: 20px; }
+.page-hero-bold .label { color: var(--champagne); display: block; margin-bottom: 20px; }
 .page-hero-bold .page-hero-heading { color: var(--ivory); }
 .page-hero-bold .page-hero-sub { color: rgba(253,246,240,0.78); }
 
@@ -210,7 +210,7 @@ ul { list-style: none; }
 }
 .prose ul li::before {
   content: '—'; position: absolute; left: 0;
-  color: var(--gold); font-weight: 600;
+  color: var(--terra); font-weight: 600;
 }
 
 /* ─── PHASE CARDS (Start Here) ─────────────────────────────────────────── */
@@ -226,7 +226,7 @@ ul { list-style: none; }
 .phase-card-label .phase-num {
   font-family: var(--head-font); font-size: 13px; font-weight: 600;
   letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 16px;
+  color: var(--champagne); margin-bottom: 16px;
 }
 .phase-card-label h3 {
   font-family: var(--display); font-size: 32px; font-weight: 400;
@@ -252,7 +252,7 @@ ul { list-style: none; }
   padding-left: 18px; position: relative; line-height: 1.55;
 }
 .phase-card-body ul li::before {
-  content: '—'; position: absolute; left: 0; color: var(--gold);
+  content: '—'; position: absolute; left: 0; color: var(--terra);
 }
 .phase-card-body .btn { margin-top: 8px; }
 
@@ -260,7 +260,7 @@ ul { list-style: none; }
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
 .feature-card {
   background: var(--sand); padding: 48px 40px;
-  border-top: 3px solid var(--gold);
+  border-top: 3px solid var(--plum);
 }
 .feature-card h4 {
   font-family: var(--display); font-size: 22px; font-weight: 600;
