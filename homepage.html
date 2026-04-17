@@ -205,24 +205,35 @@
       object-position: center top;
     }
 
-    /* ─── MEDIA BAR ────────────────────────────────────────────────────────── */
+    /* ─── FEATURED IN ─────────────────────────────────────────────────────── */
     .media-bar {
       background: var(--charcoal);
-      padding: 22px 40px;
+      padding: 80px 40px;
     }
     .media-bar-inner {
       max-width: 1160px;
       margin: 0 auto;
+      text-align: center;
+    }
+    .media-bar-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ivory);
+      opacity: 0.85;
+      margin-bottom: 48px;
+    }
+    .media-logos-row {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 48px;
       flex-wrap: wrap;
     }
-    .media-bar-label { color: rgba(253,246,240,0.35); }
     .media-logo-item {
       font-family: var(--serif);
-      font-size: 17px;
+      font-size: 19px;
       font-weight: 600;
       color: var(--ivory);
       opacity: 0.4;
@@ -390,7 +401,7 @@
     }
     .pathway-cards-v2 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 14px;
     }
     .pc-v2 {
@@ -404,10 +415,11 @@
       transform: translateY(-5px);
       box-shadow: 0 16px 44px rgba(42,26,25,0.13);
     }
-    .pc-learn  { background: var(--ivory); border: 1.5px solid rgba(97,41,40,0.15); border-top: 4px solid var(--plum); }
-    .pc-quiz   { background: var(--plum);  border-top: 4px solid var(--plum); }
-    .pc-fix    { background: var(--plum);  border-top: 4px solid var(--plum); }
-    .pc-imh    { background: var(--terra); border-top: 4px solid rgba(253,246,240,0.45); }
+    .pc-learn       { background: var(--ivory); border: 1.5px solid rgba(97,41,40,0.15); border-top: 4px solid var(--plum); }
+    .pc-quiz        { background: var(--plum);  border-top: 4px solid var(--plum); }
+    .pc-fix         { background: var(--plum);  border-top: 4px solid var(--plum); }
+    .pc-collective  { background: var(--sand);  border: 1.5px solid rgba(97,41,40,0.15); border-top: 4px solid var(--plum-mid); }
+    .pc-imh         { background: var(--terra); border-top: 4px solid rgba(253,246,240,0.45); }
     .pc-v2-num {
       font-family: var(--serif);
       font-size: 12px;
@@ -416,10 +428,11 @@
       text-transform: uppercase;
       margin-bottom: 18px;
     }
-    .pc-learn .pc-v2-num { color: var(--plum); }
-    .pc-quiz  .pc-v2-num { color: var(--champagne); }
-    .pc-fix   .pc-v2-num { color: var(--champagne); }
-    .pc-imh   .pc-v2-num { color: rgba(253,246,240,0.65); }
+    .pc-learn       .pc-v2-num { color: var(--plum); }
+    .pc-quiz        .pc-v2-num { color: var(--champagne); }
+    .pc-fix         .pc-v2-num { color: var(--champagne); }
+    .pc-collective  .pc-v2-num { color: var(--plum-mid); }
+    .pc-imh         .pc-v2-num { color: rgba(253,246,240,0.65); }
     .pc-v2-title {
       font-family: var(--serif);
       font-size: clamp(22px, 2vw, 28px);
@@ -427,20 +440,22 @@
       line-height: 1.2;
       margin-bottom: 16px;
     }
-    .pc-learn .pc-v2-title { color: var(--plum); }
-    .pc-quiz  .pc-v2-title { color: var(--ivory); }
-    .pc-fix   .pc-v2-title { color: var(--ivory); }
-    .pc-imh   .pc-v2-title { color: var(--ivory); }
+    .pc-learn       .pc-v2-title { color: var(--plum); }
+    .pc-quiz        .pc-v2-title { color: var(--ivory); }
+    .pc-fix         .pc-v2-title { color: var(--ivory); }
+    .pc-collective  .pc-v2-title { color: var(--plum); }
+    .pc-imh         .pc-v2-title { color: var(--ivory); }
     .pc-v2-body {
       font-size: 14.5px;
       line-height: 1.7;
       flex: 1;
       margin-bottom: 28px;
     }
-    .pc-learn .pc-v2-body { color: var(--charcoal); opacity: 0.78; }
-    .pc-quiz  .pc-v2-body { color: var(--ivory); opacity: 0.72; }
-    .pc-fix   .pc-v2-body { color: var(--ivory); opacity: 0.72; }
-    .pc-imh   .pc-v2-body { color: var(--ivory); opacity: 0.85; }
+    .pc-learn       .pc-v2-body { color: var(--charcoal); opacity: 0.78; }
+    .pc-quiz        .pc-v2-body { color: var(--ivory); opacity: 0.72; }
+    .pc-fix         .pc-v2-body { color: var(--ivory); opacity: 0.72; }
+    .pc-collective  .pc-v2-body { color: var(--charcoal); opacity: 0.78; }
+    .pc-imh         .pc-v2-body { color: var(--ivory); opacity: 0.85; }
     .pc-v2-link {
       font-size: 12.5px;
       font-weight: 600;
@@ -452,11 +467,13 @@
       transition: gap 0.15s;
     }
     .pc-v2-link:hover { gap: 9px; }
-    .pc-learn .pc-v2-link { color: var(--terra); }
-    .pc-quiz  .pc-v2-link { color: var(--ivory); opacity: 0.85; }
-    .pc-fix   .pc-v2-link { color: var(--ivory); opacity: 0.85; }
-    .pc-imh   .pc-v2-link { color: var(--ivory); opacity: 0.85; }
+    .pc-learn       .pc-v2-link { color: var(--terra); }
+    .pc-quiz        .pc-v2-link { color: var(--ivory); opacity: 0.85; }
+    .pc-fix         .pc-v2-link { color: var(--ivory); opacity: 0.85; }
+    .pc-collective  .pc-v2-link { color: var(--plum); }
+    .pc-imh         .pc-v2-link { color: var(--ivory); opacity: 0.85; }
     .pc-fix   .pc-v2-link:hover,
+    .pc-collective  .pc-v2-link:hover,
     .pc-imh   .pc-v2-link:hover { opacity: 1; }
 
     /* ─── SOCIAL PROOF ─────────────────────────────────────────────────────── */
@@ -736,7 +753,7 @@
     <!-- Text: overlaid left, z-index above photo -->
     <div class="hero-v2-left">
       <h1 class="hero-v2-headline">
-        Make Sense<br><em>of your life</em>
+        Make Sense<br><em>of Your Cycle</em>
       </h1>
       <p class="hero-v2-sub">
         Straight talk, evidence-informed education to help you understand your hormones, your period, and what your body's been trying to tell you.
@@ -751,21 +768,6 @@
 
   </section>
 
-  <!-- ── AS SEEN IN ─────────────────────────────────────────────────────── -->
-  <div class="media-bar">
-    <div class="media-bar-inner">
-      <span class="label media-bar-label">As seen in</span>
-      <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
-        <span class="media-logo-item">The Guardian</span>
-        <span class="media-logo-item">Well+Good</span>
-        <span class="media-logo-item">mindbodygreen</span>
-        <span class="media-logo-item">Healthline</span>
-        <span class="media-logo-item">Shape</span>
-        <span class="media-logo-item">Bustle</span>
-      </div>
-    </div>
-  </div>
-
   <!-- ── MEET NICOLE ────────────────────────────────────────────────────── -->
   <section class="meet-v2">
     <div class="meet-v2-inner">
@@ -777,18 +779,14 @@
       <div class="meet-v2-content">
         <span class="label meet-v2-label">Meet Nicole Jardim</span>
 
-        <blockquote class="meet-v2-pullquote">
-          "I've been where you are."
-        </blockquote>
-
         <p class="meet-v2-body">
           Nicole Jardim is a women's health educator, writer, and speaker focused on menstrual and hormonal health. Her work centers on helping women understand how their bodies actually function, so they can make informed, empowered decisions about their health.
         </p>
         <p class="meet-v2-body">
-          She is the author of <em>Fix Your Period</em>, the creator of the Fix Your Period App, and the founder of the Institute for Menstrual Health — a global education platform training practitioners and health professionals in menstrual and hormonal health.
+          She is the author of <em>Fix Your Period</em>, the creator of the Fix Your Period Collective, and the founder of the Institute for Menstrual Health: a global education platform training practitioners and health professionals in menstrual and hormonal health.
         </p>
         <p class="meet-v2-body">
-          Nicole's work has reached tens of thousands of women worldwide and has been featured across major media and cultural platforms. Her approach blends evidence-informed education with body literacy, nuance, and real-life context.
+          Nicole's work has reached tens of thousands of women worldwide and has been featured across major media and cultural platforms. Her approach blends evidence-informed education with body literacy, nuance, and real-life context &mdash; moving beyond symptom management toward deeper understanding, advocacy, and long-term support across every stage of life.
         </p>
 
         <a href="about.html" class="meet-v2-cta">Read Nicole's Story &rarr;</a>
@@ -823,7 +821,7 @@
       </div>
 
       <p class="philosophy-v2-closing">
-        Nicole's work is here to help you make sense of what your body is communicating — and to support you in choosing what comes next.
+        Nicole's work is here to help you make sense of what your body is communicating and to support you in choosing what comes next.
       </p>
 
     </div>
@@ -842,9 +840,9 @@
 
         <div class="pc-v2 pc-learn">
           <div class="pc-v2-num">01</div>
-          <h3 class="pc-v2-title">Learn &amp; Understand</h3>
+          <h3 class="pc-v2-title">Learn and Understand</h3>
           <p class="pc-v2-body">Foundational education about menstrual cycles, hormones, and common symptoms.</p>
-          <a href="resources.html" class="pc-v2-link">Explore articles &amp; resources &rarr;</a>
+          <a href="resources.html" class="pc-v2-link">Explore articles and resources &rarr;</a>
         </div>
 
         <div class="pc-v2 pc-quiz">
@@ -854,9 +852,16 @@
           <a href="https://fixyourperiod.app/quiz" target="_blank" class="pc-v2-link">Start with the Period Quiz &rarr;</a>
         </div>
 
-        <div class="pc-v2 pc-imh">
+        <div class="pc-v2 pc-collective">
           <div class="pc-v2-num">03</div>
-          <h3 class="pc-v2-title">Educate &amp; Specialize</h3>
+          <h3 class="pc-v2-title">Go Deeper</h3>
+          <p class="pc-v2-body">Ongoing education and structured support through programs and the Fix Your Period Collective.</p>
+          <a href="collective.html" class="pc-v2-link">Explore the Collective &rarr;</a>
+        </div>
+
+        <div class="pc-v2 pc-imh">
+          <div class="pc-v2-num">04</div>
+          <h3 class="pc-v2-title">Educate and Specialize</h3>
           <p class="pc-v2-body">Professional training and continuing education in menstrual and hormonal health through the Institute for Menstrual Health.</p>
           <a href="https://instituteformenstrualhealth.com/" target="_blank" class="pc-v2-link">Visit the Institute &rarr;</a>
         </div>
@@ -919,13 +924,28 @@
     </div>
   </section>
 
+  <!-- ── FEATURED IN ──────────────────────────────────────────────────────── -->
+  <div class="media-bar">
+    <div class="media-bar-inner">
+      <h2 class="media-bar-heading">Featured In</h2>
+      <div class="media-logos-row">
+        <span class="media-logo-item">The Guardian</span>
+        <span class="media-logo-item">Well+Good</span>
+        <span class="media-logo-item">mindbodygreen</span>
+        <span class="media-logo-item">Healthline</span>
+        <span class="media-logo-item">Shape</span>
+        <span class="media-logo-item">Bustle</span>
+      </div>
+    </div>
+  </div>
+
   <!-- ── CLOSING CTA ────────────────────────────────────────────────────── -->
   <section class="closing-v2">
     <div class="closing-v2-inner">
       <h2 class="closing-v2-headline">
         You don't need to have everything<br>figured out <em>to begin.</em>
       </h2>
-      <p class="closing-v2-sub">Whether you're just starting to pay attention to your cycle or you've been searching for real answers for years — there's a clear place to start.</p>
+      <p class="closing-v2-sub">Whether you're just starting to pay attention to your cycle or you've been searching for real answers for years: there's a clear place to start.</p>
       <a href="start-here.html" class="closing-v2-btn">Start Here &rarr;</a>
     </div>
   </section>
