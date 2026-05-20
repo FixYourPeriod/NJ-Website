@@ -75,26 +75,27 @@
       line-height: 1.4;
     }
     .cert-box {
-      background: var(--plum);
+      background: var(--ivory);
       border-radius: 6px;
       padding: 72px 80px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
       align-items: center;
+      border: 1px solid rgba(92,45,79,0.12);
     }
     .cert-box h2 {
       font-family: var(--head-font);
       font-size: clamp(32px, 3.5vw, 44px);
       font-weight: 300;
-      color: var(--ivory);
+      color: var(--plum);
       line-height: 1.15;
       margin-bottom: 20px;
     }
     .cert-box p {
       font-size: 16px;
-      color: var(--ivory);
-      opacity: 0.7;
+      color: var(--charcoal);
+      opacity: 0.75;
       line-height: 1.75;
       margin-bottom: 16px;
     }
@@ -112,22 +113,38 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: rgba(196,152,74,0.2);
+      background: rgba(196,152,74,0.15);
       border: 1px solid var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      color: var(--gold);
+      color: var(--terra);
       font-size: 14px;
       font-weight: 700;
     }
     .cert-point-text {
       font-size: 15px;
-      color: var(--ivory);
-      opacity: 0.8;
+      color: var(--charcoal);
+      opacity: 0.85;
       line-height: 1.6;
       padding-top: 4px;
+    }
+    /* About Nicole split */
+    .imh-about-nicole {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .imh-about-nicole img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 3/4;
     }
   </style>
 </head>
@@ -195,23 +212,34 @@
   <!-- ── ABOUT IMH ──────────────────────────────────────────────────────── -->
   <section class="section-pad bg-ivory">
     <div class="section-inner">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start;max-width:1040px;margin:0 auto;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;max-width:1040px;margin:0 auto;">
+
+        <!-- Left: image -->
         <div>
-          <span class="label" style="color:var(--gold);display:block;margin-bottom:18px;">The Institute for Menstrual Health</span>
-          <h2 class="split-heading">Where foundational knowledge meets real-world application</h2>
-          <p class="split-body">The Institute for Menstrual Health is Nicole Jardim's professional education platform, created to train practitioners, coaches, and health professionals in menstrual and hormonal health.</p>
-          <p class="split-body">At its core is the Women's Hormone Health Certification Program — an in-depth training designed to bridge the gap between foundational knowledge and real-world application. This work goes beyond theory. It's about understanding how the body functions, recognizing patterns and root causes, and knowing how to support clients in a way that is informed, practical, and grounded in evidence.</p>
+          <!-- Replace src with Canva coaches image once purchased -->
+          <img src="images/imh-coaches.jpg" alt="Women's health coaches" style="width:100%;border-radius:4px;display:block;object-fit:cover;aspect-ratio:4/5;background:var(--sand);" />
         </div>
-        <div style="display:flex;flex-direction:column;gap:20px;">
-          <span class="label" style="color:var(--gold);">Who This Training Is For</span>
-          <div class="who-grid" style="grid-template-columns:1fr;gap:12px;">
-            <div class="who-card"><h4>Health Coaches</h4><p>Expand your practice into specialized hormonal health support.</p></div>
-            <div class="who-card"><h4>Nutritionists &amp; Dietitians</h4><p>Deepen your clinical understanding of how nutrition affects the cycle.</p></div>
-            <div class="who-card"><h4>Midwives, Doulas &amp; PTs</h4><p>Add menstrual health expertise to complement your existing care.</p></div>
-            <div class="who-card"><h4>Healthcare Providers</h4><p>Acupuncturists, therapists, and practitioners in diverse care settings.</p></div>
-            <div class="who-card"><h4>Those Building a Practice</h4><p>Anyone looking to specialize in or build a business centered on menstrual health.</p></div>
+
+        <!-- Right: text + who cards -->
+        <div style="display:flex;flex-direction:column;gap:24px;padding-top:8px;">
+          <div>
+            <span class="label" style="color:var(--gold);display:block;margin-bottom:18px;">The Institute for Menstrual Health</span>
+            <h2 class="split-heading">Where foundational knowledge meets real-world application</h2>
+            <p class="split-body">The Institute for Menstrual Health is Nicole Jardim's professional education platform, created to train practitioners, coaches, and health professionals in menstrual and hormonal health.</p>
+            <p class="split-body">At its core is the Women's Hormone Health Certification Program — an in-depth training designed to bridge the gap between foundational knowledge and real-world application. This work goes beyond theory. It's about understanding how the body functions, recognizing patterns and root causes, and knowing how to support clients in a way that is informed, practical, and grounded in evidence.</p>
+          </div>
+          <div>
+            <span class="label" style="color:var(--gold);display:block;margin-bottom:14px;">Who This Training Is For</span>
+            <div class="who-grid" style="grid-template-columns:1fr;gap:10px;">
+              <div class="who-card"><h4>Health Coaches</h4><p>Expand your practice into specialized hormonal health support.</p></div>
+              <div class="who-card"><h4>Nutritionists &amp; Dietitians</h4><p>Deepen your clinical understanding of how nutrition affects the cycle.</p></div>
+              <div class="who-card"><h4>Midwives, Doulas &amp; PTs</h4><p>Add menstrual health expertise to complement your existing care.</p></div>
+              <div class="who-card"><h4>Healthcare Providers</h4><p>Acupuncturists, therapists, and practitioners in diverse care settings.</p></div>
+              <div class="who-card"><h4>Those Building a Practice</h4><p>Anyone looking to specialize in or build a business centered on menstrual health.</p></div>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -301,7 +329,7 @@
           <h2>Certification &amp; Professional Recognition</h2>
           <p>Upon completion, you'll be certified in Women's Hormone Health through the Institute for Menstrual Health.</p>
           <p>Graduates go on to build practices, expand existing work, and support clients with greater depth and confidence.</p>
-          <a href="https://instituteformenstrualhealth.com/womens-hormone-health-certification-program/curriculum/" target="_blank" class="btn btn-outline-ivory" style="margin-top:8px;">View Full Program Details &rarr;</a>
+          <a href="https://instituteformenstrualhealth.com/womens-hormone-health-certification-program/curriculum/" target="_blank" class="btn btn-outline" style="margin-top:8px;">View Full Program Details &rarr;</a>
         </div>
         <div class="cert-points">
           <div class="cert-point">
@@ -328,6 +356,22 @@
             <div class="cert-point-icon">$</div>
             <div class="cert-point-text">$2,997 USD — payment plans available (3, 6, 9, or 12 months)</div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT NICOLE ───────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner">
+      <div class="imh-about-nicole">
+        <img src="images/Nicole_7.jpg" alt="Nicole Jardim" />
+        <div>
+          <span class="label" style="color:var(--terra);display:block;margin-bottom:18px;">About Nicole Jardim</span>
+          <h2 class="split-heading">The expertise behind the curriculum</h2>
+          <p class="split-body">Nicole Jardim is a women's health educator, author, and the leading voice in menstrual and hormonal health education. For over two decades, her work has helped tens of thousands of women understand their cycles and the practitioners who support them do the same.</p>
+          <p class="split-body">She is the author of <em>Fix Your Period</em>, the creator of the Fix Your Period App, and the founder of the Institute for Menstrual Health. The methodology at the heart of the Women's Hormone Health Certification is drawn directly from her clinical work, research, and years of teaching at the intersection of evidence and real-world practice.</p>
+          <a href="about.html" class="btn btn-outline" style="margin-top:8px;">Read Nicole's Full Story &rarr;</a>
         </div>
       </div>
     </div>
