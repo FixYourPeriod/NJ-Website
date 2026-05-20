@@ -233,6 +233,18 @@ ul { list-style: none; }
 .phase-card-label p {
   font-size: 14px; color: var(--ivory); opacity: 0.6; line-height: 1.5;
 }
+
+/* FYP (Heal) phase — terracotta */
+.phase-heal .phase-card-label { background: var(--terra); }
+.phase-heal .phase-card-label .phase-num { color: rgba(250,245,239,0.7); }
+.phase-heal .phase-card-body h4 { color: var(--terra); }
+.phase-heal .phase-card-body ul li::before { color: var(--terra); }
+
+/* IMH (Lead) phase — charcoal professional */
+.phase-lead .phase-card-label { background: var(--charcoal); }
+.phase-lead .phase-card-label .phase-num { color: var(--gold); }
+.phase-lead .phase-card-body ul li::before { color: var(--gold); }
+
 .phase-card-body { padding: 56px 64px; }
 .phase-card-body h4 {
   font-family: var(--display); font-size: 22px; font-weight: 600;
@@ -253,6 +265,10 @@ ul { list-style: none; }
   content: '—'; position: absolute; left: 0; color: var(--gold);
 }
 .phase-card-body .btn { margin-top: 8px; }
+
+/* Terracotta outline button (FYP pages) */
+.btn-outline-terra { background: transparent; color: var(--terra); border-color: var(--terra); }
+.btn-outline-terra:hover { background: var(--terra); color: var(--ivory); }
 
 /* ─── FEATURE GRID ─────────────────────────────────────────────────────── */
 .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
