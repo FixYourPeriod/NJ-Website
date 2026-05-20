@@ -163,6 +163,17 @@ ul { list-style: none; }
 .page-hero-bold .page-hero-heading { color: var(--ivory); }
 .page-hero-bold .page-hero-sub { color: rgba(250,245,239,0.78); }
 
+/* Light hero — ivory bg for Nicole's personal pages */
+.page-hero-light {
+  background: var(--ivory);
+  padding: 120px 40px 100px;
+  border-bottom: 1px solid rgba(92,45,79,0.07);
+}
+.page-hero-light .page-hero-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.page-hero-light .label { color: var(--terra); display: block; margin-bottom: 20px; }
+.page-hero-light .page-hero-heading { color: var(--plum); }
+.page-hero-light .page-hero-sub { color: var(--charcoal); opacity: 0.75; }
+
 /* ─── SECTION SHARED ──────────────────────────────────────────────────── */
 .section-pad { padding: 96px 40px; }
 .section-pad-lg { padding: 112px 40px; }
@@ -234,15 +245,19 @@ ul { list-style: none; }
   font-size: 14px; color: var(--ivory); opacity: 0.6; line-height: 1.5;
 }
 
-/* FYP (Heal) phase — terracotta */
+/* Learn phase — sage green */
+.phase-learn .phase-card-label { background: var(--sage); }
+.phase-learn .phase-card-label .phase-num { color: rgba(250,245,239,0.8); }
+.phase-learn .phase-card-body h4 { color: var(--sage); }
+.phase-learn .phase-card-body ul li::before { color: var(--sage); }
+
+/* Heal phase — terracotta */
 .phase-heal .phase-card-label { background: var(--terra); }
 .phase-heal .phase-card-label .phase-num { color: rgba(250,245,239,0.7); }
 .phase-heal .phase-card-body h4 { color: var(--terra); }
 .phase-heal .phase-card-body ul li::before { color: var(--terra); }
 
-/* IMH (Lead) phase — charcoal professional */
-.phase-lead .phase-card-label { background: var(--charcoal); }
-.phase-lead .phase-card-label .phase-num { color: var(--gold); }
+/* Lead phase — plum (inherits default label bg) with gold accents */
 .phase-lead .phase-card-body ul li::before { color: var(--gold); }
 
 .phase-card-body { padding: 56px 64px; }
