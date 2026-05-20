@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fix Your Period — Nicole Jardim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;1,9..144,300;1,9..144,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <style>
+
+    /* ── Brand logo strip ─────────────────────────────── */
+    .fyp-brand-strip {
+      background: var(--ivory);
+      padding: 36px 40px 32px;
+      border-bottom: 1px solid rgba(181,90,58,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+    .fyp-brand-strip img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+    }
+    .fyp-brand-name {
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--terra);
+      letter-spacing: -0.01em;
+    }
+
+    /* ── How it works ────────────────────────────────── */
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+    }
+    .how-step {
+      background: var(--sand);
+      padding: 52px 44px;
+      position: relative;
+    }
+    .how-step-num {
+      font-family: var(--display);
+      font-size: 64px;
+      font-weight: 300;
+      color: var(--terra);
+      opacity: 0.18;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .how-step h4 {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 12px;
+    }
+    .how-step p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.78;
+    }
+
+    /* ── Features grid ───────────────────────────────── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--ivory);
+      border-radius: 4px;
+      padding: 40px 36px;
+      border-top: 3px solid var(--terra);
+    }
+    .feature-icon {
+      font-size: 26px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .feature-card h4 {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--plum);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    .feature-card p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--charcoal);
+      opacity: 0.75;
+    }
+
+    /* ── App screens ─────────────────────────────────── */
+    .screens-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .screens-row img {
+      width: calc(33.333% - 14px);
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(44,37,32,0.18);
+    }
+    .screens-row img:nth-child(2) {
+      transform: translateY(-24px);
+    }
+
+    /* ── Is it for you ───────────────────────────────── */
+    .is-for-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .is-for-item {
+      background: var(--ivory);
+      padding: 26px 30px;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--charcoal);
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .is-for-item::before {
+      content: '✓';
+      color: var(--terra);
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ── Assessment CTA box ──────────────────────────── */
+    .assessment-cta-box {
+      background: var(--terra);
+      border-radius: 6px;
+      padding: 72px 80px;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .assessment-cta-box h3 {
+      font-family: var(--display);
+      font-size: 44px;
+      font-weight: 300;
+      color: var(--ivory);
+      margin-bottom: 16px;
+      line-height: 1.12;
+    }
+    .assessment-cta-box p {
+      font-size: 17px;
+      color: var(--ivory);
+      opacity: 0.75;
+      margin-bottom: 40px;
+      line-height: 1.65;
+      max-width: 580px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .assessment-meta {
+      font-size: 13px;
+      color: var(--ivory);
+      opacity: 0.55;
+      margin-top: 16px;
+      letter-spacing: 0.04em;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ── NAVIGATION ─────────────────────────────────────────────────────── -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="homepage.html" class="nav-logo">Nicole Jardim</a>
+      <nav class="nav-links">
+        <a href="fix-your-period.html" class="active">Fix Your Period</a>
+        <a href="imh.html">Professional Training</a>
+        <div class="nav-dropdown">
+          <a href="resources.html" class="nav-dropdown-trigger">Resources</a>
+          <div class="nav-dropdown-menu">
+            <a href="book.html">The Book</a>
+            <a href="articles.html">Articles</a>
+          </div>
+        </div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://fixyourperiod.app/quiz" target="_blank" class="nav-cta">Take the Assessment</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── BRAND STRIP ────────────────────────────────────────────────────── -->
+  <div class="fyp-brand-strip">
+    <img src="images/fyp-logo.png" alt="Fix Your Period" />
+    <span class="fyp-brand-name">Fix Your Period</span>
+  </div>
+
+  <!-- ── HERO ───────────────────────────────────────────────────────────── -->
+  <section class="page-hero-bold" style="background:var(--terra);">
+    <div class="page-hero-inner">
+      <span class="label" style="color:rgba(250,245,239,0.65);">Evidence-Based &middot; Root-Cause &middot; Personalised</span>
+      <h1 class="page-hero-heading">Finally Fix Your Period Problems — for Good.</h1>
+      <p class="page-hero-sub">You've been told your symptoms are "normal." They're not. The Fix Your Period App uses Nicole's proven methodology to give you a personalized protocol built around your specific cycle, symptoms, and lifestyle.</p>
+      <a href="https://fixyourperiod.app/quiz" target="_blank" class="btn btn-outline-ivory">Take the Free Assessment &rarr;</a>
+      <p style="font-size:13px;color:rgba(250,245,239,0.5);margin-top:16px;letter-spacing:0.04em;">Free &middot; Takes 5 minutes &middot; No account required</p>
+    </div>
+  </section>
+
+  <!-- ── HOW IT WORKS ───────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">How It Works</span>
+        <h2 class="section-heading">Three steps to a clearer picture of your health</h2>
+        <p class="section-subhead">No guesswork. No generic advice. A structured, evidence-based path from symptoms to solutions.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-num">01</div>
+          <h4>Take the Free Assessment</h4>
+          <p>Answer 30 targeted questions about your cycle, symptoms, mood, energy, skin, and lifestyle. Takes about five minutes.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">02</div>
+          <h4>Get Your Protocol</h4>
+          <p>Receive a personalized hormonal health score and a tailored action plan covering nutrition, supplements, and lifestyle adjustments — built for your body, not a template.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">03</div>
+          <h4>Track, Learn & Improve</h4>
+          <p>Use the cycle tracker and NicoleNow AI to deepen your understanding and adapt your protocol as your body changes over time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APP SCREENS ────────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand" style="overflow:hidden;">
+    <div class="section-inner">
+      <div class="screens-row">
+        <img src="images/fyp-screen-1.png" alt="Fix Your Period App dashboard" />
+        <img src="images/fyp-screen-2.png" alt="Hormone Health Assessment" />
+        <img src="images/fyp-screen-3.png" alt="Personalized protocol" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EVERYTHING IN ONE PLACE ────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="label" style="color:var(--terra);display:block;margin-bottom:16px;">What's Inside</span>
+        <h2 class="section-heading">Everything you need in one place</h2>
+        <p class="section-subhead">The Fix Your Period App isn't a period tracker. It's a complete hormonal health platform built around Nicole's two decades of clinical methodology.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">📋</span>
+          <h4>Hormone Health Assessment</h4>
+          <p>Answer 30 questions about your symptoms and cycle. Your responses generate a personalized protocol — not a generic plan, but one built around exactly what your body is doing.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🌿</span>
+          <h4>Root-Cause Protocols</h4>
+          <p>Personalized recommendations for nutrition, supplements, lifestyle changes, and lab testing — designed to address underlying imbalances, not suppress symptoms.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💬</span>
+          <h4>NicoleNow AI</h4>
+          <p>An AI trained on Nicole's complete methodology. Ask questions, get guidance, and work through your symptoms — grounded in real expertise, not generic health advice.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📅</span>
+          <h4>Cycle Tracker</h4>
+          <p>Log your period, symptoms, mood, and energy levels. Over time, you'll start to see the patterns your body has been trying to show you all along.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📚</span>
+          <h4>Article Library</h4>
+          <p>30 in-depth guides covering every major hormonal condition — PCOS, endometriosis, PMS, perimenopause, thyroid, and more — all written by Nicole.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🎙</span>
+          <h4>The Period Party Podcast</h4>
+          <p>Over 270 episodes with leading experts in women's hormonal health. All available inside the app, organized by topic so you can go deep on what matters most to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── IS IT FOR YOU ──────────────────────────────────────────────────── -->
+  <section class="section-pad bg-sand">
+    <div class="section-inner" style="max-width:920px;margin:0 auto;">
+      <div class="section-header">
+        <h2 class="section-heading">Is the Fix Your Period App Right for You?</h2>
+        <p class="section-subhead">This app was built for women who are done guessing.</p>
+      </div>
+      <div class="is-for-grid">
+        <div class="is-for-item">You're dealing with period pain, heavy bleeding, irregular cycles, PMS, or PCOS</div>
+        <div class="is-for-item">You want a clearer, more structured approach to your hormonal health</div>
+        <div class="is-for-item">You've tried generic advice and it hasn't worked — you're ready for something personalized</div>
+        <div class="is-for-item">You want to understand what's actually going on in your body, not just manage symptoms</div>
+        <div class="is-for-item">You're navigating perimenopause, thyroid issues, or post-pill recovery</div>
+        <div class="is-for-item">You're tired of being told everything is "normal" when it clearly isn't</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ASSESSMENT CTA ─────────────────────────────────────────────────── -->
+  <section class="section-pad bg-ivory">
+    <div class="section-inner">
+      <div class="assessment-cta-box">
+        <h3>Your hormones don't have to run your life.</h3>
+        <p>The Hormone Health Assessment takes five minutes and gives you a personalized picture of your hormonal patterns — and a clear place to start.</p>
+        <a href="https://fixyourperiod.app/quiz" target="_blank" class="btn btn-outline-ivory">Take the Free Assessment &rarr;</a>
+        <p class="assessment-meta">Free &middot; Takes 5 minutes &middot; No account required</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">Nicole Jardim</div>
+          <p class="footer-tagline">Your cycle is a vital sign.<br>Let's learn to read it.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Ig</a>
+            <a href="#" class="social-link">Tk</a>
+            <a href="#" class="social-link">Yt</a>
+            <a href="#" class="social-link">&#9835;</a>
+          </div>
+        </div>
+        <div class="footer-col-group">
+          <div class="footer-col">
+            <div class="footer-col-title">Fix Your Period</div>
+            <ul><li><a href="https://fixyourperiod.app/quiz" target="_blank">Take the Hormone Health Assessment</a></li></ul>
+          </div>
+          <div class="footer-col">
+            <div class="footer-col-title">Professional Training</div>
+            <ul><li><a href="imh.html">The Institute for Menstrual Health</a></li></ul>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Resources</div>
+          <ul>
+            <li><a href="book.html">Fix Your Period (Book)</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="#">The Period Party Podcast</a></li>
+            <li><a href="about.html">About Nicole</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Nicole Jardim. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
