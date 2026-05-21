@@ -46,13 +46,13 @@
     .step-box ul { padding-left: 20px; margin-bottom: 0; }
     .step-box li { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin-bottom: 6px; }
     /* Phase timeline */
-    .phase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 36px; }
-    .phase-card { border-radius: 6px; padding: 24px 28px; }
-    .phase-card.phase-1 { background: var(--sand); border-left: 4px solid var(--terra); }
-    .phase-card.phase-2 { background: var(--sand); border-left: 4px solid var(--plum); }
-    .phase-card h4 { font-family: var(--head-font); font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--plum); margin-bottom: 10px; }
-    .phase-card ul { padding-left: 18px; margin: 0; }
-    .phase-card li { font-size: 15px; line-height: 1.65; color: var(--charcoal); margin-bottom: 6px; }
+    .article-phase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0 36px; }
+    .article-phase-card { display: block; border-radius: 6px; padding: 24px 28px; }
+    .article-phase-card.phase-1 { background: var(--sand); border-left: 4px solid var(--terra); }
+    .article-phase-card.phase-2 { background: var(--sand); border-left: 4px solid var(--plum); }
+    .article-phase-card h4 { font-family: var(--head-font); font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--plum); margin-bottom: 10px; }
+    .article-phase-card ul { padding-left: 18px; margin: 0; }
+    .article-phase-card li { font-size: 15px; line-height: 1.65; color: var(--charcoal); margin-bottom: 6px; }
     /* Symptom chips */
     .symptom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0 32px; }
     .symptom-chip { background: var(--ivory); border: 1px solid rgba(92,45,79,0.12); border-radius: 4px; padding: 12px 16px; font-size: 15px; color: var(--charcoal); line-height: 1.45; }
@@ -61,7 +61,7 @@
     .info-box { background: #f6f2ef; border: 1px solid rgba(92,45,79,0.15); border-radius: 6px; padding: 24px 28px; margin: 32px 0; }
     .info-box p { font-size: 16px; line-height: 1.7; color: var(--charcoal); margin: 0; }
     @media (max-width: 600px) {
-      .phase-grid { grid-template-columns: 1fr; }
+      .article-phase-grid { grid-template-columns: 1fr; }
       .symptom-grid { grid-template-columns: 1fr; }
       .article-cta-box { padding: 28px 24px; }
     }
@@ -125,8 +125,8 @@
 
       <p>Period changes are usually the first noticeable sign that perimenopause has begun. The pattern tends to follow a predictable arc, though the timing varies considerably from woman to woman. I think of perimenopause as unfolding in two broad phases:</p>
 
-      <div class="phase-grid">
-        <div class="phase-card phase-1">
+      <div class="article-phase-grid">
+        <div class="article-phase-card phase-1">
           <h4>Phase 1: High Estrogen, Low Progesterone</h4>
           <ul>
             <li>Shorter cycles (less than 25 days)</li>
@@ -137,7 +137,7 @@
             <li>Cycles start to vary — some short, some normal, some skipped</li>
           </ul>
         </div>
-        <div class="phase-card phase-2">
+        <div class="article-phase-card phase-2">
           <h4>Phase 2: Dropping Estrogen and Progesterone</h4>
           <ul>
             <li>Longer cycles, fewer periods per year</li>
