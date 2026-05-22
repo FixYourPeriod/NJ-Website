@@ -155,7 +155,7 @@ export default function HomePage() {
             }}
           >
             <Image
-              src="/images/nicole-hero.jpg"
+              src="/images/nicole-5.jpg"
               alt="Nicole Jardim"
               fill
               sizes="420px"
@@ -233,7 +233,7 @@ export default function HomePage() {
         >
           <div style={{ position: "relative", height: 560 }}>
             <Image
-              src="/images/nicole-about.jpg"
+              src="/images/nicole-smoothie-crop.jpg"
               alt="Nicole Jardim"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -534,6 +534,51 @@ export default function HomePage() {
               )
             })}
           </div>
+        </div>
+      </section>
+
+      {/* ── SOCIAL PROOF ────────────────────────────────────────────────── */}
+      <section style={{ background: "var(--terra)", padding: "96px 40px", textAlign: "center" }}>
+        <div style={{ maxWidth: 680, margin: "0 auto" }}>
+          <span
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              color: "rgba(250,245,239,0.6)",
+              display: "block",
+              marginBottom: 20,
+            }}
+          >
+            Reach &amp; Impact
+          </span>
+          <h2
+            style={{
+              fontFamily: "'Fraunces', Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "clamp(36px, 4.5vw, 58px)",
+              fontWeight: 300,
+              lineHeight: 1.15,
+              color: "var(--ivory)",
+              marginBottom: 24,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Trusted by Tens of Thousands Worldwide
+          </h2>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 18,
+              lineHeight: 1.8,
+              color: "var(--ivory)",
+              opacity: 0.8,
+            }}
+          >
+            Nicole&apos;s work has supported women across the globe in understanding their cycles, advocating for themselves, and approaching their health with more clarity and confidence.
+          </p>
         </div>
       </section>
 

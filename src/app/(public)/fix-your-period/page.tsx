@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Fix Your Period App",
@@ -88,9 +89,16 @@ export default function FixYourPeriodPage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          gap: 16,
+          gap: 18,
         }}
       >
+        <Image
+          src="/images/fyp-logo.png"
+          alt="Fix Your Period"
+          width={52}
+          height={52}
+          style={{ borderRadius: "50%" }}
+        />
         <span
           style={{
             fontFamily: "'Fraunces', Georgia, serif",
@@ -262,8 +270,30 @@ export default function FixYourPeriodPage() {
         </div>
       </section>
 
+      {/* ── APP SCREENS ──────────────────────────────────────────────── */}
+      <section style={{ background: "var(--sand)", padding: "72px 40px", overflow: "hidden" }}>
+        <div style={{ maxWidth: 1160, margin: "0 auto" }}>
+          <div style={{ display: "flex", gap: 24, alignItems: "center", justifyContent: "center" }}>
+            {[
+              { src: "/images/fyp-screen-1.png", alt: "Fix Your Period App dashboard", w: 270 },
+              { src: "/images/fyp-screen-2.png", alt: "Hormone Health Assessment", w: 306 },
+              { src: "/images/fyp-screen-3.png", alt: "Personalized protocol", w: 270 },
+            ].map((s) => (
+              <Image
+                key={s.src}
+                src={s.src}
+                alt={s.alt}
+                width={s.w}
+                height={Math.round(s.w * 1.9)}
+                style={{ display: "block", maxWidth: "33%", height: "auto" }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── EVERYTHING IN ONE PLACE ───────────────────────────────────── */}
-      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--ivory)", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 16 }}>

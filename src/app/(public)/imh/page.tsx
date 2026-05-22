@@ -105,17 +105,13 @@ export default function IMHPage() {
           justifyContent: "center",
         }}
       >
-        <span
-          style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: 22,
-            fontWeight: 600,
-            color: "var(--plum)",
-            letterSpacing: "0.04em",
-          }}
-        >
-          The Institute for Menstrual Health
-        </span>
+        <Image
+          src="/images/imh-logo.png"
+          alt="The Institute for Menstrual Health"
+          height={44}
+          width={200}
+          style={{ height: 44, width: "auto" }}
+        />
       </div>
 
       {/* ── HERO ─────────────────────────────────────────────────────── */}
@@ -236,7 +232,7 @@ export default function IMHPage() {
         >
           <div style={{ position: "relative", borderRadius: 4, overflow: "hidden", aspectRatio: "4/5" }}>
             <Image
-              src="/images/imh-coaches.jpg"
+              src="/images/nicole-3.jpg"
               alt="Women's health coaches"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
