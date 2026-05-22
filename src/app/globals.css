@@ -1,0 +1,201 @@
+/* ─── FONTS ─────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+/* ─── NJ BRAND PALETTE ──────────────────────────────────────────────────── */
+:root {
+  --plum:      #5C2D4F;
+  --plum-dark: #3E1D36;
+  --plum-mid:  #6e3860;
+  --terra:     #B55A3A;
+  --ivory:     #FAF5EF;
+  --sand:      #EAE0D5;
+  --gold:      #C4984A;
+  --sage:      #7A9B7E;
+  --charcoal:  #2C2520;
+  --rose:      #D4A097;
+}
+
+/* ─── TAILWIND v4 THEME ─────────────────────────────────────────────────── */
+@theme inline {
+  /* Colors */
+  --color-plum:       var(--plum);
+  --color-plum-dark:  var(--plum-dark);
+  --color-plum-mid:   var(--plum-mid);
+  --color-terra:      var(--terra);
+  --color-ivory:      var(--ivory);
+  --color-sand:       var(--sand);
+  --color-gold:       var(--gold);
+  --color-sage:       var(--sage);
+  --color-charcoal:   var(--charcoal);
+  --color-rose:       var(--rose);
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-serif:   'Cormorant Garamond', Georgia, serif;
+  --font-sans:    'DM Sans', system-ui, sans-serif;
+}
+
+/* ─── RESET & BASE ──────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: var(--ivory);
+  color: var(--charcoal);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+
+/* ─── ARTICLE PROSE ─────────────────────────────────────────────────────── */
+/* Applied via className="article-prose" on the article body wrapper.
+   Cascades typography onto article content without per-element classNames. */
+.article-prose {
+  color: var(--charcoal);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+.article-prose > * + * {
+  margin-top: 1.25em;
+}
+.article-prose h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--plum);
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.15;
+}
+.article-prose h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--plum);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+.article-prose h4 {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--terra);
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.article-prose p {
+  margin: 0;
+  color: var(--charcoal);
+}
+.article-prose a {
+  color: var(--terra);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-prose a:hover {
+  color: var(--plum);
+}
+.article-prose strong {
+  font-weight: 600;
+  color: var(--charcoal);
+}
+.article-prose ul,
+.article-prose ol {
+  padding-left: 1.5rem;
+  color: var(--charcoal);
+}
+.article-prose ul {
+  list-style: none;
+  padding-left: 0;
+}
+.article-prose ul li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.article-prose ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 600;
+}
+.article-prose ol {
+  list-style: decimal;
+}
+.article-prose li {
+  margin: 0.5em 0;
+}
+.article-prose blockquote {
+  border-left: 3px solid var(--terra);
+  padding: 0.25em 0 0.25em 1.5em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--plum);
+  margin: 2em 0;
+}
+.article-prose hr {
+  border: none;
+  height: 1px;
+  background: rgba(92, 45, 79, 0.12);
+  margin: 3em 0;
+}
+
+/* Callout box */
+.article-prose .callout {
+  background: rgba(234, 224, 213, 0.5);
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(196, 152, 74, 0.25);
+  margin: 2em 0;
+}
+.article-prose .callout > * + * {
+  margin-top: 0.5em;
+}
+.article-prose .callout p:first-child {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--terra);
+}
+
+/* ─── ANIMATIONS ────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* ─── SCROLLBAR ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--ivory); }
+::-webkit-scrollbar-thumb  { background: var(--sand); border-radius: 3px; }
