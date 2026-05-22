@@ -4,10 +4,21 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 
+const navLinksLeft = [
+  { label: "Fix Your Period", href: "/fix-your-period" },
+  { label: "Professional Training", href: "/imh" },
+  // Resources dropdown comes next — handled inline below
+]
+
+const navLinksRight = [
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+]
+
+// Combined for mobile
 const navLinks = [
   { label: "Fix Your Period", href: "/fix-your-period" },
   { label: "Professional Training", href: "/imh" },
-  // Resources is a dropdown — handled inline below
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ]
@@ -56,7 +67,7 @@ export function Nav() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {navLinksLeft.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -134,6 +145,23 @@ export function Nav() {
               ))}
             </div>
           </div>
+
+          {navLinksRight.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="transition-colors duration-150"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13.5,
+                fontWeight: isActive(link.href) ? 600 : 500,
+                color: isActive(link.href) ? "var(--plum)" : "var(--charcoal)",
+                letterSpacing: "0.02em",
+              }}
+            >
+              {link.label}
+            </Link>
+          ))}
 
           {/* CTA */}
           <Link
