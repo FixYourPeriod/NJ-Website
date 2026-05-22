@@ -1,13 +1,13 @@
 import type { Metadata } from "next"
-import { ClerkProvider } from "@clerk/nextjs"
 import "./globals.css"
 
 /**
  * Root layout — kept intentionally minimal.
  *
- * Wraps the entire app in <ClerkProvider> so any route (public or admin) can
- * read the current auth session. The public-site chrome (Nav, Footer) lives
- * in the (public) route group layout so /admin doesn't inherit it.
+ * ClerkProvider is intentionally NOT here. It lives in the (admin) route
+ * group layout so public pages never depend on Clerk keys being present.
+ * The public-site chrome (Nav, Footer) lives in the (public) route group
+ * layout so /admin doesn't inherit it.
  */
 
 export const metadata: Metadata = {
@@ -26,10 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className="antialiased">{children}</body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className="antialiased">{children}</body>
+    </html>
   )
 }
