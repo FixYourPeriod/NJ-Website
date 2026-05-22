@@ -86,12 +86,11 @@ export function Nav() {
 
           {/* Resources dropdown */}
           <div
-            className="relative flex items-center"
+            style={{ position: "relative", display: "flex", alignItems: "center" }}
             onMouseEnter={() => setResourcesOpen(true)}
             onMouseLeave={() => setResourcesOpen(false)}
           >
             <button
-              className="flex items-center gap-1 transition-colors duration-150 cursor-pointer"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13.5,
@@ -101,6 +100,10 @@ export function Nav() {
                 background: "none",
                 border: "none",
                 padding: 0,
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                gap: 4,
               }}
               aria-expanded={resourcesOpen}
               aria-haspopup="true"
@@ -109,35 +112,61 @@ export function Nav() {
               <span style={{ fontSize: 10, opacity: 0.55 }}>▾</span>
             </button>
 
-            {/* Dropdown menu */}
+            {/* Invisible bridge fills the gap between button and menu so
+                onMouseLeave doesn't fire when moving the cursor downward */}
+            {resourcesOpen && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: 0,
+                  right: 0,
+                  height: 20,
+                }}
+              />
+            )}
+
+            {/* Dropdown menu — pure inline styles, no Tailwind position classes */}
             <div
-              className="absolute left-1/2 -translate-x-1/2 rounded-md overflow-hidden"
               style={{
+                position: "absolute",
                 top: "calc(100% + 16px)",
+                left: "50%",
+                transform: `translateX(-50%) translateY(${resourcesOpen ? "0" : "-6px"})`,
                 background: "var(--ivory)",
                 border: "1px solid rgba(92,45,79,0.12)",
+                borderRadius: 6,
                 boxShadow: "0 8px 28px rgba(44,37,32,0.13)",
                 minWidth: 160,
-                padding: "6px 0",
+                padding: "8px 0",
                 opacity: resourcesOpen ? 1 : 0,
                 visibility: resourcesOpen ? "visible" : "hidden",
-                transform: `translateX(-50%) translateY(${resourcesOpen ? 0 : -4}px)`,
                 transition: "opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease",
                 pointerEvents: resourcesOpen ? "auto" : "none",
+                zIndex: 200,
               }}
             >
               {resourcesLinks.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="block transition-colors duration-150"
                   style={{
+                    display: "block",
                     fontFamily: "'DM Sans', sans-serif",
                     padding: "10px 20px",
                     fontSize: 13.5,
                     fontWeight: isActive(l.href) ? 600 : 500,
                     color: isActive(l.href) ? "var(--plum)" : "var(--charcoal)",
                     whiteSpace: "nowrap",
+                    transition: "color 0.15s, background 0.15s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "var(--plum)"
+                    e.currentTarget.style.background = "rgba(92,45,79,0.04)"
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = isActive(l.href) ? "var(--plum)" : "var(--charcoal)"
+                    e.currentTarget.style.background = "transparent"
                   }}
                 >
                   {l.label}
