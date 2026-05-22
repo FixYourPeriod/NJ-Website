@@ -53,6 +53,15 @@ body {
   font-size: 17px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  /* Restore optical sizing that Tailwind's font-variation-settings: normal resets */
+  font-optical-sizing: auto;
+}
+
+/* Re-enable optical sizing on all elements — Tailwind v4 preflight sets
+   font-variation-settings: normal on html which prevents the browser from
+   auto-adjusting the opsz axis. This restores the original HTML site behaviour. */
+* {
+  font-optical-sizing: auto;
 }
 
 img { display: block; max-width: 100%; }
