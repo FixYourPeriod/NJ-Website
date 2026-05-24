@@ -22,7 +22,7 @@ export const faqs = [
 ]
 
 const html = `
-<p>Most of us were handed a pad or tampon in middle school and told periods are a normal part of being a woman. Full stop. What we were rarely told — and what has taken decades of research to bring into mainstream conversation — is that the menstrual cycle is one of the most information-rich systems in the human body.</p>
+<p>Most of us women were handed a pad or tampon in middle school and told periods are a normal part of being a woman. Full stop. What we were rarely told — and what has taken decades of research to bring into mainstream conversation — is that the menstrual cycle is one of the most information-rich systems in the human body.</p>
 <p>Your cycle can reveal how well your thyroid is functioning, whether you're under too much stress, if your blood sugar is unstable, and whether your immune system is struggling with something it hasn't yet named. It is, as the American College of Obstetricians and Gynecologists formally recognized in 2015, a <em>vital sign</em> — as meaningful as heart rate or blood pressure.</p>
 <p>This guide covers everything you should have been taught at the start: what the menstrual cycle actually is, how the four phases work, the key hormones involved, what normal looks like, and how to use your cycle as a window into your health.</p>
 <h2>What Is the Menstrual Cycle?</h2>
