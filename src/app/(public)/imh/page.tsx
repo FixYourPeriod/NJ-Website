@@ -355,7 +355,7 @@ export default function IMHPage() {
       </section>
 
       {/* ── WHO THIS IS FOR ──────────────────────────────────────────── */}
-      <section style={{ background: "var(--sand)", padding: "80px 40px" }}>
+      <section style={{ background: "var(--ivory)", padding: "80px 40px", borderTop: "1px solid rgba(92,45,79,0.08)" }}>
         <div style={{ maxWidth: 1040, margin: "0 auto" }}>
           {/* Centered eyebrow */}
           <div
