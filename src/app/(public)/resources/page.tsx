@@ -621,6 +621,7 @@ export default function ResourcesPage() {
                 aspectRatio: "1/1",
                 borderRadius: 12,
                 overflow: "hidden",
+                background: "#fff",
                 boxShadow: "0 24px 64px rgba(0,0,0,0.35)",
               }}
             >
@@ -629,7 +630,7 @@ export default function ResourcesPage() {
                 alt="The Period Party Podcast"
                 fill
                 sizes="(max-width: 768px) 100vw, 340px"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain", padding: "12px" }}
               />
             </div>
           </div>
