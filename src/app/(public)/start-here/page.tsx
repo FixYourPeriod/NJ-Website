@@ -31,7 +31,7 @@ const phases = [
     cta: "Explore Resources",
     ctaHref: "/resources",
     external: false,
-    ctaStyle: "outline" as const,
+    color: "plum" as const,
   },
   {
     num: "Phase 2",
@@ -56,7 +56,7 @@ const phases = [
     cta: "Take the Free Assessment",
     ctaHref: "https://fixyourperiod.app/quiz",
     external: true,
-    ctaStyle: "terra" as const,
+    color: "terra" as const,
   },
   {
     num: "Phase 3",
@@ -79,7 +79,7 @@ const phases = [
     cta: "Visit the Institute for Menstrual Health",
     ctaHref: "https://instituteformenstrualhealth.com/",
     external: true,
-    ctaStyle: "plum" as const,
+    color: "charcoal" as const,
   },
 ]
 
@@ -136,25 +136,37 @@ export default function StartHerePage() {
             <em style={{ fontStyle: "italic", color: "var(--terra)" }}>Can Support You</em>
           </h1>
 
-          {[
-            "Many women arrive here after years of being dismissed, told their symptoms are "normal," or handed prescriptions without explanation. Others come seeking answers to questions their doctors didn't take the time to address. Some are simply curious about how their bodies actually work.",
-            "Nicole's work is built on a foundational principle: the menstrual cycle is a vital sign, not an inconvenience. Your symptoms aren't random occurrences to accept or suppress. They're signals worth understanding.",
-          ].map((p, i) => (
-            <p
-              key={i}
-              style={{
-                fontFamily: i === 0 ? "'Cormorant Garamond', Georgia, serif" : "'DM Sans', sans-serif",
-                fontSize: i === 0 ? 21 : 16,
-                lineHeight: 1.8,
-                color: "var(--charcoal)",
-                opacity: i === 0 ? 0.9 : 0.65,
-                maxWidth: 620,
-                margin: "0 auto 16px",
-              }}
-            >
-              {p}
-            </p>
-          ))}
+          <p
+            style={{
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 21,
+              lineHeight: 1.8,
+              color: "var(--charcoal)",
+              opacity: 0.9,
+              maxWidth: 620,
+              margin: "0 auto 16px",
+            }}
+          >
+            Many women arrive here after years of being dismissed, told their symptoms
+            are &ldquo;normal,&rdquo; or handed prescriptions without explanation. Others
+            come seeking answers to questions their doctors didn&apos;t take the time to
+            address. Some are simply curious about how their bodies actually work.
+          </p>
+          <p
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 16,
+              lineHeight: 1.8,
+              color: "var(--charcoal)",
+              opacity: 0.65,
+              maxWidth: 620,
+              margin: "0 auto 16px",
+            }}
+          >
+            Nicole&apos;s work is built on a foundational principle: the menstrual cycle
+            is a vital sign, not an inconvenience. Your symptoms aren&apos;t random
+            occurrences to accept or suppress. They&apos;re signals worth understanding.
+          </p>
         </div>
       </section>
 
@@ -196,7 +208,23 @@ export default function StartHerePage() {
 
           {/* Cards */}
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-            {phases.map((phase) => (
+            {phases.map((phase) => {
+              const leftBg =
+                phase.color === "plum"
+                  ? "var(--plum)"
+                  : phase.color === "terra"
+                  ? "var(--terra)"
+                  : "var(--charcoal)"
+              const rightBg = phase.color === "terra" ? "var(--ivory)" : "var(--sand)"
+              const ctaBg = leftBg
+              const topAccent =
+                phase.color === "plum"
+                  ? "var(--gold)"
+                  : phase.color === "terra"
+                  ? "rgba(250,245,239,0.5)"
+                  : "rgba(196,152,74,0.5)"
+
+              return (
               <div
                 key={phase.num}
                 style={{
@@ -204,13 +232,13 @@ export default function StartHerePage() {
                   overflow: "hidden",
                   display: "grid",
                   gridTemplateColumns: "260px 1fr",
-                  borderTop: "2px solid rgba(196,152,74,0.4)",
+                  borderTop: `2px solid ${topAccent}`,
                 }}
               >
-                {/* Left: plum label column */}
+                {/* Left: phase-colored label column */}
                 <div
                   style={{
-                    background: "var(--plum)",
+                    background: leftBg,
                     padding: "52px 40px",
                     display: "flex",
                     flexDirection: "column",
@@ -280,7 +308,7 @@ export default function StartHerePage() {
                 {/* Right: content column */}
                 <div
                   style={{
-                    background: "var(--sand)",
+                    background: rightBg,
                     padding: "48px 52px",
                   }}
                 >
@@ -353,7 +381,7 @@ export default function StartHerePage() {
                           key={b}
                           style={{
                             display: "flex",
-                            gap: 14,
+                            gap: 12,
                             alignItems: "flex-start",
                             fontFamily: "'DM Sans', sans-serif",
                             fontSize: 15,
@@ -364,15 +392,14 @@ export default function StartHerePage() {
                         >
                           <span
                             style={{
-                              display: "inline-block",
-                              width: 18,
-                              height: 1.5,
-                              background: "var(--gold)",
+                              color: "var(--gold)",
                               flexShrink: 0,
-                              marginTop: 10,
-                              opacity: 0.8,
+                              fontFamily: "'DM Sans', sans-serif",
+                              fontWeight: 600,
                             }}
-                          />
+                          >
+                            —
+                          </span>
                           {b}
                         </li>
                       ))}
@@ -410,10 +437,7 @@ export default function StartHerePage() {
                           letterSpacing: "0.08em",
                           textTransform: "uppercase",
                           padding: "15px 36px",
-                          background:
-                            phase.ctaStyle === "terra"
-                              ? "var(--terra)"
-                              : "var(--plum)",
+                          background: ctaBg,
                           color: "var(--ivory)",
                           borderRadius: 40,
                           textDecoration: "none",
@@ -432,7 +456,7 @@ export default function StartHerePage() {
                           letterSpacing: "0.08em",
                           textTransform: "uppercase",
                           padding: "15px 36px",
-                          background: "var(--plum)",
+                          background: ctaBg,
                           color: "var(--ivory)",
                           borderRadius: 40,
                           textDecoration: "none",
@@ -444,7 +468,8 @@ export default function StartHerePage() {
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -579,7 +604,7 @@ export default function StartHerePage() {
               }}
             >
               Lead
-            </a>
+            </Link>
           </div>
         </div>
       </section>
