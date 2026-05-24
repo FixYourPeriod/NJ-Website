@@ -1,0 +1,138 @@
+import type { ArticleMeta } from "./index"
+
+export const meta: ArticleMeta = {
+  slug: "help-why-am-i-spotting",
+  title: "Help, Why Am I Spotting?",
+  description: "Spotting between periods can signal low progesterone, a short luteal phase, fibroids, infection, or something more serious. Here's how to decode the timing and find the root cause.",
+  category: "Symptoms",
+  publishedAt: "2024-01-01",
+  readingTime: 7,
+  section: "Conditions & Symptoms",
+}
+
+export const faqs = [
+  { q: "Is it normal to spot between periods?", a: "Occasional, very light spotting that coincides with ovulation (days 12–16 in a typical cycle) can be normal. One to two days of brown spotting immediately before a full period begins is also fairly common and usually not concerning. However, spotting that recurs regularly, appears at unpredictable times, lasts more than a couple of days, or is accompanied by pain or other symptoms is worth investigating. Spotting is a symptom — not a condition — and identifying the underlying driver is what matters most." },
+  { q: "What does it mean to spot before your period?", a: "Spotting 1–2 days before your period begins is usually old blood clearing from the uterus and is generally not a concern. Spotting that starts 3 or more days before your full flow is one of the most reliable signs of low progesterone and a short luteal phase. Progesterone holds the uterine lining in place during the second half of your cycle — when it drops too quickly, the lining begins to break down before your period is due, showing up as days of spotting before the real bleed arrives. This is very addressable once the root cause is identified." },
+  { q: "What color is implantation bleeding?", a: "Implantation bleeding is typically light pink or pale brown — much lighter in color and volume than a normal period. It appears 6 to 12 days after ovulation, lasts one to three days at most, and does not progress into a heavier flow. If spotting appears around this timing and you could be pregnant, a home pregnancy test taken 3–4 days later (once hCG is detectable) will give you a clearer answer. Bright red, heavier bleeding in early pregnancy always warrants a call to a doctor or midwife." },
+  { q: "Can stress cause spotting?", a: "Yes, chronic stress can absolutely contribute to spotting — and the mechanism is hormonal. Sustained psychological or physical stress elevates cortisol, which suppresses the hypothalamic-pituitary-ovarian axis. This can delay or weaken ovulation, reduce progesterone output from the corpus luteum, and produce spotting, irregular cycles, and a shortened luteal phase. The effect is often most visible as pre-period spotting (spotting starts several days before your full period), which is a classic sign of low progesterone. Addressing the stress load — including improving sleep — is one of the most impactful steps you can take." },
+  { q: "Why am I spotting on the pill or hormonal IUD?", a: "Breakthrough bleeding and spotting are very common on hormonal contraceptives, particularly progestin-only methods like the mini-pill, implant, and hormonal IUD. The progestin thins the uterine lining over time and can cause unpredictable shedding, especially in the first 3–6 months of use. This is not dangerous, but it is one of the most commonly reported reasons people discontinue these methods. If spotting is heavy, persists beyond 6 months, or is accompanied by pain, it is worth speaking with the prescribing clinician — there may be alternative formulations or methods that suit you better." },
+  { q: "Can fibroids or polyps cause spotting?", a: "Yes — uterine polyps and submucosal fibroids are among the most common structural causes of irregular spotting and intermenstrual bleeding. Polyps are small benign growths on the endometrial lining; fibroids are non-cancerous growths in or on the uterine wall. Both can cause the uterus to bleed at unexpected times, produce heavy or prolonged periods, and create a start-stop-start pattern during menstruation. They are typically diagnosed via transvaginal ultrasound and, if symptomatic, can be removed via hysteroscopy. If you have persistent, unexplained spotting with no clear hormonal explanation, a pelvic ultrasound is a reasonable first step." },
+  { q: "When should I be worried about spotting?", a: "Most mid-cycle spotting has a benign hormonal explanation, but certain situations always warrant medical evaluation: any bleeding after menopause (12 months without a period), spotting accompanied by pelvic pain (especially one-sided pain), spotting with fever or unusual-smelling discharge, heavy intermenstrual bleeding that is more than just light spotting, or any bleeding in early pregnancy. If you are tracking your cycle and notice spotting appearing at completely random times with no clear hormonal pattern — not mid-cycle, not pre-period, not post-period — and it keeps recurring, schedule an appointment for a pelvic exam, Pap smear, and ultrasound rather than waiting and watching." },
+  { q: "How do I stop spotting before my period naturally?", a: "Pre-period spotting is most often caused by low progesterone or a short luteal phase — and both are addressable through targeted nutrition, stress support, and in some cases, herbal or supplement protocols. The key nutrients for corpus luteum function and progesterone production are vitamin C, vitamin B6, magnesium, and zinc. Ensuring you are actually ovulating each cycle is the essential first step, since progesterone cannot be produced without it. Chronic stress and thyroid dysfunction are two often-overlooked drivers that can both be worked on simultaneously. For the full step-by-step protocol, see the article on lengthening a short luteal phase ." },
+]
+
+const html = `
+<p>Spotting is defined as any light vaginal bleeding that occurs outside of your normal period window. It can show up as pink, red, or brown discharge on toilet paper, in your underwear, or when you wipe — but it is not heavy enough to require a pad or tampon. It might happen once, or it might become a recurring pattern you notice every single cycle.</p>
+<p>Here is the most important thing to understand: spotting is not a diagnosis — it is a symptom. The fact that you are spotting tells you something is going on hormonally, structurally, or locally in the reproductive tract. Where in your cycle the spotting appears is one of the most useful clues you have for figuring out what is driving it.</p>
+<h2>The 6 Types of Spotting — and What Each One Means</h2>
+<h3>1. Ovulation Spotting (Days 12–16 of a typical cycle)</h3>
+<p>Mid-cycle spotting that coincides with ovulation is one of the most benign forms of spotting and affects roughly 5% of people with regular cycles. It tends to be light pink or streaked with red, lasts only a day or two, and often arrives alongside other ovulation signs like a sharp pelvic twinge (mittelschmerz), a surge in clear stretchy cervical fluid, or an increase in libido.</p>
+<p>The mechanism is a brief dip in estrogen that occurs just before the LH surge triggers ovulation. This temporary estrogen withdrawal causes a small amount of uterine lining to shed. Once the LH surge fires and the egg is released, estrogen rises again and progesterone begins climbing — and the spotting resolves. Occasional ovulation spotting in an otherwise regular cycle is generally not a concern.</p>
+<h3>2. Implantation Bleeding (6–12 days after ovulation)</h3>
+<p>If a fertilized egg travels down the fallopian tube and burrows into the uterine lining, a small amount of light pink or brown spotting can occur at the moment of implantation. This typically happens 6 to 12 days after ovulation, which places it squarely in the luteal phase and can be mistaken for an early, light period.</p>
+<p>Implantation bleeding is usually very light — it does not progress into a full flow — and lasts one to three days at most. If you are trying to conceive and notice unexpectedly light spotting in this window, it is worth taking a pregnancy test a few days later once hCG levels are detectable.</p>
+<h3>3. Pre-Period Spotting (1–3 days before your period)</h3>
+<p>One to two days of dark brown or rust-colored spotting immediately before your period begins is common and usually no cause for alarm. It is typically old blood — the last remnant of the previous cycle clearing out before fresh bleeding begins.</p>
+<p>However, <strong>spotting that starts 3 or more days before your full flow</strong> is a different story. This pattern is one of the most reliable indicators of <a href="/articles/low-progesterone-why-it-happens-and-what-you-can-do-about-it">low progesterone</a> and a <a href="/articles/lengthen-your-luteal-phase">short luteal phase</a>. Progesterone is the hormone that holds the uterine lining in place throughout the second half of your cycle. When progesterone drops too quickly — or was never high enough — the lining begins to break down before your actual period should start, producing days of spotting before the full bleed arrives.</p>
+<h3>4. Post-Period Spotting (after your period ends)</h3>
+<p>Light spotting or brown discharge for a day or two after your period is usually old blood being cleared from the uterus and is not typically concerning. But spotting that continues or keeps reappearing after your period officially ends may point to something more structural. Conditions like endometrial polyps, submucosal fibroids, or adenomyosis can prevent the uterus from fully contracting and expelling the lining cleanly, leading to slow, lingering clearance. Hypothyroidism is another common underlying driver — low thyroid function slows everything down, including uterine contractions and menstrual blood flow.</p>
+<h3>5. Breakthrough Bleeding on Hormonal Contraceptives</h3>
+<p>Unscheduled bleeding on hormonal birth control — particularly in the first 3 months — is extremely common and is usually the result of the uterine lining adapting to the synthetic progestin. Progestin-only methods like the mini-pill, hormonal IUD, implant, or injection are especially associated with irregular spotting and breakthrough bleeding, sometimes throughout the entire time of use.</p>
+<p>It is worth noting that any bleeding that occurs on hormonal contraceptives is not a "true" period in the physiological sense. Since most hormonal methods suppress ovulation, there is no progesterone produced by a corpus luteum. The withdrawal bleed on combined pills, or the irregular spotting on progestin-only methods, is simply a response to changes in synthetic hormone levels — not a signal of ovulation or cycle health. If breakthrough bleeding is heavy, persistent, or accompanied by pain, discuss it with your prescribing clinician.</p>
+<h3>6. Random Intermenstrual Bleeding (no clear cycle timing)</h3>
+<p>Bleeding that appears at random points mid-cycle with no clear connection to ovulation, implantation, or perimenopause — particularly if it is heavier than light spotting, recurring, or accompanied by pain — requires investigation. Intermenstrual bleeding with no obvious hormonal explanation can indicate cervical ectropion, cervicitis, an STI, a uterine polyp, fibroid, or, in rare cases, cervical or uterine pathology. The key word here is pattern: a one-off episode of light spotting is different from repeated episodes of unexplained mid-cycle bleeding.</p>
+<h2>Root Causes of Spotting, Organized by Category</h2>
+<h3>Hormonal Causes</h3>
+<ul>
+<li><strong>Low progesterone / short luteal phase</strong> — the most common hormonal driver of pre-period spotting. Progesterone holds the lining; without enough of it, the lining sheds early. See the full article on <a href="/articles/lengthen-your-luteal-phase">short luteal phase</a> for the complete protocol.</li>
+<li><strong>Estrogen dominance</strong> — when estrogen is elevated relative to progesterone (even if progesterone is technically within range), the uterine lining is overstimulated. The lining may build unevenly and shed at unpredictable times.</li>
+<li><strong>Thyroid dysfunction</strong> — hypothyroidism slows the entire hormonal cascade. It raises prolactin (which disrupts ovulation), impairs corpus luteum function (which lowers progesterone), and slows uterine clearance. If you have unexplained spotting alongside fatigue, cold sensitivity, constipation, or hair loss, a full thyroid panel is worth requesting.</li>
+<li><strong>Perimenopause</strong> — the hormonal fluctuations of perimenopause, which can begin in the late 30s or early 40s, frequently produce irregular spotting as estrogen and progesterone levels become less predictable cycle to cycle.</li>
+</ul>
+<h3>Structural Causes</h3>
+<ul>
+<li><strong>Uterine polyps</strong> — small, benign growths on the endometrial lining that are a very common cause of intermenstrual spotting, heavy periods, and post-period bleeding.</li>
+<li><strong>Fibroids</strong> — non-cancerous growths in or on the uterine wall. Submucosal fibroids (those that protrude into the uterine cavity) are most likely to cause irregular bleeding and spotting.</li>
+<li><strong>Cervical ectropion</strong> — a benign condition where cells that normally line the inside of the cervical canal spread to the outer surface of the cervix, making it more prone to light spotting — particularly after intercourse or a Pap smear.</li>
+<li><strong>Endometriosis</strong> — though not always a cause of mid-cycle spotting, endometriosis can contribute to irregular bleeding patterns, particularly pre-period spotting, as well as pain during ovulation and menstruation.</li>
+</ul>
+<h3>Infections</h3>
+<ul>
+<li><strong>Cervicitis</strong> — inflammation of the cervix, often caused by an STI, can produce contact bleeding and spotting.</li>
+<li><strong>Sexually transmitted infections</strong> — chlamydia and gonorrhea in particular can cause cervical inflammation and irregular spotting. Many STIs present with no other obvious symptoms, which is why spotting with no other clear explanation warrants STI screening.</li>
+<li><strong>Bacterial vaginosis</strong> — disruption of the vaginal microbiome can cause irritation and light spotting, along with unusual discharge or odor.</li>
+</ul>
+<h3>Medications</h3>
+<ul>
+<li><strong>Hormonal contraceptives</strong> — especially progestin-only methods (mini-pill, implant, hormonal IUD, injection), which are well-known to cause irregular spotting and breakthrough bleeding.</li>
+<li><strong>Blood thinners</strong> — anticoagulant medications can increase bleeding throughout the body, including the uterus.</li>
+<li><strong>Some antidepressants and antipsychotics</strong> — medications that raise prolactin levels can disrupt ovulation and alter bleeding patterns.</li>
+</ul>
+<h3>Other Contributing Factors</h3>
+<ul>
+<li><strong>Chronic stress</strong> — sustained psychological or physical stress disrupts the HPO axis (hypothalamic-pituitary-ovarian), which can impair ovulation, lower progesterone, and cause irregular bleeding.</li>
+<li><strong>Intense or sudden changes in exercise</strong> — extreme exercise, undereating relative to energy output, or rapid weight changes can disrupt ovulation and produce irregular spotting.</li>
+<li><strong>Early pregnancy or ectopic pregnancy</strong> — any spotting in someone who could be pregnant warrants a pregnancy test. Ectopic pregnancy, where a fertilized egg implants outside the uterus, can cause spotting or light bleeding alongside one-sided pelvic pain and requires urgent medical attention.</li>
+</ul>
+<div class="warning-box">
+<h3>When to See a Doctor: Red Flags</h3>
+<ul>
+<li>Any vaginal bleeding after menopause (12 months without a period)</li>
+<li>Heavy intermenstrual bleeding — not just light spotting, but actual flow between periods</li>
+<li>Spotting accompanied by significant pelvic pain, especially one-sided pain</li>
+<li>Spotting alongside fever, unusual discharge, or foul odor</li>
+<li>Spotting in the first trimester of a known or possible pregnancy</li>
+<li>Any unexplained bleeding that recurs regularly without an obvious hormonal pattern</li>
+</ul>
+</div>
+<h2>When Spotting Is Normal</h2>
+<p>Not all spotting needs to be treated or investigated urgently. The following scenarios are generally considered within the range of normal:</p>
+<ul>
+<li>One to two days of light brown spotting immediately before your full period begins</li>
+<li>One to two days of light brownish discharge after your period ends</li>
+<li>Very light mid-cycle spotting that coincides with other ovulation signs (cervical fluid changes, mild pelvic discomfort) and lasts only a day</li>
+<li>Light spotting in the first 1–3 months on a new hormonal contraceptive</li>
+</ul>
+<p>The pattern that warrants attention is spotting that is <strong>persistent, recurring, heavy, or accompanied by symptoms like pain, odor, or fever</strong> — or spotting that does not fit the hormonal timing patterns described above.</p>
+<h2>What to Track</h2>
+<p>The most useful thing you can do if you are spotting regularly is to start tracking it with detail. At minimum, record the following:</p>
+<ul>
+<li><strong>Day of your cycle</strong> — where does the spotting fall relative to the first day of your last period and your estimated ovulation day?</li>
+<li><strong>Color</strong> — pink, bright red, dark red, brown, or rust-colored? The color gives clues about how fresh the blood is and how quickly it is moving.</li>
+<li><strong>Quantity</strong> — how much is there? A small streak on toilet paper? Enough to show in underwear? Any more than that?</li>
+<li><strong>Duration</strong> — is it one episode, or does it continue for several days?</li>
+<li><strong>Associated symptoms</strong> — is there any pain, cramping, unusual discharge, breast tenderness, or other cyclical symptoms around the same time?</li>
+<li><strong>Potential triggers</strong> — did it follow intercourse? A Pap smear? An intense workout? A particularly stressful week?</li>
+</ul>
+<p>Three to four cycles of this data will give you — and any clinician you work with — a much clearer picture of what is actually happening and where to focus.</p>
+<div class="article-cta-box">
+<h3>Get your personalized hormonal health protocol</h3>
+<p>Take the free Hormone Health Assessment — 30 questions about your cycle, symptoms, and lifestyle — and receive a tailored action plan built for your body.</p>
+<a class="btn btn-terra" href="https://fixyourperiod.app/quiz" target="_blank">Take the Free Assessment →</a>
+</div>
+<h2>Natural Approaches for Low-Progesterone Spotting</h2>
+<p>If your spotting pattern points to <a href="/articles/low-progesterone-why-it-happens-and-what-you-can-do-about-it">low progesterone</a> — particularly pre-period spotting that starts 3 or more days before your full flow — there are evidence-informed steps you can take to support progesterone production and luteal phase length. Keep in mind that progesterone is produced after ovulation, so everything here is ultimately about supporting the quality of ovulation and the health of the corpus luteum.</p>
+<h3>1. Confirm You Are Actually Ovulating</h3>
+<p>Progesterone requires ovulation. If you are not ovulating consistently (which you can track via basal body temperature and cervical fluid), the primary problem is anovulation — and that needs to be addressed before anything else will make a meaningful difference. A <a href="/articles/period-start-stop-start-again">period that starts, stops, and starts again</a> can also be a sign of disrupted ovulation and progesterone insufficiency.</p>
+<h3>2. Address Chronic Stress</h3>
+<p>Cortisol and progesterone compete for the same receptors in the body. Chronic stress suppresses the HPO axis — reducing LH output, impairing follicle development, and weakening the corpus luteum that produces progesterone after ovulation. Sustainable stress reduction is not optional if low progesterone is a factor: sleep, nervous system regulation, realistic work-life boundaries, and gentle movement all directly support hormonal health.</p>
+<h3>3. Support Progesterone Through Nutrition</h3>
+<p>The corpus luteum is nutritionally demanding. Key nutrients that support its function include:</p>
+<ul>
+<li><strong>Vitamin C</strong> — highly concentrated in the corpus luteum and critical for progesterone synthesis. Aim for at least 500–750 mg daily from food and supplementation. Bell peppers, citrus, kiwi, and strawberries are excellent food sources.</li>
+<li><strong>Vitamin B6</strong> — plays a direct role in progesterone production and reducing estrogen dominance. Found in chickpeas, poultry, salmon, and bananas. A supplement of 25–50 mg daily during the luteal phase may also be helpful.</li>
+<li><strong>Magnesium</strong> — supports the HPO axis and reduces cortisol. Found in leafy greens, pumpkin seeds, dark chocolate, and legumes. Many people benefit from 200–400 mg of magnesium glycinate or bisglycinate nightly.</li>
+<li><strong>Zinc</strong> — essential for follicle development and LH production. Found in red meat, shellfish (especially oysters), pumpkin seeds, and legumes.</li>
+<li><strong>Adequate dietary fat</strong> — cholesterol is the building block of all steroid hormones including progesterone. Very low-fat diets can suppress hormone production at the source.</li>
+</ul>
+<h3>4. Support Your Thyroid</h3>
+<p>Because thyroid dysfunction is such a common and overlooked driver of low progesterone and pre-period spotting, it is worth getting a full thyroid panel if you have not had one recently. This means TSH, free T3, free T4, and thyroid antibodies (TPO and TgAb) — not just TSH alone, which misses a lot. Thyroid hormone works alongside FSH to support follicle development, and low thyroid function directly impairs corpus luteum performance.</p>
+<h3>5. Consider Vitex (Chasteberry)</h3>
+<p>Vitex agnus-castus is a well-researched herbal adaptogen for luteal phase support. It works by raising dopamine, which lowers prolactin, which in turn supports the LH levels needed for healthy ovulation and corpus luteum function. Vitex is generally taken as 500 mg each morning from day 5 of your cycle through to the start of your next period, and results typically require 3–6 months of consistent use. It is a potent herb — work with a qualified practitioner before starting, particularly if you are on hormonal contraceptives or fertility medications.</p>
+<p>For a full protocol on addressing a short luteal phase and low progesterone, see the dedicated article on <a href="/articles/lengthen-your-luteal-phase">how to lengthen a short luteal phase naturally</a>.</p>
+`
+
+export default function ArticleBody() {
+  // eslint-disable-next-line react/no-danger
+  return <div dangerouslySetInnerHTML={{ __html: html }} />
+}

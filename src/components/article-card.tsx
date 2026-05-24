@@ -4,14 +4,11 @@ import Link from "next/link"
 import type { ArticleMeta } from "@/content/articles/index"
 
 export function ArticleCard({ article }: { article: ArticleMeta }) {
-  const isExternal = Boolean(article.externalUrl)
-  const href = article.externalUrl ?? `/articles/${article.slug}`
+  const href = `/articles/${article.slug}`
 
   return (
     <Link
       href={href}
-      target={isExternal ? "_blank" : undefined}
-      rel={isExternal ? "noopener noreferrer" : undefined}
       style={{ textDecoration: "none", display: "block", height: "100%" }}
     >
       <article

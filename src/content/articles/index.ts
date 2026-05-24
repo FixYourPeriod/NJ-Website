@@ -42,7 +42,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 6,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/periods-101-instagram-series.html",
   },
   {
     slug: "what-is-normal-menstrual-cycle-period",
@@ -52,7 +51,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/what-is-normal-menstrual-cycle-period.html",
   },
   {
     slug: "how-long-should-your-period-be",
@@ -62,7 +60,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 7,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/how-long-should-your-period-be.html",
   },
   {
     slug: "four-phases-of-your-menstrual-cycle",
@@ -72,7 +69,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/four-phases-of-your-menstrual-cycle.html",
   },
   {
     slug: "how-ovulation-works-and-why-its-so-important",
@@ -82,7 +78,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/how-ovulation-works-and-why-its-so-important.html",
   },
   {
     slug: "the-menstrual-life-cycle",
@@ -92,7 +87,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/the-menstrual-life-cycle.html",
   },
   {
     slug: "10-period-facts",
@@ -102,7 +96,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/10-period-facts.html",
   },
   {
     slug: "period-shame",
@@ -112,7 +105,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 7,
     section: "Cycle Basics & Education",
-    externalUrl: "https://nicolejardim.app/period-shame.html",
   },
 
   // ─── Conditions & Symptoms ────────────────────────────────────────────────
@@ -124,7 +116,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 12,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/endometriosis.html",
   },
   {
     slug: "adenomyosis",
@@ -134,7 +125,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/adenomyosis.html",
   },
   {
     slug: "heavy-periods",
@@ -144,7 +134,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 11,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/heavy-periods.html",
   },
   {
     slug: "cause-of-painful-periods",
@@ -154,7 +143,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/cause-of-painful-periods.html",
   },
   {
     slug: "menstrual-migraines",
@@ -164,7 +152,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/menstrual-migraines.html",
   },
   {
     slug: "pcos-high-prolactin-levels-primary-ovarian-insufficiency-common",
@@ -174,7 +161,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 12,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/pcos-high-prolactin-levels-primary-ovarian-insufficiency-common.html",
   },
   {
     slug: "how-to-prevent-ovarian-cysts",
@@ -184,7 +170,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/how-to-prevent-ovarian-cysts.html",
   },
   {
     slug: "histamine-intolerance-and-your-period",
@@ -194,7 +179,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/histamine-intolerance-and-your-period.html",
   },
   {
     slug: "post-menstrual-syndrome-pms-after-period",
@@ -204,7 +188,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/post-menstrual-syndrome-pms-after-period.html",
   },
   {
     slug: "how-to-take-your-life-back-from-pmdd",
@@ -214,7 +197,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/how-to-take-your-life-back-from-pmdd.html",
   },
   {
     slug: "mthfr-what-is-it-and-why-you-should-know-for-the-sake-of-your-fertility",
@@ -224,7 +206,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/mthfr-what-is-it-and-why-you-should-know-for-the-sake-of-your-fertility.html",
   },
   {
     slug: "how-hyperthyroidism-affects-your-period",
@@ -234,7 +215,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/how-hyperthyroidism-affects-your-period.html",
   },
   {
     slug: "how-your-thyroid-can-cause-period-and-fertility-problems",
@@ -244,7 +224,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/how-your-thyroid-can-cause-period-and-fertility-problems.html",
   },
   {
     slug: "help-why-am-i-spotting",
@@ -254,7 +233,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 7,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/help-why-am-i-spotting.html",
   },
   {
     slug: "period-start-stop-start-again",
@@ -264,7 +242,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 7,
     section: "Conditions & Symptoms",
-    externalUrl: "https://nicolejardim.app/period-start-stop-start-again.html",
   },
 
   // ─── Hormones & Imbalances ────────────────────────────────────────────────
@@ -276,7 +253,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/low-progesterone-why-it-happens-and-what-you-can-do-about-it.html",
   },
   {
     slug: "lengthen-your-luteal-phase",
@@ -286,7 +262,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/lengthen-your-luteal-phase.html",
   },
   {
     slug: "when-to-test-progesterone-levels",
@@ -296,7 +271,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/when-to-test-progesterone-levels.html",
   },
   {
     slug: "progesterone-vs-progestin",
@@ -306,7 +280,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/progesterone-vs-progestin.html",
   },
   {
     slug: "the-real-reason-your-breasts-are-sore-before-your-period",
@@ -316,7 +289,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 7,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/the-real-reason-your-breasts-are-sore-before-your-period.html",
   },
   {
     slug: "dim-sgs-i3c",
@@ -326,7 +298,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/dim-sgs-i3c.html",
   },
   {
     slug: "hormones-and-weight",
@@ -336,7 +307,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/hormones-and-weight.html",
   },
   {
     slug: "how-stress-affects-your-menstrual-cycle",
@@ -346,7 +316,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/how-stress-affects-your-menstrual-cycle.html",
   },
   {
     slug: "the-cortisol-connection",
@@ -356,7 +325,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/the-cortisol-connection.html",
   },
   {
     slug: "why-modern-women-need-to-rethink-stress",
@@ -366,7 +334,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/why-modern-women-need-to-rethink-stress.html",
   },
   {
     slug: "overlooked-sources-of-stress",
@@ -376,7 +343,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/overlooked-sources-of-stress.html",
   },
   {
     slug: "how-the-menstrual-cycle-affects-blood-sugar-and-insulin-regulation-in-the-body",
@@ -386,7 +352,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/how-the-menstrual-cycle-affects-blood-sugar-and-insulin-regulation-in-the-body.html",
   },
   {
     slug: "5-things-that-can-stop-ovulation-impair-fertility",
@@ -396,7 +361,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/5-things-that-can-stop-ovulation-impair-fertility.html",
   },
   {
     slug: "is-your-period-playing",
@@ -406,7 +370,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Hormones & Imbalances",
-    externalUrl: "https://nicolejardim.app/is-your-period-playing.html",
   },
 
   // ─── Birth Control ────────────────────────────────────────────────────────
@@ -418,7 +381,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/5-things-must-know-hormonal-birth-control.html",
   },
   {
     slug: "birthcontrolsideeffects",
@@ -428,7 +390,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/birthcontrolsideeffects.html",
   },
   {
     slug: "come-birth-control-pill-right-way",
@@ -438,7 +399,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/come-birth-control-pill-right-way.html",
   },
   {
     slug: "birth-control-pill-weight-gain",
@@ -448,7 +408,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/birth-control-pill-weight-gain.html",
   },
   {
     slug: "the-pill-your-sex-drive-how-to-start-reclaiming-your-va-va-voom",
@@ -458,7 +417,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/the-pill-your-sex-drive-how-to-start-reclaiming-your-va-va-voom.html",
   },
   {
     slug: "how-to-start-using-natural-birth-control",
@@ -468,7 +426,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/how-to-start-using-natural-birth-control.html",
   },
   {
     slug: "how-does-the-mirena-iud-work-is-it-right-for-me",
@@ -478,7 +435,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/how-does-the-mirena-iud-work-is-it-right-for-me.html",
   },
   {
     slug: "copperiud",
@@ -488,7 +444,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Birth Control",
-    externalUrl: "https://nicolejardim.app/copperiud.html",
   },
 
   // ─── Nutrition, Supplements & Gut Health ─────────────────────────────────
@@ -500,7 +455,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 10,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/vitamin-d-the-period-vitamin.html",
   },
   {
     slug: "how-to-test-your-vitamin-d-levels",
@@ -510,7 +464,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/how-to-test-your-vitamin-d-levels.html",
   },
   {
     slug: "the-many-benefits-of-magnesium-for-your-health-cycle",
@@ -520,7 +473,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/the-many-benefits-of-magnesium-for-your-health-cycle.html",
   },
   {
     slug: "vitamin-c-for-your-cycle",
@@ -530,7 +482,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/vitamin-c-for-your-cycle.html",
   },
   {
     slug: "vitex-hormones-fertility",
@@ -540,7 +491,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/vitex-hormones-fertility.html",
   },
   {
     slug: "cholesterol-great-hormones",
@@ -550,7 +500,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/cholesterol-great-hormones.html",
   },
   {
     slug: "does-being-vegan-affect-your-period",
@@ -560,7 +509,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/does-being-vegan-affect-your-period.html",
   },
   {
     slug: "is-gluten-bad",
@@ -570,7 +518,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/is-gluten-bad.html",
   },
   {
     slug: "the-effect-of-coffee-on-your-hormones-and-menstrual-cycle",
@@ -580,7 +527,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/the-effect-of-coffee-on-your-hormones-and-menstrual-cycle.html",
   },
   {
     slug: "dry-january-alcohol-free-resources",
@@ -590,7 +536,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/dry-january-alcohol-free-resources.html",
   },
   {
     slug: "howyourperiodaffectsdigestivetract",
@@ -600,7 +545,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/howyourperiodaffectsdigestivetract.html",
   },
   {
     slug: "antibiotics-effect-period",
@@ -610,7 +554,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/antibiotics-effect-period.html",
   },
   {
     slug: "livercleansehormones",
@@ -620,7 +563,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/livercleansehormones.html",
   },
   {
     slug: "vaginal-microbiome-testing",
@@ -630,7 +572,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/vaginal-microbiome-testing.html",
   },
   {
     slug: "chronic-utis-killing-sex-life",
@@ -640,7 +581,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/chronic-utis-killing-sex-life.html",
   },
   {
     slug: "seed-cycling",
@@ -650,7 +590,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Nutrition, Supplements & Gut Health",
-    externalUrl: "https://nicolejardim.app/seed-cycling.html",
   },
 
   // ─── Lifestyle, Tools & Health ────────────────────────────────────────────
@@ -662,7 +601,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/my-favorite-tips-products-for-sleep-support.html",
   },
   {
     slug: "emfs-effect-on-your-menstrual-cycle-and-fertility",
@@ -672,7 +610,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/emfs-effect-on-your-menstrual-cycle-and-fertility.html",
   },
   {
     slug: "connection-dental-health-hormones",
@@ -682,7 +619,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/connection-dental-health-hormones.html",
   },
   {
     slug: "period-underwear",
@@ -692,7 +628,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 7,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/period-underwear.html",
   },
   {
     slug: "use-drugstore-feminine-wipes",
@@ -702,7 +637,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 6,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/use-drugstore-feminine-wipes.html",
   },
   {
     slug: "steam-vagina",
@@ -712,7 +646,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/steam-vagina.html",
   },
   {
     slug: "mayan-abdominal-massage",
@@ -722,7 +655,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/mayan-abdominal-massage.html",
   },
   {
     slug: "castor-oil",
@@ -732,7 +664,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/castor-oil.html",
   },
   {
     slug: "period-cycle-tracking-apps",
@@ -742,7 +673,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/period-cycle-tracking-apps.html",
   },
   {
     slug: "my-favorite-fertility-tracking-devices",
@@ -752,7 +682,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/my-favorite-fertility-tracking-devices.html",
   },
   {
     slug: "7-surprising-reasons-women-lose-their-hair",
@@ -762,7 +691,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 9,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/7-surprising-reasons-women-lose-their-hair.html",
   },
   {
     slug: "period-late",
@@ -772,7 +700,6 @@ export const articles: ArticleMeta[] = [
     publishedAt: "2024-01-01",
     readingTime: 8,
     section: "Lifestyle, Tools & Health",
-    externalUrl: "https://nicolejardim.app/period-late.html",
   },
 ]
 

@@ -1,0 +1,138 @@
+import type { ArticleMeta } from "./index"
+
+export const meta: ArticleMeta = {
+  slug: "mayan-abdominal-massage",
+  title: "Mayan Abdominal Massage for Hormonal Health",
+  description: "Learn about Arvigo Mayan Abdominal Therapy — the history, the theory behind uterine positioning and pelvic circulation, conditions it may help, and a step-by-step self-massage protocol.",
+  category: "Protocols",
+  publishedAt: "2024-01-01",
+  readingTime: 9,
+  section: "Lifestyle, Tools & Health",
+}
+
+export const faqs = [
+  { q: "What is Arvigo Mayan Abdominal Therapy, exactly?", a: "It is a non-invasive, external massage technique that addresses the position of the uterus and surrounding connective tissue and stimulates circulation and lymphatic drainage in the abdominal and pelvic region. It was developed by Dr. Rosita Arvigo, who synthesized traditional Mayan healing techniques learned from her teachers in Belize with her Western naturopathic and naprapathic training. It is used for both reproductive and digestive health issues, and can be practiced by a trained therapist or as a self-care routine at home." },
+  { q: "Does it really matter if the uterus is \"tilted\"?", a: "Having a retroverted or retroflexed uterus is a normal anatomical variation, and most people with a tilted uterus have no symptoms at all. The Mayan abdominal therapy perspective is not that a tilted uterus is inherently problematic, but that the surrounding connective tissue tension and compromised circulation that can accompany certain positions may contribute to symptoms like pelvic congestion and period pain. The massage addresses the tissue tone and circulation as much as uterine position itself. Whether or not your uterus is tilted, the circulatory and nervous system benefits of the massage are real and worthwhile." },
+  { q: "How often should I do the self-massage?", a: "Daily practice is ideal and will produce the fastest results — even five to ten minutes per day makes a real difference over time. If daily isn't realistic, aim for at least three to four sessions per week. Consistency matters far more than duration in any single session. Most people see digestive improvements within two weeks and menstrual cycle improvements within one to two cycles of regular practice." },
+  { q: "Can I do abdominal massage if I have an IUD?", a: "Yes, with caution. If you have an IUD, use lighter pressure over your lower abdomen during the clockwise circles — particularly in the area directly over the uterus, just above the pubic bone. The diaphragm release strokes higher on the abdomen are generally fine at normal pressure. If you want to learn a more complete self-massage protocol with an IUD in place, consulting with a trained abdominal therapist for guidance tailored to your situation is a good idea." },
+  { q: "Can this massage help with endometriosis?", a: "Abdominal massage is frequently used as a complementary tool for people with endometriosis . It won't treat the underlying condition or remove lesions, but the anti-inflammatory effects of improved circulation and lymphatic drainage can reduce pelvic pain, congestion, and discomfort in many people. It is best used as part of a broader, multi-pronged approach to endometriosis management that includes appropriate medical care. Always let your healthcare provider know about complementary practices you are using." },
+  { q: "Can I use oil or lotion during the massage?", a: "Yes, and it can enhance the experience. The massage can be done over clothing, on dry skin, or with any lotion or oil you like. Magnesium lotion is a popular choice because you get the potential benefits of transdermal magnesium absorption alongside the massage. Cold-pressed castor oil is another excellent option, since it adds anti-inflammatory and circulatory benefits of its own. Avoid using essential oils directly on the skin unless they are properly diluted in a carrier oil." },
+  { q: "Is abdominal massage safe to do while trying to conceive?", a: "Yes, during the pre-ovulatory phase of your cycle. Many practitioners who work with people on fertility journeys include abdominal massage as a core part of their protocol, because improved pelvic circulation, reduced scar tissue, and better structural alignment of the reproductive organs all support fertility. The timing guideline is to practice the massage from the end of your period through ovulation, then pause until your next period begins — just in case conception has occurred. Do not practice abdominal massage after confirmed pregnancy." },
+  { q: "Do I need to see a practitioner, or is the self-massage enough?", a: "The self-care massage is genuinely effective and is a meaningful practice in its own right. If you have access to a trained abdominal therapist, an in-person session adds significant depth — a full-body treatment including back, hips, and sacrum, a personalized assessment, and hands-on guidance for your specific self-care practice. But if access or cost is a barrier, the self-massage protocol described above is a real tool with real benefits. Many people who have never seen a practitioner have experienced meaningful improvements in their cycle and digestion through consistent home practice." },
+]
+
+const html = `
+<p>If you have ever dealt with painful periods, digestive issues, pelvic congestion, or fertility challenges, there is a good chance your pelvis could use some direct attention — and not just in the form of medication or supplements. Abdominal massage, particularly the tradition brought to the West by Dr. Rosita Arvigo, is a beautiful, gentle, and surprisingly powerful tool that has helped countless people reconnect with their bodies and improve both reproductive and digestive health.</p>
+<p>What makes this practice compelling is not just the long historical track record — it is also the underlying physiology. When we understand how uterine positioning, pelvic blood flow, and lymphatic drainage are all connected, the logic behind abdominal massage becomes very clear. Let's dig in.</p>
+<h2>A Brief History: Where Mayan Abdominal Therapy Comes From</h2>
+<p>Every culture throughout the world has used abdominal massage in some form since ancient times. The tradition that is most widely practiced today in the West has roots in the Mayan healing culture of Central America, and it was brought to a modern international audience through the work of one remarkable person: <strong>Dr. Rosita Arvigo</strong>.</p>
+<p>Dr. Arvigo was a naturopathic doctor and naprapath — a practitioner who specializes in realigning connective tissues, somewhat like an osteopath — who moved to Belize and spent years apprenticing with traditional Mayan healers. Her most significant teacher was <strong>Don Elijio Panti</strong>, a revered Mayan healer with whom she studied for twelve years. Don Elijio had spent his entire life healing people with hands-on techniques and herbal remedies passed down through generations. Dr. Arvigo also studied with traditional midwives, including Miss Hortense Robinson, who taught her deep knowledge of women's reproductive care.</p>
+<p>With the express permission of her teachers to share what she had learned, Dr. Arvigo synthesized these traditional techniques with her Western training and developed what became known as the <strong>Arvigo Techniques of Mayan Abdominal Therapy (ATMAT)</strong>. In 2000, she established a formal training organization — now known as the Abdominal Therapy Collective — and trained practitioners throughout the world who continue to carry this work forward.</p>
+<p>If you have ever encountered the terms "Mayan massage," "womb massage," or "fertility massage," the roots of those practices almost certainly trace back to Dr. Arvigo's work. Her contribution to making this tradition accessible to people around the world cannot be overstated.</p>
+<h2>The Theory: Uterine Positioning, Circulation, and Pelvic Congestion</h2>
+<p>To understand why abdominal massage works, it helps to understand a key concept at the heart of this therapy: <strong>the position of the uterus matters</strong>.</p>
+<p>The uterus is held in place within the pelvis by a network of ligaments and connective tissue. Ideally, it sits in a central, slightly anteverted (tipped slightly forward) position that allows for healthy circulation of blood and lymphatic fluid into and out of the pelvic bowl. But for a variety of reasons — physical impact, abdominal surgery, sitting for long periods, emotional stress held in the body, or simply anatomy — the uterus can shift slightly out of this optimal position.</p>
+<p>When the uterus is "tilted," retroflexed (tipped backward), or in some other slightly displaced position, the arteries, veins, and lymphatic vessels that supply the uterus and ovaries can become compressed or congested. The result is often exactly what many women experience: <strong>sluggish circulation in the pelvis, poor lymphatic drainage, pelvic heaviness, and a whole cascade of menstrual and reproductive symptoms</strong>.</p>
+<p>This concept — pelvic congestion as a root cause of period problems — aligns well with what we know about reproductive physiology. The uterus and ovaries need robust, fresh blood supply to function optimally. The lymphatic system depends on movement and structural freedom to clear cellular waste and used-up hormones from pelvic tissues. When either of these systems is chronically restricted, it shows up in the menstrual cycle.</p>
+<p>Abdominal massage works by gently encouraging the uterus back toward its optimal position, releasing tension in the surrounding ligaments and connective tissue, and mechanically stimulating blood and lymphatic circulation through the entire pelvic region and abdomen. It also has a profound effect on the nervous system — the gentle, rhythmic touch activates the parasympathetic "rest and repair" state, which is essential for the body to ovulate, regulate hormones, and carry out reproductive functions normally.</p>
+<h2>What Conditions Can Abdominal Massage Help?</h2>
+<p>Because it works on circulation, lymphatic drainage, nervous system tone, and structural alignment simultaneously, abdominal massage has a broad range of applications. Practitioners and clients report meaningful benefit for:</p>
+<div class="benefits-grid">
+<div class="benefit-chip">Painful periods and cramping</div>
+<div class="benefit-chip">Heavy or irregular menstrual bleeding</div>
+<div class="benefit-chip">Ovulation pain</div>
+<div class="benefit-chip">PMS and PMDD symptoms</div>
+<div class="benefit-chip">Endometriosis discomfort</div>
+<div class="benefit-chip">Uterine fibroids</div>
+<div class="benefit-chip">Ovarian cysts</div>
+<div class="benefit-chip">Fertility challenges</div>
+<div class="benefit-chip">Digestive issues and IBS symptoms</div>
+<div class="benefit-chip">Bloating and constipation</div>
+<div class="benefit-chip">Lower back and sacral pain</div>
+<div class="benefit-chip">Recovery from abdominal surgery (once cleared)</div>
+</div>
+<p>It is worth emphasizing that abdominal massage is a <em>complementary</em> tool — it does not replace appropriate medical diagnosis and care, particularly for conditions like <a href="/articles/endometriosis">endometriosis</a> or fibroids. But as part of a comprehensive approach to hormonal health, it is one of the most accessible and effective things you can do with your own hands on a regular basis.</p>
+<p>Many clients who work with abdominal therapists report improvement within one to two menstrual cycles for period pain, and within a couple of weeks for digestive symptoms. The key, as with most healing practices, is consistency.</p>
+<h2>Professional Sessions vs. Self-Massage at Home</h2>
+<p>There are two ways to experience abdominal therapy: with a trained practitioner, and through a self-care practice at home. Both have real value, and ideally you would do both.</p>
+<h3>Working with a Practitioner</h3>
+<p>A professional session with a trained abdominal therapist is a full-body treatment that typically includes massage of the abdomen, lower back, hips, and sacrum, as well as guidance on the self-care practice, dietary recommendations, and lifestyle suggestions specific to your situation. Practitioners who have trained in Arvigo techniques are able to assess uterine positioning, work with specific ligament groups, and provide a level of depth that is difficult to replicate at home.</p>
+<p>If budget and access allow, an in-person professional session is highly recommended — especially as an introduction to the work. Finding a practitioner trained through the Abdominal Therapy Collective or equivalent lineage is a good starting point. That said, the self-care practice you learn from a practitioner (or from a protocol like the one below) is genuinely powerful in its own right and can be done consistently at home between sessions or instead of sessions if access is limited.</p>
+<h3>Self-Massage at Home</h3>
+<p>The self-care massage is a simplified version of the full professional treatment that focuses on two key techniques: a downward diaphragm release stroke and clockwise abdominal circles. Done consistently — ideally daily or a few times per week — it supports circulation, lymphatic drainage, and nervous system regulation in a meaningful way.</p>
+<p>The self-massage can be done standing, sitting upright, or lying down. You can do it directly on your skin with or without a lotion or oil, or over light clothing. Many people enjoy combining it with magnesium lotion for the added benefit of transdermal magnesium absorption.</p>
+<div class="article-cta-box">
+<h3>Get your personalized hormonal health protocol</h3>
+<p>Take the free Hormone Health Assessment — 30 questions about your cycle, symptoms, and lifestyle — and receive a tailored action plan built for your body.</p>
+<a class="btn btn-terra" href="https://fixyourperiod.app/quiz" target="_blank">Take the Free Assessment →</a>
+</div>
+<h2>The Self-Care Abdominal Massage Protocol</h2>
+<p>The following is a step-by-step guide to the two foundational self-massage techniques used in Mayan abdominal therapy. Start gently and slowly, always listening to the feedback your body gives you through your fingertips.</p>
+<div class="step-box">
+<div class="step-box-header">
+<span class="step-number">Step 1</span>
+</div>
+<h3>Choose Your Position and Prepare</h3>
+<p>You can do this massage standing, sitting upright, or lying down. If you lie down, you can keep your legs straight or place a pillow or bolster under your knees — whatever is most comfortable.</p>
+<p>The massage can be done over light clothing or directly on your skin, with or without oil or lotion. If you use an oil or lotion, a small amount is all you need.</p>
+<p>Before you begin, place both hands flat on your abdomen and take three to five slow, deep breaths. Let your belly soften. This simple act of pausing and breathing helps transition your nervous system into a receptive, relaxed state — which makes the massage significantly more effective.</p>
+</div>
+<div class="step-box">
+<div class="step-box-header">
+<span class="step-number">Step 2</span>
+</div>
+<h3>Diaphragm Release — Downward Strokes from Ribcage to Navel</h3>
+<p>This first technique gently releases tension in the diaphragm and encourages the downward flow of energy and circulation through the upper abdomen.</p>
+<p><strong>Center strokes (M-shape position):</strong> Form your hands into an M-shape — fingertips pointing downward, both hands side by side. Place your fingertips just under the center of your ribcage. Using gentle pressure, glide both hands downward from under the ribcage to your navel in one smooth stroke. Lift your hands, return to the starting position, and repeat for a total of three strokes.</p>
+<p><strong>Right side strokes:</strong> Make a flat hand with your right hand. Place the heel of your hand at the bottom of your right ribcage. Using gentle pressure, glide your hand down and across until the heel of your hand reaches your navel. Lift, return to the right ribcage, and repeat for a total of three strokes.</p>
+<p><strong>Left side strokes:</strong> Repeat the same movement on your left side, starting at the bottom of your left ribcage and gliding to the navel. Three strokes.</p>
+<p>You can cycle through this sequence — center, right, left — as many times as feels good, typically two to three full rounds.</p>
+</div>
+<div class="step-box">
+<div class="step-box-header">
+<span class="step-number">Step 3</span>
+</div>
+<h3>Clockwise Abdominal Circles</h3>
+<p>This second technique stimulates circulation and lymphatic flow through the entire abdominal and pelvic region and supports healthy digestive function.</p>
+<p>Place the flat of one or both hands on your abdomen and, using gentle but firm pressure, massage in a <strong>clockwise direction</strong> around your entire abdomen. To orient yourself: imagine your feet are at 12 o'clock, the right side of your navel is at 3 o'clock, your head is at 6 o'clock, and the left side of your navel is at 9 o'clock. Moving from 12 to 3 to 6 to 9 and back to 12 is clockwise.</p>
+<p>Start at the upper right abdomen (just below the right ribcage), sweep across to the upper left, then down the left side, across the lower abdomen, and up the right side again. Keep your pressure light and consistent, and let the circle be large enough to cover your full abdominal area from ribcage to pubic bone.</p>
+<p>Continue for one to three minutes, or as long as feels comfortable. Always start very slowly and gently, and adjust pressure based on what your body tells you. If any area feels tender or tight, ease off the pressure there and simply rest your hand for a breath before continuing.</p>
+</div>
+<div class="step-box">
+<div class="step-box-header">
+<span class="step-number">Step 4</span>
+</div>
+<h3>Close the Practice</h3>
+<p>When you have finished the circles, return both hands to rest flat on your lower abdomen. Take three to five slow breaths, allowing yourself to feel the warmth and increased circulation in the area. This closing pause helps consolidate the effects of the massage and gives your nervous system a moment to integrate.</p>
+<p><strong>Frequency:</strong> Daily practice is ideal. Even five to ten minutes per day done consistently will produce noticeable results over time. If daily isn't realistic, aim for at least three to four times per week.</p>
+<p><strong>Timing within your cycle:</strong> You can practice this massage at any point in your cycle. Many people choose to pause during menstruation, since some find the increased circulation intensifies flow — but others find it soothing during their period. Follow your body's lead. Do not practice this massage during pregnancy.</p>
+</div>
+<h2>Integrating Abdominal Massage with Castor Oil Packs</h2>
+<p>Abdominal massage and <a href="/articles/castor-oil">castor oil packs</a> are natural companions — they work through overlapping mechanisms (improving pelvic circulation and lymphatic drainage) and support each other beautifully when used together.</p>
+<p>One effective approach is to do your self-care abdominal massage first, then apply a castor oil pack over your lower abdomen for 30 to 60 minutes afterward. The massage warms up the tissue and gets circulation moving, making the pelvic region more receptive to the deeper detoxifying and circulatory benefits of the castor oil. Alternatively, you can do them on separate days — massage on some days, castor oil packs on others — for a comprehensive pelvic care routine.</p>
+<p>Castor oil also makes an excellent massage medium: applying a small amount of high-quality, cold-pressed castor oil to your hands before the massage gives you both the mechanical benefits of the massage and the anti-inflammatory, circulation-enhancing properties of the oil simultaneously. See the full <a href="/articles/castor-oil">castor oil packs protocol</a> for complete instructions on materials, timing, and safety.</p>
+<h2>Contraindications and Important Precautions</h2>
+<div class="caution-box">
+<h3>When Not to Use Abdominal Massage</h3>
+<ul>
+<li><strong>Pregnancy:</strong> Do not practice abdominal massage during pregnancy. This is an absolute contraindication.</li>
+<li><strong>During menstruation:</strong> It is best to avoid the deeper clockwise circles during active menstrual bleeding, as increased circulation can intensify flow. The gentle diaphragm release strokes are generally fine if you find them soothing.</li>
+<li><strong>IUD:</strong> If you have an IUD in place, use extra-light pressure over your lower abdomen during the clockwise circles. The deeper strokes and professional treatments should be done under the guidance of a trained practitioner who can advise appropriately.</li>
+<li><strong>Recent abdominal surgery:</strong> Wait at least six weeks after abdominal surgery — or until you have been cleared by your surgeon — before resuming abdominal massage. Whichever comes later takes precedence.</li>
+<li><strong>Recent childbirth:</strong> Wait at least six weeks postpartum before resuming or beginning abdominal massage.</li>
+<li><strong>Active infection or inflammation:</strong> Do not massage over areas of active infection, unexplained acute pain, or known inflammatory conditions (such as an active appendicitis or acute pelvic inflammatory disease) without medical clearance.</li>
+<li><strong>Active cancer in the pelvic or abdominal region:</strong> Consult with your oncologist before using abdominal massage techniques.</li>
+<li><strong>Large fibroids or ovarian cysts:</strong> While abdominal massage is often used supportively for fibroids and cysts, work with a trained practitioner rather than doing deep self-massage if your condition has been identified as significant.</li>
+</ul>
+</div>
+<p>A note on emotional responses: some people find that massaging their abdomen brings up strong emotions — whether connected to current health challenges, past experiences with their body, or deeper somatic memories. This is normal and not uncommon. If this happens to you, be very gentle with yourself. Pause the massage for as long as you need, seek any emotional support that feels right, and when you return to the practice, start with very light touch and shorter sessions until you feel settled.</p>
+<h2>Making Abdominal Massage a Regular Practice</h2>
+<p>One of the most important things to understand about abdominal massage is that consistency is what produces results. A single session — professional or self-care — will likely feel relaxing and may provide some immediate comfort, but the deeper shifts in circulation, lymphatic drainage, and structural tone happen over weeks and months of regular practice.</p>
+<p>For digestive improvements, many people notice changes within two weeks of daily practice. For menstrual cycle changes — reduced cramping, improved blood color and flow, shorter or more regular cycles — expect to see meaningful differences within one to two cycles. Fertility-related benefits typically require a longer window of consistent practice, usually three to six months minimum.</p>
+<p>Think of abdominal massage the way you think of exercise: a single workout does something, but a consistent practice transforms your body. Give your abdomen the same steady, attentive care you would give any part of your body you wanted to genuinely heal — and it will respond.</p>
+`
+
+export default function ArticleBody() {
+  // eslint-disable-next-line react/no-danger
+  return <div dangerouslySetInnerHTML={{ __html: html }} />
+}

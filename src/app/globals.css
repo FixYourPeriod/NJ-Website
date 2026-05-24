@@ -185,6 +185,109 @@ a { text-decoration: none; color: inherit; }
   color: var(--terra);
 }
 
+/* ─── ARTICLE WIDGET CLASSES ────────────────────────────────────────────── */
+
+/* CTA box */
+.article-prose .article-cta-box {
+  background: var(--sand);
+  border-left: 4px solid var(--terra);
+  border-radius: 6px;
+  padding: 2rem 2.5rem;
+  margin: 2.5em 0;
+}
+.article-prose .article-cta-box h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--plum);
+  margin-bottom: 0.5rem;
+}
+.article-prose .article-cta-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+/* Period-length range bar */
+.article-prose .range-bar {
+  display: flex;
+  gap: 4px;
+  margin: 1.5em 0 2em;
+  flex-wrap: wrap;
+}
+.article-prose .range-segment {
+  flex: 1;
+  min-width: 80px;
+  border-radius: 4px;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(234, 224, 213, 0.4);
+}
+
+/* Cause chips */
+.article-prose .cause-chip {
+  background: var(--sand);
+  border-left: 3px solid var(--plum);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--charcoal);
+}
+
+/* Warning box */
+.article-prose .warning-box {
+  background: rgba(196, 120, 74, 0.08);
+  border: 1px solid rgba(196, 120, 74, 0.35);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 2em 0;
+}
+.article-prose .warning-box p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Info box */
+.article-prose .info-box {
+  background: rgba(234, 224, 213, 0.5);
+  border: 1px solid rgba(196, 152, 74, 0.3);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 2em 0;
+}
+.article-prose .info-box p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Basic table styling */
+.article-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  font-size: 0.95rem;
+}
+.article-prose th {
+  background: var(--sand);
+  color: var(--plum);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-bottom: 2px solid rgba(92, 45, 79, 0.15);
+}
+.article-prose td {
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid rgba(92, 45, 79, 0.08);
+  color: var(--charcoal);
+  vertical-align: top;
+}
+.article-prose tr:last-child td {
+  border-bottom: none;
+}
+
 /* ─── ANIMATIONS ────────────────────────────────────────────────────────── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
