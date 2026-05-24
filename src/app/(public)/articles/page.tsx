@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { articles } from "@/content/articles/index"
-import { ArticleCard } from "@/components/article-card"
+import { ArticlesSearch } from "@/components/articles-search"
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -126,106 +126,8 @@ export default function ArticlesPage() {
         </div>
       </section>
 
-      {/* ── ARTICLE SECTIONS ──────────────────────────────────────────── */}
-      <section style={{ background: "var(--ivory)", padding: "80px 40px 112px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-          {sections.map((section, sectionIndex) => {
-            const sectionArticles = articles.filter((a) => a.section === section.key)
-            if (sectionArticles.length === 0) return null
-            return (
-              <div
-                key={section.key}
-                style={{ marginBottom: sectionIndex < sections.length - 1 ? 80 : 0 }}
-              >
-                {/* Section header */}
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-end",
-                    justifyContent: "space-between",
-                    gap: 40,
-                    marginBottom: 36,
-                    paddingBottom: 20,
-                    borderBottom: "1px solid rgba(92,45,79,0.1)",
-                  }}
-                >
-                  <div>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 10,
-                        marginBottom: 10,
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: 20,
-                          height: 1,
-                          background: "var(--gold)",
-                          opacity: 0.6,
-                        }}
-                      />
-                      <span
-                        style={{
-                          fontFamily: "'DM Sans', sans-serif",
-                          fontSize: 11,
-                          fontWeight: 600,
-                          letterSpacing: "0.14em",
-                          textTransform: "uppercase",
-                          color: "var(--terra)",
-                        }}
-                      >
-                        {section.title}
-                      </span>
-                    </div>
-                    <p
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: 14,
-                        lineHeight: 1.65,
-                        color: "var(--charcoal)",
-                        opacity: 0.55,
-                        maxWidth: 540,
-                        margin: 0,
-                      }}
-                    >
-                      {section.description}
-                    </p>
-                  </div>
-                  <span
-                    style={{
-                      fontFamily: "'Fraunces', Georgia, serif",
-                      fontSize: 48,
-                      fontWeight: 300,
-                      color: "var(--plum)",
-                      opacity: 0.12,
-                      lineHeight: 1,
-                      whiteSpace: "nowrap",
-                      flexShrink: 0,
-                    }}
-                  >
-                    {sectionArticles.length}
-                  </span>
-                </div>
-
-                {/* Article grid */}
-                <div
-                  style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
-                    gap: 16,
-                  }}
-                >
-                  {sectionArticles.map((article) => (
-                    <ArticleCard key={article.slug} article={article} />
-                  ))}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </section>
+      {/* ── SEARCH + ARTICLE SECTIONS ─────────────────────────────────── */}
+      <ArticlesSearch articles={articles} sections={sections} />
 
       {/* ── CLOSING CTA ───────────────────────────────────────────────── */}
       <section
