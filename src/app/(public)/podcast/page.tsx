@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { PodcastEpisodes } from "@/components/podcast-episodes"
+import { episodes } from "@/content/podcasts"
 
 export const metadata: Metadata = {
   title: "The Period Party Podcast",
@@ -357,8 +359,74 @@ export default function PodcastPage() {
         </div>
       </section>
 
-      {/* ── ABOUT THE HOST ───────────────────────────────────────────── */}
+      {/* ── EPISODE LIST ─────────────────────────────────────────────── */}
       <section style={{ background: "var(--ivory)", padding: "96px 40px" }}>
+        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
+          {/* Section header */}
+          <div style={{ maxWidth: 600, marginBottom: 48 }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 20,
+              }}
+            >
+              <div
+                style={{
+                  width: 28,
+                  height: 1,
+                  background: "var(--gold)",
+                  opacity: 0.7,
+                }}
+              />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                Episode Archive
+              </span>
+            </div>
+            <h2
+              style={{
+                fontFamily: "'Fraunces', Georgia, serif",
+                fontSize: "clamp(28px, 3.5vw, 42px)",
+                fontWeight: 300,
+                fontStyle: "italic",
+                color: "var(--plum)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.015em",
+                marginBottom: 16,
+              }}
+            >
+              203 episodes and counting
+            </h2>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 15.5,
+                lineHeight: 1.8,
+                color: "var(--charcoal)",
+                opacity: 0.6,
+              }}
+            >
+              Search by title or topic — or scroll through the archive and find
+              something that speaks to exactly where you are right now.
+            </p>
+          </div>
+
+          <PodcastEpisodes episodes={episodes} />
+        </div>
+      </section>
+
+      {/* ── ABOUT THE HOST ───────────────────────────────────────────── */}
+      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
         <div
           style={{
             maxWidth: 760,
