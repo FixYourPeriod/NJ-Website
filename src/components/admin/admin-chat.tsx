@@ -1,78 +1,200 @@
 "use client"
 
-import { useState, useRef, useEffect, useCallback } from "react"
-import { useUser } from "@clerk/nextjs"
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type ClipboardEvent,
+  type DragEvent,
+} from "react"
+import {
+  CheckCircle2,
+  ExternalLink,
+  ImageIcon,
+  Paperclip,
+  RotateCcw,
+  Send,
+  Sparkles,
+  Undo2,
+  Wrench,
+  X,
+} from "lucide-react"
 
-type MessageRole = "user" | "assistant"
+// --- Types -------------------------------------------------------------------
 
-type CommitInfo = {
+type ToolCall = { name: string; summary: string }
+type Commit = { sha: string; files: string[] } | null
+
+type Attachment = {
+  id: string
+  kind: "image"
+  mediaType: "image/png" | "image/jpeg" | "image/webp" | "image/gif"
+  data: string
+  fileName: string
+  previewUrl: string
+}
+
+type UndoCandidate = {
   sha: string
-  files: string[]
+  subject: string
+  url: string
+  filesChanged: string[]
+}
+
+type UndoResult = {
+  revertedSha: string
+  revertedSubject: string
+  newSha: string
 }
 
 type Message = {
   id: string
-  role: MessageRole
+  role: "user" | "assistant"
   content: string
-  commit?: CommitInfo
+  attachments?: Attachment[]
+  toolCalls?: ToolCall[]
+  commit?: Commit
+  undo?: UndoResult
   isStreaming?: boolean
 }
 
-const SUGGESTED_PROMPTS = [
-  "Update the hero headline on the home page",
-  "Edit the PCOS article introduction",
-  "Add a new FAQ to the Fix Your Period page",
-  "Create a new article about progesterone",
-  "Update Nicole's bio on the About page",
-]
+const MAX_ATTACHMENT_BYTES = 4 * 1024 * 1024
+const MAX_ATTACHMENTS = 4
+const ACCEPTED_MIME = [
+  "image/png",
+  "image/jpeg",
+  "image/webp",
+  "image/gif",
+] as const
+type AcceptedMime = (typeof ACCEPTED_MIME)[number]
 
 function uid() {
   return Math.random().toString(36).slice(2)
 }
 
-export function AdminChat() {
-  const { user } = useUser()
+// --- Main component ----------------------------------------------------------
+
+export function AdminChat({
+  userId,
+  firstName,
+  fullName,
+  email,
+}: {
+  userId: string
+  firstName: string | null
+  fullName: string | null
+  email: string | null
+}) {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState("")
   const [sessionId] = useState(uid)
-  const [isLoading, setIsLoading] = useState(false)
-  const [undoState, setUndoState] = useState<"idle" | "loading" | "done" | "error">("idle")
-  const [lastCommit, setLastCommit] = useState<CommitInfo | null>(null)
-  const [images, setImages] = useState<Array<{ dataUrl: string; mediaType: string }>>([])
-  const bottomRef = useRef<HTMLDivElement>(null)
-  const textareaRef = useRef<HTMLTextAreaElement>(null)
+  const [busy, setBusy] = useState(false)
+  const [pendingAttachments, setPendingAttachments] = useState<Attachment[]>([])
+  const [dragActive, setDragActive] = useState(false)
+  const [attachError, setAttachError] = useState<string | null>(null)
+  const [undoable, setUndoable] = useState<UndoCandidate | null>(null)
+  const [undoBusy, setUndoBusy] = useState(false)
+  const scrollRef = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const dragDepthRef = useRef(0)
 
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
-  }, [messages])
-
-  const autoResize = useCallback(() => {
-    const el = textareaRef.current
-    if (!el) return
-    el.style.height = "auto"
-    el.style.height = Math.min(el.scrollHeight, 200) + "px"
+  // Fetch the most-recent undoable admin commit on mount and after agent turns
+  const refreshUndoable = useCallback(async () => {
+    try {
+      const res = await fetch("/api/admin-agent/undo", { method: "GET" })
+      if (!res.ok) { setUndoable(null); return }
+      const data = (await res.json()) as { undoable: UndoCandidate | null }
+      setUndoable(data.undoable ?? null)
+    } catch {
+      setUndoable(null)
+    }
   }, [])
 
-  async function handleSubmit(e?: React.FormEvent) {
-    e?.preventDefault()
-    const trimmed = input.trim()
-    if (!trimmed || isLoading) return
+  useEffect(() => { void refreshUndoable() }, [refreshUndoable])
 
-    const userMsg: Message = { id: uid(), role: "user", content: trimmed }
-    const assistantMsg: Message = { id: uid(), role: "assistant", content: "", isStreaming: true }
+  // Auto-scroll to latest message
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" })
+  }, [messages, busy])
+
+  // Auto-clear attach errors
+  useEffect(() => {
+    if (!attachError) return
+    const t = setTimeout(() => setAttachError(null), 4000)
+    return () => clearTimeout(t)
+  }, [attachError])
+
+  async function attachFiles(files: FileList | File[]) {
+    const items = Array.from(files)
+    const accepted: Attachment[] = []
+    for (const file of items) {
+      if (pendingAttachments.length + accepted.length >= MAX_ATTACHMENTS) {
+        setAttachError(`Max ${MAX_ATTACHMENTS} images per message.`)
+        break
+      }
+      if (!ACCEPTED_MIME.includes(file.type as AcceptedMime)) {
+        setAttachError(`Unsupported type: ${file.type || file.name}`)
+        continue
+      }
+      if (file.size > MAX_ATTACHMENT_BYTES) {
+        setAttachError(`${file.name} is too large (max 4 MB).`)
+        continue
+      }
+      try {
+        const { base64, dataUrl } = await readFileAsBase64(file)
+        accepted.push({
+          id: uid(),
+          kind: "image",
+          mediaType: file.type as AcceptedMime,
+          data: base64,
+          fileName: file.name || "screenshot",
+          previewUrl: dataUrl,
+        })
+      } catch {
+        setAttachError(`Couldn't read ${file.name}.`)
+      }
+    }
+    if (accepted.length > 0) setPendingAttachments((prev) => [...prev, ...accepted])
+  }
+
+  async function send(text: string) {
+    const trimmed = text.trim()
+    if ((!trimmed && pendingAttachments.length === 0) || busy) return
+
+    const assistantId = uid()
+    const userMsg: Message = {
+      id: uid(),
+      role: "user",
+      content: trimmed,
+      attachments: pendingAttachments.length > 0 ? [...pendingAttachments] : undefined,
+    }
+    const assistantMsg: Message = {
+      id: assistantId,
+      role: "assistant",
+      content: "",
+      isStreaming: true,
+      toolCalls: [],
+    }
 
     setMessages((prev) => [...prev, userMsg, assistantMsg])
     setInput("")
-    setImages([])
-    setIsLoading(true)
-    if (textareaRef.current) textareaRef.current.style.height = "auto"
+    setPendingAttachments([])
+    setBusy(true)
 
-    // Build message history for API
-    const history = [
-      ...messages.map((m) => ({ role: m.role, content: m.content })),
-      { role: "user" as const, content: trimmed },
-    ]
+    // Build API history — include image attachments as Anthropic content blocks
+    const allMessages = [...messages, userMsg]
+    const history = allMessages.map((m) => {
+      if (m.attachments && m.attachments.length > 0) {
+        const blocks: object[] = m.attachments.map((a) => ({
+          type: "image",
+          source: { type: "base64", media_type: a.mediaType, data: a.data },
+        }))
+        if (m.content) blocks.push({ type: "text", text: m.content })
+        return { role: m.role, content: blocks }
+      }
+      return { role: m.role, content: m.content }
+    })
 
     try {
       const res = await fetch("/api/admin-agent", {
@@ -81,9 +203,7 @@ export function AdminChat() {
         body: JSON.stringify({ messages: history, sessionId }),
       })
 
-      if (!res.ok || !res.body) {
-        throw new Error(`Request failed: ${res.status}`)
-      }
+      if (!res.ok || !res.body) throw new Error(`Request failed: ${res.status}`)
 
       const reader = res.body.getReader()
       const decoder = new TextDecoder()
@@ -93,7 +213,6 @@ export function AdminChat() {
         const { done, value } = await reader.read()
         if (done) break
         buffer += decoder.decode(value, { stream: true })
-
         const lines = buffer.split("\n")
         buffer = lines.pop() ?? ""
 
@@ -101,30 +220,32 @@ export function AdminChat() {
           if (!line.startsWith("data: ")) continue
           const raw = line.slice(6).trim()
           if (!raw) continue
-
           try {
             const event = JSON.parse(raw)
-
             if (event.type === "text") {
               setMessages((prev) =>
                 prev.map((m) =>
-                  m.id === assistantMsg.id
-                    ? { ...m, content: m.content + event.content }
+                  m.id === assistantId ? { ...m, content: m.content + event.content } : m
+                )
+              )
+            } else if (event.type === "tool_call") {
+              setMessages((prev) =>
+                prev.map((m) =>
+                  m.id === assistantId
+                    ? { ...m, toolCalls: [...(m.toolCalls ?? []), { name: event.name, summary: event.summary }] }
                     : m
                 )
               )
             } else if (event.type === "committed") {
-              const commit: CommitInfo = { sha: event.sha, files: event.files }
-              setLastCommit(commit)
+              const commit: Commit = { sha: event.sha, files: event.files }
               setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === assistantMsg.id ? { ...m, commit } : m
-                )
+                prev.map((m) => (m.id === assistantId ? { ...m, commit } : m))
               )
+              void refreshUndoable()
             } else if (event.type === "error") {
               setMessages((prev) =>
                 prev.map((m) =>
-                  m.id === assistantMsg.id
+                  m.id === assistantId
                     ? { ...m, content: m.content || `Error: ${event.message}` }
                     : m
                 )
@@ -138,23 +259,25 @@ export function AdminChat() {
     } catch (err) {
       const message = err instanceof Error ? err.message : "Something went wrong."
       setMessages((prev) =>
-        prev.map((m) =>
-          m.id === assistantMsg.id ? { ...m, content: message } : m
-        )
+        prev.map((m) => (m.id === assistantId ? { ...m, content: message } : m))
       )
     } finally {
       setMessages((prev) =>
-        prev.map((m) =>
-          m.id === assistantMsg.id ? { ...m, isStreaming: false } : m
-        )
+        prev.map((m) => (m.id === assistantId ? { ...m, isStreaming: false } : m))
       )
-      setIsLoading(false)
+      setBusy(false)
     }
   }
 
-  async function handleUndo() {
-    if (undoState === "loading") return
-    setUndoState("loading")
+  async function performUndo() {
+    if (!undoable || undoBusy) return
+    const ok = window.confirm(
+      `Undo "${undoable.subject}"?\n\nThis reverts the changed files to their pre-edit state and publishes a new revert commit. Continue?`
+    )
+    if (!ok) return
+
+    const target = undoable
+    setUndoBusy(true)
     try {
       const res = await fetch("/api/admin-agent/undo", {
         method: "POST",
@@ -162,493 +285,489 @@ export function AdminChat() {
         body: JSON.stringify({ sessionId }),
       })
       if (!res.ok) {
-        const data = await res.json()
-        throw new Error(data.error ?? "Undo failed")
+        const data = await res.json().catch(() => ({}))
+        throw new Error((data as { error?: string }).error ?? `Undo failed (${res.status})`)
       }
-      setUndoState("done")
-      setLastCommit(null)
-      const system: Message = {
-        id: uid(),
-        role: "assistant",
-        content: "✓ Last publish reverted. The site will restore to its previous state in ~60 seconds.",
+      const data = (await res.json()) as {
+        success: boolean
+        revertedSha: string
+        newSha: string
+        message: string
       }
-      setMessages((prev) => [...prev, system])
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: uid(),
+          role: "assistant",
+          content: `Reverted "${target.subject}".`,
+          undo: { revertedSha: data.revertedSha, revertedSubject: target.subject, newSha: data.newSha },
+        },
+      ])
+      await refreshUndoable()
     } catch (err) {
-      setUndoState("error")
-      const system: Message = {
-        id: uid(),
-        role: "assistant",
-        content: `Undo failed: ${err instanceof Error ? err.message : String(err)}`,
-      }
-      setMessages((prev) => [...prev, system])
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: uid(),
+          role: "assistant",
+          content: err instanceof Error ? `Couldn't undo: ${err.message}` : "Couldn't undo.",
+        },
+      ])
+    } finally {
+      setUndoBusy(false)
     }
   }
 
-  function handleImageFiles(files: FileList | File[]) {
-    const arr = Array.from(files).slice(0, 4 - images.length)
-    arr.forEach((file) => {
-      if (!file.type.startsWith("image/")) return
-      const reader = new FileReader()
-      reader.onload = (e) => {
-        const dataUrl = e.target?.result as string
-        setImages((prev) => [...prev, { dataUrl, mediaType: file.type }])
+  function handlePaste(e: ClipboardEvent<HTMLTextAreaElement>) {
+    const files: File[] = []
+    for (const item of Array.from(e.clipboardData?.items ?? [])) {
+      if (item.kind === "file" && item.type.startsWith("image/")) {
+        const f = item.getAsFile()
+        if (f) files.push(f)
       }
-      reader.readAsDataURL(file)
-    })
+    }
+    if (files.length > 0) {
+      e.preventDefault()
+      void attachFiles(files)
+    }
   }
 
-  function handlePaste(e: React.ClipboardEvent) {
-    const items = Array.from(e.clipboardData.items).filter((i) =>
-      i.type.startsWith("image/")
-    )
-    if (items.length === 0) return
+  function handleDragEnter(e: DragEvent<HTMLDivElement>) {
+    if (!hasImageInDataTransfer(e.dataTransfer)) return
     e.preventDefault()
-    handleImageFiles(items.map((i) => i.getAsFile()!).filter(Boolean) as File[])
+    dragDepthRef.current += 1
+    setDragActive(true)
+  }
+
+  function handleDragLeave(e: DragEvent<HTMLDivElement>) {
+    if (!hasImageInDataTransfer(e.dataTransfer)) return
+    e.preventDefault()
+    dragDepthRef.current = Math.max(0, dragDepthRef.current - 1)
+    if (dragDepthRef.current === 0) setDragActive(false)
+  }
+
+  function handleDragOver(e: DragEvent<HTMLDivElement>) {
+    if (hasImageInDataTransfer(e.dataTransfer)) e.preventDefault()
+  }
+
+  function handleDrop(e: DragEvent<HTMLDivElement>) {
+    if (!hasImageInDataTransfer(e.dataTransfer)) return
+    e.preventDefault()
+    dragDepthRef.current = 0
+    setDragActive(false)
+    if (e.dataTransfer.files.length > 0) void attachFiles(e.dataTransfer.files)
   }
 
   const showWelcome = messages.length === 0
 
   return (
-    <>
-      <style>{`
-        .admin-chat-root {
-          display: flex;
-          flex-direction: column;
-          height: 100vh;
-          background: #FAF5EF;
-          font-family: 'DM Sans', sans-serif;
-        }
-        .admin-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 0 28px;
-          height: 56px;
-          background: #5C2D4F;
-          flex-shrink: 0;
-          gap: 16px;
-        }
-        .admin-header-title {
-          font-family: 'Fraunces', Georgia, serif;
-          font-size: 17px;
-          font-weight: 300;
-          font-style: italic;
-          color: rgba(250,245,239,0.9);
-          letter-spacing: -0.01em;
-        }
-        .admin-header-right {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
-        .undo-btn {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 12px;
-          font-weight: 600;
-          letter-spacing: 0.06em;
-          text-transform: uppercase;
-          padding: 7px 16px;
-          background: rgba(250,245,239,0.1);
-          color: rgba(250,245,239,0.75);
-          border: 1px solid rgba(250,245,239,0.2);
-          border-radius: 20px;
-          cursor: pointer;
-          transition: background 0.15s, color 0.15s;
-        }
-        .undo-btn:hover:not(:disabled) {
-          background: rgba(250,245,239,0.18);
-          color: rgba(250,245,239,0.95);
-        }
-        .undo-btn:disabled { opacity: 0.4; cursor: default; }
-        .admin-messages {
-          flex: 1;
-          overflow-y: auto;
-          padding: 32px 28px;
-          display: flex;
-          flex-direction: column;
-          gap: 24px;
-        }
-        .welcome-card {
-          max-width: 560px;
-          margin: 0 auto;
-          text-align: center;
-          padding: 48px 32px 40px;
-          background: white;
-          border-radius: 12px;
-          box-shadow: 0 1px 4px rgba(92,45,79,0.06);
-        }
-        .welcome-title {
-          font-family: 'Fraunces', Georgia, serif;
-          font-size: 24px;
-          font-weight: 300;
-          font-style: italic;
-          color: #5C2D4F;
-          margin-bottom: 10px;
-        }
-        .welcome-sub {
-          font-size: 14.5px;
-          color: rgba(44,37,32,0.55);
-          line-height: 1.65;
-          margin-bottom: 32px;
-        }
-        .prompt-grid {
-          display: flex;
-          flex-direction: column;
-          gap: 8px;
-          text-align: left;
-        }
-        .prompt-btn {
-          font-family: 'DM Sans', sans-serif;
-          font-size: 13.5px;
-          color: #5C2D4F;
-          background: #FAF5EF;
-          border: 1px solid rgba(92,45,79,0.12);
-          border-radius: 8px;
-          padding: 10px 14px;
-          text-align: left;
-          cursor: pointer;
-          transition: background 0.12s, border-color 0.12s;
-        }
-        .prompt-btn:hover {
-          background: rgba(92,45,79,0.05);
-          border-color: rgba(92,45,79,0.25);
-        }
-        .msg-row {
-          display: flex;
-          gap: 12px;
-          max-width: 780px;
-          width: 100%;
-        }
-        .msg-row.user { margin-left: auto; flex-direction: row-reverse; }
-        .msg-avatar {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          flex-shrink: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 12px;
-          font-weight: 600;
-          margin-top: 2px;
-        }
-        .msg-avatar.user { background: #5C2D4F; color: #FAF5EF; }
-        .msg-avatar.assistant {
-          background: rgba(196,152,74,0.15);
-          color: #B55A3A;
-          font-style: italic;
-          font-family: 'Fraunces', serif;
-        }
-        .msg-bubble {
-          padding: 12px 16px;
-          border-radius: 12px;
-          font-size: 14.5px;
-          line-height: 1.7;
-          white-space: pre-wrap;
-          word-break: break-word;
-          max-width: calc(100% - 42px);
-        }
-        .msg-bubble.user {
-          background: #5C2D4F;
-          color: rgba(250,245,239,0.92);
-          border-bottom-right-radius: 4px;
-        }
-        .msg-bubble.assistant {
-          background: white;
-          color: #2C2520;
-          border-bottom-left-radius: 4px;
-          box-shadow: 0 1px 3px rgba(92,45,79,0.06);
-        }
-        .commit-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          margin-top: 10px;
-          padding: 5px 10px;
-          background: rgba(100,160,90,0.1);
-          border: 1px solid rgba(100,160,90,0.25);
-          border-radius: 20px;
-          font-size: 11.5px;
-          color: #3a7a30;
-          font-weight: 500;
-        }
-        .streaming-cursor::after {
-          content: "▌";
-          opacity: 0.5;
-          animation: blink 0.8s step-end infinite;
-        }
-        @keyframes blink { 0%,100%{opacity:0.5} 50%{opacity:0} }
-        .admin-composer {
-          padding: 16px 28px 24px;
-          background: white;
-          border-top: 1px solid rgba(92,45,79,0.07);
-          flex-shrink: 0;
-        }
-        .image-previews {
-          display: flex;
-          gap: 8px;
-          margin-bottom: 10px;
-          flex-wrap: wrap;
-        }
-        .image-preview-wrap {
-          position: relative;
-        }
-        .image-preview-wrap img {
-          width: 56px;
-          height: 56px;
-          object-fit: cover;
-          border-radius: 6px;
-          border: 1px solid rgba(92,45,79,0.12);
-        }
-        .image-remove-btn {
-          position: absolute;
-          top: -6px;
-          right: -6px;
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          background: #5C2D4F;
-          color: white;
-          border: none;
-          cursor: pointer;
-          font-size: 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          line-height: 1;
-        }
-        .composer-row {
-          display: flex;
-          gap: 10px;
-          align-items: flex-end;
-        }
-        .composer-textarea {
-          flex: 1;
-          resize: none;
-          font-family: 'DM Sans', sans-serif;
-          font-size: 14.5px;
-          line-height: 1.6;
-          color: #2C2520;
-          background: #FAF5EF;
-          border: 1.5px solid rgba(92,45,79,0.15);
-          border-radius: 10px;
-          padding: 10px 14px;
-          outline: none;
-          transition: border-color 0.15s;
-          min-height: 44px;
-          max-height: 200px;
-          overflow-y: auto;
-        }
-        .composer-textarea::placeholder { color: rgba(44,37,32,0.35); }
-        .composer-textarea:focus { border-color: rgba(92,45,79,0.45); }
-        .composer-actions {
-          display: flex;
-          gap: 8px;
-          align-items: flex-end;
-        }
-        .attach-btn {
-          width: 40px;
-          height: 40px;
-          border-radius: 8px;
-          background: #FAF5EF;
-          border: 1.5px solid rgba(92,45,79,0.15);
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: rgba(92,45,79,0.5);
-          transition: background 0.12s, border-color 0.12s;
-          flex-shrink: 0;
-        }
-        .attach-btn:hover { background: rgba(92,45,79,0.05); border-color: rgba(92,45,79,0.3); }
-        .send-btn {
-          width: 40px;
-          height: 40px;
-          border-radius: 8px;
-          background: #5C2D4F;
-          border: none;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: white;
-          transition: background 0.12s, opacity 0.12s;
-          flex-shrink: 0;
-        }
-        .send-btn:hover:not(:disabled) { background: #4a2440; }
-        .send-btn:disabled { opacity: 0.4; cursor: default; }
-        .composer-hint {
-          margin-top: 8px;
-          font-size: 11.5px;
-          color: rgba(44,37,32,0.35);
-        }
-      `}</style>
-
-      <div className="admin-chat-root">
-        {/* Header */}
-        <header className="admin-header">
-          <span className="admin-header-title">Nicole Jardim — Admin</span>
-          <div className="admin-header-right">
-            {lastCommit && (
-              <button
-                className="undo-btn"
-                onClick={handleUndo}
-                disabled={undoState === "loading"}
-                title={`Undo last publish (${lastCommit.sha.slice(0, 7)})`}
-              >
-                {undoState === "loading" ? "Undoing…" : "↩ Undo Last Publish"}
-              </button>
-            )}
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span style={{ fontSize: 12, color: "rgba(250,245,239,0.5)" }}>
-                {user?.emailAddresses[0]?.emailAddress}
-              </span>
-            </div>
+    <div
+      className="flex-1 flex flex-col max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 relative"
+      onDragEnter={handleDragEnter}
+      onDragLeave={handleDragLeave}
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+    >
+      {/* Drag overlay */}
+      {dragActive && (
+        <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#5C2D4F]/10 border-2 border-dashed border-[#5C2D4F] rounded-2xl pointer-events-none">
+          <div
+            className="flex flex-col items-center gap-2 text-[#5C2D4F]"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            <ImageIcon className="w-10 h-10" />
+            <p className="text-sm font-semibold">Drop image to attach</p>
           </div>
-        </header>
-
-        {/* Messages */}
-        <div className="admin-messages">
-          {showWelcome ? (
-            <div className="welcome-card">
-              <div className="welcome-title">What would you like to update?</div>
-              <p className="welcome-sub">
-                Describe a change in plain English. I&apos;ll read the relevant file,
-                make the edit, and publish it — live on nicolejardim.app in ~60 seconds.
-              </p>
-              <div className="prompt-grid">
-                {SUGGESTED_PROMPTS.map((p) => (
-                  <button
-                    key={p}
-                    className="prompt-btn"
-                    onClick={() => {
-                      setInput(p)
-                      textareaRef.current?.focus()
-                    }}
-                  >
-                    {p}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            messages.map((msg) => (
-              <div key={msg.id} className={`msg-row ${msg.role}`}>
-                <div className={`msg-avatar ${msg.role}`}>
-                  {msg.role === "user"
-                    ? (user?.firstName?.[0] ?? "U")
-                    : "N"}
-                </div>
-                <div>
-                  <div
-                    className={`msg-bubble ${msg.role}${msg.isStreaming && !msg.content ? " streaming-cursor" : ""}`}
-                  >
-                    {msg.content || (msg.isStreaming ? "" : "—")}
-                    {msg.isStreaming && msg.content && (
-                      <span className="streaming-cursor" />
-                    )}
-                  </div>
-                  {msg.commit && (
-                    <div className="commit-badge">
-                      <span>✓</span>
-                      <span>
-                        Published · {msg.commit.files.length} file
-                        {msg.commit.files.length !== 1 ? "s" : ""} ·{" "}
-                        <code style={{ fontFamily: "monospace" }}>
-                          {msg.commit.sha.slice(0, 7)}
-                        </code>
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))
-          )}
-          <div ref={bottomRef} />
         </div>
+      )}
 
-        {/* Composer */}
-        <div className="admin-composer">
-          {images.length > 0 && (
-            <div className="image-previews">
-              {images.map((img, i) => (
-                <div key={i} className="image-preview-wrap">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img.dataUrl} alt="" />
-                  <button
-                    className="image-remove-btn"
-                    onClick={() => setImages((prev) => prev.filter((_, j) => j !== i))}
-                  >
-                    ✕
-                  </button>
-                </div>
-              ))}
-            </div>
-          )}
-          <form onSubmit={handleSubmit}>
-            <div className="composer-row">
-              <textarea
-                ref={textareaRef}
-                className="composer-textarea"
-                placeholder="Describe a change — e.g. 'Update the book description to…'"
-                value={input}
-                onChange={(e) => { setInput(e.target.value); autoResize() }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault()
-                    handleSubmit()
-                  }
-                }}
-                onPaste={handlePaste}
-                rows={1}
-                disabled={isLoading}
-              />
-              <div className="composer-actions">
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  multiple
-                  style={{ display: "none" }}
-                  onChange={(e) => e.target.files && handleImageFiles(e.target.files)}
+      {/* Undo banner — shown whenever there's a recent admin commit */}
+      {undoable && (
+        <UndoBanner candidate={undoable} busy={undoBusy} onClick={performUndo} />
+      )}
+
+      {/* Message log / welcome state */}
+      <div
+        ref={scrollRef}
+        className="flex-1 overflow-y-auto pr-1"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
+      >
+        {showWelcome ? (
+          <WelcomeState firstName={firstName} email={email} />
+        ) : (
+          <ul className="space-y-5 pb-6">
+            {messages.map((m) => (
+              <li key={m.id} className="space-y-2">
+                <MessageBubble
+                  role={m.role}
+                  content={m.content}
+                  attachments={m.attachments}
+                  isStreaming={m.isStreaming}
+                  initials={initialsFor(fullName, email)}
+                />
+                {m.role === "assistant" && m.toolCalls && m.toolCalls.length > 0 && (
+                  <ToolCallStrip toolCalls={m.toolCalls} />
+                )}
+                {m.role === "assistant" && m.commit && (
+                  <CommitCard commit={m.commit} />
+                )}
+                {m.role === "assistant" && m.undo && (
+                  <UndoCard undo={m.undo} />
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Composer */}
+      <div className="mt-4 border-t border-[rgba(92,45,79,0.1)] pt-4">
+        {pendingAttachments.length > 0 && (
+          <div className="mb-3 flex flex-wrap gap-2">
+            {pendingAttachments.map((a) => (
+              <div
+                key={a.id}
+                className="relative rounded-lg overflow-hidden border border-[rgba(92,45,79,0.15)] bg-white shadow-sm"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={a.previewUrl}
+                  alt={a.fileName}
+                  className="h-16 w-auto max-w-[120px] object-cover block"
                 />
                 <button
                   type="button"
-                  className="attach-btn"
-                  onClick={() => fileInputRef.current?.click()}
-                  title="Attach image (or paste)"
+                  onClick={() => setPendingAttachments((prev) => prev.filter((x) => x.id !== a.id))}
+                  className="absolute top-1 right-1 flex items-center justify-center w-5 h-5 rounded-full bg-black/60 hover:bg-black/80 text-white"
+                  aria-label={`Remove ${a.fileName}`}
                 >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M2 10.5L5.5 7L8 9.5L10.5 6.5L14 10.5" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
-                    <rect x="1.5" y="1.5" width="13" height="13" rx="2" stroke="currentColor" strokeWidth="1.4" />
-                    <circle cx="5.5" cy="5" r="1" fill="currentColor" />
-                  </svg>
-                </button>
-                <button
-                  type="submit"
-                  className="send-btn"
-                  disabled={!input.trim() || isLoading}
-                  title="Send (Enter)"
-                >
-                  {isLoading ? (
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <circle cx="8" cy="8" r="6" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
-                      <path d="M8 2a6 6 0 0 1 6 6" stroke="white" strokeWidth="2" strokeLinecap="round">
-                        <animateTransform attributeName="transform" type="rotate" from="0 8 8" to="360 8 8" dur="0.8s" repeatCount="indefinite" />
-                      </path>
-                    </svg>
-                  ) : (
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M13.5 8L2.5 3L5 8L2.5 13L13.5 8Z" fill="white" />
-                    </svg>
-                  )}
+                  <X className="w-3 h-3" />
                 </button>
               </div>
+            ))}
+          </div>
+        )}
+
+        {attachError && (
+          <p
+            className="mb-2 text-xs text-[#B55A3A]"
+            style={{ fontFamily: "'DM Sans', sans-serif" }}
+          >
+            {attachError}
+          </p>
+        )}
+
+        <form
+          onSubmit={(e) => { e.preventDefault(); send(input) }}
+          className="flex items-end gap-2"
+        >
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            disabled={busy || pendingAttachments.length >= MAX_ATTACHMENTS}
+            className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[rgba(92,45,79,0.15)] bg-white hover:bg-[rgba(92,45,79,0.05)] text-[rgba(92,45,79,0.45)] hover:text-[#5C2D4F] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            aria-label="Attach screenshot"
+            title="Attach screenshot (or paste / drag-and-drop)"
+          >
+            <Paperclip className="w-4 h-4" />
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept={ACCEPTED_MIME.join(",")}
+            multiple
+            className="hidden"
+            onChange={(e) => {
+              if (e.target.files) void attachFiles(e.target.files)
+              e.target.value = ""
+            }}
+          />
+
+          <textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault()
+                send(input)
+              }
+            }}
+            onPaste={handlePaste}
+            rows={1}
+            placeholder="Describe a change, ask me to draft an article, or paste a screenshot for context…"
+            className="flex-1 resize-none rounded-2xl border border-[rgba(92,45,79,0.15)] bg-white px-4 py-3 text-sm leading-relaxed text-[#2C2520] placeholder:text-[rgba(44,37,32,0.35)] focus:outline-none focus:ring-2 focus:ring-[#5C2D4F]/30 focus:border-[#5C2D4F]"
+            style={{ fontFamily: "'DM Sans', sans-serif", maxHeight: 160 }}
+            disabled={busy}
+          />
+          <button
+            type="submit"
+            disabled={busy || (!input.trim() && pendingAttachments.length === 0)}
+            className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#5C2D4F] hover:bg-[#4a2440] text-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow"
+            aria-label="Send"
+          >
+            <Send className="w-4 h-4" />
+          </button>
+        </form>
+        <p
+          className="mt-2 text-[11px] text-[rgba(44,37,32,0.4)]"
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
+        >
+          Signed in as {fullName ?? email ?? userId}. Edits auto-publish to nicolejardim.app.
+          Attach screenshots with the paperclip, paste, or drag-and-drop.
+        </p>
+      </div>
+    </div>
+  )
+}
+
+// --- Sub-components ----------------------------------------------------------
+
+function WelcomeState({
+  firstName,
+  email,
+}: {
+  firstName: string | null
+  email: string | null
+}) {
+  const greeting = firstName ?? email?.split("@")[0] ?? "there"
+  return (
+    <div className="max-w-2xl mx-auto py-10">
+      <div
+        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5C2D4F]/10 border border-[#5C2D4F]/25 text-[11px] uppercase tracking-widest text-[#5C2D4F] font-semibold mb-4"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
+      >
+        <Sparkles className="w-3 h-3" />
+        Admin workspace
+      </div>
+      <h1
+        className="text-3xl sm:text-4xl text-[#2C2520] font-light leading-tight mb-3"
+        style={{ fontFamily: "'Fraunces', Georgia, serif", fontStyle: "italic" }}
+      >
+        Hi {greeting} — what would you like to change today?
+      </h1>
+      <p
+        className="text-[rgba(44,37,32,0.6)] text-base leading-relaxed"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
+      >
+        Tell me what you want to do in plain English. I can edit existing articles, draft new
+        ones, change page copy, and update the site. Attach a screenshot (paste, drag, or click
+        the paperclip) when it&rsquo;s easier to show than describe. Every change auto-publishes
+        to the live site.
+      </p>
+    </div>
+  )
+}
+
+function MessageBubble({
+  role,
+  content,
+  attachments,
+  isStreaming,
+  initials,
+}: {
+  role: "user" | "assistant"
+  content: string
+  attachments?: Attachment[]
+  isStreaming?: boolean
+  initials: string
+}) {
+  if (role === "user") {
+    return (
+      <div className="flex items-start gap-3 justify-end">
+        <div className="max-w-[80%] flex flex-col items-end gap-2">
+          {attachments && attachments.length > 0 && (
+            <div className="flex flex-wrap gap-2 justify-end">
+              {attachments.map((a) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={a.id}
+                  src={a.previewUrl}
+                  alt={a.fileName}
+                  className="max-w-[220px] max-h-[220px] rounded-xl border border-[rgba(92,45,79,0.12)] object-cover bg-white"
+                />
+              ))}
             </div>
-            <p className="composer-hint">Enter to send · Shift+Enter for new line · Paste images for context</p>
-          </form>
+          )}
+          {content && (
+            <div
+              className="bg-[#5C2D4F] text-white rounded-2xl rounded-tr-sm px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap"
+              style={{ fontFamily: "'DM Sans', sans-serif" }}
+            >
+              {content}
+            </div>
+          )}
+        </div>
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#2C2520] text-white text-xs font-semibold flex items-center justify-center">
+          {initials}
         </div>
       </div>
-    </>
+    )
+  }
+
+  return (
+    <div className="flex items-start gap-3">
+      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-[#5C2D4F] to-[#3a1a33] text-white flex items-center justify-center">
+        <Sparkles className="w-4 h-4" />
+      </div>
+      <div
+        className="max-w-[80%] bg-white border border-[rgba(92,45,79,0.1)] text-[#2C2520] rounded-2xl rounded-tl-sm px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
+      >
+        {content || (isStreaming && (
+          <span className="inline-flex gap-1 items-center py-0.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#5C2D4F] animate-bounce [animation-delay:-0.3s]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#5C2D4F] animate-bounce [animation-delay:-0.15s]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#5C2D4F] animate-bounce" />
+          </span>
+        ))}
+      </div>
+    </div>
   )
+}
+
+function ToolCallStrip({ toolCalls }: { toolCalls: ToolCall[] }) {
+  return (
+    <div className="ml-11 flex flex-wrap gap-1.5">
+      {toolCalls.map((tc, i) => (
+        <span
+          key={i}
+          className="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-[#5C2D4F]/5 border border-[#5C2D4F]/15 text-[11px] text-[#5C2D4F]/70"
+          style={{ fontFamily: "'DM Sans', sans-serif" }}
+        >
+          <Wrench className="w-3 h-3" />
+          {tc.summary}
+        </span>
+      ))}
+    </div>
+  )
+}
+
+function CommitCard({ commit }: { commit: { sha: string; files: string[] } }) {
+  const url = `https://github.com/FixYourPeriod/nj-website/commit/${commit.sha}`
+  return (
+    <div className="ml-11 inline-flex items-start gap-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200 max-w-full">
+      <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+      <div className="min-w-0 flex-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        <div className="flex items-baseline gap-2 flex-wrap">
+          <span className="text-sm font-semibold text-emerald-900">Published to production</span>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-emerald-700 hover:text-emerald-900 inline-flex items-center gap-1 underline"
+          >
+            {commit.sha.slice(0, 7)}
+            <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+        <div className="mt-1 text-xs text-emerald-800/90 break-all">{commit.files.join(", ")}</div>
+        <div className="mt-1 text-[11px] text-emerald-700/80">Vercel will redeploy in ~60 seconds.</div>
+      </div>
+    </div>
+  )
+}
+
+function UndoBanner({
+  candidate,
+  busy,
+  onClick,
+}: {
+  candidate: UndoCandidate
+  busy: boolean
+  onClick: () => void
+}) {
+  return (
+    <div
+      className="mb-3 flex items-start gap-3 p-3 rounded-xl bg-[rgba(92,45,79,0.05)] border border-[rgba(92,45,79,0.12)]"
+      style={{ fontFamily: "'DM Sans', sans-serif" }}
+    >
+      <RotateCcw className="w-4 h-4 text-[#5C2D4F] flex-shrink-0 mt-0.5" />
+      <div className="min-w-0 flex-1">
+        <div className="text-[11px] uppercase tracking-widest text-[#5C2D4F] font-semibold mb-0.5">
+          Most recent publish
+        </div>
+        <div className="text-sm text-[#2C2520] truncate" title={candidate.subject}>
+          {candidate.subject}
+        </div>
+        <div className="mt-1 text-[11px] text-[rgba(44,37,32,0.55)]">
+          {candidate.filesChanged.length} file
+          {candidate.filesChanged.length === 1 ? "" : "s"} changed ·{" "}
+          <a
+            href={candidate.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-[#5C2D4F]"
+          >
+            {candidate.sha.slice(0, 7)}
+          </a>
+        </div>
+      </div>
+      <button
+        type="button"
+        onClick={onClick}
+        disabled={busy}
+        className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full bg-white border border-[#5C2D4F]/40 text-[#5C2D4F] hover:bg-[#5C2D4F] hover:text-white text-xs font-semibold uppercase tracking-widest transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex-shrink-0"
+        style={{ fontFamily: "'DM Sans', sans-serif" }}
+      >
+        <Undo2 className="w-3.5 h-3.5" />
+        {busy ? "Undoing…" : "Undo last publish"}
+      </button>
+    </div>
+  )
+}
+
+function UndoCard({ undo }: { undo: UndoResult }) {
+  const url = `https://github.com/FixYourPeriod/nj-website/commit/${undo.newSha}`
+  return (
+    <div className="ml-11 inline-flex items-start gap-3 p-3 rounded-xl bg-amber-50 border border-amber-200 max-w-full">
+      <Undo2 className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
+      <div className="min-w-0 flex-1" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+        <div className="flex items-baseline gap-2 flex-wrap">
+          <span className="text-sm font-semibold text-amber-900">Reverted to pre-edit state</span>
+          {undo.newSha && (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-amber-800 hover:text-amber-900 inline-flex items-center gap-1 underline"
+            >
+              {undo.newSha.slice(0, 7)}
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          )}
+        </div>
+        <div className="mt-1 text-[11px] text-amber-700/80">Vercel will redeploy in ~60 seconds.</div>
+      </div>
+    </div>
+  )
+}
+
+// --- Helpers -----------------------------------------------------------------
+
+function initialsFor(fullName: string | null, email: string | null): string {
+  if (fullName) {
+    const parts = fullName.trim().split(/\s+/)
+    return ((parts[0]?.[0] ?? "") + (parts[1]?.[0] ?? "")).toUpperCase() || "?"
+  }
+  if (email) return email[0]?.toUpperCase() ?? "?"
+  return "?"
+}
+
+function readFileAsBase64(file: File): Promise<{ base64: string; dataUrl: string }> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onerror = () => reject(reader.error)
+    reader.onload = () => {
+      const dataUrl = String(reader.result || "")
+      const commaIdx = dataUrl.indexOf(",")
+      const base64 = commaIdx >= 0 ? dataUrl.slice(commaIdx + 1) : dataUrl
+      resolve({ base64, dataUrl })
+    }
+    reader.readAsDataURL(file)
+  })
+}
+
+function hasImageInDataTransfer(dt: DataTransfer | null): boolean {
+  if (!dt) return false
+  return Array.from(dt.types ?? []).includes("Files")
 }

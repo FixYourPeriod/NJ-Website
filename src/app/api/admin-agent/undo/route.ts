@@ -1,8 +1,38 @@
 import { auth, currentUser } from "@clerk/nextjs/server"
 import { NextResponse } from "next/server"
-import { getRecentAdminCommits, revertToBeforeCommit } from "@/lib/admin/github-client"
+import { getRecentAdminCommits, revertToBeforeCommit, getCommitDetails } from "@/lib/admin/github-client"
 import { logAudit } from "@/lib/admin/audit-log"
 
+/** GET — returns the most recent undoable admin commit, or null. */
+export async function GET(_req: Request) {
+  const { userId } = await auth()
+  if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
+
+  try {
+    const adminCommits = await getRecentAdminCommits(5)
+    if (adminCommits.length === 0) {
+      return NextResponse.json({ undoable: null })
+    }
+    const latest = adminCommits[0]
+    const details = await getCommitDetails(latest.sha)
+
+    // Strip the "admin: <sessionid>: " prefix so the banner shows a clean subject
+    const subject = latest.message.replace(/^admin:[a-z0-9]+:\s*/i, "Admin: ")
+
+    return NextResponse.json({
+      undoable: {
+        sha: latest.sha,
+        subject,
+        url: `https://github.com/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/commit/${latest.sha}`,
+        filesChanged: details.filesChanged,
+      },
+    })
+  } catch {
+    return NextResponse.json({ undoable: null })
+  }
+}
+
+/** POST — performs the revert. */
 export async function POST(req: Request) {
   const { userId } = await auth()
   if (!userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })

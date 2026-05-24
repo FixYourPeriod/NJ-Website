@@ -140,6 +140,23 @@ export async function getRecentAdminCommits(
     .map((c) => ({ sha: c.sha, message: c.commit.message }))
 }
 
+export async function getCommitDetails(sha: string): Promise<{
+  filesChanged: string[]
+  authoredAt: string
+}> {
+  const { owner, repo, token } = cfg()
+  const res = await fetch(
+    `${BASE}/repos/${owner}/${repo}/commits/${sha}`,
+    { headers: headers(token), cache: "no-store" }
+  )
+  if (!res.ok) throw new Error(`Could not get commit details: ${res.status}`)
+  const data = await res.json()
+  return {
+    filesChanged: (data.files ?? []).map((f: { filename: string }) => f.filename),
+    authoredAt: data.commit?.author?.date ?? new Date().toISOString(),
+  }
+}
+
 /**
  * Reverts only the files changed by a specific commit back to their pre-commit state,
  * leaving all other files (and all commits after the target) intact.

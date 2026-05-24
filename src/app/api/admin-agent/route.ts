@@ -112,6 +112,17 @@ type IncomingMessage = {
   content: string | Array<{ type: string; text?: string; source?: ImageBlock }>
 }
 
+function toolCallSummary(toolUse: Anthropic.ToolUseBlock): string {
+  const input = toolUse.input as Record<string, unknown>
+  switch (toolUse.name) {
+    case "read_file":   return `Reading ${input.path}`
+    case "write_file":  return `Writing ${input.path}`
+    case "commit_changes": return `Committing: ${input.message}`
+    case "list_articles": return "Listing articles"
+    default: return toolUse.name
+  }
+}
+
 export async function POST(req: Request) {
   // Auth check
   const { userId } = await auth()
@@ -171,6 +182,11 @@ export async function POST(req: Request) {
           const toolUseBlocks = response.content.filter(
             (b): b is Anthropic.ToolUseBlock => b.type === "tool_use"
           )
+
+          // Emit tool_call events so the UI can show progress chips
+          for (const toolUse of toolUseBlocks) {
+            send({ type: "tool_call", name: toolUse.name, summary: toolCallSummary(toolUse) })
+          }
 
           const toolResults: Anthropic.ToolResultBlockParam[] = []
 
