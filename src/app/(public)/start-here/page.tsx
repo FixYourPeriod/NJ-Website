@@ -28,9 +28,10 @@ const phases = [
         body: "A top-rated podcast breaking down complex hormonal health topics, featuring expert interviews and answering real questions from women navigating their cycles.",
       },
     ],
-    cta: "Explore Resources →",
+    cta: "Explore Resources",
     ctaHref: "/resources",
     external: false,
+    ctaStyle: "outline" as const,
   },
   {
     num: "Phase 2",
@@ -52,10 +53,10 @@ const phases = [
     ],
     bulletNote:
       "You'll receive targeted recommendations — supplements, nutrition, and lifestyle adjustments — designed to address root causes, not just mask symptoms.",
-    cta: "Take the Free Assessment →",
+    cta: "Take the Free Assessment",
     ctaHref: "https://fixyourperiod.app/quiz",
     external: true,
-    ctaStyle: "terra",
+    ctaStyle: "terra" as const,
   },
   {
     num: "Phase 3",
@@ -75,21 +76,12 @@ const phases = [
       "Support clients with PCOS, endometriosis, perimenopause, and more",
       "Build or expand a menstrual health practice",
     ],
-    cta: "Visit the Institute for Menstrual Health →",
+    cta: "Visit the Institute for Menstrual Health",
     ctaHref: "https://instituteformenstrualhealth.com/",
     external: true,
+    ctaStyle: "plum" as const,
   },
 ]
-
-const S = {
-  label: {
-    fontFamily: "'DM Sans', sans-serif",
-    fontSize: 11,
-    fontWeight: 600,
-    letterSpacing: "0.14em",
-    textTransform: "uppercase" as const,
-  },
-}
 
 export default function StartHerePage() {
   return (
@@ -98,40 +90,65 @@ export default function StartHerePage() {
       <section
         style={{
           background: "var(--ivory)",
-          padding: "100px 40px 80px",
+          padding: "100px 40px 88px",
           borderBottom: "1px solid rgba(92,45,79,0.07)",
-          textAlign: "center",
         }}
       >
-        <div style={{ maxWidth: 720, margin: "0 auto" }}>
-          <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 20 }}>
-            Where to Begin
-          </span>
-          <h1
+        <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
+          {/* Eyebrow */}
+          <div
             style={{
-              fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(40px, 6vw, 64px)",
-              fontWeight: 300,
-              lineHeight: 1.08,
-              color: "var(--plum)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
               marginBottom: 28,
             }}
           >
-            How Nicole&apos;s Work Can Support You
+            <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--terra)",
+              }}
+            >
+              Where to Begin
+            </span>
+            <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+          </div>
+
+          <h1
+            style={{
+              fontFamily: "'Fraunces', Georgia, serif",
+              fontSize: "clamp(40px, 5.5vw, 64px)",
+              fontWeight: 300,
+              lineHeight: 1.08,
+              color: "var(--plum)",
+              letterSpacing: "-0.02em",
+              marginBottom: 32,
+            }}
+          >
+            How Nicole&apos;s Work<br />
+            <em style={{ fontStyle: "italic", color: "var(--terra)" }}>Can Support You</em>
           </h1>
+
           {[
-            "Many women arrive here after years of being dismissed, told their symptoms are “normal,” or handed prescriptions without explanation. Others come seeking answers to questions their doctors didn’t take the time to address. Some are simply curious about how their bodies actually work.",
+            "Many women arrive here after years of being dismissed, told their symptoms are "normal," or handed prescriptions without explanation. Others come seeking answers to questions their doctors didn't take the time to address. Some are simply curious about how their bodies actually work.",
             "Nicole's work is built on a foundational principle: the menstrual cycle is a vital sign, not an inconvenience. Your symptoms aren't random occurrences to accept or suppress. They're signals worth understanding.",
           ].map((p, i) => (
             <p
               key={i}
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
-                lineHeight: 1.75,
+                fontFamily: i === 0 ? "'Cormorant Garamond', Georgia, serif" : "'DM Sans', sans-serif",
+                fontSize: i === 0 ? 21 : 16,
+                lineHeight: 1.8,
                 color: "var(--charcoal)",
-                opacity: 0.75,
-                maxWidth: 640,
+                opacity: i === 0 ? 0.9 : 0.65,
+                maxWidth: 620,
                 margin: "0 auto 16px",
               }}
             >
@@ -144,14 +161,18 @@ export default function StartHerePage() {
       {/* ── PHASE CARDS ──────────────────────────────────────────────── */}
       <section style={{ background: "var(--ivory)", padding: "72px 40px 96px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
+
+          {/* Section heading */}
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <h2
               style={{
-                fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(28px, 3.5vw, 42px)",
-                fontWeight: 300,
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: "clamp(28px, 3.5vw, 44px)",
+                fontWeight: 400,
+                fontStyle: "italic",
                 color: "var(--plum)",
-                marginBottom: 16,
+                marginBottom: 14,
+                lineHeight: 1.15,
               }}
             >
               Where Are You in Your Journey?
@@ -159,100 +180,144 @@ export default function StartHerePage() {
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
+                fontSize: 16,
                 lineHeight: 1.75,
                 color: "var(--charcoal)",
-                opacity: 0.65,
-                maxWidth: 600,
+                opacity: 0.6,
+                maxWidth: 580,
                 margin: "0 auto",
               }}
             >
-              Whether your goal is to address personal period problems, deepen knowledge for professional practice, or build expertise in menstrual health education — you&apos;re in the right place.
+              Whether your goal is to address personal period problems, deepen knowledge
+              for professional practice, or build expertise in menstrual health education
+              — you&apos;re in the right place.
             </p>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+          {/* Cards */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {phases.map((phase) => (
               <div
                 key={phase.num}
                 style={{
-                  background: "var(--sand)",
-                  borderRadius: 6,
+                  borderRadius: 4,
                   overflow: "hidden",
                   display: "grid",
-                  gridTemplateColumns: "280px 1fr",
-                  borderLeft: "3px solid var(--gold)",
+                  gridTemplateColumns: "260px 1fr",
+                  borderTop: "2px solid rgba(196,152,74,0.4)",
                 }}
               >
+                {/* Left: plum label column */}
                 <div
                   style={{
                     background: "var(--plum)",
-                    padding: "52px 44px",
+                    padding: "52px 40px",
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "center",
                   }}
                 >
-                  <span
+                  {/* Phase number + gold dash */}
+                  <div
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 11,
-                      fontWeight: 600,
-                      letterSpacing: "0.12em",
-                      textTransform: "uppercase",
-                      color: "var(--gold)",
-                      marginBottom: 12,
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 10,
+                      marginBottom: 16,
                     }}
                   >
-                    {phase.num}
-                  </span>
+                    <div
+                      style={{
+                        width: 20,
+                        height: 1,
+                        background: "rgba(196,152,74,0.6)",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <span
+                      style={{
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: 11,
+                        fontWeight: 600,
+                        letterSpacing: "0.14em",
+                        textTransform: "uppercase",
+                        color: "rgba(196,152,74,0.75)",
+                      }}
+                    >
+                      {phase.num}
+                    </span>
+                  </div>
+
                   <h3
                     style={{
                       fontFamily: "'Fraunces', Georgia, serif",
-                      fontSize: 36,
+                      fontSize: 40,
                       fontWeight: 300,
+                      fontStyle: "italic",
                       color: "var(--ivory)",
-                      marginBottom: 8,
+                      lineHeight: 1.05,
+                      marginBottom: 12,
+                      letterSpacing: "-0.01em",
                     }}
                   >
                     {phase.name}
                   </h3>
+
                   <p
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
+                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontSize: 16,
+                      fontStyle: "italic",
                       color: "var(--ivory)",
                       opacity: 0.6,
-                      lineHeight: 1.5,
+                      lineHeight: 1.55,
                     }}
                   >
                     {phase.sub}
                   </p>
                 </div>
 
-                <div style={{ padding: "48px 52px" }}>
+                {/* Right: content column */}
+                <div
+                  style={{
+                    background: "var(--sand)",
+                    padding: "48px 52px",
+                  }}
+                >
                   <p
                     style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 16,
+                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontSize: 20,
                       lineHeight: 1.75,
                       color: "var(--charcoal)",
-                      opacity: 0.8,
-                      marginBottom: 28,
+                      opacity: 0.9,
+                      marginBottom: 32,
                     }}
                   >
                     {phase.intro}
                   </p>
 
-                  {phase.items.map((item) => (
-                    <div key={item.title} style={{ marginBottom: 20 }}>
+                  {/* Resource items */}
+                  {phase.items.map((item, i) => (
+                    <div
+                      key={item.title}
+                      style={{
+                        marginBottom: 24,
+                        paddingBottom: i < phase.items.length - 1 ? 24 : 0,
+                        borderBottom: i < phase.items.length - 1
+                          ? "1px solid rgba(92,45,79,0.08)"
+                          : "none",
+                      }}
+                    >
                       <h4
                         style={{
                           fontFamily: "'Fraunces', Georgia, serif",
-                          fontSize: 18,
-                          fontWeight: 600,
+                          fontSize: 19,
+                          fontWeight: 300,
                           color: "var(--plum)",
                           marginBottom: 8,
+                          lineHeight: 1.2,
+                          letterSpacing: "-0.01em",
                         }}
                       >
                         {item.title}
@@ -261,9 +326,9 @@ export default function StartHerePage() {
                         style={{
                           fontFamily: "'DM Sans', sans-serif",
                           fontSize: 15,
-                          lineHeight: 1.7,
+                          lineHeight: 1.75,
                           color: "var(--charcoal)",
-                          opacity: 0.8,
+                          opacity: 0.75,
                         }}
                       >
                         {item.body}
@@ -271,15 +336,16 @@ export default function StartHerePage() {
                     </div>
                   ))}
 
+                  {/* Bullet list */}
                   {"bullets" in phase && phase.bullets && (
                     <ul
                       style={{
-                        margin: "16px 0",
+                        margin: "20px 0",
                         paddingLeft: 0,
                         listStyle: "none",
                         display: "flex",
                         flexDirection: "column",
-                        gap: 8,
+                        gap: 10,
                       }}
                     >
                       {phase.bullets.map((b) => (
@@ -287,15 +353,26 @@ export default function StartHerePage() {
                           key={b}
                           style={{
                             display: "flex",
-                            gap: 12,
+                            gap: 14,
+                            alignItems: "flex-start",
                             fontFamily: "'DM Sans', sans-serif",
                             fontSize: 15,
-                            lineHeight: 1.6,
+                            lineHeight: 1.65,
                             color: "var(--charcoal)",
                             opacity: 0.8,
                           }}
                         >
-                          <span style={{ color: "var(--terra)", flexShrink: 0 }}>→</span>
+                          <span
+                            style={{
+                              display: "inline-block",
+                              width: 18,
+                              height: 1.5,
+                              background: "var(--gold)",
+                              flexShrink: 0,
+                              marginTop: 10,
+                              opacity: 0.8,
+                            }}
+                          />
                           {b}
                         </li>
                       ))}
@@ -305,20 +382,21 @@ export default function StartHerePage() {
                   {"bulletNote" in phase && phase.bulletNote && (
                     <p
                       style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: 15,
+                        fontFamily: "'Cormorant Garamond', Georgia, serif",
+                        fontStyle: "italic",
+                        fontSize: 17,
                         lineHeight: 1.7,
                         color: "var(--charcoal)",
-                        opacity: 0.8,
-                        marginBottom: 24,
-                        marginTop: 12,
+                        opacity: 0.75,
+                        margin: "16px 0 28px",
                       }}
                     >
                       {phase.bulletNote}
                     </p>
                   )}
 
-                  <div style={{ marginTop: 24 }}>
+                  {/* CTA */}
+                  <div style={{ marginTop: 28 }}>
                     {phase.external ? (
                       <a
                         href={phase.ctaHref}
@@ -329,17 +407,19 @@ export default function StartHerePage() {
                           fontFamily: "'DM Sans', sans-serif",
                           fontSize: 13,
                           fontWeight: 600,
-                          letterSpacing: "0.06em",
+                          letterSpacing: "0.08em",
                           textTransform: "uppercase",
-                          padding: "14px 32px",
-                          background: "ctaStyle" in phase && phase.ctaStyle === "terra" ? "var(--terra)" : "transparent",
-                          color: "ctaStyle" in phase && phase.ctaStyle === "terra" ? "var(--ivory)" : "var(--plum)",
-                          border: "ctaStyle" in phase && phase.ctaStyle === "terra" ? "none" : "1.5px solid rgba(92,45,79,0.3)",
+                          padding: "15px 36px",
+                          background:
+                            phase.ctaStyle === "terra"
+                              ? "var(--terra)"
+                              : "var(--plum)",
+                          color: "var(--ivory)",
                           borderRadius: 40,
                           textDecoration: "none",
                         }}
                       >
-                        {phase.cta}
+                        {phase.cta} &rarr;
                       </a>
                     ) : (
                       <Link
@@ -349,17 +429,16 @@ export default function StartHerePage() {
                           fontFamily: "'DM Sans', sans-serif",
                           fontSize: 13,
                           fontWeight: 600,
-                          letterSpacing: "0.06em",
+                          letterSpacing: "0.08em",
                           textTransform: "uppercase",
-                          padding: "14px 32px",
-                          background: "transparent",
-                          color: "var(--plum)",
-                          border: "1.5px solid rgba(92,45,79,0.3)",
+                          padding: "15px 36px",
+                          background: "var(--plum)",
+                          color: "var(--ivory)",
                           borderRadius: 40,
                           textDecoration: "none",
                         }}
                       >
-                        {phase.cta}
+                        {phase.cta} &rarr;
                       </Link>
                     )}
                   </div>
@@ -371,19 +450,49 @@ export default function StartHerePage() {
       </section>
 
       {/* ── DON'T NEED IT ALL FIGURED OUT ────────────────────────────── */}
-      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+      <section style={{ background: "var(--plum)", padding: "104px 40px" }}>
+        <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
+          {/* Eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "rgba(196,152,74,0.7)",
+              }}
+            >
+              A note
+            </span>
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+          </div>
+
           <h2
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(28px, 3.5vw, 40px)",
+              fontSize: "clamp(28px, 3.5vw, 42px)",
               fontWeight: 300,
-              color: "var(--plum)",
-              marginBottom: 24,
+              fontStyle: "italic",
+              color: "var(--ivory)",
+              marginBottom: 28,
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
             }}
           >
             You Don&apos;t Need to Have It All Figured Out
           </h2>
+
           {[
             "Most women don't move through these phases in a straight line. Some will begin with the Fix Your Period App and then dive into educational resources. Practitioners often start with personal healing before pursuing professional training.",
             "You don't need to map out your whole journey. Start where you are. Clarity comes as you go.",
@@ -391,19 +500,29 @@ export default function StartHerePage() {
             <p
               key={i}
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 18,
+                fontFamily: i === 0 ? "'Cormorant Garamond', Georgia, serif" : "'DM Sans', sans-serif",
+                fontSize: i === 0 ? 20 : 16,
                 lineHeight: 1.8,
-                color: "var(--charcoal)",
-                opacity: 0.8,
-                maxWidth: 620,
-                margin: "0 auto 24px",
+                color: "var(--ivory)",
+                opacity: i === 0 ? 0.8 : 0.55,
+                maxWidth: 580,
+                margin: "0 auto 20px",
               }}
             >
               {p}
             </p>
           ))}
-          <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", marginTop: 24 }}>
+
+          {/* Three path buttons */}
+          <div
+            style={{
+              display: "flex",
+              gap: 14,
+              justifyContent: "center",
+              flexWrap: "wrap",
+              marginTop: 40,
+            }}
+          >
             <Link
               href="/resources"
               style={{
@@ -411,12 +530,12 @@ export default function StartHerePage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 padding: "14px 32px",
                 background: "transparent",
-                color: "var(--plum)",
-                border: "1.5px solid rgba(92,45,79,0.3)",
+                color: "var(--ivory)",
+                border: "1px solid rgba(250,245,239,0.35)",
                 borderRadius: 40,
                 textDecoration: "none",
               }}
@@ -432,11 +551,11 @@ export default function StartHerePage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 padding: "14px 32px",
-                background: "var(--plum)",
-                color: "var(--ivory)",
+                background: "var(--ivory)",
+                color: "var(--plum)",
                 borderRadius: 40,
                 textDecoration: "none",
               }}
@@ -450,7 +569,7 @@ export default function StartHerePage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
                 padding: "14px 32px",
                 background: "var(--terra)",
@@ -460,26 +579,55 @@ export default function StartHerePage() {
               }}
             >
               Lead
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
       {/* ── TRUSTED ──────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--plum)", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
+      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
+        <div style={{ maxWidth: 680, margin: "0 auto", textAlign: "center" }}>
+          {/* Eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--terra)",
+              }}
+            >
+              Reach &amp; Impact
+            </span>
+            <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+          </div>
+
           <h2
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(28px, 3.5vw, 40px)",
+              fontSize: "clamp(28px, 3.5vw, 42px)",
               fontWeight: 300,
               fontStyle: "italic",
-              color: "var(--ivory)",
+              color: "var(--plum)",
               marginBottom: 24,
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
             }}
           >
             Trusted by Tens of Thousands Worldwide
           </h2>
+
           {[
             "Nicole's work has supported women across the globe in understanding their cycles, addressing period problems, and approaching their health with clarity and confidence.",
             "Health professionals trained through the Institute are now supporting clients in their own practices, building specialized menstrual health businesses, and integrating this work into diverse care settings.",
@@ -487,25 +635,28 @@ export default function StartHerePage() {
             <p
               key={i}
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 19,
                 lineHeight: 1.8,
-                color: "var(--ivory)",
-                opacity: 0.7,
-                maxWidth: 620,
-                margin: "0 auto 20px",
+                color: "var(--charcoal)",
+                opacity: 0.75,
+                maxWidth: 580,
+                margin: "0 auto 18px",
               }}
             >
               {p}
             </p>
           ))}
+
           <p
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: 22,
+              fontFamily: "'Fraunces', Georgia, serif",
               fontStyle: "italic",
-              color: "var(--gold)",
-              marginTop: 12,
+              fontSize: 26,
+              fontWeight: 300,
+              color: "var(--plum)",
+              marginTop: 20,
+              letterSpacing: "-0.01em",
             }}
           >
             Let&apos;s begin.
