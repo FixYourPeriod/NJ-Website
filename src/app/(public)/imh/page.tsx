@@ -368,18 +368,16 @@ export default function IMHPage() {
               </span>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               {whoCards.map((card) => (
                 <div
                   key={card.title}
                   style={{
-                    background: "var(--sand)",
-                    borderRadius: 4,
-                    padding: "18px 24px",
-                    borderLeft: "2px solid rgba(196,152,74,0.5)",
                     display: "flex",
                     gap: 14,
                     alignItems: "flex-start",
+                    paddingBottom: 14,
+                    borderBottom: "1px solid rgba(92,45,79,0.07)",
                   }}
                 >
                   <span
@@ -389,7 +387,7 @@ export default function IMHPage() {
                       fontWeight: 600,
                       fontSize: 14,
                       flexShrink: 0,
-                      lineHeight: 1.5,
+                      lineHeight: 1.6,
                     }}
                   >
                     —
@@ -397,13 +395,13 @@ export default function IMHPage() {
                   <div>
                     <span
                       style={{
-                        fontFamily: "'Fraunces', Georgia, serif",
-                        fontSize: 16,
-                        fontWeight: 300,
+                        fontFamily: "'DM Sans', sans-serif",
+                        fontSize: 14,
+                        fontWeight: 600,
                         color: "var(--plum)",
                         display: "block",
-                        marginBottom: 3,
-                        lineHeight: 1.2,
+                        marginBottom: 2,
+                        letterSpacing: "0.01em",
                       }}
                     >
                       {card.title}
@@ -412,9 +410,9 @@ export default function IMHPage() {
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
                         fontSize: 13.5,
-                        lineHeight: 1.55,
+                        lineHeight: 1.6,
                         color: "var(--charcoal)",
-                        opacity: 0.7,
+                        opacity: 0.65,
                       }}
                     >
                       {card.body}
