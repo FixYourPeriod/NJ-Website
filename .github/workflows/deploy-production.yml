@@ -9,9 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Create Vercel production deployment
+      - name: Create deployment, wait for build, promote to production
         run: |
-          curl -s -X POST \
+          # 1. Trigger the Vercel build
+          DEPLOY_RESPONSE=$(curl -s -X POST \
             -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
             -H "Content-Type: application/json" \
             -d '{
@@ -23,4 +24,38 @@ jobs:
               },
               "target": "production"
             }' \
-            "https://api.vercel.com/v13/deployments?teamId=team_Otn5h1teztjgsFakaVmZlLIg&forceNew=1"
+            "https://api.vercel.com/v13/deployments?teamId=team_Otn5h1teztjgsFakaVmZlLIg&forceNew=1")
+
+          DEPLOY_ID=$(echo "$DEPLOY_RESPONSE" | python3 -c "import json,sys; print(json.load(sys.stdin).get('id',''))")
+          echo "Deployment ID: $DEPLOY_ID"
+
+          if [ -z "$DEPLOY_ID" ]; then
+            echo "ERROR: No deployment ID returned"
+            echo "$DEPLOY_RESPONSE"
+            exit 1
+          fi
+
+          # 2. Poll until READY or ERROR (max ~8 minutes, 30 × 16s)
+          for i in $(seq 1 30); do
+            sleep 16
+            STATE=$(curl -s \
+              -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+              "https://api.vercel.com/v13/deployments/$DEPLOY_ID?teamId=team_Otn5h1teztjgsFakaVmZlLIg" | \
+              python3 -c "import json,sys; print(json.load(sys.stdin).get('readyState','UNKNOWN'))")
+            echo "[$i/30] State: $STATE"
+            if [ "$STATE" = "READY" ]; then break; fi
+            if [ "$STATE" = "ERROR" ] || [ "$STATE" = "CANCELED" ]; then
+              echo "Build $STATE — aborting"
+              exit 1
+            fi
+          done
+
+          # 3. Promote the ready deployment to production
+          #    (assigns nicolejardim.app and other production aliases)
+          PROMOTE_RESPONSE=$(curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.VERCEL_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            "https://api.vercel.com/v1/projects/prj_WehPV85xslwGLhTJo4F1OUukP8LA/promote/$DEPLOY_ID?teamId=team_Otn5h1teztjgsFakaVmZlLIg")
+
+          echo "Promote response: $PROMOTE_RESPONSE"
+          echo "✓ Promoted $DEPLOY_ID to production"
