@@ -213,7 +213,7 @@ export default function FixYourPeriodPage() {
               textTransform: "uppercase",
             }}
           >
-            Free &middot; Takes 5 minutes &middot; No account required
+            Free &middot; Takes 5 minutes
           </p>
         </div>
       </section>
@@ -714,7 +714,7 @@ export default function FixYourPeriodPage() {
                 textTransform: "uppercase",
               }}
             >
-              Free &middot; Takes 5 minutes &middot; No account required
+              Free &middot; Takes 5 minutes
             </p>
           </div>
         </div>
