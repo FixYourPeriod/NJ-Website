@@ -261,7 +261,7 @@ export default function IMHPage() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 80,
-            alignItems: "stretch",
+            alignItems: "start",
             maxWidth: 1040,
             margin: "0 auto",
           }}
@@ -272,7 +272,7 @@ export default function IMHPage() {
               position: "relative",
               borderRadius: 4,
               overflow: "hidden",
-              minHeight: 520,
+              aspectRatio: "4/5",
             }}
           >
             <Image
@@ -280,7 +280,7 @@ export default function IMHPage() {
               alt="Women's health coaches"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover", objectPosition: "center top", background: "var(--sand)" }}
+              style={{ objectFit: "cover", background: "var(--sand)" }}
             />
           </div>
 
@@ -350,77 +350,94 @@ export default function IMHPage() {
               and knowing how to support clients in a way that is informed, practical, and
               grounded in evidence.
             </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Who it's for */}
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-              <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
-              <span
+      {/* ── WHO THIS IS FOR ──────────────────────────────────────────── */}
+      <section style={{ background: "var(--sand)", padding: "80px 40px" }}>
+        <div style={{ maxWidth: 1040, margin: "0 auto" }}>
+          {/* Centered eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 48,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--terra)",
+              }}
+            >
+              Who this training is for
+            </span>
+            <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+          </div>
+
+          {/* 5 columns with vertical dividers */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(5, 1fr)",
+            }}
+          >
+            {whoCards.map((card, i) => (
+              <div
+                key={card.title}
                 style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 11,
-                  fontWeight: 600,
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  color: "var(--terra)",
+                  padding: "0 32px 0 32px",
+                  borderLeft: i > 0 ? "1px solid rgba(92,45,79,0.1)" : "none",
+                  textAlign: "center",
                 }}
               >
-                Who this training is for
-              </span>
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {whoCards.map((card) => (
-                <div
-                  key={card.title}
+                <span
                   style={{
-                    display: "flex",
-                    gap: 14,
-                    alignItems: "flex-start",
-                    paddingBottom: 14,
-                    borderBottom: "1px solid rgba(92,45,79,0.07)",
+                    display: "block",
+                    color: "var(--gold)",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    fontSize: 18,
+                    marginBottom: 12,
                   }}
                 >
-                  <span
-                    style={{
-                      color: "var(--gold)",
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 600,
-                      fontSize: 14,
-                      flexShrink: 0,
-                      lineHeight: 1.6,
-                    }}
-                  >
-                    —
-                  </span>
-                  <div>
-                    <span
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: 14,
-                        fontWeight: 600,
-                        color: "var(--plum)",
-                        display: "block",
-                        marginBottom: 2,
-                        letterSpacing: "0.01em",
-                      }}
-                    >
-                      {card.title}
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: "'DM Sans', sans-serif",
-                        fontSize: 13.5,
-                        lineHeight: 1.6,
-                        color: "var(--charcoal)",
-                        opacity: 0.65,
-                      }}
-                    >
-                      {card.body}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  —
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13.5,
+                    fontWeight: 600,
+                    color: "var(--plum)",
+                    display: "block",
+                    marginBottom: 8,
+                    letterSpacing: "0.01em",
+                    lineHeight: 1.35,
+                  }}
+                >
+                  {card.title}
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 13,
+                    lineHeight: 1.65,
+                    color: "var(--charcoal)",
+                    opacity: 0.6,
+                  }}
+                >
+                  {card.body}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
