@@ -26,6 +26,7 @@ const navLinks = [
 const resourcesLinks = [
   { label: "The Book", href: "/book" },
   { label: "Articles", href: "/articles" },
+  { label: "Podcast", href: "/podcast" },
 ]
 
 export function Nav() {

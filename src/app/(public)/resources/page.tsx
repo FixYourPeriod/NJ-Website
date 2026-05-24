@@ -584,7 +584,7 @@ export default function ResourcesPage() {
             </div>
 
             <a
-              href="https://nicolejardim.com/podcast/"
+              href="https://site.fixyourperiod.app/podcasts"
               target="_blank"
               rel="noopener noreferrer"
               style={{
