@@ -189,15 +189,7 @@ export default function PodcastPage() {
                     borderBottom: "1px solid rgba(250,245,239,0.22)",
                     paddingBottom: 4,
                     width: "fit-content",
-                    transition: "opacity 0.15s",
                   }}
-                  onMouseEnter={(e) =>
-                    ((e.currentTarget as HTMLAnchorElement).style.opacity = "1")
-                  }
-                  onMouseLeave={(e) =>
-                    ((e.currentTarget as HTMLAnchorElement).style.opacity =
-                      "0.65")
-                  }
                 >
                   {p.label} &rarr;
                 </a>
