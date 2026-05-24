@@ -9,10 +9,8 @@ export const metadata = {
 export default async function AdminPage() {
   const user = await currentUser()
   const firstName = user?.firstName ?? null
-  const fullName =
-    user?.fullName ??
-    [user?.firstName, user?.lastName].filter(Boolean).join(" ") ||
-    null
+  const composedName = [user?.firstName, user?.lastName].filter(Boolean).join(" ") || null
+  const fullName = user?.fullName ?? composedName
   const email = user?.primaryEmailAddress?.emailAddress ?? null
 
   return (
