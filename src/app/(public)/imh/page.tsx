@@ -40,26 +40,32 @@ const modules = [
 
 const programFeatures = [
   {
+    num: "01",
     title: "Structured Modules",
     body: "12 in-depth training modules with recorded teaching sessions and case study reviews — designed to build systematically, so you never feel like you've missed a step.",
   },
   {
+    num: "02",
     title: "Practical Protocols",
     body: "Client-ready resources, practical protocols, and frameworks you can immediately integrate into your work — not just theory, but applied education.",
   },
   {
+    num: "03",
     title: "Practice Building",
     body: "Business and practice-building guidance helps you take your new expertise and translate it into a real, sustainable professional offering.",
   },
   {
+    num: "04",
     title: "Assessment & Certification",
     body: "Module tests, a comprehensive final exam, and a two-day virtual practitioner training workshop culminate in your certification — open book, with an 80%+ pass threshold.",
   },
   {
+    num: "05",
     title: "Expert Collaborations",
     body: "Guest presentations from leading practitioners in menstrual health, functional medicine, and adjacent specialties to broaden your perspective.",
   },
   {
+    num: "06",
     title: "Continuing Education",
     body: "36 CE credits recognized through NBHWC — supporting your ongoing professional development and credentialing requirements.",
   },
@@ -80,16 +86,6 @@ const certPoints = [
   "36 CE credits through NBHWC",
   "$2,997 USD — payment plans available (3, 6, 9, or 12 months)",
 ]
-
-const S = {
-  label: {
-    fontFamily: "'DM Sans', sans-serif",
-    fontSize: 11,
-    fontWeight: 600,
-    letterSpacing: "0.14em",
-    textTransform: "uppercase" as const,
-  },
-}
 
 export default function IMHPage() {
   return (
@@ -118,39 +114,78 @@ export default function IMHPage() {
       <section
         style={{
           background: "var(--plum)",
-          padding: "96px 40px 80px",
+          padding: "96px 40px 88px",
           textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <span style={{ ...S.label, color: "var(--gold)", display: "block", marginBottom: 20 }}>
-            Professional Training
-          </span>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "radial-gradient(ellipse at 50% 30%, rgba(181,90,58,0.12) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ maxWidth: 760, margin: "0 auto", position: "relative" }}>
+          {/* Eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.55)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "rgba(196,152,74,0.8)",
+              }}
+            >
+              Professional Training
+            </span>
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.55)" }} />
+          </div>
+
           <h1
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(36px, 5vw, 60px)",
+              fontSize: "clamp(36px, 5vw, 62px)",
               fontWeight: 300,
-              lineHeight: 1.1,
+              fontStyle: "italic",
+              lineHeight: 1.08,
               color: "var(--ivory)",
-              marginBottom: 24,
+              marginBottom: 28,
+              letterSpacing: "-0.02em",
             }}
           >
-            Study Menstrual and Hormonal Health at a Professional Level
+            Study Menstrual and Hormonal Health<br />at a Professional Level
           </h1>
+
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18,
-              lineHeight: 1.7,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 21,
+              lineHeight: 1.75,
               color: "var(--ivory)",
-              opacity: 0.75,
-              maxWidth: 640,
-              margin: "0 auto 36px",
+              opacity: 0.8,
+              maxWidth: 620,
+              margin: "0 auto 40px",
             }}
           >
-            Comprehensive, practitioner-level training through the Institute for Menstrual Health — designed to help you understand, apply, and confidently support women&apos;s hormonal health in real-world settings.
+            Comprehensive, practitioner-level training through the Institute for Menstrual
+            Health — designed to help you understand, apply, and confidently support
+            women&apos;s hormonal health in real-world settings.
           </p>
+
           <a
             href="https://instituteformenstrualhealth.com/"
             target="_blank"
@@ -160,22 +195,22 @@ export default function IMHPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              letterSpacing: "0.06em",
+              letterSpacing: "0.08em",
               textTransform: "uppercase",
-              padding: "14px 36px",
+              padding: "16px 44px",
               background: "var(--terra)",
               color: "var(--ivory)",
               borderRadius: 40,
               textDecoration: "none",
             }}
           >
-            Explore the Certification Program →
+            Explore the Certification Program &rarr;
           </a>
         </div>
       </section>
 
       {/* ── CREDENTIAL STRIP ─────────────────────────────────────────── */}
-      <div style={{ background: "var(--charcoal)", padding: "40px" }}>
+      <div style={{ background: "var(--charcoal)", padding: "44px 40px" }}>
         <div
           style={{
             maxWidth: 1160,
@@ -191,8 +226,9 @@ export default function IMHPage() {
               <div
                 style={{
                   fontFamily: "'Fraunces', Georgia, serif",
-                  fontSize: 36,
+                  fontSize: 38,
                   fontWeight: 300,
+                  fontStyle: "italic",
                   color: "var(--gold)",
                   lineHeight: 1,
                   marginBottom: 8,
@@ -203,11 +239,11 @@ export default function IMHPage() {
               <div
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 13,
-                  fontWeight: 500,
+                  fontSize: 11,
+                  fontWeight: 600,
                   color: "var(--ivory)",
-                  opacity: 0.6,
-                  letterSpacing: "0.04em",
+                  opacity: 0.45,
+                  letterSpacing: "0.1em",
                   textTransform: "uppercase",
                 }}
               >
@@ -219,157 +255,275 @@ export default function IMHPage() {
       </div>
 
       {/* ── ABOUT IMH ────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--ivory)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--ivory)", padding: "104px 40px" }}>
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
-            gap: 72,
+            gap: 80,
             alignItems: "start",
             maxWidth: 1040,
             margin: "0 auto",
           }}
         >
-          <div style={{ position: "relative", borderRadius: 4, overflow: "hidden", aspectRatio: "4/5" }}>
+          {/* Photo */}
+          <div
+            style={{
+              position: "relative",
+              borderRadius: 4,
+              overflow: "hidden",
+              aspectRatio: "4/5",
+            }}
+          >
             <Image
               src="/images/nicole-3.jpg"
               alt="Women's health coaches"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-              style={{ background: "var(--sand)" }}
+              style={{ objectFit: "cover", background: "var(--sand)" }}
             />
           </div>
 
+          {/* Text */}
           <div style={{ paddingTop: 8 }}>
-            <span style={{ ...S.label, color: "var(--gold)", display: "block", marginBottom: 18 }}>
-              The Institute for Menstrual Health
-            </span>
+            {/* Eyebrow */}
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
+              <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                The Institute for Menstrual Health
+              </span>
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(28px, 3.5vw, 40px)",
-                fontWeight: 400,
+                fontSize: "clamp(26px, 3vw, 38px)",
+                fontWeight: 300,
+                fontStyle: "italic",
                 color: "var(--plum)",
-                lineHeight: 1.2,
+                lineHeight: 1.15,
                 marginBottom: 20,
+                letterSpacing: "-0.01em",
               }}
             >
               Where foundational knowledge meets real-world application
             </h2>
-            {[
-              "The Institute for Menstrual Health is Nicole Jardim's professional education platform, created to train practitioners, coaches, and health professionals in menstrual and hormonal health.",
-              "At its core is the Women's Hormone Health Certification Program — an in-depth training designed to bridge the gap between foundational knowledge and real-world application. This work goes beyond theory. It's about understanding how the body functions, recognizing patterns and root causes, and knowing how to support clients in a way that is informed, practical, and grounded in evidence.",
-            ].map((p, i) => (
-              <p
-                key={i}
+
+            <div style={{ width: 40, height: 1.5, background: "var(--gold)", marginBottom: 28, opacity: 0.6 }} />
+
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 20,
+                lineHeight: 1.8,
+                color: "var(--charcoal)",
+                marginBottom: 18,
+              }}
+            >
+              The Institute for Menstrual Health is Nicole Jardim&apos;s professional
+              education platform, created to train practitioners, coaches, and health
+              professionals in menstrual and hormonal health.
+            </p>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 15.5,
+                lineHeight: 1.85,
+                color: "var(--charcoal)",
+                opacity: 0.75,
+                marginBottom: 32,
+              }}
+            >
+              At its core is the Women&apos;s Hormone Health Certification Program — an
+              in-depth training designed to bridge the gap between foundational knowledge
+              and real-world application. This work goes beyond theory. It&apos;s about
+              understanding how the body functions, recognizing patterns and root causes,
+              and knowing how to support clients in a way that is informed, practical, and
+              grounded in evidence.
+            </p>
+
+            {/* Who it's for */}
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
+              <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+              <span
                 style={{
                   fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 16,
-                  lineHeight: 1.8,
-                  color: "var(--charcoal)",
-                  opacity: 0.8,
-                  marginBottom: 16,
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
                 }}
               >
-                {p}
-              </p>
-            ))}
-
-            <div style={{ marginTop: 32 }}>
-              <span style={{ ...S.label, color: "var(--gold)", display: "block", marginBottom: 14 }}>
-                Who This Training Is For
+                Who this training is for
               </span>
-              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                {whoCards.map((card) => (
-                  <div
-                    key={card.title}
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              {whoCards.map((card) => (
+                <div
+                  key={card.title}
+                  style={{
+                    background: "var(--sand)",
+                    borderRadius: 4,
+                    padding: "18px 24px",
+                    borderLeft: "2px solid rgba(196,152,74,0.5)",
+                    display: "flex",
+                    gap: 14,
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <span
                     style={{
-                      background: "var(--sand)",
-                      borderRadius: 4,
-                      padding: "20px 24px",
-                      borderTop: "3px solid var(--gold)",
+                      color: "var(--gold)",
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontWeight: 600,
+                      fontSize: 14,
+                      flexShrink: 0,
+                      lineHeight: 1.5,
                     }}
                   >
-                    <h4
+                    —
+                  </span>
+                  <div>
+                    <span
                       style={{
                         fontFamily: "'Fraunces', Georgia, serif",
-                        fontSize: 18,
-                        fontWeight: 600,
+                        fontSize: 16,
+                        fontWeight: 300,
                         color: "var(--plum)",
-                        marginBottom: 4,
+                        display: "block",
+                        marginBottom: 3,
+                        lineHeight: 1.2,
                       }}
                     >
                       {card.title}
-                    </h4>
-                    <p
+                    </span>
+                    <span
                       style={{
                         fontFamily: "'DM Sans', sans-serif",
-                        fontSize: 14,
-                        lineHeight: 1.6,
+                        fontSize: 13.5,
+                        lineHeight: 1.55,
                         color: "var(--charcoal)",
-                        opacity: 0.75,
+                        opacity: 0.7,
                       }}
                     >
                       {card.body}
-                    </p>
+                    </span>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* ── THE CERTIFICATION ────────────────────────────────────────── */}
-      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--sand)", padding: "104px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <span style={{ ...S.label, color: "var(--gold)", display: "block", marginBottom: 16 }}>
-              The Program
-            </span>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            {/* Centered eyebrow */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 12,
+                marginBottom: 28,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                The Program
+              </span>
+              <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(30px, 4vw, 46px)",
+                fontStyle: "italic",
+                fontSize: "clamp(30px, 4vw, 48px)",
                 fontWeight: 300,
                 color: "var(--plum)",
                 marginBottom: 16,
+                lineHeight: 1.1,
+                letterSpacing: "-0.01em",
               }}
             >
               The Women&apos;s Hormone Health Certification
             </h2>
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 20,
                 lineHeight: 1.75,
                 color: "var(--charcoal)",
-                opacity: 0.65,
-                maxWidth: 580,
+                opacity: 0.75,
+                maxWidth: 560,
                 margin: "0 auto",
               }}
             >
-              A comprehensive training designed to help you become a more knowledgeable, confident, and effective practitioner in women&apos;s hormonal health.
+              A comprehensive training designed to help you become a more knowledgeable,
+              confident, and effective practitioner in women&apos;s hormonal health.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
             {modules.map((mod) => (
               <div
                 key={mod}
                 style={{
                   background: "var(--ivory)",
                   borderRadius: 4,
-                  padding: "22px 28px",
-                  borderLeft: "3px solid var(--gold)",
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 15,
-                  fontWeight: 500,
-                  color: "var(--plum)",
-                  lineHeight: 1.4,
+                  padding: "20px 24px",
+                  borderLeft: "2px solid rgba(196,152,74,0.5)",
+                  display: "flex",
+                  gap: 14,
+                  alignItems: "flex-start",
                 }}
               >
-                {mod}
+                <span
+                  style={{
+                    color: "var(--gold)",
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: 600,
+                    fontSize: 14,
+                    flexShrink: 0,
+                    lineHeight: 1.5,
+                  }}
+                >
+                  —
+                </span>
+                <span
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 15,
+                    fontWeight: 500,
+                    color: "var(--plum)",
+                    lineHeight: 1.45,
+                  }}
+                >
+                  {mod}
+                </span>
               </div>
             ))}
           </div>
@@ -377,16 +531,44 @@ export default function IMHPage() {
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────────────────────── */}
-      <section style={{ background: "var(--ivory)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--ivory)", padding: "104px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 12,
+                marginBottom: 28,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                How it works
+              </span>
+              <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(30px, 4vw, 46px)",
+                fontStyle: "italic",
+                fontSize: "clamp(28px, 4vw, 46px)",
                 fontWeight: 300,
                 color: "var(--plum)",
                 marginBottom: 16,
+                lineHeight: 1.1,
+                letterSpacing: "-0.01em",
               }}
             >
               How the Self-Study Program Works
@@ -394,18 +576,21 @@ export default function IMHPage() {
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
+                fontSize: 16,
                 lineHeight: 1.75,
                 color: "var(--charcoal)",
-                opacity: 0.65,
-                maxWidth: 580,
+                opacity: 0.6,
+                maxWidth: 560,
                 margin: "0 auto",
               }}
             >
-              Move through the material at your own pace while still following a clear, structured framework — from foundational concepts into deeper, applied understanding.
+              Move through the material at your own pace while still following a clear,
+              structured framework — from foundational concepts into deeper, applied
+              understanding.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
             {programFeatures.map((f) => (
               <div
                 key={f.title}
@@ -413,16 +598,34 @@ export default function IMHPage() {
                   background: "var(--sand)",
                   borderRadius: 4,
                   padding: "40px 36px",
-                  borderTop: "3px solid var(--gold)",
+                  borderTop: "2px solid rgba(196,152,74,0.4)",
                 }}
               >
+                {/* Number label */}
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 18 }}>
+                  <div style={{ width: 20, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+                  <span
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 11,
+                      fontWeight: 600,
+                      letterSpacing: "0.14em",
+                      textTransform: "uppercase",
+                      color: "var(--gold)",
+                    }}
+                  >
+                    {f.num}
+                  </span>
+                </div>
                 <h4
                   style={{
                     fontFamily: "'Fraunces', Georgia, serif",
-                    fontSize: 20,
-                    fontWeight: 600,
+                    fontSize: "clamp(18px, 1.6vw, 22px)",
+                    fontWeight: 300,
                     color: "var(--plum)",
                     marginBottom: 12,
+                    lineHeight: 1.2,
+                    letterSpacing: "-0.01em",
                   }}
                 >
                   {f.title}
@@ -430,10 +633,10 @@ export default function IMHPage() {
                 <p
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 15,
-                    lineHeight: 1.65,
+                    fontSize: 14.5,
+                    lineHeight: 1.75,
                     color: "var(--charcoal)",
-                    opacity: 0.78,
+                    opacity: 0.75,
                   }}
                 >
                   {f.body}
@@ -445,42 +648,82 @@ export default function IMHPage() {
       </section>
 
       {/* ── OUTCOMES ─────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--plum)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--plum)", padding: "104px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
+          <div style={{ textAlign: "center", marginBottom: 56 }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 12,
+                marginBottom: 28,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.55)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "rgba(196,152,74,0.8)",
+                }}
+              >
+                Program outcomes
+              </span>
+              <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.55)" }} />
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(30px, 4vw, 46px)",
+                fontStyle: "italic",
+                fontSize: "clamp(28px, 4vw, 46px)",
                 fontWeight: 300,
                 color: "var(--ivory)",
                 marginBottom: 16,
+                lineHeight: 1.1,
+                letterSpacing: "-0.01em",
               }}
             >
               What This Program Allows You to Do
             </h2>
             <p
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 20,
                 lineHeight: 1.75,
                 color: "var(--ivory)",
                 opacity: 0.65,
-                maxWidth: 560,
+                maxWidth: 540,
                 margin: "0 auto",
               }}
             >
-              By the end of the program, you&apos;ll be equipped to support women&apos;s health with confidence, clarity, and clinical depth.
+              By the end of the program, you&apos;ll be equipped to support women&apos;s
+              health with confidence, clarity, and clinical depth.
             </p>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 2 }}>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 3 }}>
             {outcomes.map((o) => (
               <div
                 key={o}
-                style={{ background: "var(--plum-mid)", padding: "44px 48px" }}
+                style={{
+                  background: "rgba(255,255,255,0.055)",
+                  padding: "44px 48px",
+                  borderTop: "2px solid rgba(196,152,74,0.45)",
+                }}
               >
                 <div
-                  style={{ width: 36, height: 2, background: "var(--gold)", marginBottom: 20 }}
+                  style={{
+                    width: 28,
+                    height: 1.5,
+                    background: "var(--gold)",
+                    marginBottom: 20,
+                    opacity: 0.7,
+                  }}
                 />
                 <p
                   style={{
@@ -488,7 +731,7 @@ export default function IMHPage() {
                     fontSize: 21,
                     fontWeight: 400,
                     fontStyle: "italic",
-                    lineHeight: 1.45,
+                    lineHeight: 1.5,
                     color: "var(--ivory)",
                   }}
                 >
@@ -501,107 +744,131 @@ export default function IMHPage() {
       </section>
 
       {/* ── CERTIFICATION BOX ────────────────────────────────────────── */}
-      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--sand)", padding: "104px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div
             style={{
               background: "var(--ivory)",
-              borderRadius: 6,
+              borderRadius: 4,
               padding: "72px 80px",
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
-              gap: 64,
-              alignItems: "center",
-              border: "1px solid rgba(92,45,79,0.12)",
+              gap: 72,
+              alignItems: "start",
+              borderTop: "2px solid rgba(196,152,74,0.4)",
             }}
           >
             <div>
+              {/* Eyebrow */}
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
+                <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+                <span
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontSize: 11,
+                    fontWeight: 600,
+                    letterSpacing: "0.16em",
+                    textTransform: "uppercase",
+                    color: "var(--terra)",
+                  }}
+                >
+                  Certification
+                </span>
+              </div>
+
               <h2
                 style={{
                   fontFamily: "'Fraunces', Georgia, serif",
-                  fontSize: "clamp(32px, 3.5vw, 44px)",
+                  fontStyle: "italic",
+                  fontSize: "clamp(26px, 3vw, 38px)",
                   fontWeight: 300,
                   color: "var(--plum)",
                   lineHeight: 1.15,
                   marginBottom: 20,
+                  letterSpacing: "-0.01em",
                 }}
               >
                 Certification &amp; Professional Recognition
               </h2>
-              {[
-                "Upon completion, you'll be certified in Women's Hormone Health through the Institute for Menstrual Health.",
-                "Graduates go on to build practices, expand existing work, and support clients with greater depth and confidence.",
-              ].map((p, i) => (
-                <p
-                  key={i}
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 16,
-                    color: "var(--charcoal)",
-                    opacity: 0.75,
-                    lineHeight: 1.75,
-                    marginBottom: 16,
-                  }}
-                >
-                  {p}
-                </p>
-              ))}
+
+              <p
+                style={{
+                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontSize: 20,
+                  lineHeight: 1.8,
+                  color: "var(--charcoal)",
+                  marginBottom: 16,
+                }}
+              >
+                Upon completion, you&apos;ll be certified in Women&apos;s Hormone Health
+                through the Institute for Menstrual Health.
+              </p>
+              <p
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 15.5,
+                  lineHeight: 1.8,
+                  color: "var(--charcoal)",
+                  opacity: 0.7,
+                  marginBottom: 32,
+                }}
+              >
+                Graduates go on to build practices, expand existing work, and support
+                clients with greater depth and confidence.
+              </p>
+
               <a
                 href="https://instituteformenstrualhealth.com/womens-hormone-health-certification-program/curriculum/"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
                   display: "inline-block",
-                  marginTop: 8,
                   fontFamily: "'DM Sans', sans-serif",
                   fontSize: 13,
                   fontWeight: 600,
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  padding: "14px 32px",
-                  background: "transparent",
-                  color: "var(--plum)",
-                  border: "1.5px solid rgba(92,45,79,0.3)",
+                  padding: "15px 36px",
+                  background: "var(--plum)",
+                  color: "var(--ivory)",
                   borderRadius: 40,
                   textDecoration: "none",
                 }}
               >
-                View Full Program Details →
+                View Full Program Details &rarr;
               </a>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {certPoints.map((point, i) => (
+            {/* Cert points */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 16, paddingTop: 4 }}>
+              {certPoints.map((point) => (
                 <div
-                  key={i}
-                  style={{ display: "flex", gap: 16, alignItems: "flex-start" }}
+                  key={point}
+                  style={{
+                    display: "flex",
+                    gap: 14,
+                    alignItems: "flex-start",
+                  }}
                 >
-                  <div
+                  <span
                     style={{
-                      width: 32,
-                      height: 32,
-                      borderRadius: "50%",
-                      background: "rgba(196,152,74,0.15)",
-                      border: "1px solid var(--gold)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexShrink: 0,
-                      color: "var(--terra)",
+                      color: "var(--gold)",
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontWeight: 600,
                       fontSize: 14,
-                      fontWeight: 700,
+                      flexShrink: 0,
+                      lineHeight: 1.6,
                     }}
                   >
-                    {i === certPoints.length - 1 ? "$" : "✓"}
-                  </div>
+                    —
+                  </span>
                   <span
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: 15,
                       color: "var(--charcoal)",
                       opacity: 0.85,
-                      lineHeight: 1.6,
-                      paddingTop: 4,
+                      lineHeight: 1.65,
                     }}
                   >
                     {point}
@@ -614,79 +881,117 @@ export default function IMHPage() {
       </section>
 
       {/* ── ABOUT NICOLE ─────────────────────────────────────────────── */}
-      <section style={{ background: "var(--ivory)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--ivory)", padding: "104px 40px" }}>
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "420px 1fr",
+            gridTemplateColumns: "400px 1fr",
             gap: 80,
             alignItems: "center",
             maxWidth: 1040,
             margin: "0 auto",
           }}
         >
-          <div style={{ position: "relative", borderRadius: 4, overflow: "hidden", aspectRatio: "3/4" }}>
+          <div
+            style={{
+              position: "relative",
+              borderRadius: 4,
+              overflow: "hidden",
+              aspectRatio: "3/4",
+            }}
+          >
             <Image
               src="/images/Nicole_7.jpg"
               alt="Nicole Jardim"
               fill
-              sizes="(max-width: 768px) 100vw, 420px"
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 400px"
+              style={{ objectFit: "cover" }}
             />
           </div>
+
           <div>
-            <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 18 }}>
-              About Nicole Jardim
-            </span>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 24 }}>
+              <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                About Nicole Jardim
+              </span>
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(28px, 3.5vw, 40px)",
-                fontWeight: 400,
+                fontStyle: "italic",
+                fontSize: "clamp(26px, 3vw, 38px)",
+                fontWeight: 300,
                 color: "var(--plum)",
-                lineHeight: 1.2,
+                lineHeight: 1.15,
                 marginBottom: 20,
+                letterSpacing: "-0.01em",
               }}
             >
               The expertise behind the curriculum
             </h2>
-            {[
-              "Nicole Jardim is a women's health educator, author, and the leading voice in menstrual and hormonal health education. For over two decades, her work has helped tens of thousands of women understand their cycles and the practitioners who support them do the same.",
-              "She is the author of Fix Your Period, the creator of the Fix Your Period App, and the founder of the Institute for Menstrual Health. The methodology at the heart of the Women's Hormone Health Certification is drawn directly from her clinical work, research, and years of teaching at the intersection of evidence and real-world practice.",
-            ].map((p, i) => (
-              <p
-                key={i}
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontSize: 16,
-                  lineHeight: 1.8,
-                  color: "var(--charcoal)",
-                  opacity: 0.8,
-                  marginBottom: 16,
-                }}
-              >
-                {p}
-              </p>
-            ))}
+
+            <div style={{ width: 40, height: 1.5, background: "var(--gold)", marginBottom: 28, opacity: 0.6 }} />
+
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 20,
+                lineHeight: 1.8,
+                color: "var(--charcoal)",
+                marginBottom: 18,
+              }}
+            >
+              Nicole Jardim is a women&apos;s health educator, author, and the leading
+              voice in menstrual and hormonal health education. For over two decades, her
+              work has helped tens of thousands of women understand their cycles and the
+              practitioners who support them do the same.
+            </p>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 15.5,
+                lineHeight: 1.85,
+                color: "var(--charcoal)",
+                opacity: 0.75,
+                marginBottom: 32,
+              }}
+            >
+              She is the author of <em>Fix Your Period</em>, the creator of the Fix Your
+              Period App, and the founder of the Institute for Menstrual Health. The
+              methodology at the heart of the Women&apos;s Hormone Health Certification is
+              drawn directly from her clinical work, research, and years of teaching at
+              the intersection of evidence and real-world practice.
+            </p>
+
             <Link
               href="/about"
               style={{
-                display: "inline-block",
-                marginTop: 8,
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 6,
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                padding: "14px 32px",
-                background: "transparent",
-                color: "var(--plum)",
-                border: "1.5px solid rgba(92,45,79,0.3)",
-                borderRadius: 40,
+                color: "var(--terra)",
+                borderBottom: "1.5px solid var(--terra)",
+                paddingBottom: 3,
                 textDecoration: "none",
               }}
             >
-              Read Nicole&apos;s Full Story →
+              Read Nicole&apos;s Full Story &rarr;
             </Link>
           </div>
         </div>
@@ -695,34 +1000,77 @@ export default function IMHPage() {
       {/* ── CLOSING CTA ──────────────────────────────────────────────── */}
       <section
         style={{
-          background: "linear-gradient(135deg, var(--plum) 0%, var(--terra) 100%)",
-          padding: "80px 40px",
+          background: "var(--plum)",
+          padding: "104px 40px",
           textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div style={{ maxWidth: 680, margin: "0 auto" }}>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "radial-gradient(ellipse at 60% 50%, rgba(181,90,58,0.18) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ maxWidth: 680, margin: "0 auto", position: "relative" }}>
+          {/* Eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "rgba(196,152,74,0.75)",
+              }}
+            >
+              Ready to specialize
+            </span>
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+          </div>
+
           <h2
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(28px, 4vw, 42px)",
+              fontStyle: "italic",
+              fontSize: "clamp(28px, 4vw, 46px)",
               fontWeight: 300,
               color: "var(--ivory)",
               marginBottom: 20,
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
             }}
           >
             Ready to specialize in women&apos;s hormonal health?
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 17,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 20,
               lineHeight: 1.75,
               color: "var(--ivory)",
-              opacity: 0.7,
-              marginBottom: 36,
+              opacity: 0.75,
+              marginBottom: 44,
+              maxWidth: 560,
+              margin: "0 auto 44px",
             }}
           >
-            Explore the full curriculum, enrollment details, and everything included in the Women&apos;s Hormone Health Certification at the Institute for Menstrual Health.
+            Explore the full curriculum, enrollment details, and everything included in
+            the Women&apos;s Hormone Health Certification at the Institute for Menstrual
+            Health.
           </p>
           <a
             href="https://instituteformenstrualhealth.com/"
@@ -733,17 +1081,16 @@ export default function IMHPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              letterSpacing: "0.06em",
+              letterSpacing: "0.08em",
               textTransform: "uppercase",
-              padding: "14px 36px",
-              background: "transparent",
-              color: "var(--ivory)",
-              border: "1.5px solid rgba(250,245,239,0.5)",
+              padding: "16px 44px",
+              background: "var(--ivory)",
+              color: "var(--plum)",
               borderRadius: 40,
               textDecoration: "none",
             }}
           >
-            Visit the Institute for Menstrual Health →
+            Visit the Institute for Menstrual Health &rarr;
           </a>
         </div>
       </section>
