@@ -420,6 +420,195 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* ── PODCAST ──────────────────────────────────────────────────── */}
+      <section style={{ background: "var(--charcoal)", padding: "104px 40px" }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 96,
+            alignItems: "center",
+            maxWidth: 1060,
+            margin: "0 auto",
+          }}
+        >
+          {/* Text */}
+          <div>
+            {/* Eyebrow */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 24,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.55)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "rgba(196,152,74,0.85)",
+                }}
+              >
+                The Podcast
+              </span>
+            </div>
+
+            <h2
+              style={{
+                fontFamily: "'Fraunces', Georgia, serif",
+                fontSize: "clamp(28px, 3.5vw, 44px)",
+                fontWeight: 300,
+                fontStyle: "italic",
+                color: "var(--ivory)",
+                lineHeight: 1.1,
+                marginBottom: 20,
+                letterSpacing: "-0.015em",
+              }}
+            >
+              The Period Party
+            </h2>
+
+            <div
+              style={{
+                width: 40,
+                height: 1.5,
+                background: "rgba(196,152,74,0.5)",
+                marginBottom: 28,
+              }}
+            />
+
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 20,
+                lineHeight: 1.8,
+                color: "var(--ivory)",
+                opacity: 0.75,
+                marginBottom: 16,
+              }}
+            >
+              Nicole&apos;s long-running podcast exploring every dimension of menstrual
+              and hormonal health — with leading experts, researchers, and practitioners.
+            </p>
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 15,
+                lineHeight: 1.85,
+                color: "var(--ivory)",
+                opacity: 0.5,
+                marginBottom: 40,
+              }}
+            >
+              Each episode goes deep on a specific topic — from PCOS and endometriosis to
+              gut health, stress, and beyond. Equal parts education and conversation,
+              it&apos;s the kind of information your doctor probably never gave you.
+            </p>
+
+            {/* Platform links */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
+              <a
+                href="#"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: "var(--ivory)",
+                  opacity: 0.65,
+                  textDecoration: "none",
+                  borderBottom: "1px solid rgba(250,245,239,0.25)",
+                  paddingBottom: 3,
+                  width: "fit-content",
+                }}
+              >
+                Listen on Spotify &rarr;
+              </a>
+              <a
+                href="#"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: "var(--ivory)",
+                  opacity: 0.65,
+                  textDecoration: "none",
+                  borderBottom: "1px solid rgba(250,245,239,0.25)",
+                  paddingBottom: 3,
+                  width: "fit-content",
+                }}
+              >
+                Listen on Apple Podcasts &rarr;
+              </a>
+            </div>
+
+            <a
+              href="https://nicolejardim.com/podcast/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13,
+                fontWeight: 600,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                padding: "15px 36px",
+                background: "var(--ivory)",
+                color: "var(--charcoal)",
+                borderRadius: 40,
+                textDecoration: "none",
+              }}
+            >
+              Browse All Episodes &rarr;
+            </a>
+          </div>
+
+          {/* Podcast cover art */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                maxWidth: 340,
+                aspectRatio: "1/1",
+                borderRadius: 12,
+                overflow: "hidden",
+                boxShadow: "0 24px 64px rgba(0,0,0,0.35)",
+              }}
+            >
+              <Image
+                src="/images/podcast-logo.png"
+                alt="The Period Party Podcast"
+                fill
+                sizes="(max-width: 768px) 100vw, 340px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── CLOSING CTA ──────────────────────────────────────────────── */}
       <section
         style={{
