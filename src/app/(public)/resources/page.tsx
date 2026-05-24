@@ -21,24 +21,6 @@ const topics = [
   "Low Progesterone",
 ]
 
-const S = {
-  label: {
-    fontFamily: "'DM Sans', sans-serif",
-    fontSize: 11,
-    fontWeight: 600,
-    letterSpacing: "0.14em",
-    textTransform: "uppercase" as const,
-  },
-  body: {
-    fontFamily: "'DM Sans', sans-serif",
-    fontSize: 16,
-    lineHeight: 1.8,
-    color: "var(--charcoal)" as string,
-    opacity: 0.8,
-    marginBottom: 16,
-  },
-}
-
 export default function ResourcesPage() {
   return (
     <>
@@ -46,43 +28,80 @@ export default function ResourcesPage() {
       <section
         style={{
           background: "var(--ivory)",
-          padding: "100px 40px 80px",
-          borderBottom: "1px solid rgba(92,45,79,0.07)",
+          padding: "104px 40px 88px",
           textAlign: "center",
+          borderBottom: "1px solid rgba(92,45,79,0.07)",
         }}
       >
-        <div style={{ maxWidth: 640, margin: "0 auto" }}>
-          <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 20 }}>
-            Learn
-          </span>
+        <div style={{ maxWidth: 660, margin: "0 auto" }}>
+          {/* Centered eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.7 }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "var(--terra)",
+              }}
+            >
+              Learn
+            </span>
+            <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.7 }} />
+          </div>
+
           <h1
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(40px, 6vw, 64px)",
+              fontSize: "clamp(44px, 6vw, 70px)",
               fontWeight: 300,
-              lineHeight: 1.08,
+              fontStyle: "italic",
+              lineHeight: 1.05,
               color: "var(--plum)",
-              marginBottom: 20,
+              marginBottom: 24,
+              letterSpacing: "-0.02em",
             }}
           >
             Resources
           </h1>
+
+          <div
+            style={{
+              width: 40,
+              height: 1.5,
+              background: "var(--gold)",
+              margin: "0 auto 28px",
+              opacity: 0.6,
+            }}
+          />
+
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18,
-              lineHeight: 1.7,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 21,
+              lineHeight: 1.75,
               color: "var(--charcoal)",
-              opacity: 0.7,
+              opacity: 0.8,
             }}
           >
-            The book and article library Nicole has built to help you understand your hormones, decode your symptoms, and take action with confidence.
+            The book and article library Nicole has built to help you understand your
+            hormones, decode your symptoms, and take action with confidence.
           </p>
         </div>
       </section>
 
       {/* ── THE BOOK ─────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--ivory)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--ivory)", padding: "104px 40px" }}>
         <div
           style={{
             display: "grid",
@@ -93,50 +112,124 @@ export default function ResourcesPage() {
             margin: "0 auto",
           }}
         >
-          {/* Book visual */}
+          {/* Book visual — plum bg for editorial contrast */}
           <div
             style={{
-              background: "var(--sand)",
-              borderRadius: 12,
-              padding: "52px 44px",
+              background: "var(--plum)",
+              borderRadius: 4,
+              padding: "60px 48px",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              boxShadow: "0 12px 40px rgba(92,45,79,0.12)",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
-            <div style={{ position: "relative", width: "100%", maxWidth: 280, aspectRatio: "3/4" }}>
+            {/* Subtle radial vignette */}
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background:
+                  "radial-gradient(ellipse at 30% 70%, rgba(181,90,58,0.18) 0%, transparent 65%)",
+                pointerEvents: "none",
+              }}
+            />
+            <div
+              style={{
+                position: "relative",
+                width: "100%",
+                maxWidth: 260,
+                aspectRatio: "3/4",
+              }}
+            >
               <Image
                 src="/images/book-front.jpg"
                 alt="Fix Your Period by Nicole Jardim"
                 fill
-                sizes="(max-width: 768px) 100vw, 280px"
-                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 260px"
+                style={{ objectFit: "contain" }}
               />
             </div>
           </div>
 
+          {/* Text */}
           <div>
-            <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 18 }}>
-              The Book
-            </span>
+            {/* Eyebrow */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 24,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "var(--gold)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                The Book
+              </span>
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(32px, 4vw, 48px)",
+                fontSize: "clamp(32px, 4vw, 50px)",
                 fontWeight: 300,
+                fontStyle: "italic",
                 color: "var(--plum)",
-                lineHeight: 1.12,
+                lineHeight: 1.08,
                 marginBottom: 20,
+                letterSpacing: "-0.02em",
               }}
             >
               Fix Your Period
             </h2>
-            <p style={S.body}>
-              A practical, evidence-informed guide to understanding your cycle, identifying root causes, and improving your hormonal health — step by step.
+
+            <div
+              style={{
+                width: 40,
+                height: 1.5,
+                background: "var(--gold)",
+                marginBottom: 28,
+                opacity: 0.6,
+              }}
+            />
+
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 20,
+                lineHeight: 1.8,
+                color: "var(--charcoal)",
+                marginBottom: 16,
+              }}
+            >
+              A practical, evidence-informed guide to understanding your cycle,
+              identifying root causes, and improving your hormonal health — step by step.
             </p>
-            <p style={S.body}>
-              Whether you&apos;re brand new to hormonal health or have been searching for answers for years, the book gives you the context, the framework, and a clear plan to follow. It covers nutrition, stress, gut health, liver function, and more — in a way that&apos;s actually readable.
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 15.5,
+                lineHeight: 1.85,
+                color: "var(--charcoal)",
+                opacity: 0.75,
+                marginBottom: 36,
+              }}
+            >
+              Whether you&apos;re brand new to hormonal health or have been searching for
+              answers for years, the book gives you the context, the framework, and a
+              clear plan to follow. It covers nutrition, stress, gut health, liver
+              function, and more — in a way that&apos;s actually readable.
             </p>
             <Link
               href="/book"
@@ -145,23 +238,23 @@ export default function ResourcesPage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                padding: "14px 32px",
+                padding: "15px 36px",
                 background: "var(--plum)",
                 color: "var(--ivory)",
                 borderRadius: 40,
                 textDecoration: "none",
               }}
             >
-              Explore the Book →
+              Explore the Book &rarr;
             </Link>
           </div>
         </div>
       </section>
 
       {/* ── ARTICLES ─────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--sand)", padding: "96px 40px" }}>
+      <section style={{ background: "var(--sand)", padding: "104px 40px" }}>
         <div
           style={{
             display: "grid",
@@ -172,24 +265,71 @@ export default function ResourcesPage() {
             margin: "0 auto",
           }}
         >
+          {/* Text */}
           <div>
-            <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 18 }}>
-              Articles
-            </span>
+            {/* Eyebrow */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 24,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "var(--gold)", opacity: 0.7 }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                Articles
+              </span>
+            </div>
+
             <h2
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(32px, 4vw, 48px)",
+                fontSize: "clamp(28px, 3.5vw, 44px)",
                 fontWeight: 300,
+                fontStyle: "italic",
                 color: "var(--plum)",
                 lineHeight: 1.12,
                 marginBottom: 20,
+                letterSpacing: "-0.015em",
               }}
             >
               In-depth guides on the conditions and symptoms that matter most
             </h2>
-            <p style={S.body}>
-              The article library covers the most common hormonal conditions and cycle symptoms — each written by Nicole and grounded in current research. Whether you&apos;re trying to understand a diagnosis or decode what your body is doing, there&apos;s a guide for it.
+
+            <div
+              style={{
+                width: 40,
+                height: 1.5,
+                background: "var(--gold)",
+                marginBottom: 28,
+                opacity: 0.6,
+              }}
+            />
+
+            <p
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 15.5,
+                lineHeight: 1.85,
+                color: "var(--charcoal)",
+                opacity: 0.75,
+                marginBottom: 36,
+              }}
+            >
+              The article library covers the most common hormonal conditions and cycle
+              symptoms — each written by Nicole and grounded in current research. Whether
+              you&apos;re trying to understand a diagnosis or decode what your body is
+              doing, there&apos;s a guide for it.
             </p>
             <Link
               href="/articles"
@@ -198,55 +338,82 @@ export default function ResourcesPage() {
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                padding: "14px 32px",
+                padding: "15px 36px",
                 background: "var(--plum)",
                 color: "var(--ivory)",
                 borderRadius: 40,
                 textDecoration: "none",
               }}
             >
-              Browse All Articles →
+              Browse All Articles &rarr;
             </Link>
           </div>
 
-          {/* Articles visual */}
+          {/* Topics visual */}
           <div
             style={{
               background: "var(--ivory)",
-              borderRadius: 12,
-              padding: 36,
-              border: "1px solid rgba(92,45,79,0.08)",
+              borderRadius: 4,
+              padding: "40px 36px",
+              border: "1px solid rgba(92,45,79,0.07)",
             }}
           >
-            <span style={{ ...S.label, color: "var(--terra)", display: "block", marginBottom: 20 }}>
-              Topics covered
-            </span>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                marginBottom: 24,
+              }}
+            >
+              <div style={{ width: 20, height: 1, background: "var(--gold)", opacity: 0.6 }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                Topics covered
+              </span>
+            </div>
             <div
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
-                gap: 8,
+                gap: 6,
               }}
             >
               {topics.map((topic) => (
-                <span
+                <div
                   key={topic}
                   style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    padding: "11px 14px",
                     background: "var(--sand)",
-                    borderTop: "2px solid var(--gold)",
                     borderRadius: 3,
-                    padding: "12px 14px",
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: 15,
-                    fontWeight: 600,
-                    color: "var(--plum)",
-                    lineHeight: 1.2,
+                    borderLeft: "2px solid rgba(196,152,74,0.5)",
                   }}
                 >
-                  {topic}
-                </span>
+                  <span
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 13.5,
+                      fontWeight: 500,
+                      color: "var(--plum)",
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {topic}
+                  </span>
+                </div>
               ))}
             </div>
           </div>
@@ -256,34 +423,75 @@ export default function ResourcesPage() {
       {/* ── CLOSING CTA ──────────────────────────────────────────────── */}
       <section
         style={{
-          background: "linear-gradient(135deg, var(--plum) 0%, var(--terra) 100%)",
-          padding: "80px 40px",
+          background: "var(--plum)",
+          padding: "104px 40px",
           textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div style={{ maxWidth: 600, margin: "0 auto" }}>
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "radial-gradient(ellipse at 60% 50%, rgba(181,90,58,0.18) 0%, transparent 65%)",
+            pointerEvents: "none",
+          }}
+        />
+        <div style={{ maxWidth: 640, margin: "0 auto", position: "relative" }}>
+          {/* Centered eyebrow */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "rgba(196,152,74,0.8)",
+              }}
+            >
+              Not sure where to start
+            </span>
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+          </div>
+
           <h2
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(28px, 4vw, 40px)",
+              fontSize: "clamp(28px, 4vw, 46px)",
               fontWeight: 300,
+              fontStyle: "italic",
               color: "var(--ivory)",
-              marginBottom: 16,
+              marginBottom: 20,
+              lineHeight: 1.1,
+              letterSpacing: "-0.01em",
             }}
           >
-            Not sure where to start?
+            Find the right entry point for your journey
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 17,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 20,
               lineHeight: 1.75,
               color: "var(--ivory)",
-              opacity: 0.7,
-              marginBottom: 36,
+              opacity: 0.75,
+              marginBottom: 44,
             }}
           >
-            Find the right entry point for your journey.
+            Answer a few quick questions and we&apos;ll point you to the resource,
+            program, or next step that fits exactly where you are right now.
           </p>
           <Link
             href="/start-here"
@@ -292,17 +500,16 @@ export default function ResourcesPage() {
               fontFamily: "'DM Sans', sans-serif",
               fontSize: 13,
               fontWeight: 600,
-              letterSpacing: "0.06em",
+              letterSpacing: "0.08em",
               textTransform: "uppercase",
-              padding: "14px 36px",
-              background: "transparent",
-              color: "var(--ivory)",
-              border: "1.5px solid rgba(250,245,239,0.5)",
+              padding: "16px 44px",
+              background: "var(--ivory)",
+              color: "var(--plum)",
               borderRadius: 40,
               textDecoration: "none",
             }}
           >
-            Start Here →
+            Start Here &rarr;
           </Link>
         </div>
       </section>
