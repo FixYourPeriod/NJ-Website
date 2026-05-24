@@ -44,7 +44,7 @@ export default function PodcastPage() {
       <section
         style={{
           background: "var(--charcoal)",
-          padding: "104px 40px 0",
+          padding: "104px 40px",
           position: "relative",
           overflow: "hidden",
         }}
@@ -67,12 +67,12 @@ export default function PodcastPage() {
             display: "grid",
             gridTemplateColumns: "1fr auto",
             gap: 80,
-            alignItems: "end",
+            alignItems: "center",
             position: "relative",
           }}
         >
           {/* Left — text */}
-          <div style={{ paddingBottom: 80 }}>
+          <div style={{ paddingBottom: 104 }}>
             {/* Eyebrow */}
             <div
               style={{
@@ -219,10 +219,9 @@ export default function PodcastPage() {
             </a>
           </div>
 
-          {/* Right — podcast cover art, flush to bottom */}
+          {/* Right — podcast cover art */}
           <div
             style={{
-              alignSelf: "end",
               flexShrink: 0,
             }}
           >
@@ -231,7 +230,7 @@ export default function PodcastPage() {
                 position: "relative",
                 width: 320,
                 height: 320,
-                borderRadius: "12px 12px 0 0",
+                borderRadius: 12,
                 overflow: "hidden",
                 background: "#fff",
                 boxShadow: "0 -16px 60px rgba(0,0,0,0.4)",
