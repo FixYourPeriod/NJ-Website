@@ -513,7 +513,9 @@ export default function ResourcesPage() {
             {/* Platform links */}
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
               <a
-                href="#"
+                href="https://open.spotify.com/show/0LWZpLDcMNXHlqcYBqfHaA"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -534,7 +536,9 @@ export default function ResourcesPage() {
                 Listen on Spotify &rarr;
               </a>
               <a
-                href="#"
+                href="https://podcasts.apple.com/us/podcast/the-period-party/id1076463201"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -553,6 +557,29 @@ export default function ResourcesPage() {
                 }}
               >
                 Listen on Apple Podcasts &rarr;
+              </a>
+              <a
+                href="https://www.youtube.com/c/NicoleJardimWomensHealth"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 13,
+                  fontWeight: 600,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: "var(--ivory)",
+                  opacity: 0.65,
+                  textDecoration: "none",
+                  borderBottom: "1px solid rgba(250,245,239,0.25)",
+                  paddingBottom: 3,
+                  width: "fit-content",
+                }}
+              >
+                Watch on YouTube &rarr;
               </a>
             </div>
 
