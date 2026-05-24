@@ -7,7 +7,7 @@ import { articles } from "@/content/articles/index"
 // Tell Next.js which slugs to pre-render at build time.
 
 export async function generateStaticParams() {
-  return articles.map((a) => ({ slug: a.slug }))
+  return articles.filter((a) => !a.externalUrl).map((a) => ({ slug: a.slug }))
 }
 
 // ─── METADATA ────────────────────────────────────────────────────────────────
@@ -35,7 +35,7 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params
   const meta = articles.find((a) => a.slug === slug)
-  if (!meta) notFound()
+  if (!meta || meta.externalUrl) notFound()
 
   // Dynamically import the article module (body + optional faqs)
   const articleModule = await import(`@/content/articles/${slug}`)
