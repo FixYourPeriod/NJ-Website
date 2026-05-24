@@ -261,7 +261,7 @@ export default function IMHPage() {
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gap: 80,
-            alignItems: "start",
+            alignItems: "stretch",
             maxWidth: 1040,
             margin: "0 auto",
           }}
@@ -272,7 +272,7 @@ export default function IMHPage() {
               position: "relative",
               borderRadius: 4,
               overflow: "hidden",
-              aspectRatio: "4/5",
+              minHeight: 520,
             }}
           >
             <Image
@@ -280,7 +280,7 @@ export default function IMHPage() {
               alt="Women's health coaches"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover", background: "var(--sand)" }}
+              style={{ objectFit: "cover", objectPosition: "center top", background: "var(--sand)" }}
             />
           </div>
 
