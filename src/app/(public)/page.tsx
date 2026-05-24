@@ -66,6 +66,35 @@ const testimonials = [
   },
 ]
 
+// ─── EYEBROW helper ─────────────────────────────────────────────────────────
+// Reusable eyebrow pattern: gold dash + uppercase label
+function Eyebrow({ label, light = false }: { label: string; light?: boolean }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
+      <div
+        style={{
+          width: 28,
+          height: 1,
+          background: light ? "rgba(196,152,74,0.6)" : "var(--gold)",
+          flexShrink: 0,
+        }}
+      />
+      <span
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: 11,
+          fontWeight: 600,
+          letterSpacing: "0.16em",
+          textTransform: "uppercase",
+          color: light ? "rgba(250,245,239,0.6)" : "var(--terra)",
+        }}
+      >
+        {label}
+      </span>
+    </div>
+  )
+}
+
 // ─── COMPONENT ───────────────────────────────────────────────────────────────
 
 export default function HomePage() {
@@ -74,107 +103,113 @@ export default function HomePage() {
       {/* ── HERO ────────────────────────────────────────────────────────── */}
       <section
         style={{
+          position: "relative",
           minHeight: "100vh",
           display: "grid",
-          gridTemplateColumns: "50% 50%",
+          gridTemplateColumns: "1fr 1fr",
           overflow: "hidden",
         }}
       >
-        {/* Left: terra bg + text */}
+        {/* Left: warm ivory column */}
         <div
           style={{
-            background: "var(--terra)",
+            background: "var(--ivory)",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            padding: "120px 60px 80px 8vw",
+            padding: "80px 64px 80px 8vw",
+            zIndex: 1,
           }}
         >
+          <Eyebrow label="Women's Hormonal Health" />
+
           <h1
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(52px, 5.5vw, 84px)",
+              fontSize: "clamp(44px, 4.5vw, 72px)",
               fontWeight: 300,
-              lineHeight: 1.05,
-              color: "var(--ivory)",
-              letterSpacing: "-0.01em",
-              marginBottom: 28,
+              lineHeight: 1.08,
+              color: "var(--plum)",
+              marginBottom: 32,
+              letterSpacing: "-0.02em",
             }}
           >
             Make Sense<br />
-            <em
-              style={{
-                fontStyle: "italic",
-                fontWeight: 700,
-                color: "var(--gold)",
-                display: "block",
-              }}
-            >
-              of Your Cycle.
-            </em>
+            of Your<br />
+            <em style={{ fontStyle: "italic", color: "var(--terra)" }}>Cycle.</em>
           </h1>
+
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18,
-              fontWeight: 400,
-              lineHeight: 1.75,
-              color: "rgba(250,245,239,0.85)",
-              maxWidth: 420,
-              marginBottom: 48,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 21,
+              lineHeight: 1.7,
+              color: "var(--charcoal)",
+              marginBottom: 8,
+              maxWidth: 400,
             }}
           >
             Straight talk, evidence-informed education to help you understand
             your hormones, your period, and what your body&apos;s been trying
             to tell you.
           </p>
-          <Link
-            href="/start-here"
-            style={{
-              display: "inline-block",
-              alignSelf: "flex-start",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 13,
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              textTransform: "uppercase",
-              padding: "18px 40px",
-              background: "var(--ivory)",
-              color: "var(--terra)",
-              borderRadius: 40,
-              transition: "background 0.2s ease, color 0.2s ease",
-            }}
-          >
-            Start Here &rarr;
-          </Link>
+
+          <div style={{ display: "flex", alignItems: "center", gap: 32, marginTop: 40 }}>
+            <Link
+              href="/start-here"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13,
+                fontWeight: 600,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                padding: "16px 40px",
+                background: "var(--plum)",
+                color: "var(--ivory)",
+                borderRadius: 40,
+              }}
+            >
+              Start Here
+            </Link>
+            <Link
+              href="/about"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                color: "var(--terra)",
+                borderBottom: "1px solid var(--terra)",
+                paddingBottom: 2,
+              }}
+            >
+              About Nicole &rarr;
+            </Link>
+          </div>
         </div>
 
         {/* Right: full-bleed photo */}
-        <div style={{ overflow: "hidden" }}>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          {/* Warm edge blend */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "linear-gradient(to right, rgba(250,245,239,0.18) 0%, transparent 28%)",
+              zIndex: 1,
+            }}
+          />
           <Image
             src="/images/nicole-5.jpg"
             alt="Nicole Jardim"
-            width={800}
-            height={1000}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              objectPosition: "center top",
-              display: "block",
-            }}
+            fill
+            style={{ objectFit: "cover", objectPosition: "center top" }}
             priority
           />
         </div>
       </section>
 
       {/* ── AS SEEN IN ──────────────────────────────────────────────────── */}
-      <div
-        style={{
-          background: "var(--charcoal)",
-          padding: "22px 40px",
-        }}
-      >
+      <div style={{ background: "var(--charcoal)", padding: "22px 40px" }}>
         <div
           style={{
             maxWidth: 1160,
@@ -220,62 +255,60 @@ export default function HomePage() {
       </div>
 
       {/* ── MEET NICOLE ─────────────────────────────────────────────────── */}
-      <section style={{ background: "var(--ivory)", padding: "120px 40px" }}>
+      <section style={{ background: "var(--sand)", padding: "120px 40px" }}>
         <div
           style={{
             maxWidth: 1160,
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "1.1fr 1fr",
+            gridTemplateColumns: "1fr 1.1fr",
             gap: 96,
             alignItems: "center",
           }}
         >
-          <div style={{ height: 660, borderRadius: 6, overflow: "hidden" }}>
+          {/* Photo with warm frame */}
+          <div
+            style={{
+              position: "relative",
+              height: 660,
+              borderRadius: 4,
+              overflow: "hidden",
+            }}
+          >
             <Image
               src="/images/nicole-smoothie-crop.jpg"
               alt="Nicole Jardim"
-              width={600}
-              height={660}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center top",
-                display: "block",
-              }}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
             />
           </div>
 
           <div>
-            <span
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 11,
-                fontWeight: 600,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "var(--terra)",
-                display: "block",
-                marginBottom: 20,
-              }}
-            >
-              Meet Nicole Jardim
-            </span>
+            <Eyebrow label="Meet Nicole Jardim" />
 
             <blockquote
               style={{
                 fontFamily: "'Fraunces', Georgia, serif",
-                fontSize: "clamp(32px, 4vw, 44px)",
+                fontSize: "clamp(32px, 3.5vw, 46px)",
                 fontWeight: 300,
                 fontStyle: "italic",
                 color: "var(--plum)",
                 lineHeight: 1.15,
-                marginBottom: 28,
+                marginBottom: 20,
               }}
             >
               &ldquo;I&apos;ve been where you are.&rdquo;
             </blockquote>
+
+            {/* Gold rule below quote */}
+            <div
+              style={{
+                width: 40,
+                height: 1.5,
+                background: "var(--gold)",
+                marginBottom: 28,
+              }}
+            />
 
             {[
               "Nicole Jardim is a women's health educator, writer, and speaker focused on menstrual and hormonal health. Her work centers on helping women understand how their bodies actually function, so they can make informed, empowered decisions about their health.",
@@ -285,11 +318,11 @@ export default function HomePage() {
               <p
                 key={i}
                 style={{
-                  fontSize: 17,
-                  lineHeight: 1.8,
+                  fontSize: 16.5,
+                  lineHeight: 1.85,
                   color: "var(--charcoal)",
                   opacity: 0.85,
-                  marginBottom: 18,
+                  marginBottom: 16,
                 }}
               >
                 {para}
@@ -302,14 +335,14 @@ export default function HomePage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
-                marginTop: 12,
+                marginTop: 16,
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: 13,
                 fontWeight: 600,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase",
-                color: "var(--plum)",
-                borderBottom: "1.5px solid rgba(92,45,79,0.3)",
+                color: "var(--terra)",
+                borderBottom: "1.5px solid var(--terra)",
                 paddingBottom: 3,
               }}
             >
@@ -320,43 +353,67 @@ export default function HomePage() {
       </section>
 
       {/* ── PHILOSOPHY ──────────────────────────────────────────────────── */}
-      <section
-        style={{
-          background: "var(--plum)",
-          padding: "112px 40px",
-        }}
-      >
+      <section style={{ background: "var(--plum)", padding: "112px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <h2
-            style={{
-              fontFamily: "'Fraunces', Georgia, serif",
-              fontStyle: "italic",
-              fontSize: "clamp(40px, 5vw, 62px)",
-              fontWeight: 300,
-              lineHeight: 1.1,
-              color: "var(--ivory)",
-              textAlign: "center",
-              marginBottom: 24,
-              letterSpacing: "-0.01em",
-            }}
-          >
-            A Different Way of Thinking<br />About Menstrual Health
-          </h2>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: 18,
-              lineHeight: 1.75,
-              color: "var(--ivory)",
-              opacity: 0.7,
-              maxWidth: 640,
-              margin: "0 auto 64px",
-            }}
-          >
-            Menstrual and hormonal symptoms aren&apos;t random, and they&apos;re not
-            something you&apos;re meant to &ldquo;just live with.&rdquo;
-          </p>
 
+          {/* Centered eyebrow + heading */}
+          <div style={{ textAlign: "center", marginBottom: 64 }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 12,
+                marginBottom: 28,
+              }}
+            >
+              <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.6)" }} />
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.16em",
+                  textTransform: "uppercase",
+                  color: "rgba(196,152,74,0.75)",
+                }}
+              >
+                The philosophy
+              </span>
+              <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.6)" }} />
+            </div>
+
+            <h2
+              style={{
+                fontFamily: "'Fraunces', Georgia, serif",
+                fontStyle: "italic",
+                fontSize: "clamp(38px, 4.5vw, 60px)",
+                fontWeight: 300,
+                lineHeight: 1.1,
+                color: "var(--ivory)",
+                marginBottom: 20,
+                letterSpacing: "-0.01em",
+              }}
+            >
+              A Different Way of Thinking<br />About Menstrual Health
+            </h2>
+            <p
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: 21,
+                lineHeight: 1.7,
+                color: "var(--ivory)",
+                opacity: 0.7,
+                maxWidth: 580,
+                margin: "0 auto",
+              }}
+            >
+              Menstrual and hormonal symptoms aren&apos;t random, and they&apos;re not
+              something you&apos;re meant to &ldquo;just live with.&rdquo;
+            </p>
+          </div>
+
+          {/* Belief cards */}
           <div
             style={{
               display: "grid",
@@ -369,24 +426,25 @@ export default function HomePage() {
               <div
                 key={belief}
                 style={{
-                  background: "rgba(255,255,255,0.06)",
+                  background: "rgba(255,255,255,0.055)",
                   padding: "48px 52px",
-                  borderTop: "3px solid var(--gold)",
+                  borderTop: "2px solid rgba(196,152,74,0.5)",
                 }}
               >
                 <div
                   style={{
                     width: 28,
-                    height: 2,
+                    height: 1.5,
                     background: "var(--gold)",
-                    marginBottom: 20,
+                    marginBottom: 22,
+                    opacity: 0.7,
                   }}
                 />
                 <p
                   style={{
                     fontFamily: "'Cormorant Garamond', Georgia, serif",
                     fontStyle: "italic",
-                    fontSize: 24,
+                    fontSize: 23,
                     fontWeight: 400,
                     lineHeight: 1.5,
                     color: "var(--ivory)",
@@ -401,11 +459,12 @@ export default function HomePage() {
           <p
             style={{
               textAlign: "center",
-              fontSize: 17,
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: 16,
               lineHeight: 1.75,
               color: "var(--ivory)",
-              opacity: 0.65,
-              maxWidth: 600,
+              opacity: 0.55,
+              maxWidth: 580,
               margin: "0 auto",
             }}
           >
@@ -418,11 +477,13 @@ export default function HomePage() {
       {/* ── HOW CAN I HELP YOU ───────────────────────────────────────────── */}
       <section style={{ background: "var(--ivory)", padding: "112px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
+
+          <div style={{ textAlign: "center", marginBottom: 60 }}>
+            <Eyebrow label="Where to begin" />
             <h2
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
-                fontSize: "clamp(36px, 4vw, 54px)",
+                fontSize: "clamp(34px, 4vw, 52px)",
                 fontWeight: 400,
                 lineHeight: 1.15,
                 color: "var(--plum)",
@@ -434,12 +495,16 @@ export default function HomePage() {
             <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: 17,
+                fontSize: 16,
+                lineHeight: 1.75,
                 color: "var(--charcoal)",
                 opacity: 0.6,
+                maxWidth: 520,
+                margin: "0 auto",
               }}
             >
-              Whether you&apos;re just beginning to ask questions or looking for deeper support, there&apos;s a clear place to start.
+              Whether you&apos;re just beginning to ask questions or looking for
+              deeper support, there&apos;s a clear place to start.
             </p>
           </div>
 
@@ -455,7 +520,8 @@ export default function HomePage() {
               const bg = isLight ? "var(--ivory)" : p.style === "terra" ? "var(--terra)" : "var(--plum)"
               const textColor = isLight ? "var(--plum)" : "var(--ivory)"
               const bodyColor = isLight ? "var(--charcoal)" : "rgba(250,245,239,0.75)"
-              const linkColor = isLight ? "var(--terra)" : "rgba(250,245,239,0.65)"
+              const linkColor = isLight ? "var(--terra)" : "rgba(250,245,239,0.7)"
+              const topBorder = isLight ? "2px solid var(--gold)" : "2px solid rgba(250,245,239,0.25)"
 
               const content = (
                 <div
@@ -466,37 +532,33 @@ export default function HomePage() {
                     flexDirection: "column",
                     height: "100%",
                     background: bg,
-                    border: isLight
-                      ? "1.5px solid rgba(196,152,74,0.3)"
-                      : undefined,
-                    borderTop: isLight
-                      ? "4px solid var(--gold)"
-                      : "4px solid rgba(250,245,239,0.35)",
-                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                    border: isLight ? "1px solid rgba(196,152,74,0.2)" : undefined,
+                    borderTop: topBorder,
                   }}
                 >
-                  <div
+                  <span
                     style={{
                       fontFamily: "'Cormorant Garamond', Georgia, serif",
                       fontSize: 12,
                       fontWeight: 600,
-                      letterSpacing: "0.12em",
+                      letterSpacing: "0.14em",
                       textTransform: "uppercase",
-                      color: isLight ? "var(--gold)" : textColor,
-                      opacity: isLight ? 1 : 0.6,
+                      color: isLight ? "var(--gold)" : "rgba(250,245,239,0.45)",
+                      display: "block",
                       marginBottom: 18,
                     }}
                   >
                     {p.num}
-                  </div>
+                  </span>
                   <h3
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
-                      fontSize: "clamp(22px, 2vw, 28px)",
-                      fontWeight: 600,
+                      fontFamily: "'Fraunces', Georgia, serif",
+                      fontSize: "clamp(20px, 1.8vw, 26px)",
+                      fontWeight: 300,
                       color: textColor,
-                      marginBottom: 16,
+                      marginBottom: 14,
                       lineHeight: 1.2,
+                      letterSpacing: "-0.01em",
                     }}
                   >
                     {p.title}
@@ -505,8 +567,9 @@ export default function HomePage() {
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
                       fontSize: 15,
-                      lineHeight: 1.7,
+                      lineHeight: 1.75,
                       color: bodyColor,
+                      opacity: isLight ? 0.75 : 1,
                       flexGrow: 1,
                       marginBottom: 28,
                     }}
@@ -519,7 +582,7 @@ export default function HomePage() {
                       fontSize: 13,
                       fontWeight: 600,
                       color: linkColor,
-                      letterSpacing: "0.02em",
+                      letterSpacing: "0.01em",
                     }}
                   >
                     {p.cta}
@@ -550,25 +613,35 @@ export default function HomePage() {
       {/* ── SOCIAL PROOF ────────────────────────────────────────────────── */}
       <section style={{ background: "var(--terra)", padding: "96px 40px", textAlign: "center" }}>
         <div style={{ maxWidth: 680, margin: "0 auto" }}>
-          <span
+          <div
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 11,
-              fontWeight: 600,
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              color: "rgba(250,245,239,0.6)",
-              display: "block",
-              marginBottom: 20,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 28,
             }}
           >
-            Reach &amp; Impact
-          </span>
+            <div style={{ width: 28, height: 1, background: "rgba(250,245,239,0.4)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "rgba(250,245,239,0.6)",
+              }}
+            >
+              Reach &amp; Impact
+            </span>
+            <div style={{ width: 28, height: 1, background: "rgba(250,245,239,0.4)" }} />
+          </div>
           <h2
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
               fontStyle: "italic",
-              fontSize: "clamp(36px, 4.5vw, 58px)",
+              fontSize: "clamp(34px, 4vw, 54px)",
               fontWeight: 300,
               lineHeight: 1.15,
               color: "var(--ivory)",
@@ -580,14 +653,16 @@ export default function HomePage() {
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18,
-              lineHeight: 1.8,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 21,
+              lineHeight: 1.75,
               color: "var(--ivory)",
-              opacity: 0.8,
+              opacity: 0.85,
             }}
           >
-            Nicole&apos;s work has supported women across the globe in understanding their cycles, advocating for themselves, and approaching their health with more clarity and confidence.
+            Nicole&apos;s work has supported women across the globe in understanding their
+            cycles, advocating for themselves, and approaching their health with more
+            clarity and confidence.
           </p>
         </div>
       </section>
@@ -596,20 +671,7 @@ export default function HomePage() {
       <section style={{ background: "var(--ivory)", padding: "112px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
-            <span
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 11,
-                fontWeight: 600,
-                letterSpacing: "0.14em",
-                textTransform: "uppercase",
-                color: "var(--terra)",
-                display: "block",
-                marginBottom: 14,
-              }}
-            >
-              Women&apos;s voices
-            </span>
+            <Eyebrow label="Women's voices" />
             <h2
               style={{
                 fontFamily: "'Cormorant Garamond', Georgia, serif",
@@ -628,7 +690,7 @@ export default function HomePage() {
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(3, 1fr)",
-              gap: 24,
+              gap: 20,
             }}
           >
             {testimonials.map((t) => (
@@ -640,6 +702,7 @@ export default function HomePage() {
                   padding: "48px 40px 44px",
                   display: "flex",
                   flexDirection: "column",
+                  borderTop: "2px solid rgba(196,152,74,0.35)",
                 }}
               >
                 <span
@@ -652,19 +715,20 @@ export default function HomePage() {
                     marginBottom: 24,
                     display: "block",
                     flexShrink: 0,
+                    opacity: 0.7,
                   }}
                 >
                   &ldquo;
                 </span>
                 <p
                   style={{
-                    fontSize: 16,
-                    lineHeight: 1.8,
+                    fontFamily: "'Cormorant Garamond', Georgia, serif",
+                    fontSize: 19,
+                    lineHeight: 1.75,
                     color: "var(--charcoal)",
-                    opacity: 0.85,
                     fontStyle: "italic",
                     flexGrow: 1,
-                    marginBottom: 32,
+                    marginBottom: 36,
                   }}
                 >
                   {t.text}
@@ -676,13 +740,14 @@ export default function HomePage() {
                       width: 28,
                       height: 1.5,
                       background: "var(--gold)",
-                      marginBottom: 10,
+                      marginBottom: 12,
+                      opacity: 0.6,
                     }}
                   />
                   <span
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: 600,
                       color: "var(--plum)",
                       letterSpacing: "0.02em",
@@ -694,11 +759,11 @@ export default function HomePage() {
                   <span
                     style={{
                       fontFamily: "'DM Sans', sans-serif",
-                      fontSize: 13,
+                      fontSize: 12,
                       color: "var(--charcoal)",
-                      opacity: 0.45,
+                      opacity: 0.4,
                       display: "block",
-                      marginTop: 2,
+                      marginTop: 3,
                     }}
                   >
                     {t.location}
@@ -713,16 +778,53 @@ export default function HomePage() {
       {/* ── CLOSING CTA ─────────────────────────────────────────────────── */}
       <section
         style={{
-          background: "linear-gradient(135deg, var(--plum) 0%, var(--terra) 100%)",
+          background: "var(--plum)",
           padding: "136px 40px",
           textAlign: "center",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
+        {/* Subtle warm vignette */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "radial-gradient(ellipse at 60% 50%, rgba(181,90,58,0.18) 0%, transparent 70%)",
+            pointerEvents: "none",
+          }}
+        />
+
+        <div style={{ maxWidth: 760, margin: "0 auto", position: "relative" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 12,
+              marginBottom: 32,
+            }}
+          >
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+            <span
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 11,
+                fontWeight: 600,
+                letterSpacing: "0.16em",
+                textTransform: "uppercase",
+                color: "rgba(196,152,74,0.7)",
+              }}
+            >
+              Ready to begin
+            </span>
+            <div style={{ width: 28, height: 1, background: "rgba(196,152,74,0.5)" }} />
+          </div>
+
           <h2
             style={{
               fontFamily: "'Fraunces', Georgia, serif",
-              fontSize: "clamp(44px, 6vw, 76px)",
+              fontSize: "clamp(44px, 6vw, 74px)",
               fontWeight: 300,
               lineHeight: 1.1,
               color: "var(--ivory)",
@@ -731,16 +833,16 @@ export default function HomePage() {
             }}
           >
             You don&apos;t need to have everything
-            <br />figured out <em>to begin.</em>
+            <br />figured out <em style={{ fontStyle: "italic", color: "rgba(250,245,239,0.75)" }}>to begin.</em>
           </h2>
           <p
             style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18,
+              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontSize: 21,
               lineHeight: 1.75,
               color: "var(--ivory)",
-              opacity: 0.75,
-              maxWidth: 560,
+              opacity: 0.7,
+              maxWidth: 540,
               margin: "0 auto 52px",
             }}
           >
@@ -748,25 +850,38 @@ export default function HomePage() {
             you&apos;ve been searching for real answers for years — there&apos;s a
             clear place to start.
           </p>
-          <Link
-            href="/start-here"
-            style={{
-              display: "inline-block",
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 14,
-              fontWeight: 600,
-              letterSpacing: "0.07em",
-              textTransform: "uppercase",
-              padding: "17px 44px",
-              background: "transparent",
-              color: "var(--ivory)",
-              border: "1.5px solid rgba(250,245,239,0.55)",
-              borderRadius: 40,
-              transition: "background 0.2s ease, border-color 0.2s ease, color 0.2s ease",
-            }}
-          >
-            Start Here &rarr;
-          </Link>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 24 }}>
+            <Link
+              href="/start-here"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 13,
+                fontWeight: 600,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                padding: "16px 44px",
+                background: "var(--ivory)",
+                color: "var(--plum)",
+                borderRadius: 40,
+              }}
+            >
+              Start Here
+            </Link>
+            <Link
+              href="/about"
+              style={{
+                fontFamily: "'DM Sans', sans-serif",
+                fontSize: 14,
+                fontWeight: 500,
+                color: "var(--ivory)",
+                borderBottom: "1px solid rgba(250,245,239,0.4)",
+                paddingBottom: 2,
+                opacity: 0.8,
+              }}
+            >
+              About Nicole &rarr;
+            </Link>
+          </div>
         </div>
       </section>
     </>
