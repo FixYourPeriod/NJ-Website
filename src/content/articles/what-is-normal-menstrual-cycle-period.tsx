@@ -26,6 +26,11 @@ const html = `
 <p>Here's the truth: many of these experiences are <em>common</em>, but common and normal are not the same thing. Common means a lot of women experience it. Normal means it reflects a healthy, well-functioning body. The distinction matters enormously, because when we accept pain and dysfunction as simply "part of being a woman," we stop looking for the underlying reasons — and those reasons are almost always addressable.</p>
 <p>This article is the reference I wish every woman had access to. It covers what the research actually says about what a healthy period and menstrual cycle look like, where the real thresholds are, and what signals genuinely deserve investigation.</p>
 <h2>What "Normal" Actually Means</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/what-is-normal-menstrual-cycle-period/img-01" alt="What&#039;s a normal menstrual cycle look like?" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding what a normal menstrual cycle looks like</figcaption>
+</figure>
+
 <p>Normal, in the context of menstrual health, means that your cycle is operating as a reflection of a body in good hormonal balance. A regular, ovulatory menstrual cycle — one where ovulation happens consistently — is a sign of adequate estrogen and progesterone production, a healthy hypothalamic-pituitary-ovarian axis, a functioning thyroid, and well-regulated adrenal function. In 2015, the American College of Obstetricians and Gynecologists formally recognized the menstrual cycle as a vital sign, in the same category as blood pressure and pulse. That framing is not an exaggeration.</p>
 <p>What this means practically: if your period is painful, irregular, very heavy, very light, or accompanied by significant mood disturbances, these are not quirks of your personality or your genetics. They are signals from your body that something in the hormonal or systemic picture is worth looking into. For more on how the cycle functions as a full-body communication system, see the article on the <a href="/articles/four-phases-of-your-menstrual-cycle">four phases of your menstrual cycle</a>.</p>
 <h2>Normal Cycle Length</h2>

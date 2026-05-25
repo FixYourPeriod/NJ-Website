@@ -26,6 +26,10 @@ const html = `
 <p>But hyperthyroidism — an <em>overactive</em> thyroid — affects your period just as profoundly, and in ways that are often overlooked or misattributed. If your periods have become very light, infrequent, or have stopped altogether, and you also feel anxious, hot, wired-but-tired, or like your heart is racing for no reason, hyperthyroidism may be part of the picture.</p>
 <p>For a full overview of how both thyroid conditions affect <a href="/articles/how-your-thyroid-can-cause-period-and-fertility-problems">thyroid and periods</a>, that article covers the broader landscape. Here, we are going to go deep on hyperthyroidism specifically.</p>
 <h2>Hypothyroidism vs. Hyperthyroidism: Getting Clear on the Difference</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-hyperthyroidism-affects-your-period/img-01" alt="How Hyperthyroidism Affects Your Period" width="760" height="760" loading="lazy" />
+</figure>
+
 <p>The two conditions are essentially opposites. <strong>Hypothyroidism</strong> means the thyroid is underactive — it is not producing enough thyroid hormone (T3 and T4), and the body slows down as a result. <strong>Hyperthyroidism</strong> means the thyroid is overactive — it is producing too much thyroid hormone, and the body speeds up in ways that are uncomfortable and, over time, harmful.</p>
 <p>Both conditions disrupt menstrual function, but through different mechanisms. Hypothyroidism tends to cause heavy, prolonged bleeding and longer cycles, while hyperthyroidism tends to push in the opposite direction: lighter periods, shorter cycles, irregular or absent bleeds.</p>
 <p>Women sometimes confuse the two because some symptoms overlap (fatigue, hair loss, mood changes, fertility difficulties), and because the thyroid can fluctuate — particularly in autoimmune conditions — swinging between hyper and hypo states over time.</p>

@@ -26,11 +26,21 @@ const html = `
 <p>Your cycle can reveal how well your thyroid is functioning, whether you're under too much stress, if your blood sugar is unstable, and whether your immune system is struggling with something it hasn't yet named. It is, as the American College of Obstetricians and Gynecologists formally recognized in 2015, a <em>vital sign</em> — as meaningful as heart rate or blood pressure.</p>
 <p>This guide covers everything you should have been taught at the start: what the menstrual cycle actually is, how the four phases work, the key hormones involved, what normal looks like, and how to use your cycle as a window into your health.</p>
 <h2>What Is the Menstrual Cycle?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/periods-101-instagram-series/img-02" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding your menstrual cycle as a vital sign</figcaption>
+</figure>
+
 <p>Here's the first thing most people get wrong: the menstrual cycle is <em>not</em> your period. Your period is just one phase of a much longer, much more complex process. The menstrual cycle encompasses everything from the first day of one period to the first day of the next — and a great deal happens in between.</p>
 <p>A typical cycle runs anywhere from <strong>21 to 35 days</strong>, with 28 days often cited as the average (though many healthy cycles differ from this). Throughout the cycle, the brain, ovaries, uterus, and cervix are in constant hormonal conversation — a precisely timed feedback loop involving at least five major hormones that rise and fall in coordinated waves.</p>
 <p>The purpose of this cycle is not simply reproduction, although that is one of its functions. Regular ovulation — the cycle's main event — drives the production of estrogen and progesterone that your brain, bones, heart, skin, and mood all depend on. When you ovulate consistently, your hormones are working as they should. When ovulation is disrupted, everything downstream is affected.</p>
 <p>This is why understanding your cycle is not just reproductive health. It is whole-body health.</p>
 <h2>The Four Phases of the Menstrual Cycle</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/periods-101-instagram-series/img-04" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">The four phases of the menstrual cycle</figcaption>
+</figure>
+
 <p>The menstrual cycle is divided into four phases. Two of them — menstruation and the follicular phase — overlap in the first half of the cycle. The second half belongs entirely to the luteal phase. In the middle sits the brief but pivotal ovulatory phase, which is the event the entire cycle is building toward.</p>
 <div class="phase-grid">
 <div class="phase-card menstruation">

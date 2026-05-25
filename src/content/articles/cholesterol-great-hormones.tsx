@@ -26,6 +26,11 @@ const html = `
 <p>Without adequate cholesterol, you cannot make enough estrogen. You cannot make enough progesterone. Your testosterone will suffer. Your cortisol regulation will suffer. Your entire hormonal cascade depends on having enough of this molecule circulating in your body. And yet millions of women — eating low-fat diets, taking cholesterol-lowering medications, or simply never questioning the dominant nutritional narrative — are operating with a deficiency that shows up in their cycles, their moods, their libido, and their energy.</p>
 <p>It's time to set the record straight.</p>
 <h2>Cholesterol Is the Mother of All Steroid Hormones</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/cholesterol-great-hormones/img-03" alt="Cholesterol" width="760" height="618" loading="lazy" />
+  <figcaption class="article-image-caption">Cholesterol is the essential building block for all steroid hormones</figcaption>
+</figure>
+
 <p>To understand why cholesterol matters so much for hormonal health, you need to understand how steroid hormones are made. Every single one of your sex hormones — estrogen, progesterone, testosterone, DHEA, and cortisol — belongs to a class called steroid hormones. And every steroid hormone in your body begins its life as cholesterol.</p>
 <p>The process starts with something called the <strong>StAR protein</strong> (steroidogenic acute regulatory protein), which is produced by the StAR gene. This protein binds to cholesterol in the mitochondria of the adrenal glands and the gonads, initiating the first step of hormone synthesis. The result of this process is <strong>pregnenolone</strong> — often called the "mother hormone" or the "matriarch hormone" — because everything else flows downstream from it.</p>
 <p>From pregnenolone, your body can produce:</p>

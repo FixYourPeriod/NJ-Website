@@ -25,6 +25,11 @@ const html = `
 <p>The Mirena IUD is one of the most widely used forms of hormonal contraception in the world — and one of the most misunderstood. It is frequently recommended not just for contraception, but for heavy periods, endometriosis, adenomyosis, and perimenopause management. Many providers describe it as a "low hormone" option that works almost entirely at a local level. And while that framing contains some truth, it glosses over a body of evidence showing that the Mirena does have measurable systemic effects — and that a meaningful subset of women experience real side effects because of them.</p>
 <p>If you are considering the Mirena, currently have one, or are thinking about removal, this article will give you the full picture: how it works, what the research actually says about hormone levels, which side effects are underreported, who is likely to benefit, and what to do to support your body through the transition if you decide to remove it.</p>
 <h2>What Is the Mirena IUD?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-does-the-mirena-iud-work-is-it-right-for-me/img-02" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">The Mirena IUD is a small T-shaped device that releases levonorgestrel directly into the uterus</figcaption>
+</figure>
+
 <p>The Mirena is a small, T-shaped plastic device that is placed inside the uterus by a healthcare provider. It releases a low daily dose of <strong>levonorgestrel</strong> — a synthetic progestin — directly into the uterine cavity. It is FDA-approved for up to 8 years of use, though it was previously approved for 5 years; current clinical guidelines now support extended use.</p>
 <p>The Mirena is not the only hormonal IUD on the market. Kyleena, Liletta, and Skyla also release levonorgestrel, but at lower doses and with shorter licensed durations. Mirena releases the highest dose (approximately 20 micrograms per day initially, declining over time) and is the most studied device of its type.</p>
 <p>Levonorgestrel is a second-generation progestin derived from testosterone. It has significant androgenic activity, meaning it binds not only to progesterone receptors but also to androgen receptors in the body. This is relevant to some of the side effects we will discuss shortly. For a deeper explanation of how synthetic progestins differ from natural progesterone, see my article on <a href="/articles/progesterone-vs-progestin">progestin vs progesterone</a>.</p>
@@ -43,6 +48,11 @@ const html = `
 <p>Additionally, the Mirena suppresses ovulation in a significant proportion of users, particularly in the first year. This matters because when you do not ovulate, you do not produce the progesterone that follows ovulation. The downstream effects of low progesterone — mood changes, sleep disruption, anxiety, loss of the calming GABA-receptor effect that natural progesterone provides — can contribute to symptoms that users may not connect to their IUD.</p>
 <p>The bottom line: the Mirena is lower-systemic than the pill or implant, but it is not a zero-hormone device. Individual response depends on how sensitive you are to levonorgestrel, whether ovulation is being suppressed, and your broader hormonal context.</p>
 <h2>How the Mirena Affects Your Cycle</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-does-the-mirena-iud-work-is-it-right-for-me/img-03" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding how the Mirena affects your menstrual cycle over time</figcaption>
+</figure>
+
 <p>One of the most commonly cited benefits of the Mirena is its effect on menstrual bleeding. For many women, this is genuinely transformative — particularly for those with heavy periods or bleeding conditions. Here is what typically happens:</p>
 <ul>
 <li><strong>First 3–6 months:</strong> Irregular spotting, light bleeding between periods, and unpredictable cycle timing are very common and expected. This is the adjustment phase as the uterine lining thins.</li>

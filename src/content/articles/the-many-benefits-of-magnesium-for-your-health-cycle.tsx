@@ -25,6 +25,11 @@ const html = `
 <p>If I had to choose a single supplement to recommend to almost every woman I work with, magnesium would be at the very top of the list. That is not an exaggeration. Magnesium is a cofactor in more than 300 enzymatic reactions in the human body — reactions that touch everything from energy production to DNA synthesis, nerve signaling, muscle contraction, and hormone regulation. When magnesium is low, virtually every system in the body feels it.</p>
 <p>And low it often is. Estimates suggest that up to 75 percent of adults in Western countries do not meet the recommended daily intake for magnesium from diet alone. For women dealing with hormonal symptoms — PMS, painful periods, poor sleep, anxiety, blood sugar dysregulation, or persistent migraines — magnesium deficiency is frequently a silent contributor that never gets addressed because it is rarely tested in routine bloodwork. (A note on testing: serum magnesium, the standard blood test, is a poor indicator of total body magnesium status because the body tightly regulates blood levels at the expense of cellular stores. Red blood cell magnesium or hair tissue mineral analysis gives a more accurate picture.)</p>
 <h2>Why So Many Women Are Deficient</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-many-benefits-of-magnesium-for-your-health-cycle/img-02" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Modern diets and lifestyles contribute to widespread magnesium deficiency</figcaption>
+</figure>
+
 <p>The modern world is working against magnesium status in almost every direction at once. Several factors combine to leave most women running below optimal levels:</p>
 <ul>
 <li><strong>Soil depletion:</strong> Magnesium content in fruits and vegetables has dropped significantly over the past several decades as intensive farming practices have depleted soil mineral levels. The same handful of almonds that provided your grandmother with meaningful magnesium may now provide significantly less.</li>
@@ -35,9 +40,14 @@ const html = `
 <li><strong>Menstruation itself:</strong> Magnesium levels fluctuate across the menstrual cycle, typically dropping in the luteal phase — which is precisely when PMS symptoms peak. This is not a coincidence.</li>
 </ul>
 <h2>Magnesium's Specific Roles in Hormonal Health</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-many-benefits-of-magnesium-for-your-health-cycle/img-04" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Magnesium plays essential roles in mood, sleep, and hormonal balance</figcaption>
+</figure>
+
 <p>Let me walk through the ways magnesium directly affects the symptoms and conditions I see most often in women with hormonal imbalances.</p>
 <h3>1. PMS and mood</h3>
-<p>Research consistently shows that women with PMS have significantly lower red blood cell magnesium levels than women without PMS — and that supplementation can reduce PMS severity. The mechanism makes sense: magnesium is required for the synthesis of serotonin (the neurotransmitter most associated with mood stability) and supports the activity of GABA, the brain's primary inhibitory neurotransmitter responsible for calm and relaxation. Low magnesium means less serotonin and less GABA activity, which translates directly into the anxiety, irritability, low mood, and overwhelm that characterize luteal phase PMS. Magnesium glycinate is the form I most commonly recommend for this purpose — it is highly absorbable, does not cause loose stools, and the glycine component has additional calming effects of its own.</p>
+<p>Research consistently shows that women with PMS have significantly lower red blood cell magnesium levels than women without PMS — and that supplementation can reduce PMS severity. The mechanism makes sense: magnesium is required for the synthesis of serotonin (the neurotransmitter most associated with mood stability) and supports the activity of GABA, the brain's primary inhibitory neurotransmitter responsible for calm and relaxation. Low magnesium means less serotonin and less GABA activity, which translates directly into the anxiety, irritability, low mood, and overwhelm that characterize luteal phase PMS. <a href="https://us.fullscript.com/protocols/nicolejardim-magnesium-options" target="_blank" rel="noopener noreferrer" class="article-link">Magnesium glycinate</a> is the form I most commonly recommend for this purpose — it is highly absorbable, does not cause loose stools, and the glycine component has additional calming effects of its own.</p>
 <h3>2. Period cramps</h3>
 <p>Magnesium is a natural muscle relaxant. It works by competing with calcium at the cellular level — while calcium triggers muscle contraction, magnesium promotes relaxation. In the context of menstrual cramps, magnesium helps relax the smooth muscle of the uterus directly. It also modulates prostaglandin synthesis; the inflammatory prostaglandins (particularly PGF2-alpha) that drive cramping and pain are produced in higher amounts when magnesium is low. Several clinical trials have found that magnesium supplementation reduces the severity of dysmenorrhea (painful periods) and decreases the need for pain medication over multiple cycles of use.</p>
 <h3>3. Blood sugar and insulin sensitivity</h3>
@@ -103,6 +113,11 @@ const html = `
 <li><strong>Check your supplement label.</strong> Pay attention to the amount of elemental magnesium, not the total weight of the compound. A capsule of magnesium glycinate may weigh 500 mg, but only deliver 60–80 mg of elemental magnesium.</li>
 </ul>
 <h2>Food Sources of Magnesium</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-many-benefits-of-magnesium-for-your-health-cycle/img-07" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Dark leafy greens, nuts, and seeds are excellent dietary sources of magnesium</figcaption>
+</figure>
+
 <p>Supplementation is most effective when built on a dietary foundation. Prioritizing magnesium-rich whole foods means your supplement is filling gaps rather than doing all the work from scratch. The best food sources include:</p>
 <ul>
 <li><strong>Dark chocolate</strong> (70% or higher): one ounce provides approximately 64 mg of magnesium — genuinely one of the richest sources per serving</li>
@@ -115,7 +130,12 @@ const html = `
 <li><strong>Fatty fish</strong> (salmon, mackerel): a 3-ounce serving provides 26–30 mg alongside omega-3s and vitamin D</li>
 </ul>
 <p>A genuinely magnesium-rich diet — one built around seeds, nuts, leafy greens, legumes, and whole grains — can deliver 300–400 mg per day. But as discussed above, soil depletion and the practicalities of modern eating mean most women do not consistently hit this in practice, which is where supplementation fills in.</p>
-<h2>Transdermal Magnesium: Epsom Salt Baths</h2>
+<h2>Transdermal Magnesium: <a href="https://amzn.to/3D71cuV" target="_blank" rel="noopener noreferrer" class="article-link">Epsom Salt</a> Baths</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-many-benefits-of-magnesium-for-your-health-cycle/img-09" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Epsom salt baths offer a relaxing way to absorb magnesium through the skin</figcaption>
+</figure>
+
 <p>Beyond oral supplementation, transdermal magnesium — absorbed through the skin — is a useful complement, particularly for muscle relaxation, stress relief, and gentle cycle support. Epsom salt (magnesium sulfate) baths are the most accessible form. Adding one to two cups of Epsom salts to a warm bath and soaking for 20 minutes, two to three times per week, provides meaningful relaxation benefits and may support magnesium levels, though the evidence for significant systemic absorption through skin is less robust than for oral magnesium. The parasympathetic (rest-and-digest) benefit of a warm bath itself is real and supports the same nervous system reset that oral magnesium supports biochemically. Magnesium sulfate topical sprays (often marketed as magnesium oil) are another option for localized muscle tension or restless legs.</p>
 <p>Transdermal magnesium works best as a complement to oral supplementation, not a replacement for it.</p>
 <h2>Signs of Too Much Magnesium</h2>

@@ -39,6 +39,10 @@ const html = `
 <li><strong>Heart and cardiovascular health:</strong> Progesterone helps maintain healthy blood pressure and vessel tone, and works with estrogen to support cardiovascular function.</li>
 </ul>
 <h2>Signs and Symptoms of Low Progesterone</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/low-progesterone-why-it-happens-and-what-you-can-do-about-it/img-03" alt="" width="760" height="760" loading="lazy" />
+</figure>
+
 <p>Because progesterone acts across so many body systems, low levels produce a wide and seemingly unrelated scatter of symptoms. What they share is timing: they tend to appear or worsen in the luteal phase — the week or two before your period — and resolve (or at least improve) once your period begins.</p>
 <div class="symptom-grid">
 <div class="symptom-card"><p><strong>PMS and PMDD</strong> — mood swings, anxiety, overwhelm, cramps, migraines, breast soreness, bloating</p></div>

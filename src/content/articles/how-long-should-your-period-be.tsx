@@ -22,7 +22,7 @@ export const faqs = [
 
 const html = `
 <p>Period length is one of the most undervalued pieces of information your body gives you every month. Most women pay close attention to cramps or mood changes, but the number of days you bleed — and whether that number is creeping up or shrinking over time — is one of the clearest windows into your hormonal health.</p>
-<p>Here is the simple answer: <strong>a normal period lasts between 3 and 7 days.</strong> Anything shorter than 2 days or longer than 7 days warrants a closer look. This is true even if the bleeding itself feels manageable or painless. Length is not just a quantity issue — it is a signal about what is happening with your estrogen, progesterone, uterine health, thyroid, and more.</p>
+<p>Here is the simple answer: <strong>a normal period lasts between 3 and 7 days.</strong> Anything shorter than 2 days or longer than 7 days warrants a closer look. This is true even if the bleeding itself feels manageable or painless. Length is not just a quantity issue — it is a signal about what is happening with your estrogen, progesterone, uterine health, <a href="https://amzn.to/2fKMtgw" target="_blank" rel="noopener noreferrer" class="article-link">thyroid</a>, and more.</p>
 <p>Let's break down exactly what different period lengths mean, what drives them, and what you can do about it. For more context on the broader picture of cycle health, see this guide to <a href="/articles/what-is-normal-menstrual-cycle-period">what's normal in a menstrual cycle</a>.</p>
 <h2>The Normal Range — and What Sits Outside It</h2>
 <div class="range-bar">
@@ -42,6 +42,11 @@ const html = `
 <p>Within the normal range, there is variation. A consistent 4-day period is just as healthy as a consistent 6-day period, provided the flow volume is appropriate — roughly 35–80 ml of blood total across the cycle — and you are not passing large clots or soaking through protection rapidly. The key word is consistent. A sudden shift in your usual pattern — even if the new length still falls within "normal" — is worth paying attention to.</p>
 <p>The two ends of the spectrum, under 2 days and over 7 days, both point to something specific. They are not opposite problems caused by the same thing; they tend to have distinct root causes and require different approaches.</p>
 <h2>What Causes a Very Short Period (1–2 Days)?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-long-should-your-period-be/img-05" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Period length can change significantly during perimenopause</figcaption>
+</figure>
+
 <p>A period that comes and goes within a day or two is often interpreted as a good thing. Less mess, less disruption. But a very short bleed is almost never a sign that your body is running efficiently. In most cases, it reflects a uterine lining that is too thin to sustain more than a day or two of shedding — and that thinness is driven by one or more of the following:</p>
 <div class="causes-grid">
 <div class="cause-chip">
@@ -76,7 +81,7 @@ const html = `
 <p>The absence of pain does not equal health. A period can be completely painless and still be signaling a meaningful hormonal deficit. This distinction matters enormously because women with very short, light periods are frequently told "you're lucky" by well-meaning friends and sometimes by clinicians — and they delay investigation for years as a result.</p>
 <p>If your period has always been this short, it is worth getting a baseline hormone panel including estradiol, FSH, LH, and thyroid markers to understand what is actually happening hormonally. If your period used to be longer and has shortened over time, that change itself is the signal worth investigating.</p>
 <h2>What Causes a Very Long Period (8+ Days)?</h2>
-<p>A period that stretches beyond seven days — particularly if the bleeding is moderate to heavy — is one of the most important menstrual symptoms to take seriously. Prolonged bleeding leads to significant iron loss, contributes to anemia and fatigue, and in many cases reflects an underlying condition that will not resolve without targeted intervention. See the full guide to <a href="/articles/heavy-periods">heavy periods</a> for a deep dive into volume-related concerns.</p>
+<p>A period that stretches beyond seven days — particularly if the bleeding is moderate to heavy — is one of the most important menstrual symptoms to take seriously. Prolonged bleeding leads to significant <a href="https://amzn.to/2UmutK8" target="_blank" rel="noopener noreferrer" class="article-link">iron</a> loss, contributes to anemia and fatigue, and in many cases reflects an underlying condition that will not resolve without targeted intervention. See the full guide to <a href="/articles/heavy-periods">heavy periods</a> for a deep dive into volume-related concerns.</p>
 <p>The most common drivers of a long period include:</p>
 <h3>Estrogen Dominance</h3>
 <p>Estrogen dominance — where estrogen is high relative to progesterone, whether because estrogen is elevated or progesterone is inadequate — is the most frequent hormonal cause of prolonged bleeding. Estrogen is your lining-building hormone. When it is not sufficiently balanced by progesterone in the second half of your cycle, the lining can become excessively thick and take longer to shed fully. The result is a period that drags on for eight, ten, or even twelve days.</p>

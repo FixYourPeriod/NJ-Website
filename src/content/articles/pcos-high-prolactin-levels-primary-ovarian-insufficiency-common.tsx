@@ -26,6 +26,11 @@ const html = `
 <p>Two of the most commonly missed are <strong>hyperprolactinemia</strong> (chronically elevated prolactin) and <strong>primary ovarian insufficiency (POI)</strong>. All three conditions can cause irregular or absent periods, <a href="/articles/5-things-that-can-stop-ovulation-impair-fertility">disrupted ovulation</a>, and fertility challenges. But their underlying mechanisms are completely different — and so are their treatment approaches. Treating hyperprolactinemia like PCOS, or assuming POI is just "irregular cycles," can delay recovery by years and leave the real problem unaddressed.</p>
 <p>This article breaks down exactly what each condition is, how they differ, what to test for, and how to advocate for yourself in a medical system that too often stops at the first plausible-sounding diagnosis.</p>
 <h2>PCOS: What It Actually Is</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/pcos-high-prolactin-levels-primary-ovarian-insufficiency-common/img-01" alt="What do PCOS, high prolactin levels and premature ovarian failure have in common?" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">PCOS, high prolactin, and primary ovarian insufficiency share similar symptoms but require different treatment approaches</figcaption>
+</figure>
+
 <p>Polycystic ovary syndrome is the most common endocrine-metabolic disorder in women of reproductive age and the leading cause of ovulatory infertility. But as its name suggests, it is a <em>syndrome</em> — a cluster of symptoms, not a single disease with a single cause. This distinction matters enormously, because it means the same diagnosis can describe very different underlying conditions in different people.</p>
 <h3>The Rotterdam Criteria</h3>
 <p>The standard diagnostic framework — the <strong>Rotterdam criteria</strong> — requires that a person present with at least two of the following three features:</p>

@@ -26,6 +26,10 @@ const html = `
 <p>Low libido is one of the most common complaints among women on hormonal birth control, and it is also one of the most routinely dismissed. Patients report it. Studies confirm it. And yet it continues to be treated as something psychological — a problem to be worked around rather than a hormonal side effect to be taken seriously.</p>
 <p>Let me be direct: the pill has well-documented mechanisms by which it suppresses sexual desire, diminishes physical arousal, and alters the tissues involved in sexual function. Understanding those mechanisms is the first step toward doing something about them — whether you stay on the pill, switch methods, or come off it entirely.</p>
 <h2>Why the Pill Affects Libido: The Hormonal Mechanisms</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-pill-your-sex-drive-how-to-start-reclaiming-your-va-va-voom/img-02" alt="" width="760" height="507" loading="lazy" />
+</figure>
+
 <div class="numbered-section">
 <div class="numbered-heading">
 <span class="num">01</span>

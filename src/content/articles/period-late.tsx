@@ -29,6 +29,11 @@ const html = `
 <p>What this means in practice: if your cycle is usually 30 days and your period arrives on day 33, that is not necessarily late. If your cycle has been reliably 28 days and your period hasn't shown by day 38, that is worth investigating. <strong>Your personal baseline matters far more than any number on a chart.</strong></p>
 <p>Cycle length is determined largely by when you ovulate. Ovulation can shift earlier or later depending on stress, nutrition, sleep, illness, and a host of other factors — and the period follows ovulation, typically by 11 to 17 days. So a "late" period is almost always a sign of late or absent ovulation. Understanding that is the key to understanding everything that follows. For a deeper look at what a healthy cycle looks like from start to finish, read <a href="/articles/what-is-normal-menstrual-cycle-period">What Is a Normal Menstrual Cycle?</a></p>
 <h2>9 Reasons Your Period May Be Late (That Have Nothing to Do With Pregnancy)</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/period-late/img-02" alt="Sand castle on the beach at sunset" width="760" height="507" loading="lazy" />
+  <figcaption class="article-image-caption">A late period is often your body's way of signaling that something has shifted</figcaption>
+</figure>
+
 <h3>1. Stress and HPA Axis Disruption</h3>
 <p>This is the most common reason periods go missing or run late, and it operates through a very specific biological mechanism. Your hypothalamic-pituitary-adrenal (HPA) axis — the system that governs your stress response — is in direct conversation with your hypothalamic-pituitary-ovarian (HPO) axis, which governs your menstrual cycle.</p>
 <p>When stress hormones like cortisol rise, they suppress the secretion of GnRH (gonadotropin releasing hormone) from the hypothalamus. GnRH is the signal that tells your pituitary to release FSH and LH — the hormones that drive follicle development and trigger ovulation. Cortisol also slows down the GnRH pulse generator, which directly delays or blunts the LH surge that kicks off ovulation. The result: ovulation is delayed, and your period follows suit — or doesn't come at all.</p>

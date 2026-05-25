@@ -26,6 +26,11 @@ const html = `
 <p>I want to tell you something different: <strong>heavy bleeding is not the problem — it is the symptom.</strong> It is your body's response to underlying imbalances and conditions that, when addressed properly, allow the bleeding to normalize. Chasing the symptom with hormonal contraception or medication suppresses the signal without fixing what is generating it. Once you treat the cause, periods genuinely get lighter. I have seen it happen with thousands of women.</p>
 <p>This article covers exactly what "heavy" means clinically, the eight most common root causes, the health consequences of chronic heavy bleeding, and a full step-by-step protocol drawn from my evidence-informed practice. Let's dig in.</p>
 <h2>What Actually Counts as a Heavy Period?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/heavy-periods/img-01" alt="Everything you ever wanted to know about heavy periods" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding what qualifies as heavy menstrual bleeding</figcaption>
+</figure>
+
 <p>The clinical term for heavy menstrual bleeding is <strong>menorrhagia</strong>. Clinically, it is defined as blood loss of more than 80 ml per cycle. For reference, a normal period involves roughly 35–60 ml of blood. One fully soaked regular pad or tampon holds approximately 5 ml, so a normal cycle uses roughly six to ten pads or tampons total.</p>
 <p>You have a heavy period if you experience any of the following:</p>
 <ul>
@@ -33,12 +38,17 @@ const html = `
 <li>Passing <strong>blood clots larger than a quarter</strong> (approximately 2.5 cm or bigger)</li>
 <li>Your period <strong>lasts eight days or longer</strong> consistently</li>
 <li>You need to use <strong>double protection</strong> (a tampon plus a pad, or a pad plus period underwear) to prevent leaking</li>
-<li>You are <strong>emptying a 30 ml menstrual cup more than twice a day</strong></li>
+<li>You are <strong>emptying a 30 ml <a href="https://amzn.to/2fL3EyI" target="_blank" rel="noopener noreferrer" class="article-link">menstrual cup</a> more than twice a day</strong></li>
 <li>You have to get up during the night to change your protection</li>
 <li>You experience <strong>profound fatigue, brain fog, or shortness of breath</strong> during or after your period — signs your bleeding is affecting your iron stores</li>
 </ul>
 <p>If several of these apply to you, take them seriously. The fact that your mother or sister also bleeds this way does not make it biologically normal — it may just mean the same root cause runs in your family.</p>
 <h2>Why Heavy Periods Happen: The 8 Root Causes</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/heavy-periods/img-04" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Hormonal changes can significantly impact period flow</figcaption>
+</figure>
+
 <p>Heavy periods are not a single condition with a single cause. They are a shared symptom of multiple distinct underlying issues. Identifying your specific root cause is essential, because it determines your path forward. Here are the eight most common drivers:</p>
 <h3>1. Estrogen Dominance and Relative Progesterone Deficiency</h3>
 <p>This is the most common hormonal driver of heavy bleeding, and it is worth understanding clearly. <a href="/articles/the-real-reason-your-breasts-are-sore-before-your-period">Estrogen dominance</a> simply means estrogen is too high <em>relative to progesterone</em>. This can happen when estrogen is genuinely elevated, or when progesterone is low — or both simultaneously.</p>

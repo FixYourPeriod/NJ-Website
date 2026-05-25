@@ -30,6 +30,11 @@ const html = `
 <p><strong>Non-cyclic breast pain</strong> is not tied to the menstrual cycle. It may be constant or intermittent, often affects one breast, and can have many causes — from musculoskeletal issues and cysts to benign fibroadenomas. Non-cyclic pain should always be evaluated by a healthcare provider to rule out structural causes.</p>
 <p>If your breast pain is clearly cyclical — comes before your period, goes away when bleeding starts — read on. Your hormones are the key.</p>
 <h2>The Hormonal Picture Behind Breast Tenderness</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-real-reason-your-breasts-are-sore-before-your-period/img-01" alt="The Real Reason Your Breasts Are Sore Before Your Period" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding the hormonal drivers behind cyclical breast tenderness</figcaption>
+</figure>
+
 <p>Breast tissue is highly sensitive to hormonal fluctuations. The interplay between estrogen, progesterone, prolactin, and thyroid hormones all shapes what you feel in your breasts across the cycle.</p>
 <h3>Estrogen: the proliferative driver</h3>
 <p>Estrogen causes breast tissue to grow and retain fluid. A moderate rise in estrogen during the follicular phase is completely normal and does not cause pain. The problem arises when estrogen is too high relative to progesterone — a state commonly called estrogen dominance.</p>
@@ -43,7 +48,7 @@ const html = `
 <h3>Thyroid function</h3>
 <p>Hypothyroidism — low or sluggish thyroid function — is a frequently overlooked driver of cyclical breast tenderness. Thyroid hormones support liver detoxification of estrogen, regulate prolactin levels, and support overall ovarian function. When thyroid hormones are insufficient, estrogen clearance slows, prolactin can rise, and ovulation can become irregular — all of which worsen breast tenderness. If you have other symptoms of low thyroid (fatigue, cold hands and feet, constipation, hair loss, low mood), it is worth getting a full thyroid panel including TSH, free T3, free T4, and thyroid antibodies.</p>
 <h3>Iodine deficiency</h3>
-<p>Breast tissue is one of the highest concentrators of iodine in the body outside of the thyroid. Iodine deficiency makes breast tissue more sensitive to estrogen stimulation. Research has shown that iodine supplementation can meaningfully reduce cyclical breast pain, likely through both its direct effect on breast tissue sensitivity and its role in thyroid hormone production. This is why many women find that addressing iodine deficiency is a game-changer for breast tenderness specifically.</p>
+<p>Breast tissue is one of the highest concentrators of <a href="https://amzn.to/2TS0tpE" target="_blank" rel="noopener noreferrer" class="article-link">iodine</a> in the body outside of the thyroid. Iodine deficiency makes breast tissue more sensitive to estrogen stimulation. Research has shown that iodine supplementation can meaningfully reduce cyclical breast pain, likely through both its direct effect on breast tissue sensitivity and its role in thyroid hormone production. This is why many women find that addressing iodine deficiency is a game-changer for breast tenderness specifically.</p>
 <h2>What Creates This Hormonal Imbalance?</h2>
 <p>Understanding the "what" — excess estrogen, low progesterone, high prolactin — is only half the picture. The more useful question is: what is causing it? Here are the most common root causes I see.</p>
 <h3>Impaired estrogen clearance through the liver</h3>

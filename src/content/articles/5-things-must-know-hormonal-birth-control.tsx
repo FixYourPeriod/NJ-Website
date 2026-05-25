@@ -29,6 +29,11 @@ const html = `
 <div class="numbered-heading">
 <span class="num">01</span>
 <h2>It Doesn't Regulate Your Cycle — It Suppresses It</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/5-things-must-know-hormonal-birth-control/img-02" alt="birth control pill in handbag - healthcare and medicine" width="760" height="507" loading="lazy" />
+  <figcaption class="article-image-caption">Many women are prescribed hormonal birth control without understanding how it truly affects their bodies</figcaption>
+</figure>
+
 </div>
 <p>This is perhaps the most widespread misconception about hormonal birth control, and it matters enormously. When a doctor prescribes the pill for irregular periods, painful periods, or PCOS, they often frame it as "regulating" your cycle. It doesn't. What it does is suppress your cycle entirely — and replace it with something that looks like a period but isn't one.</p>
 <p>The combined oral contraceptive pill works by shutting down the communication pathway between your brain and your ovaries. Specifically, it suppresses the hypothalamic-pituitary-ovarian (HPO) axis, preventing the hormonal cascade that would normally trigger ovulation. No ovulation means no real hormonal cycle — no estrogen rise, no LH surge, no progesterone production in the luteal phase.</p>
@@ -81,7 +86,7 @@ const html = `
 <div class="protocol-box">
 <h3>The Birth Control Nutrient Support Protocol</h3>
 <ul>
-<li><strong>B-complex:</strong> Look for a methylated B-complex (containing methylfolate and methylcobalamin) for better absorption. This is especially important if you have an MTHFR gene variant. Take daily with food.</li>
+<li><strong><a href="https://www.amazon.com/gp/product/B001CYK13Y/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B001CYK13Y&amp;linkCode=as2&amp;tag=thehealelem-20" target="_blank" rel="noopener noreferrer" class="article-link">B-complex</a>:</strong> Look for a methylated B-complex (containing methylfolate and methylcobalamin) for better absorption. This is especially important if you have an MTHFR gene variant. Take daily with food.</li>
 <li><strong>Zinc:</strong> 15–25 mg daily with food (zinc can cause nausea on an empty stomach). Zinc picolinate or zinc bisglycinate are well absorbed forms.</li>
 <li><strong>Magnesium glycinate:</strong> 200–400 mg daily, ideally taken in the evening. It supports sleep quality while replenishing stores. Glycinate form is gentle on the digestive system.</li>
 <li><strong>Antioxidants (Vitamin C &amp; CoQ10):</strong> 500–1,000 mg vitamin C daily with food. 100–200 mg CoQ10 (as ubiquinol for best absorption).</li>

@@ -25,6 +25,11 @@ const html = `
 <p>Most women who experience recurrent urinary tract infections have heard some version of the same advice: drink more water, wipe front to back, urinate after sex. And while none of that is wrong, it completely misses the deeper picture. If you are getting UTIs three or more times a year — or twice within six months — your body is not just unlucky. Something in your internal environment has shifted in a way that is making you vulnerable, and no amount of cranberry juice is going to fix it on its own.</p>
 <p>Understanding why chronic UTIs happen requires looking at a set of interconnected systems: your vaginal microbiome, your gut, your hormones, and your immune function. When any of these are out of balance, the conditions that normally protect your bladder and urethra break down — and bacteria, most often <em>Escherichia coli</em>, get the foothold they need to cause infection after infection.</p>
 <h2>What Makes a UTI "Chronic"?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/chronic-utis-killing-sex-life/img-01" alt="Natural solutions for chronic UTI’s" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Natural approaches can help break the cycle of chronic UTIs</figcaption>
+</figure>
+
 <p>The clinical definition of recurrent UTI (rUTI) is either three or more confirmed infections in a twelve-month period, or two or more infections within a six-month window. By that measure, recurrent UTIs are strikingly common — affecting roughly 25–30% of women who have had a first UTI. Despite how common they are, most women receive the same antibiotic prescription each time, with little investigation into why they keep happening.</p>
 <p>The infections are not random. They reflect a pattern — usually a persistent disruption in the protective environment of the lower urinary and genital tract. Treating each infection individually without addressing that underlying disruption is like bailing water out of a leaky boat without patching the hole.</p>
 <h2>Why Some Women Keep Getting UTIs</h2>

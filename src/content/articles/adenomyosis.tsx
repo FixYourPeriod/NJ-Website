@@ -25,6 +25,11 @@ const html = `
 <p>If you have been dealing with progressively heavier periods, increasingly severe cramps, and a doctor who tells you your uterus looks "bulky" or "enlarged" — adenomyosis may be at the root of it. It is a condition that affects a significant number of women in their reproductive years, yet it remains poorly understood, frequently dismissed, and consistently underdiagnosed. Many women spend years cycling through treatments that address their symptoms without anyone identifying the underlying cause.</p>
 <p>I want to give you a thorough, honest picture of what adenomyosis actually is, what causes it, how it is diagnosed, and what a genuinely comprehensive management strategy looks like — one that includes natural and lifestyle interventions alongside the appropriate medical options.</p>
 <h2>What Adenomyosis Actually Is</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/adenomyosis/img-03" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Adenomyosis involves endometrial tissue growing into the uterine wall</figcaption>
+</figure>
+
 <p>Adenomyosis is a condition in which tissue similar to the uterine lining — the endometrium — grows into the muscular wall of the uterus, known as the myometrium. That is the key distinction: the tissue is growing <em>into</em> the uterine wall, not outside the uterus. Think of it like a thick, saturated sponge embedded within the uterine muscle itself.</p>
 <p>This displaced tissue behaves just like the endometrial lining does during a normal cycle: it thickens and engorges in response to estrogen, then breaks down and bleeds with each period. But because it is trapped inside the muscular wall with nowhere to shed, this process creates intense pressure, inflammation, and abnormal uterine contractions — which is why the pain and bleeding associated with adenomyosis can be so severe.</p>
 <p>Over time, as the tissue continues to grow into the myometrium, the uterine walls thicken and the uterus itself becomes enlarged. This is what doctors mean when they describe a "bulky uterus" — a phrase women with adenomyosis hear frequently, often without a clear explanation of what is causing it or what it means for their health.</p>
@@ -33,6 +38,10 @@ const html = `
 <p>In <a href="/articles/endometriosis">endometriosis</a>, the endometrial-like tissue grows <em>outside</em> the uterus: on the fallopian tubes, ovaries, peritoneum, bowel, bladder, and in rare cases even further afield. In adenomyosis, the tissue grows <em>into</em> the uterine wall itself. One condition is about invasion outward; the other is about invasion inward.</p>
 <p>Importantly, these two conditions frequently co-occur. Research suggests that approximately 20 percent of women with <a href="/articles/endometriosis">endometriosis</a> also have adenomyosis. If you have endometriosis, adenomyosis is worth investigating — especially if your bleeding is heavier or your cramps are worse than endometriosis alone would typically explain. The reverse is also true: if you have adenomyosis and your pain seems disproportionate to what imaging shows, endometriosis may also be present.</p>
 <h2>Symptoms: What Adenomyosis Actually Feels Like</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/adenomyosis/img-04" alt="" width="760" height="760" loading="lazy" />
+</figure>
+
 <p>Symptoms of adenomyosis tend to worsen progressively over time, and they often intensify in the years approaching perimenopause as estrogen levels fluctuate more dramatically. Up to a third of women with adenomyosis are completely asymptomatic — the condition is found incidentally. For those who do have symptoms, the picture typically includes:</p>
 <ul>
 <li><strong>Extremely heavy bleeding:</strong> This is driven by two factors — an increased surface area of the endometrium (because the tissue has invaded further into the uterine wall) and increased vascularization of the uterine lining. The result is <a href="/articles/heavy-periods">heavy periods</a> that can involve large clots, flooding, and bleeding that soaks through protection within an hour.</li>

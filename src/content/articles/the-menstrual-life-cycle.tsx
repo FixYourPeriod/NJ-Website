@@ -24,6 +24,11 @@ const html = `
 <p>If you've ever noticed that your period in your thirties feels nothing like it did at seventeen, you're not imagining it. Your hormones are not a fixed backdrop to your life — they are an evolving story, written in chapters. From your very first period through the last, your body is constantly shifting, and every decade brings its own hormonal signature.</p>
 <p>Understanding these stages doesn't just satisfy curiosity. It gives you a framework for decoding your symptoms, making better decisions for your health, and recognizing what's normal versus what deserves attention. The menstrual life cycle is one of the most underappreciated maps we have for understanding female health — and it's time we start reading it.</p>
 <h2>Menarche: Your First Period and Why It Matters</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/the-menstrual-life-cycle/img-02" alt="" width="400" height="401" loading="lazy" />
+  <figcaption class="article-image-caption">The journey from menarche through menopause spans decades of hormonal change</figcaption>
+</figure>
+
 <p>The story begins with <strong>menarche</strong> — your first period — which typically arrives somewhere between ages 12 and 13, though anywhere from age 8 to 16 is considered within the range of normal. Ideally, a girl will have her first period by age 15. If it hasn't arrived by then, that warrants a conversation with a healthcare provider to rule out primary amenorrhea or other underlying causes.</p>
 <p>Menarche is triggered by a cascade that starts long before any blood appears. A neuropeptide called kisspeptin acts as the gatekeeper of puberty, stimulating the pulsatile release of gonadotropin-releasing hormone (GnRH) from the hypothalamus. GnRH signals the pituitary gland to release follicle-stimulating hormone (FSH) and luteinizing hormone (LH), which then prompt the ovaries to begin producing estrogen and progesterone. This is the same hormonal axis that will govern your cycle for the next several decades.</p>
 <p>What's often overlooked is just how long the machinery has been in place. A girl is born with her maximum lifetime supply of primordial follicles already in her ovaries — this number only ever decreases from birth onward. By puberty, the pool is already significantly smaller than it was at birth. From that first cycle forward, follicles are continuously recruited, developed, and either ovulated or lost through a process called atresia.</p>
@@ -39,6 +44,10 @@ const html = `
 <p>The good news is that the body in its twenties is exceptionally responsive. <a href="/articles/what-is-normal-menstrual-cycle-period">Understanding what a healthy cycle actually looks like</a> — and learning to track it — can make an enormous difference. The four phases of the menstrual cycle (menstruation, follicular, ovulatory, and luteal) are all windows into what's happening hormonally, and small changes to nutrition, sleep, and stress management often produce significant results quickly at this stage.</p>
 <p>Pregnancy, if it occurs, represents its own profound hormonal chapter within this phase. After delivery, estrogen and progesterone — which were elevated throughout pregnancy — drop acutely within the first 24 hours once the placenta is delivered. For many women, postpartum periods are completely different from what they experienced before: heavier, more painful, or more irregular. This is real, it is common, and it is worth addressing rather than simply enduring.</p>
 <h2>Your Thirties: Hormonal Resilience Begins to Shift</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-menstrual-life-cycle/img-03" alt="" width="760" height="760" loading="lazy" />
+</figure>
+
 <p>One of the most common things I hear from women in their early thirties is that something has changed — cycles are getting shorter, PMS is worse, periods are heavier, or symptoms they never had before are showing up. This is not imaginary. <strong>The thirties represent the beginning of a gradual shift in hormonal resilience.</strong></p>
 <p>Cycles may begin to shorten slightly as the follicular phase compresses. Some women notice heavier bleeding or spotting they didn't have before. Others see lighter, shorter periods — sometimes a sign of anovulatory cycles, iron deficiency, or diminished ovarian reserve. Migraines, worsening PMS, and new-onset acne in the thirties are all patterns worth paying attention to, because they usually point to something that can be addressed.</p>
 <p>Technically, perimenopause begins at 35 — but this doesn't mean symptoms immediately arrive on your thirty-fifth birthday. For most women in their mid-to-late thirties, what's actually happening is a subtle increase in anovulatory cycles each year. Without ovulation, the corpus luteum never forms — and without the corpus luteum, <strong>progesterone production drops.</strong> Even a few extra anovulatory cycles per year can begin to tip the estrogen-to-progesterone ratio. More on that below.</p>
@@ -49,6 +58,11 @@ const html = `
 <a class="btn btn-terra" href="https://fixyourperiod.app/quiz" target="_blank">Take the Free Assessment →</a>
 </div>
 <h2>Perimenopause: The Transition That Begins Long Before You Expect It</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-menstrual-life-cycle/img-09" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Perimenopause brings significant changes to your menstrual cycle</figcaption>
+</figure>
+
 <p>Perimenopause is the transitional decade leading up to the final period — and it is far more nuanced than the hot-flash narrative most of us grew up with. It unfolds in two distinct phases, each with its own hormonal signature, and understanding the difference can clarify a lot of confusing symptoms.</p>
 <h3>Phase One: Progesterone Drops First</h3>
 <p>The first hallmark of perimenopause isn't a drop in estrogen. It's a drop in <strong>progesterone</strong>. As ovulation becomes less frequent or less robust in the early forties, the corpus luteum — the small gland that forms after the egg is released and produces most of the body's progesterone — either forms inconsistently or produces less of the hormone than it once did.</p>
@@ -60,6 +74,10 @@ const html = `
 <p>Testosterone also fluctuates during perimenopause. It temporarily rises due to increased FSH stimulation, which can cause facial hair growth and hair thinning on the scalp — symptoms that catch many women completely off guard. Eventually testosterone also declines, contributing to fatigue, low libido, and reduced muscle mass.</p>
 <p>As ovulation becomes increasingly rare, cycles lengthen and periods eventually become lighter, shorter, or just spotting. The body is winding down a system that has been running for decades, and it does so gradually.</p>
 <h2>Menopause and Beyond</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-menstrual-life-cycle/img-05" alt="" width="760" height="760" loading="lazy" />
+</figure>
+
 <p>Menopause is officially defined as twelve consecutive months without a period. It is a single moment in time — a threshold you cross, not a prolonged state. The years before that crossing are perimenopause; everything after is post-menopause.</p>
 <p>Hormonally, menopause marks the near-complete cessation of ovarian progesterone and estradiol production. <strong>The adrenal glands take over as the primary source of both progesterone (in very small amounts) and the precursor hormones DHEA and androstenedione, which are converted to estrone</strong> — the estrogen dominant in post-menopause — through a process called aromatization, primarily in fat tissue.</p>
 <p>This is why adrenal health matters so much going into menopause. If chronic stress, overwork, and sleep deprivation have taxed the adrenals throughout the reproductive years, there will be less reserve to draw on when the ovaries step back. The symptoms that often make menopause feel catastrophic — severe hot flashes, profound fatigue, major mood disruption — are frequently amplified by adrenal insufficiency, not just ovarian decline.</p>
@@ -71,6 +89,10 @@ const html = `
 <p><strong>Stress and the HPA axis:</strong> Cortisol does not exist in isolation. Chronic stress suppresses GnRH, which disrupts LH and FSH, which impairs ovulation, which drops progesterone. This chain reaction plays out identically whether you are sixteen or forty-six — the mechanism is the same; the consequences just compound over time. <a href="/articles/how-stress-affects-your-menstrual-cycle">Stress and the menstrual cycle</a> are inextricably linked, and any protocol that ignores stress management is incomplete.</p>
 <p><strong>Sleep:</strong> Progesterone promotes deep, restorative sleep. As it declines in perimenopause, sleep deteriorates — and poor sleep raises cortisol, which further disrupts hormonal balance. Protecting sleep becomes increasingly important as a woman moves through the later stages of her hormonal life.</p>
 <h2>Each Phase Is a New Season</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-menstrual-life-cycle/img-06" alt="" width="760" height="760" loading="lazy" />
+</figure>
+
 <p>There is a tendency in our culture to view the menstrual life cycle as a story of loss — a slow decline from the fertility of youth toward the inevitable diminishment of menopause. I reject that framing entirely. Each phase of a woman's hormonal life brings its own kind of intelligence, its own gifts, and its own demands.</p>
 <p>The teen years are a time of awakening — chaotic, yes, but full of the raw energy of a body discovering itself. The reproductive years are a time of deepening self-knowledge, where the cycle becomes a reliable mirror for everything happening in your health and life. Perimenopause is an invitation to reckon honestly with what has been ignored or deferred, to build new foundations before the next chapter begins. And post-menopause, for many women, brings a kind of clarity and freedom that the hormonal fluctuations of the cycling years couldn't always allow.</p>
 <p>Your cycle is not a nuisance to manage. It is a vital sign — one that speaks to your metabolic health, your stress response, your nutritional status, your immune function, and your neurological wellbeing. <a href="/articles/four-phases-of-your-menstrual-cycle">Understanding its four phases</a> is the beginning of learning its language. Understanding the broader arc of the menstrual life cycle is how you learn to read the whole story.</p>

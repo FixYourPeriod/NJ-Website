@@ -25,6 +25,11 @@ const html = `
 <p>The luteal phase is arguably the most underappreciated part of your menstrual cycle. Most cycle conversations center on ovulation or your period itself — but what happens in the days between those two events matters enormously for how you feel, whether you can get pregnant, and whether your period actually shows up on time and without a lot of drama.</p>
 <p>A short luteal phase is one of those issues that can quietly wreak havoc on your hormones for years before anyone identifies it. You might be spotting before your period, dealing with relentless PMS, struggling to conceive, or simply feeling "off" in the second half of your cycle — and no one has ever told you why. This article is here to change that.</p>
 <h2>What Is the Luteal Phase?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/lengthen-your-luteal-phase/img-02" alt="Menstrual Cycle" width="760" height="628" loading="lazy" />
+  <figcaption class="article-image-caption">The four phases of the menstrual cycle</figcaption>
+</figure>
+
 <p>Your menstrual cycle has four phases: menstruation, the follicular phase, ovulation, and the luteal phase. The luteal phase begins the day after you ovulate and ends the day before your next period arrives. It is the second half of your cycle, and it is dominated by one very important hormone: <strong>progesterone</strong>.</p>
 <p>Here is what actually happens during the luteal phase. When your ovary releases an egg at ovulation, the empty follicle transforms into a temporary endocrine gland called the <strong>corpus luteum</strong>. This remarkable little structure — which your body builds from scratch in under 24 hours — is what produces the bulk of your progesterone. It pumps out progesterone to thicken and stabilize the uterine lining in case a fertilized egg needs to implant. If no pregnancy occurs, the corpus luteum eventually breaks down, progesterone drops, and your period begins.</p>
 <p>The length of your luteal phase depends entirely on how long the corpus luteum can maintain its progesterone production. When the corpus luteum is healthy and producing adequate progesterone, the luteal phase runs its full course. When it is not, you end up with a short luteal phase — and all the symptoms that come with it.</p>
@@ -33,6 +38,11 @@ const html = `
 <p>A luteal phase of <strong>10 days or fewer</strong> is considered a short luteal phase. When it is 9 days or less, this is formally known as <strong>Luteal Phase Deficiency (LPD)</strong>. At this length, there is not enough progesterone exposure to properly prepare the endometrium, and if a fertilized egg is traveling down the fallopian tube, it may not reach the uterus before the lining starts to shed.</p>
 <p>One more thing worth knowing: because the length of the follicular phase (the first half of your cycle) varies from person to person and cycle to cycle, your total cycle length can vary — but your luteal phase tends to be relatively consistent once ovulation occurs. This means that even if you have a 26-day cycle or a 34-day cycle, your luteal phase should still be within that 11–17 day range. If it is not, something needs to be addressed.</p>
 <h2>Symptoms of a Short Luteal Phase</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/lengthen-your-luteal-phase/img-04" alt="PMS!" width="760" height="757" loading="lazy" />
+  <figcaption class="article-image-caption">PMS symptoms can signal a short luteal phase</figcaption>
+</figure>
+
 <p>The symptoms of a short luteal phase are essentially the symptoms of <a href="/articles/low-progesterone-why-it-happens-and-what-you-can-do-about-it">low progesterone</a>, because that is the underlying driver. Here is what to look for:</p>
 <ul>
 <li><strong>Spotting 3 or more days before your period</strong> — this is one of the most telltale signs. When progesterone drops too quickly or was never high enough, the uterine lining begins to shed before your actual period. One to two days of brownish spotting before a period is usually fine; three or more days is a signal.</li>
@@ -47,7 +57,7 @@ const html = `
 <p>You cannot fix a short luteal phase if you do not know you have one — and most people have no idea how long their luteal phase actually is. The good news is that tracking it is straightforward once you know what to look for.</p>
 <p>The luteal phase begins the day after ovulation, so you first need to <strong>confirm when you ovulate</strong>. Here are the most reliable ways to do that:</p>
 <ul>
-<li><strong>Basal Body Temperature (BBT) tracking</strong> — progesterone is a thermogenic hormone, meaning it raises your resting body temperature. After ovulation, you will see a sustained temperature shift of roughly 0.2°C upward that lasts for the rest of your cycle. The first day of this sustained rise is typically the day after ovulation.</li>
+<li><strong><a href="https://www.amazon.com/gp/product/0060881909/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0060881909&amp;linkCode=as2&amp;tag=thehealelem-20" target="_blank" rel="noopener noreferrer" class="article-link">Basal Body Temperature (BBT) tracking</a></strong> — progesterone is a thermogenic hormone, meaning it raises your resting body temperature. After ovulation, you will see a sustained temperature shift of roughly 0.2°C upward that lasts for the rest of your cycle. The first day of this sustained rise is typically the day after ovulation.</li>
 <li><strong>Cervical fluid monitoring</strong> — in the days leading up to ovulation, cervical fluid becomes clear, slippery, and stretchy (similar to raw egg white). After ovulation, progesterone causes it to become thick, tacky, or dry. The last day of this fertile-quality fluid is typically the day of or day before ovulation.</li>
 <li><strong>LH testing strips</strong> — over-the-counter LH strips detect the luteinizing hormone surge that triggers ovulation. The LH surge typically starts 24–36 hours before ovulation, so tracking with these strips alongside BBT gives you the clearest picture.</li>
 </ul>

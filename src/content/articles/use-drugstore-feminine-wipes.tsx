@@ -28,6 +28,11 @@ const html = `
 <p>The vagina also produces natural discharge, which serves as a continuous self-flushing mechanism — removing dead cells, old blood, and other debris. This is completely normal and healthy. It is not something that needs to be wiped away with a chemical-laden cloth.</p>
 <p>The vulva — the external tissue — does benefit from gentle cleansing, particularly during menstruation. But even there, the skin is delicate and highly sensitive. Many of the ingredients found in drugstore feminine wipes are inappropriate for any mucous membrane tissue, let alone the most sensitive area of your body.</p>
 <h2>What's Actually Inside Conventional Feminine Wipes</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/use-drugstore-feminine-wipes/img-02" alt="Feminine Wipes " width="760" height="570" loading="lazy" />
+  <figcaption class="article-image-caption">Many drugstore feminine wipes contain problematic ingredients</figcaption>
+</figure>
+
 <p>Ingredient transparency in the feminine hygiene category has historically been poor. Manufacturers have not been required to disclose full ingredient lists in the same way food and pharmaceutical companies are, though this is slowly changing. When you do look at the ingredient panels, here is what typically shows up in conventional drugstore wipes:</p>
 <div class="ingredient-list">
 <h4>Common Problem Ingredients to Avoid</h4>

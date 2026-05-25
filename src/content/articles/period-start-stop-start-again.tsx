@@ -36,6 +36,11 @@ const html = `
 <p>In the second half of your cycle (the luteal phase), progesterone rises after ovulation to thicken and stabilize the uterine lining in preparation for a potential pregnancy. If no pregnancy occurs, progesterone drops — and that drop is what triggers menstruation. The lining, no longer supported by progesterone, begins to shed.</p>
 <p>When this hormonal withdrawal is smooth and complete, your period tends to flow in a relatively continuous pattern. When it is uneven, halting, or complicated by other hormonal factors — including the role of estrogen, prostaglandins, and local uterine factors — the shedding process can become irregular. This is the root of most start-stop patterns.</p>
 <h2>Root Causes of a Period That Starts, Stops, and Starts Again</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/period-start-stop-start-again/img-02" alt="Uterine Positions" width="400" height="436" loading="lazy" />
+  <figcaption class="article-image-caption">Uterine position can affect how your period flows</figcaption>
+</figure>
+
 <h3>1. Hormonal Fluctuations: Estrogen and Progesterone Timing Issues</h3>
 <p>The most common underlying driver of an on-and-off period is an imbalance in the estrogen-to-progesterone ratio, or inconsistent hormonal signaling as the cycle transitions into menstruation.</p>
 <p>When progesterone does not drop cleanly at the end of the luteal phase — either because it was not high enough to begin with, or because there are small fluctuations as it declines — the uterine lining does not receive a single, clear signal to shed all at once. Instead, shedding can happen in a fragmented, stop-start way.</p>

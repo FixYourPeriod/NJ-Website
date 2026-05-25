@@ -26,6 +26,11 @@ const html = `
 <p>Female bodies are cyclical by nature, producing varying quantities of estrogen, progesterone, testosterone, and other hormones at different points throughout the month. These fluctuations are not flaws or inconveniences — they are the operating system. Understanding them is one of the most powerful things you can do for your health. If you have ever felt like a completely different person from one week to the next, that is because hormonally, you practically are.</p>
 <p>The menstrual cycle is divided into four phases. Two major ones — the <strong>follicular phase</strong> and the <strong>luteal phase</strong> — bookend the cycle. Nested within them are two events: <strong>menstruation</strong> at the start and <strong>ovulation</strong> at the midpoint. Each phase has its own hormonal signature, its own physical and emotional texture, and its own nutritional and lifestyle needs. Let's walk through all four.</p>
 <h2>Phase 1: The Menstrual Phase (Days 1–5)</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/four-phases-of-your-menstrual-cycle/img-04" alt="MENSTRUATION PHASE" width="760" height="642" loading="lazy" />
+  <figcaption class="article-image-caption">The menstrual phase marks the beginning of your cycle</figcaption>
+</figure>
+
 <div class="phase-label">Days 1–5 • Estrogen &amp; Progesterone at Their Lowest</div>
 <h3>What is happening hormonally</h3>
 <p>Day 1 of your cycle is the first day of full bleeding — not spotting, but actual flow. At this point, both estrogen and progesterone have dropped to their lowest levels of the entire cycle. It is this withdrawal of progesterone, specifically, that signals the uterine lining it is time to shed. The endometrium releases pro-inflammatory prostaglandins that trigger uterine contractions, which push the lining out. Menstruation is, at its core, an inflammatory process.</p>
@@ -36,8 +41,13 @@ const html = `
 <p>Heavy bleeding that soaks through a pad or tampon every hour for several hours, clots larger than a quarter, or bleeding that lasts more than 7 days are also signs worth investigating, not normalizing.</p>
 <h3>What to eat and do</h3>
 <p>This is a time for genuine rest. Your body is doing significant work, and your energy is naturally lower. Honor that rather than push through it. Nutritionally, focus on iron-rich foods to replenish what is lost through bleeding — red meat, dark leafy greens, lentils, and pumpkin seeds. Pair plant-based iron with vitamin C to improve absorption. Omega-3 fatty acids (found in fatty fish, walnuts, and flaxseed) are particularly helpful during menstruation because they support the production of anti-inflammatory prostaglandins, which counterbalance the cramping-inducing ones.</p>
-<p>Gentle movement — walking, restorative yoga, stretching — tends to feel better than high-intensity exercise for most people during this phase. Heat on the lower abdomen can ease cramping by relaxing uterine muscles and improving blood flow.</p>
+<p>Gentle movement — walking, restorative yoga, stretching — tends to feel better than high-intensity exercise for most people during this phase. <a href="https://amzn.to/1S2XroX" target="_blank" rel="noopener noreferrer" class="article-link">Heat on the lower abdomen</a> can ease cramping by relaxing uterine muscles and improving blood flow.</p>
 <h2>Phase 2: The Follicular Phase (Days 1–13)</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/four-phases-of-your-menstrual-cycle/img-05" alt="THE FOLLICULAR PHASE" width="760" height="451" loading="lazy" />
+  <figcaption class="article-image-caption">Rising estrogen during the follicular phase brings renewed energy</figcaption>
+</figure>
+
 <div class="phase-label">Days 1–13 • FSH Rises, Estrogen Builds</div>
 <h3>What is happening hormonally</h3>
 <p>The follicular phase technically begins on day 1 alongside menstruation and continues until ovulation — so it overlaps with the bleeding phase for its first several days. Once menstruation ends, the follicular phase enters its more energizing second half.</p>

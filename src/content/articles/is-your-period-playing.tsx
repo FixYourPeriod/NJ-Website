@@ -26,6 +26,11 @@ const html = `
 <p>Here is what I want you to know before we go any further: most of what feels like your period "playing tricks on you" is actually meaningful biological information. Your cycle is not malfunctioning — it is communicating. The question is whether what you are experiencing is normal physiological variation, a response to something in your life that has shifted, or a signal that something deeper deserves attention.</p>
 <p>Let us work through this systematically.</p>
 <h2>First: What Is Actually a Normal Cycle?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/is-your-period-playing/img-03" alt="Hormonal Cycle in Women" width="760" height="648" loading="lazy" />
+  <figcaption class="article-image-caption">The hormonal fluctuations throughout a normal menstrual cycle</figcaption>
+</figure>
+
 <p>Before you can identify what is irregular, you need to know what irregular actually means — and most people have been given a much narrower definition than the science supports.</p>
 <p>A normal menstrual cycle length is anywhere from <strong>21 to 35 days</strong>, measured from the first day of one period to the first day of the next. That is a 14-day range that is considered completely healthy. A 24-day cycle is normal. A 34-day cycle is normal. What matters is consistency — and even that has natural variation built in.</p>
 <p>Here is what surprises many people: a cycle that varies by up to 7 days from month to month is within the range of normal variation. If your cycle is usually 28 days but occasionally runs 25 or 31 days, that is not a disorder. That is a body responding to the countless variables that influence the hormonal cascade every single month.</p>
@@ -35,6 +40,11 @@ const html = `
 </div>
 <p>True irregularity — the kind that warrants investigation — is when your cycle consistently falls outside the 21–35 day range, when variation exceeds 7–9 days regularly, when periods stop altogether for 3 or more months (amenorrhea), or when new and significant changes appear in your cycle that persist across multiple months without an obvious explanation.</p>
 <h2>The Most Common "Tricks" Your Period Plays — and Why</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/is-your-period-playing/img-06" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Period changes can signal important shifts in your cycle</figcaption>
+</figure>
+
 <h3>Your Period Arrives Later Than Expected</h3>
 <p>A late period is one of the most anxiety-inducing cycle changes, and pregnancy is usually the first thing that comes to mind. But a late period that is not pregnancy almost always means one thing: ovulation was delayed.</p>
 <p>Here is why that matters. Your period does not arrive on a fixed schedule from your last period. It arrives approximately 12 to 14 days after ovulation (the luteal phase). If ovulation happens later than usual in a given cycle, your period will arrive later. The follicular phase — the first half of the cycle, from menstruation through ovulation — is the variable one. It can shorten or lengthen considerably depending on what is happening in your body and life.</p>

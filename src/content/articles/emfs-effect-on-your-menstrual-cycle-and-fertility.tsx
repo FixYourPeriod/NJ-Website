@@ -21,9 +21,14 @@ export const faqs = [
 ]
 
 const html = `
-<p>You're probably already thinking about what you eat, how much you sleep, and whether your supplements are doing their job. But there's an environmental factor that rarely comes up in conversations about hormonal health — and it's one that most of us are exposed to essentially every waking hour: electromagnetic fields, or EMFs.</p>
+<p>You're probably already thinking about what you eat, how much you sleep, and whether your supplements are doing their job. But there's an environmental factor that rarely comes up in conversations about hormonal health — and it's one that most of us are exposed to essentially every waking hour: electromagnetic fields, or <a href="https://amzn.to/2UPS4Sw" target="_blank" rel="noopener noreferrer" class="article-link">EMFs</a>.</p>
 <p>This isn't a topic that warrants panic, but it does deserve serious attention. The research is still evolving, and not all of it points in the same direction. What I can tell you is that the biological mechanisms through which EMF exposure may affect your hormones are real and well-documented — even if the full clinical picture continues to be studied. Understanding what we know, what we don't, and what you can reasonably do about it is the goal of this article.</p>
 <h2>What Are EMFs, Exactly?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/emfs-effect-on-your-menstrual-cycle-and-fertility/img-01" alt="EMF&#039;s effect on your menstrual cycle and fertility" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding how EMFs may impact your hormonal health</figcaption>
+</figure>
+
 <p>Electromagnetic fields are areas of energy that surround electrical devices. They exist on a wide spectrum, divided into two categories: <strong>ionizing radiation</strong> and <strong>non-ionizing radiation</strong>.</p>
 <p>Ionizing radiation — think X-rays and gamma rays — carries enough energy to remove electrons from atoms and directly damage DNA. This type of radiation is well-established as harmful at sufficient doses, which is why radiologists leave the room when you're having an X-ray, and why occupational exposure is strictly regulated.</p>
 <p>Non-ionizing radiation is what comes from the devices most of us interact with all day: cell phones, Wi-Fi routers, laptops, smart meters, Bluetooth devices, and power lines. This lower-frequency radiation does not carry enough energy to directly break chemical bonds or damage DNA the way ionizing radiation can. For many years, this led regulators and researchers to consider it essentially harmless. That assumption is now being revisited.</p>

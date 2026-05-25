@@ -36,6 +36,11 @@ const html = `
 </ul>
 <p>The sleep-cycle connection runs in both directions: poor sleep drives up cortisol, elevated cortisol impairs ovulation and progesterone production, and low progesterone makes it harder to fall and stay asleep. It's a cycle that feeds itself. The good news is that interrupting it — even with small, consistent changes — has a measurable ripple effect throughout your hormonal system. You can read more about this dynamic in my articles on <a href="/articles/the-cortisol-connection">the cortisol connection</a> and <a href="/articles/how-stress-affects-your-menstrual-cycle">how stress affects your menstrual cycle</a>.</p>
 <h2>Optimize Your Sleep Environment</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/my-favorite-tips-products-for-sleep-support/img-05" alt="" width="400" height="457" loading="lazy" />
+  <figcaption class="article-image-caption">Creating a sleep-supportive environment is essential for hormonal health</figcaption>
+</figure>
+
 <p>Before we get to supplements, the single most impactful changes you can make are environmental. No pill can substitute for a room that's set up to support deep sleep.</p>
 <h3>Darkness</h3>
 <p>Your body needs complete darkness to produce melatonin optimally. Even small amounts of ambient light — from a streetlamp through thin curtains, a charging light on your phone, a nightlight in the hallway — are enough to blunt melatonin secretion. Invest in blackout curtains or wear a quality sleep mask. This is not a preference; it's a biological requirement.</p>
@@ -75,6 +80,11 @@ const html = `
 </ul>
 <p>Consistency matters as much as content. Doing the same sequence every night trains your nervous system to recognize the ritual as a sleep cue, making the transition faster and more reliable over time.</p>
 <h2>My Favorite Sleep Supplements — and How to Use Them</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/my-favorite-tips-products-for-sleep-support/img-03" alt="" width="400" height="412" loading="lazy" />
+  <figcaption class="article-image-caption">Quality supplements can support your sleep routine when used correctly</figcaption>
+</figure>
+
 <p>I want to be clear about the role supplements play here: they are supportive tools, not the foundation. Get the environment, the light exposure, the caffeine timing, and the wind-down routine working first. Then add supplements strategically to fill in the gaps. I also want to emphasize: always consult your healthcare provider before starting any supplement, particularly if you are pregnant, breastfeeding, or taking medications.</p>
 <p>When you do go shopping, look for products that carry independent third-party testing certifications (such as NSF, USP, or Informed Sport). These certifications mean what's on the label is actually in the bottle, at the stated amount, without adulterants.</p>
 <h3>Magnesium Glycinate — the first supplement to try</h3>

@@ -25,6 +25,11 @@ const html = `
 <p>Here's the problem with that framing: it treats stress as a personal organization challenge. Something to optimize around. But for women's hormonal health, stress isn't a scheduling issue — it's a <strong>biological emergency signal</strong> that, when chronic, rewires your entire endocrine system. And the modern version of stress is fundamentally different from anything our bodies were designed to handle.</p>
 <p>Until we understand <em>why</em> that's true, we'll keep reaching for the wrong solutions.</p>
 <h2>Why Modern Stress Is Different</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/why-modern-women-need-to-rethink-stress/img-01" alt="Why Modern Women Need to Rethink Stress" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Modern stress affects women's bodies differently than the acute threats we evolved to handle</figcaption>
+</figure>
+
 <p>Your body's stress response system — the HPA (hypothalamic-pituitary-adrenal) axis — evolved to handle acute threats. A predator. A physical emergency. The system fires, cortisol and adrenaline flood the bloodstream, you survive the threat, and then the whole cascade shuts off so you can recover. This is a beautifully designed survival mechanism.</p>
 <p>The problem is that our bodies can't tell the difference between a lion and a overflowing inbox. What I mean by that is your nervous system processes a difficult performance review, a sleepless night with a newborn, a financial scare, and an intense spin class all through the same stress pathway. And unlike the lion — which either eats you or doesn't — <strong>modern stressors never fully resolve.</strong></p>
 <p>This is the critical distinction: our bodies evolved for short bursts of stress followed by genuine recovery. What we're actually living is a state of near-constant low-grade activation with no real off-switch. The alarm is always on. And over time, that wears down every system in your body, starting with the ones your body considers non-essential to immediate survival — like your reproductive system.</p>

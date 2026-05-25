@@ -24,6 +24,11 @@ const html = `
 <p>Most conversations about the microbiome focus on the gut. And that makes sense — your gut microbiome influences everything from immune function and nutrient absorption to hormone metabolism and mood. But there's another microbial community that rarely gets the spotlight it deserves, and it lives in your vagina.</p>
 <p>Your vaginal microbiome is a distinct ecosystem of bacteria, and the balance of that ecosystem has a surprisingly large influence on your hormonal health, your fertility, and your protection against chronic reproductive infections. Understanding it — and learning how to support it — can change the way you think about your entire cycle.</p>
 <h2>What Is the Vaginal Microbiome?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/vaginal-microbiome-testing/img-03" alt="Lactobacillus" width="400" height="436" loading="lazy" />
+  <figcaption class="article-image-caption">Lactobacillus species are the dominant protective bacteria in a healthy vaginal microbiome</figcaption>
+</figure>
+
 <p>The vaginal microbiome is the community of microorganisms that live in and around the vaginal canal. Like the gut, this ecosystem contains a mix of commensal bacteria (essentially harmless residents), mutualistic bacteria (microbes you've developed a beneficial relationship with), and opportunistic pathogens that need to be kept in check.</p>
 <p>What makes the vaginal microbiome fundamentally different from the gut microbiome is this: <strong>diversity is not the goal here.</strong> In gut health, we generally want a wide variety of bacterial species — that diversity is a marker of resilience. But a healthy vaginal microbiome is actually characterized by <em>low</em> diversity and <em>high dominance</em> of one particular genus: <strong>Lactobacillus</strong>.</p>
 <p>Several Lactobacillus species — most notably <em>L. crispatus</em>, <em>L. iners</em>, <em>L. jensenii</em>, and <em>L. gasseri</em> — protect the vaginal environment by producing lactic acid. This keeps vaginal pH low, typically between 3.8 and 4.5, creating an acidic environment that is inhospitable to harmful bacteria, yeast, and certain sexually transmitted infections. Think of Lactobacillus as the primary protective barrier of your reproductive tract.</p>
@@ -43,6 +48,11 @@ const html = `
 <p>The endometrium (uterine lining) has its own microbiome, and the vaginal microbiome significantly influences it. Studies have found that women with Lactobacillus-dominant vaginal and endometrial microbiomes have substantially better IVF implantation rates compared to women whose microbiomes are characterized by non-Lactobacillus-dominant communities. One particularly striking finding: women with less than 90% Lactobacillus dominance in the endometrial microbiome had significantly lower clinical pregnancy and live birth rates.</p>
 <p>BV and vaginal dysbiosis have also been associated with increased risk of preterm birth, miscarriage, and pelvic inflammatory disease (PID) — all of which underscore why the vaginal microbiome is not a minor footnote in reproductive health. It belongs front and center in any conversation about fertility, pregnancy preparation, and recurrent pregnancy loss.</p>
 <h2>What Is Vaginal Microbiome Testing?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/vaginal-microbiome-testing/img-05" alt="CST type" width="400" height="500" loading="lazy" />
+  <figcaption class="article-image-caption">Vaginal microbiome testing identifies your Community State Type (CST)</figcaption>
+</figure>
+
 <p>Vaginal microbiome testing is a way to get a detailed picture of what bacterial species are living in your vaginal ecosystem — their identities, their relative abundance, and how that composition compares to an optimal Lactobacillus-dominant profile.</p>
 <h3>At-Home PCR-Based Microbiome Panels</h3>
 <p>A growing number of at-home vaginal microbiome tests use PCR (polymerase chain reaction) technology or next-generation sequencing (NGS) to identify and quantify hundreds of microbial species from a simple self-collected vaginal swab. These tests typically mail you a collection kit, you swab at home (usually just inside the vaginal opening), seal the sample, and mail it back to a laboratory.</p>
@@ -59,6 +69,11 @@ const html = `
 <a class="btn btn-terra" href="https://fixyourperiod.app/quiz" target="_blank">Take the Free Assessment →</a>
 </div>
 <h2>What Disrupts the Vaginal Microbiome</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/vaginal-microbiome-testing/img-08" alt="700+ Microbes" width="760" height="511" loading="lazy" />
+  <figcaption class="article-image-caption">Testing can identify over 700 microbial species in your vaginal microbiome</figcaption>
+</figure>
+
 <p>Understanding what knocks the vaginal microbiome off balance is just as important as knowing what a healthy one looks like. The most common disruptors include:</p>
 <ul>
 <li><strong>Antibiotics.</strong> As discussed above, antibiotics are the single most common cause of vaginal dysbiosis. They are not selective — they deplete Lactobacillus populations just as effectively as they clear the bacteria they're targeting. Even a single short course can trigger a significant shift in vaginal flora that takes weeks to months to correct.</li>

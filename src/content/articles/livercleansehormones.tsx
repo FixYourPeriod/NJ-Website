@@ -25,6 +25,11 @@ const html = `
 <p>I want to talk about an organ that rarely gets the attention it deserves: your liver. Most people think of it as the organ that processes alcohol, and they're not wrong — but that is a tiny fraction of what your liver does every single day. Your liver performs over 500 essential functions, including something that's absolutely critical to your menstrual health: processing and clearing your hormones.</p>
 <p>When I work with women dealing with heavy periods, relentless PMS, hormonal acne, <a href="/articles/the-real-reason-your-breasts-are-sore-before-your-period">breast tenderness</a>, or unexplained weight gain, the liver is almost always part of the conversation. Not because it's "toxic" and needs a cleanse, but because it's working too hard and needs more support. There's a big difference — and understanding it is the first step to actually feeling better.</p>
 <h2>Your Liver's Role in Hormone Balance</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/livercleansehormones/img-02" alt="Liver Detoxification " width="760" height="381" loading="lazy" />
+  <figcaption class="article-image-caption">The three phases of liver detoxification</figcaption>
+</figure>
+
 <p>Your liver is the master processor of estrogen. Every time estrogen circulates through your bloodstream and does its job — building the uterine lining, supporting bone density, maintaining mood — it eventually needs to be deactivated and eliminated from the body. That's your liver's job.</p>
 <p>This detoxification process happens in three distinct phases:</p>
 <h3>Phase 1: Transformation</h3>
@@ -89,7 +94,7 @@ const html = `
 <div class="step-box-header">
 <span class="step-number">Step 2</span>
 </div>
-<h3>Consider NAC and Alpha Lipoic Acid</h3>
+<h3>Consider <a href="https://www.amazon.com/gp/product/B0036H0BOO/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0036H0BOO&amp;linkCode=as2&amp;tag=thehealelem-20&amp;linkId=VJTPTN4HABLTLC3N" target="_blank" rel="noopener noreferrer" class="article-link">NAC</a> and Alpha Lipoic Acid</h3>
 <p><strong>N-Acetylcysteine (NAC)</strong> is a precursor to glutathione — the master antioxidant your liver uses to neutralize toxins in Phase 2. If you're dealing with significant hormonal symptoms, chronic exposure to environmental chemicals, or have taken medications for years, NAC can be transformative. <strong>Alpha lipoic acid (ALA)</strong> is another antioxidant that supports both Phase 1 and Phase 2 and helps recycle other antioxidants, including glutathione.</p>
 <ul>
 <li><strong>NAC dosage:</strong> 600–1,200 mg daily</li>

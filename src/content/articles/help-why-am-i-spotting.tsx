@@ -25,6 +25,11 @@ const html = `
 <p>Spotting is defined as any light vaginal bleeding that occurs outside of your normal period window. It can show up as pink, red, or brown discharge on toilet paper, in your underwear, or when you wipe — but it is not heavy enough to require a pad or tampon. It might happen once, or it might become a recurring pattern you notice every single cycle.</p>
 <p>Here is the most important thing to understand: spotting is not a diagnosis — it is a symptom. The fact that you are spotting tells you something is going on hormonally, structurally, or locally in the reproductive tract. Where in your cycle the spotting appears is one of the most useful clues you have for figuring out what is driving it.</p>
 <h2>The 6 Types of Spotting — and What Each One Means</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/help-why-am-i-spotting/img-04" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding your cycle patterns can help identify the cause of spotting</figcaption>
+</figure>
+
 <h3>1. Ovulation Spotting (Days 12–16 of a typical cycle)</h3>
 <p>Mid-cycle spotting that coincides with ovulation is one of the most benign forms of spotting and affects roughly 5% of people with regular cycles. It tends to be light pink or streaked with red, lasts only a day or two, and often arrives alongside other ovulation signs like a sharp pelvic twinge (mittelschmerz), a surge in clear stretchy cervical fluid, or an increase in libido.</p>
 <p>The mechanism is a brief dip in estrogen that occurs just before the LH surge triggers ovulation. This temporary estrogen withdrawal causes a small amount of uterine lining to shed. Once the LH surge fires and the egg is released, estrogen rises again and progesterone begins climbing — and the spotting resolves. Occasional ovulation spotting in an otherwise regular cycle is generally not a concern.</p>
@@ -121,7 +126,7 @@ const html = `
 <ul>
 <li><strong>Vitamin C</strong> — highly concentrated in the corpus luteum and critical for progesterone synthesis. Aim for at least 500–750 mg daily from food and supplementation. Bell peppers, citrus, kiwi, and strawberries are excellent food sources.</li>
 <li><strong>Vitamin B6</strong> — plays a direct role in progesterone production and reducing estrogen dominance. Found in chickpeas, poultry, salmon, and bananas. A supplement of 25–50 mg daily during the luteal phase may also be helpful.</li>
-<li><strong>Magnesium</strong> — supports the HPO axis and reduces cortisol. Found in leafy greens, pumpkin seeds, dark chocolate, and legumes. Many people benefit from 200–400 mg of magnesium glycinate or bisglycinate nightly.</li>
+<li><strong>Magnesium</strong> — supports the HPO axis and reduces cortisol. Found in leafy greens, pumpkin seeds, dark chocolate, and legumes. Many people benefit from 200–400 mg of <a href="https://amzn.to/1OmMsG1" target="_blank" rel="noopener noreferrer" class="article-link">magnesium</a> glycinate or bisglycinate nightly.</li>
 <li><strong>Zinc</strong> — essential for follicle development and LH production. Found in red meat, shellfish (especially oysters), pumpkin seeds, and legumes.</li>
 <li><strong>Adequate dietary fat</strong> — cholesterol is the building block of all steroid hormones including progesterone. Very low-fat diets can suppress hormone production at the source.</li>
 </ul>

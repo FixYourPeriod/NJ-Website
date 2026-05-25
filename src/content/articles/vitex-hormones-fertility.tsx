@@ -22,9 +22,14 @@ export const faqs = [
 ]
 
 const html = `
-<p>If you have ever searched online for natural ways to balance your hormones, regulate your cycle, or improve your fertility, you have almost certainly come across vitex. It shows up in supplement blends, wellness blogs, and practitioner recommendations with remarkable frequency. And yet, despite its popularity, there is a lot of confusion about what vitex actually does in the body, who it is appropriate for, and how to use it correctly.</p>
+<p>If you have ever searched online for natural ways to balance your hormones, regulate your cycle, or improve your fertility, you have almost certainly come across <a href="https://amzn.to/29jF3tW" target="_blank" rel="noopener noreferrer" class="article-link">vitex</a>. It shows up in supplement blends, wellness blogs, and practitioner recommendations with remarkable frequency. And yet, despite its popularity, there is a lot of confusion about what vitex actually does in the body, who it is appropriate for, and how to use it correctly.</p>
 <p>I want to cut through the noise. This article covers the science behind vitex agnus-castus, the conditions where it has a legitimate role, how to dose and time it properly, and — just as importantly — the situations where you should not use it at all.</p>
 <h2>What Is Vitex Agnus-Castus?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/vitex-hormones-fertility/img-02" alt="Vitex and your hormones" width="760" height="536" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding how vitex interacts with your hormonal system</figcaption>
+</figure>
+
 <p>Vitex agnus-castus goes by several common names: chaste tree berry, chasteberry, monk's pepper, and Abraham's balm. It is the fruit of the <em>Vitex agnus-castus</em> shrub, a plant native to the Mediterranean and Central Asia that has been used medicinally for thousands of years. Ancient Greek and Roman physicians prescribed it; medieval monks used it to suppress libido (hence the name "chaste" tree). Today, it is standardized and sold as a supplement specifically for menstrual and hormonal support.</p>
 <p>Unlike herbs that act directly on the ovaries or uterus, vitex works upstream — at the level of the brain. This distinction matters a great deal for understanding both why it works and why it can go wrong when used carelessly.</p>
 <h2>How Vitex Works in the Body</h2>

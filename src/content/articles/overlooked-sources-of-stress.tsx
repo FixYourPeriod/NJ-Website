@@ -26,6 +26,10 @@ const html = `
 <p>This matters enormously for your menstrual cycle. Cortisol and sex hormones compete for the same raw materials. When cortisol is chronically elevated — or chronically dysregulated — it disrupts progesterone production, impairs ovulation, throws off your cycle timing, and can worsen every period symptom you already struggle with. You can read more about that cascade in <a href="/articles/how-stress-affects-your-menstrual-cycle">how stress affects your menstrual cycle</a>.</p>
 <p>What follows are ten sources of physiological stress that most women never identify — and practical steps you can take to reduce each one.</p>
 <h2>1. Blood Sugar Instability</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/overlooked-sources-of-stress/img-02" alt="" width="400" height="401" loading="lazy" />
+</figure>
+
 <p>Every glucose spike followed by a crash is a <strong>physiological stress event</strong>. When blood sugar drops too low, too fast, the body perceives it as an emergency: cortisol and adrenaline are released to mobilize stored glucose and get levels back up. Do this multiple times a day — which is easy to do on a diet of refined carbohydrates, skipped meals, or coffee on an empty stomach — and your HPA axis stays chronically activated.</p>
 <p>Poor blood sugar control is also listed as one of the primary symptoms of HPA axis dysfunction. The two conditions feed each other in a loop that is very hard to break if you're not addressing both simultaneously. To learn more about this relationship, see <a href="/articles/how-the-menstrual-cycle-affects-blood-sugar-and-insulin-regulation-in-the-body">how the menstrual cycle affects blood sugar and insulin regulation</a>.</p>
 <p><strong>What to do:</strong></p>

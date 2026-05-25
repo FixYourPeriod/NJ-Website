@@ -30,6 +30,11 @@ const html = `
 <p>The gut also produces a vast share of the body's serotonin — approximately 90 to 95 percent. Serotonin is not only a mood regulator; it plays a critical role in controlling gut motility (how quickly food moves through the intestines). Because serotonin levels are influenced by estrogen, shifts in estrogen across the cycle directly affect how fast or slow your gut moves. This is one of the core mechanisms behind cycle-linked digestive changes.</p>
 <p>And then there is the vagus nerve, which forms the main communication highway of the gut-brain axis. Hormonal changes influence vagal tone, which in turn affects everything from gut motility and stomach acid production to immune responses in the gut lining. When hormones fluctuate significantly — as they do before ovulation and before menstruation — the whole gut-brain axis feels it.</p>
 <h2>Digestive Changes in Each Phase of Your Cycle</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/howyourperiodaffectsdigestivetract/img-01" alt="Periods and Poops: Why we experience constipation after ovulation" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">How your cycle phases affect digestive patterns</figcaption>
+</figure>
+
 <div class="phase-block">
 <h3>Follicular Phase (After Your Period Ends)</h3>
 <p>For most people, the follicular phase — from the end of bleeding through to ovulation — brings the best gut days of the month. Estrogen rises steadily and supports serotonin production, which keeps gut motility regular and mood stable. Inflammation tends to be lower in this phase, and many women with IBS or other gut conditions notice a clear improvement in their symptoms. If you are going to try new foods or eat in ways that challenge your digestion, this is the phase where your gut is most resilient.</p>

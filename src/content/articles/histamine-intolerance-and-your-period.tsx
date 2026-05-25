@@ -23,8 +23,13 @@ export const faqs = [
 
 const html = `
 <p>You track your period carefully. You know roughly when you ovulate. And you have noticed that right around that midcycle window — and again in the days before your period arrives — something else shows up too. Headaches. Hives. A suddenly runny nose. Bloating so bad you look six months pregnant. Maybe anxiety that spikes out of nowhere, or insomnia that leaves you staring at the ceiling. You have a sneaking suspicion it is not a coincidence that these symptoms cluster around the same points in your cycle every single month.</p>
-<p>You are right — it is not a coincidence. What you may be experiencing is histamine intolerance with a pronounced hormonal pattern, and once you understand the mechanism driving it, the whole picture clicks into place.</p>
+<p>You are right — it is not a coincidence. What you may be experiencing is <a href="https://us.fullscript.com/protocols/nicolejardim-histamine-help-protocol" target="_blank" rel="noopener noreferrer" class="article-link">histamine intolerance</a> with a pronounced hormonal pattern, and once you understand the mechanism driving it, the whole picture clicks into place.</p>
 <h2>What Is Histamine Intolerance?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/histamine-intolerance-and-your-period/img-01" alt="Histamine Intolerance and your period" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Understanding the connection between histamine intolerance and your menstrual cycle</figcaption>
+</figure>
+
 <p>Histamine is a chemical your body produces naturally. It plays essential roles in immune function, digestion, sleep-wake regulation, and neurotransmission. Under normal circumstances, any excess histamine — whether produced internally or taken in through food — is quickly broken down by two key enzymes: <strong>diamine oxidase (DAO)</strong>, found primarily in the gut lining and the bloodstream, and <strong>histamine N-methyltransferase (HNMT)</strong>, which works inside cells throughout the body, including the brain.</p>
 <p>Histamine intolerance develops when the amount of histamine in your body exceeds your capacity to break it down. This can happen because your DAO or HNMT activity is low — whether due to genetics, gut damage, nutrient deficiencies, or certain medications — or because you are taking in far more histamine than your system can handle. The result is a buildup of histamine that triggers a wide range of symptoms that can look a lot like an allergic reaction, but without the classic IgE allergy mechanism behind it.</p>
 <p>What makes this especially confusing for people with menstrual cycles is that histamine does not behave consistently across the month. Its effects wax and wane in direct response to your hormonal shifts. And that is where things get interesting.</p>

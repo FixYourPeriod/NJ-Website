@@ -30,6 +30,11 @@ const html = `
 <p>The devices in this guide help you capture those signals with far more precision than a period-tracking app that is essentially just counting days. When you combine hardware data with an understanding of what you are looking at, you start building genuine body literacy — the kind that helps you spot hormonal shifts early, optimize your fertility window, confirm that ovulation actually happened, and communicate meaningfully with your doctor about what is going on.</p>
 <p>Understanding your body's own patterns also matters if you have concerns like a <a href="/articles/lengthen-your-luteal-phase">short luteal phase</a>, PCOS, or irregular cycles — all of which benefit enormously from the more granular data these devices provide.</p>
 <h2>The Devices I Recommend</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/my-favorite-fertility-tracking-devices/img-03" alt="" width="400" height="401" loading="lazy" />
+  <figcaption class="article-image-caption">Tempdrop wearable BBT sensor</figcaption>
+</figure>
+
 <p>These are the devices I currently recommend to clients and in my programs. Each one solves a different problem, so I have included guidance on who each device is best suited for.</p>
 <div class="device-card">
 <h3>Tempdrop</h3>
@@ -80,6 +85,10 @@ const html = `
 <p>If you have done research on fertility tracking devices in the past, you may have come across two products that are no longer available: the <strong>Kindara Wink thermometer</strong> (and the Kindara app, which was discontinued) and the <strong>Ava bracelet</strong> (Ava's U.S. and European operations shut down in 2023). I used to recommend both of these. I am noting their discontinuation here specifically because outdated blog posts and YouTube videos still recommend them, and I do not want you purchasing something that no longer has support, updates, or a functioning companion app.</p>
 <p>The good news is that the current generation of devices — particularly Tempdrop and the Oura Ring — do everything the Ava bracelet was trying to do, with more accurate readings and actively maintained software.</p>
 <h2>How to Choose the Right Device for Your Goal</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/my-favorite-fertility-tracking-devices/img-12" alt="" width="760" height="391" loading="lazy" />
+</figure>
+
 <p>The device that is right for you depends almost entirely on what you are trying to accomplish. Here is a quick decision framework:</p>
 <table class="chooser-table">
 <thead>

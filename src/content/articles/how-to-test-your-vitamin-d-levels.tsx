@@ -24,6 +24,11 @@ const html = `
 <p>If you've ever had a routine blood panel done and been told your vitamin D is "normal," you may have walked away feeling reassured — only to still be dealing with period problems, exhaustion, low mood, or immune issues that no one has explained. The reality is that the conventional "normal" range for vitamin D was designed to prevent bone disease, not to support robust hormonal health. For many women, there is a significant gap between what shows up as acceptable on a lab report and what the body actually needs to thrive.</p>
 <p>Vitamin D occupies a unique position in human physiology. It behaves less like a conventional vitamin and more like a steroid hormone — it has its own receptors throughout virtually every cell in the body, and it influences hundreds of genetic processes. For women specifically, its role extends far beyond bone density into areas that touch nearly every aspect of menstrual and reproductive health. <a href="/articles/vitamin-d-the-period-vitamin">I've written before about why I call vitamin D the period vitamin</a>, and testing is the necessary first step toward doing anything meaningful about your levels.</p>
 <h2>Why Vitamin D Matters So Much for Women's Hormonal Health</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-to-test-your-vitamin-d-levels/img-01" alt="How To Test Your Vitamin D Levels" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Testing your vitamin D levels is an important step for hormonal health</figcaption>
+</figure>
+
 <p>Vitamin D receptors are found on the ovaries, uterus, placenta, pituitary gland, and immune cells — which tells you something about how broadly it influences women's health. Here is a summary of what research shows when vitamin D is insufficient:</p>
 <ul>
 <li><strong>Progesterone production:</strong> Vitamin D is required for the synthesis of progesterone. Low vitamin D is consistently associated with lower progesterone levels, which can contribute to irregular cycles, short luteal phases, heavy periods, and PMS.</li>

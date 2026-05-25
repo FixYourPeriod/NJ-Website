@@ -26,10 +26,15 @@ const html = `
 <p>Let me clear all of that up. Seed cycling is not a miracle cure and it is not rocket science. Seeds are, after all, just seeds. But the specific nutrients they contain — lignans, zinc, selenium, vitamin E, B vitamins, essential fatty acids, and fiber — are genuinely important to hormone production and balance. Rotating the right seeds at the right time of your cycle is a meaningful way to support your hormones with food. I have seen it make a real difference for many women over the years, particularly when it is part of a broader approach to period health.</p>
 <p>This guide covers everything: how it works, the complete protocol for both regular and irregular cycles, what to expect, and honest context about the evidence. Let's get into it.</p>
 <h2>What Is Seed Cycling?</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/seed-cycling/img-02" alt="How to do seed cycling using flax, pumpkin, sesame and sunflower seeds" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">The four seeds used in seed cycling: flax, pumpkin, sesame, and sunflower</figcaption>
+</figure>
+
 <p>Seed cycling is a technique that — in addition to food and lifestyle changes — naturally helps your body regulate its sex hormone levels, namely estrogen and progesterone, by alternating different seeds during the two halves of your menstrual cycle. The concept is simple: you rotate four types of seeds, two per phase, in sync with the natural hormonal rhythm of your cycle.</p>
 <ul>
-<li><strong>Follicular phase (days 1–14 approximately):</strong> 1 tablespoon raw ground flaxseed + 1 tablespoon raw pumpkin seeds daily</li>
-<li><strong>Luteal phase (from ovulation to the day before your next period):</strong> 1 tablespoon raw sunflower seeds + 1 tablespoon raw sesame seeds daily</li>
+<li><strong>Follicular phase (days 1–14 approximately):</strong> 1 tablespoon raw ground <a href="https://amzn.to/2YNEilE" target="_blank" rel="noopener noreferrer" class="article-link">flaxseed</a> + 1 tablespoon raw <a href="https://amzn.to/2CgEof2" target="_blank" rel="noopener noreferrer" class="article-link">pumpkin seeds</a> daily</li>
+<li><strong>Luteal phase (from ovulation to the day before your next period):</strong> 1 tablespoon raw <a href="https://amzn.to/2wFFon2" target="_blank" rel="noopener noreferrer" class="article-link">sunflower seeds</a> + 1 tablespoon raw <a href="https://amzn.to/2wMkCD7" target="_blank" rel="noopener noreferrer" class="article-link">sesame seeds</a> daily</li>
 </ul>
 <p>The follicular phase seeds support your body as estrogen rises toward ovulation. The luteal phase seeds support your body as progesterone becomes the dominant hormone after ovulation. This is not about flooding your body with plant hormones — it is about providing the specific nutrients your body needs to make, use, and clear hormones efficiently at each stage of your cycle.</p>
 <h2>The Evidence: What We Know and What Is Anecdotal</h2>
@@ -79,6 +84,11 @@ const html = `
 </div>
 <p>When your next period arrives, start over with the phase 1 seeds on day 1.</p>
 <h2>The Full Protocol: Irregular Cycles, Missing Period, or No Period</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_400,f_auto,q_auto/nj-articles-original/seed-cycling/img-05" alt="Seed cycling guide by Nicole Jardim" width="400" height="516" loading="lazy" />
+  <figcaption class="article-image-caption">Seed cycling guide by Nicole Jardim</figcaption>
+</figure>
+
 <p>If your cycle is longer than 45 days, feels completely unpredictable, or if your period is missing, you will sync with the moon cycle instead of your menstrual cycle. The lunar cycle is approximately 28 days and provides a consistent external rhythm to follow.</p>
 <p>Think of it this way: the new moon corresponds to the follicular phase and the full moon corresponds to ovulation/luteal phase. This is not mystical — it is just a reliable 28-day clock you can use while your body's own rhythm is re-establishing itself.</p>
 <div class="phase-box">
