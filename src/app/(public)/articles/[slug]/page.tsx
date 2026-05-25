@@ -2,7 +2,14 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { articles } from "@/content/articles/index"
+import { articleCtas } from "@/content/articles/ctas"
 import { ArticleHeaderImage } from "@/components/article-header-image"
+
+// ─── Default CTA (used when no article-specific copy exists) ─────────────────
+const DEFAULT_CTA = {
+  headline: "Your period is trying to tell you something.",
+  body: "The Fix Your Period App builds a personalized hormonal health protocol around your specific symptoms — whether you're dealing with irregular cycles, painful periods, mood shifts, or something you can't quite name yet.",
+}
 
 // ─── STATIC PARAMS ───────────────────────────────────────────────────────────
 // Tell Next.js which slugs to pre-render at build time.
@@ -44,6 +51,8 @@ export default async function ArticlePage({
   const faqs = articleModule.faqs as
     | Array<{ q: string; a: string }>
     | undefined
+
+  const cta = articleCtas[meta.slug] ?? DEFAULT_CTA
 
   const formattedDate = new Date(meta.publishedAt).toLocaleDateString("en-US", {
     year: "numeric",
@@ -178,7 +187,7 @@ export default async function ArticlePage({
               marginBottom: 20,
             }}
           >
-            Perimenopause doesn&apos;t have to feel this way.
+            {cta.headline}
           </h2>
           <p
             style={{
@@ -190,9 +199,7 @@ export default async function ArticlePage({
               marginBottom: 32,
             }}
           >
-            The Fix Your Period App builds a personalized hormonal health protocol around your
-            specific symptoms — whether you&apos;re navigating erratic cycles, sleep changes, or
-            shifting moods.
+            {cta.body}
           </p>
           <a
             href="https://fixyourperiod.app/quiz"
