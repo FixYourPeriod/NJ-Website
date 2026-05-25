@@ -462,7 +462,8 @@ function WelcomeCard({
   firstName: string | null
   email: string | null
 }) {
-  const greeting = firstName ?? email?.split("@")[0] ?? "there"
+  const raw = firstName ?? email?.split("@")[0] ?? "there"
+  const greeting = raw.charAt(0).toUpperCase() + raw.slice(1)
   return (
     <div className="text-center mb-6">
       <h1
