@@ -94,7 +94,7 @@ const html = `
 <div class="step-box-header">
 <span class="step-number">Step 2</span>
 </div>
-<h3>Consider <a href="https://www.amazon.com/gp/product/B0036H0BOO/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B0036H0BOO&amp;linkCode=as2&amp;tag=thehealelem-20&amp;linkId=VJTPTN4HABLTLC3N" target="_blank" rel="noopener noreferrer" class="article-link">NAC</a> and Alpha Lipoic Acid</h3>
+<h3>Consider NAC and Alpha Lipoic Acid</h3>
 <p><strong>N-Acetylcysteine (NAC)</strong> is a precursor to glutathione — the master antioxidant your liver uses to neutralize toxins in Phase 2. If you're dealing with significant hormonal symptoms, chronic exposure to environmental chemicals, or have taken medications for years, NAC can be transformative. <strong>Alpha lipoic acid (ALA)</strong> is another antioxidant that supports both Phase 1 and Phase 2 and helps recycle other antioxidants, including glutathione.</p>
 <ul>
 <li><strong>NAC dosage:</strong> 600–1,200 mg daily</li>

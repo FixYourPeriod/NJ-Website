@@ -123,7 +123,7 @@ const html = `
 <ul>
 <li><strong>Vitamin C</strong> — highly concentrated in the corpus luteum and critical for progesterone synthesis. Aim for at least 500–750 mg daily from food and supplementation. Bell peppers, citrus, kiwi, and strawberries are excellent food sources.</li>
 <li><strong>Vitamin B6</strong> — plays a direct role in progesterone production and reducing estrogen dominance. Found in chickpeas, poultry, salmon, and bananas. A supplement of 25–50 mg daily during the luteal phase may also be helpful.</li>
-<li><strong>Magnesium</strong> — supports the HPO axis and reduces cortisol. Found in leafy greens, pumpkin seeds, dark chocolate, and legumes. Many people benefit from 200–400 mg of <a href="https://amzn.to/1OmMsG1" target="_blank" rel="noopener noreferrer" class="article-link">magnesium</a> glycinate or bisglycinate nightly.</li>
+<li><strong>Magnesium</strong> — supports the HPO axis and reduces cortisol. Found in leafy greens, pumpkin seeds, dark chocolate, and legumes. Many people benefit from 200–400 mg of magnesium glycinate or bisglycinate nightly.</li>
 <li><strong>Zinc</strong> — essential for follicle development and LH production. Found in red meat, shellfish (especially oysters), pumpkin seeds, and legumes.</li>
 <li><strong>Adequate dietary fat</strong> — cholesterol is the building block of all steroid hormones including progesterone. Very low-fat diets can suppress hormone production at the source.</li>
 </ul>

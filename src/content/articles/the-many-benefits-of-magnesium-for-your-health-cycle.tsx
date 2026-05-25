@@ -130,7 +130,7 @@ const html = `
 <li><strong>Fatty fish</strong> (salmon, mackerel): a 3-ounce serving provides 26–30 mg alongside omega-3s and vitamin D</li>
 </ul>
 <p>A genuinely magnesium-rich diet — one built around seeds, nuts, leafy greens, legumes, and whole grains — can deliver 300–400 mg per day. But as discussed above, soil depletion and the practicalities of modern eating mean most women do not consistently hit this in practice, which is where supplementation fills in.</p>
-<h2>Transdermal Magnesium: <a href="https://amzn.to/3D71cuV" target="_blank" rel="noopener noreferrer" class="article-link">Epsom Salt</a> Baths</h2>
+<h2>Transdermal Magnesium: Epsom Salt Baths</h2>
 <figure class="article-image">
   <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-many-benefits-of-magnesium-for-your-health-cycle/img-09" alt="" width="760" height="760" loading="lazy" />
   <figcaption class="article-image-caption">Epsom salt baths offer a relaxing way to absorb magnesium through the skin</figcaption>

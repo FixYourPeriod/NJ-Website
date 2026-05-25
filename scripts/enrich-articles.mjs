@@ -123,10 +123,14 @@ function selectCandidateImages(uploadedImages) {
     }))
 }
 
-/** Filter scraped links to monetisable candidates */
+/** Filter scraped links to monetisable candidates.
+ *  Amazon affiliate links are intentionally excluded — they use an old affiliate
+ *  tag that may no longer be active. Only Fullscript supplement protocols and
+ *  other non-Amazon affiliate links are used.
+ */
 function selectCandidateLinks(links) {
   return links
-    .filter(l => ["amazon-affiliate", "affiliate", "supplement-affiliate"].includes(l.type))
+    .filter(l => ["affiliate", "supplement-affiliate"].includes(l.type))
     .filter(l => l.href && l.text && l.text.length > 2)
     .map(l => ({ href: l.href, text: l.text.slice(0, 100) }))
 }

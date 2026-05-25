@@ -22,7 +22,7 @@ export const faqs = [
 ]
 
 const html = `
-<p>If you've ever been prescribed a hormonal <a href="https://www.amazon.com/This-Your-Brain-Birth-Control-ebook/dp/B07MYLLP21/ref=sr_1_1?crid=1S26A2KLCJWN2&amp;keywords=sarah+hill+your+brain+on+birth+control&amp;qid=1691612917&amp;sprefix=your+brain+on+birth%2Caps%2C120&amp;sr=8-1" target="_blank" rel="noopener noreferrer" class="article-link">birth control</a> pill or HRT and wondered why you feel anxious, moody, or unlike yourself — this article may be the answer you've been looking for. The culprit is often the progestin in your prescription, and understanding why it affects you differently than natural progesterone is one of the most important things you can do for your hormonal health.</p>
+<p>If you've ever been prescribed a hormonal birth control pill or HRT and wondered why you feel anxious, moody, or unlike yourself — this article may be the answer you've been looking for. The culprit is often the progestin in your prescription, and understanding why it affects you differently than natural progesterone is one of the most important things you can do for your hormonal health.</p>
 <p>Let's start with the basics — and yes, the difference really is that significant.</p>
 <h2>What Is Progesterone?</h2>
 <figure class="article-image">

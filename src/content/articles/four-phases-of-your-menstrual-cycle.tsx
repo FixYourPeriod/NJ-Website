@@ -41,7 +41,7 @@ const html = `
 <p>Heavy bleeding that soaks through a pad or tampon every hour for several hours, clots larger than a quarter, or bleeding that lasts more than 7 days are also signs worth investigating, not normalizing.</p>
 <h3>What to eat and do</h3>
 <p>This is a time for genuine rest. Your body is doing significant work, and your energy is naturally lower. Honor that rather than push through it. Nutritionally, focus on iron-rich foods to replenish what is lost through bleeding — red meat, dark leafy greens, lentils, and pumpkin seeds. Pair plant-based iron with vitamin C to improve absorption. Omega-3 fatty acids (found in fatty fish, walnuts, and flaxseed) are particularly helpful during menstruation because they support the production of anti-inflammatory prostaglandins, which counterbalance the cramping-inducing ones.</p>
-<p>Gentle movement — walking, restorative yoga, stretching — tends to feel better than high-intensity exercise for most people during this phase. <a href="https://amzn.to/1S2XroX" target="_blank" rel="noopener noreferrer" class="article-link">Heat on the lower abdomen</a> can ease cramping by relaxing uterine muscles and improving blood flow.</p>
+<p>Gentle movement — walking, restorative yoga, stretching — tends to feel better than high-intensity exercise for most people during this phase. Heat on the lower abdomen can ease cramping by relaxing uterine muscles and improving blood flow.</p>
 <h2>Phase 2: The Follicular Phase (Days 1–13)</h2>
 <figure class="article-image">
   <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/four-phases-of-your-menstrual-cycle/img-05" alt="THE FOLLICULAR PHASE" width="760" height="451" loading="lazy" />

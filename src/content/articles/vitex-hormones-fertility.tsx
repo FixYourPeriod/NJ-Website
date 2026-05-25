@@ -22,7 +22,7 @@ export const faqs = [
 ]
 
 const html = `
-<p>If you have ever searched online for natural ways to balance your hormones, regulate your cycle, or improve your fertility, you have almost certainly come across <a href="https://amzn.to/29jF3tW" target="_blank" rel="noopener noreferrer" class="article-link">vitex</a>. It shows up in supplement blends, wellness blogs, and practitioner recommendations with remarkable frequency. And yet, despite its popularity, there is a lot of confusion about what vitex actually does in the body, who it is appropriate for, and how to use it correctly.</p>
+<p>If you have ever searched online for natural ways to balance your hormones, regulate your cycle, or improve your fertility, you have almost certainly come across vitex. It shows up in supplement blends, wellness blogs, and practitioner recommendations with remarkable frequency. And yet, despite its popularity, there is a lot of confusion about what vitex actually does in the body, who it is appropriate for, and how to use it correctly.</p>
 <p>I want to cut through the noise. This article covers the science behind vitex agnus-castus, the conditions where it has a legitimate role, how to dose and time it properly, and — just as importantly — the situations where you should not use it at all.</p>
 <h2>What Is Vitex Agnus-Castus?</h2>
 <figure class="article-image">

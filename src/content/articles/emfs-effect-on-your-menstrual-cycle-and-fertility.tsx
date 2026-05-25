@@ -21,7 +21,7 @@ export const faqs = [
 ]
 
 const html = `
-<p>You're probably already thinking about what you eat, how much you sleep, and whether your supplements are doing their job. But there's an environmental factor that rarely comes up in conversations about hormonal health — and it's one that most of us are exposed to essentially every waking hour: electromagnetic fields, or <a href="https://amzn.to/2UPS4Sw" target="_blank" rel="noopener noreferrer" class="article-link">EMFs</a>.</p>
+<p>You're probably already thinking about what you eat, how much you sleep, and whether your supplements are doing their job. But there's an environmental factor that rarely comes up in conversations about hormonal health — and it's one that most of us are exposed to essentially every waking hour: electromagnetic fields, or EMFs.</p>
 <p>This isn't a topic that warrants panic, but it does deserve serious attention. The research is still evolving, and not all of it points in the same direction. What I can tell you is that the biological mechanisms through which EMF exposure may affect your hormones are real and well-documented — even if the full clinical picture continues to be studied. Understanding what we know, what we don't, and what you can reasonably do about it is the goal of this article.</p>
 <h2>What Are EMFs, Exactly?</h2>
 

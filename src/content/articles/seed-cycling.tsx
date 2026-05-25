@@ -33,8 +33,8 @@ const html = `
 
 <p>Seed cycling is a technique that — in addition to food and lifestyle changes — naturally helps your body regulate its sex hormone levels, namely estrogen and progesterone, by alternating different seeds during the two halves of your menstrual cycle. The concept is simple: you rotate four types of seeds, two per phase, in sync with the natural hormonal rhythm of your cycle.</p>
 <ul>
-<li><strong>Follicular phase (days 1–14 approximately):</strong> 1 tablespoon raw ground <a href="https://amzn.to/2YNEilE" target="_blank" rel="noopener noreferrer" class="article-link">flaxseed</a> + 1 tablespoon raw <a href="https://amzn.to/2CgEof2" target="_blank" rel="noopener noreferrer" class="article-link">pumpkin seeds</a> daily</li>
-<li><strong>Luteal phase (from ovulation to the day before your next period):</strong> 1 tablespoon raw <a href="https://amzn.to/2wFFon2" target="_blank" rel="noopener noreferrer" class="article-link">sunflower seeds</a> + 1 tablespoon raw <a href="https://amzn.to/2wMkCD7" target="_blank" rel="noopener noreferrer" class="article-link">sesame seeds</a> daily</li>
+<li><strong>Follicular phase (days 1–14 approximately):</strong> 1 tablespoon raw ground flaxseed + 1 tablespoon raw pumpkin seeds daily</li>
+<li><strong>Luteal phase (from ovulation to the day before your next period):</strong> 1 tablespoon raw sunflower seeds + 1 tablespoon raw sesame seeds daily</li>
 </ul>
 <p>The follicular phase seeds support your body as estrogen rises toward ovulation. The luteal phase seeds support your body as progesterone becomes the dominant hormone after ovulation. This is not about flooding your body with plant hormones — it is about providing the specific nutrients your body needs to make, use, and clear hormones efficiently at each stage of your cycle.</p>
 <h2>The Evidence: What We Know and What Is Anecdotal</h2>

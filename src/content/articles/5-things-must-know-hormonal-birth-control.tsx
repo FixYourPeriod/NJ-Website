@@ -86,7 +86,7 @@ const html = `
 <div class="protocol-box">
 <h3>The Birth Control Nutrient Support Protocol</h3>
 <ul>
-<li><strong><a href="https://www.amazon.com/gp/product/B001CYK13Y/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B001CYK13Y&amp;linkCode=as2&amp;tag=thehealelem-20" target="_blank" rel="noopener noreferrer" class="article-link">B-complex</a>:</strong> Look for a methylated B-complex (containing methylfolate and methylcobalamin) for better absorption. This is especially important if you have an MTHFR gene variant. Take daily with food.</li>
+<li><strong>B-complex:</strong> Look for a methylated B-complex (containing methylfolate and methylcobalamin) for better absorption. This is especially important if you have an MTHFR gene variant. Take daily with food.</li>
 <li><strong>Zinc:</strong> 15–25 mg daily with food (zinc can cause nausea on an empty stomach). Zinc picolinate or zinc bisglycinate are well absorbed forms.</li>
 <li><strong>Magnesium glycinate:</strong> 200–400 mg daily, ideally taken in the evening. It supports sleep quality while replenishing stores. Glycinate form is gentle on the digestive system.</li>
 <li><strong>Antioxidants (Vitamin C &amp; CoQ10):</strong> 500–1,000 mg vitamin C daily with food. 100–200 mg CoQ10 (as ubiquinol for best absorption).</li>

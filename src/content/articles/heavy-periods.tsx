@@ -35,7 +35,7 @@ const html = `
 <li>Passing <strong>blood clots larger than a quarter</strong> (approximately 2.5 cm or bigger)</li>
 <li>Your period <strong>lasts eight days or longer</strong> consistently</li>
 <li>You need to use <strong>double protection</strong> (a tampon plus a pad, or a pad plus period underwear) to prevent leaking</li>
-<li>You are <strong>emptying a 30 ml <a href="https://amzn.to/2fL3EyI" target="_blank" rel="noopener noreferrer" class="article-link">menstrual cup</a> more than twice a day</strong></li>
+<li>You are <strong>emptying a 30 ml menstrual cup more than twice a day</strong></li>
 <li>You have to get up during the night to change your protection</li>
 <li>You experience <strong>profound fatigue, brain fog, or shortness of breath</strong> during or after your period — signs your bleeding is affecting your iron stores</li>
 </ul>
