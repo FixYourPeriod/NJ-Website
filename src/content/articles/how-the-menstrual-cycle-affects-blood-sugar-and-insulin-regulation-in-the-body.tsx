@@ -33,6 +33,11 @@ const html = `
 </ul>
 <p>Understanding both sides changes how you approach eating, supplementation, and lifestyle support — and it explains why what works well for your body in the first half of your cycle may feel completely different in the second half.</p>
 <h2>How Insulin Sensitivity Shifts Across Your Cycle</h2>
+<figure class="article-image">
+  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-the-menstrual-cycle-affects-blood-sugar-and-insulin-regulation-in-the-body/img-02" alt="" width="760" height="760" loading="lazy" />
+  <figcaption class="article-image-caption">Insulin sensitivity fluctuates throughout your menstrual cycle phases</figcaption>
+</figure>
+
 <p>Your cycle is not a flat hormonal landscape — it is a dynamic sequence of shifting estrogen, progesterone, LH, and FSH, and each of these hormones interacts with insulin in specific ways. Here is what happens at each phase:</p>
 <div class="cycle-phase-grid">
 <div class="cycle-phase-card follicular">
