@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     }
 
     const { error } = await resend.emails.send({
-      from: "Nicole Jardim Website <contact@nicolejardim.com>",
+      from: "Nicole Jardim Website <noreply@nicolejardim.com>",
       to: "support@nicolejardim.com",
       replyTo: email,
       subject: subject
