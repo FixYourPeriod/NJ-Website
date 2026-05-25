@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import Link from "next/link"
 import { articles } from "@/content/articles/index"
+import { ArticleHeaderImage } from "@/components/article-header-image"
 
 // ─── STATIC PARAMS ───────────────────────────────────────────────────────────
 // Tell Next.js which slugs to pre-render at build time.
@@ -60,79 +61,94 @@ export default async function ArticlePage({
           borderBottom: "1px solid rgba(92,45,79,0.07)",
         }}
       >
-        <div style={{ maxWidth: 760, margin: "0 auto" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 16,
-              marginBottom: 24,
-            }}
-          >
-            <span
+        {/* Two-column layout: text left, title-card image right */}
+        <div
+          style={{
+            maxWidth: 960,
+            margin: "0 auto",
+            display: "flex",
+            alignItems: "center",
+            gap: 56,
+          }}
+        >
+          {/* ── Text column ── */}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: 11,
+                display: "flex",
+                alignItems: "center",
+                gap: 16,
+                marginBottom: 24,
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 11,
+                  fontWeight: 600,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "var(--terra)",
+                }}
+              >
+                {meta.category}
+              </span>
+              {meta.readingTime && (
+                <>
+                  <span style={{ color: "var(--charcoal)", opacity: 0.2 }}>·</span>
+                  <span
+                    style={{
+                      fontFamily: "'DM Sans', sans-serif",
+                      fontSize: 13,
+                      color: "var(--charcoal)",
+                      opacity: 0.5,
+                    }}
+                  >
+                    {meta.readingTime} min read
+                  </span>
+                </>
+              )}
+              <span style={{ color: "var(--charcoal)", opacity: 0.2 }}>·</span>
+              <span
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontSize: 13,
+                  color: "var(--charcoal)",
+                  opacity: 0.5,
+                }}
+              >
+                {formattedDate}
+              </span>
+            </div>
+
+            <h1
+              style={{
+                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontSize: "clamp(28px, 4vw, 48px)",
                 fontWeight: 600,
-                letterSpacing: "0.12em",
-                textTransform: "uppercase",
-                color: "var(--terra)",
+                color: "var(--plum)",
+                lineHeight: 1.15,
+                marginBottom: 20,
               }}
             >
-              {meta.category}
-            </span>
-            {meta.readingTime && (
-              <>
-                <span style={{ color: "var(--charcoal)", opacity: 0.2 }}>·</span>
-                <span
-                  style={{
-                    fontFamily: "'DM Sans', sans-serif",
-                    fontSize: 13,
-                    color: "var(--charcoal)",
-                    opacity: 0.5,
-                  }}
-                >
-                  {meta.readingTime} min read
-                </span>
-              </>
-            )}
-            <span style={{ color: "var(--charcoal)", opacity: 0.2 }}>·</span>
-            <span
+              {meta.title}
+            </h1>
+
+            <p
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                fontSize: 13,
+                fontSize: 17,
+                lineHeight: 1.7,
                 color: "var(--charcoal)",
-                opacity: 0.5,
+                opacity: 0.8,
               }}
             >
-              {formattedDate}
-            </span>
+              {meta.description}
+            </p>
           </div>
 
-          <h1
-            style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: "clamp(32px, 5vw, 52px)",
-              fontWeight: 600,
-              color: "var(--plum)",
-              lineHeight: 1.15,
-              marginBottom: 20,
-            }}
-          >
-            {meta.title}
-          </h1>
-
-          <p
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: 18,
-              lineHeight: 1.7,
-              color: "var(--charcoal)",
-              opacity: 0.8,
-            }}
-          >
-            {meta.description}
-          </p>
+          {/* ── Title-card image column ── */}
+          <ArticleHeaderImage slug={meta.slug} />
         </div>
       </section>
 
