@@ -57,10 +57,7 @@ const html = `
 <p>In premenopausal women, this extra estrogen production from fat can contribute to estrogen dominance, worsening symptoms like heavy periods, PMS, fibroids, and endometriosis. After menopause, this peripheral estrogen production becomes the body's primary estrogen source — which sounds helpful, but excess visceral fat-derived estrogen is associated with increased risk of hormone-sensitive cancers.</p>
 <p>This connection also means that reducing visceral fat through metabolic support is not just a cosmetic goal — it is a hormonal health priority.</p>
 <h2>PCOS and Weight</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/hormones-and-weight/img-03" alt="Perimenopause GLP1" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding the connection between perimenopause and metabolic changes</figcaption>
-</figure>
+
 
 <p>Polycystic ovary syndrome is the most common hormonal condition in women of reproductive age, and insulin resistance is central to its pathophysiology in the majority of cases. Elevated insulin drives the ovaries to produce excess androgens (testosterone and its precursors), which suppresses ovulation, promotes fat storage (particularly centrally), and creates a cycle of worsening insulin resistance.</p>
 <p>This is why "eat less, move more" often feels particularly futile for women with PCOS. Their elevated insulin is actively working against fat loss. Approaches that target insulin resistance directly — including reduced refined carbohydrates, regular strength training, adequate protein, and in some cases targeted supplementation with inositol, berberine, or magnesium — tend to be far more effective than caloric restriction alone.</p>

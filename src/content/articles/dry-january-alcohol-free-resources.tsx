@@ -25,9 +25,7 @@ const html = `
 <p>The truth is, alcohol has a direct and measurable effect on estrogen metabolism, progesterone levels, cortisol output, blood sugar stability, and sleep quality. For women dealing with PMS, heavy periods, breast tenderness, endometriosis, or just a general sense that their cycle is "off," alcohol is often a hidden contributor — and removing it, even temporarily, can produce surprisingly clear results.</p>
 <p>This article covers what alcohol actually does to your hormones, how the liver is at the center of the story, what happens to your cycle when you stop drinking, and how to make an alcohol-free month (or longer) feel genuinely good rather than like deprivation.</p>
 <h2>What Dry January Actually Is — And Why More Women Are Participating</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/dry-january-alcohol-free-resources/img-01" alt="Dry jan" width="760" height="760" loading="lazy" />
-</figure>
+
 
 <p>Dry January began in the UK in 2013 as an initiative encouraging people to go alcohol-free for the first month of the year. The premise was simple: after the indulgence of the holiday season, a month off could reset habits, improve health markers, and give people a clearer sense of their relationship with alcohol. By the 2020s, participation had expanded to tens of millions of people worldwide.</p>
 <p>What's notable about current Dry January trends is the demographic shift. While early participants skewed toward people who recognized a drinking problem, today's participants are much more likely to describe themselves as "sober curious" — people who drink moderately but wonder whether even that moderate intake is working against them. Women, in particular, are driving this shift, often motivated by specific health goals: better hormonal balance, less severe PMS, improved sleep, or a desire to understand their own patterns more clearly.</p>

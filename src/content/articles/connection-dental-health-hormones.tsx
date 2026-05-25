@@ -25,10 +25,7 @@ const html = `
 <p>Oral health and hormonal health are deeply intertwined in ways that most conventional medicine simply does not address. Periodontal (gum) disease is a systemic inflammatory condition. Mercury amalgam fillings are classified as an endocrine disruptor. The bacteria living in your mouth communicate directly with your gut, your immune system, and your hormonal pathways. And your hormones — estrogen and progesterone in particular — actively shape the health of your gum tissue throughout your cycle, your pregnancies, and your life.</p>
 <p>If you have been doing everything "right" for your hormones — eating well, sleeping, managing stress — but still struggling with stubborn cycle irregularities, heavy periods, or inflammatory symptoms, it may be worth looking inside your mouth.</p>
 <h2>How Gum Disease Triggers Systemic Inflammation</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/connection-dental-health-hormones/img-01" alt="The connection between your dental health + your hormones" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">The connection between your dental health and your hormones</figcaption>
-</figure>
+
 
 <p>Periodontal disease is not just a dental problem. It is a chronic bacterial infection that, left untreated, trains your immune system into a state of persistent, low-grade inflammation — the same kind of systemic inflammation that underlies hormonal disruption, estrogen dominance, thyroid dysfunction, and conditions like endometriosis and PCOS.</p>
 <p>Here is the mechanism: the bacteria responsible for gum disease — species like <em>Porphyromonas gingivalis</em> and <em>Treponema denticola</em> — do not stay confined to your gums. They enter the bloodstream through inflamed gum tissue, especially during activities as routine as brushing your teeth or eating. Once in circulation, these bacteria and their byproducts trigger an immune response that elevates <strong>inflammatory cytokines</strong> throughout the body.</p>

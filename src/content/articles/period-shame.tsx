@@ -25,10 +25,7 @@ const html = `
 <p>For most women, the story of learning about menstruation is also a story about learning to be ashamed of it. And that shame — subtle, persistent, and deeply culturally conditioned — has consequences that reach far beyond the emotional. It shapes the way women describe their symptoms to doctors, the years they spend dismissing their own pain, and the conditions that go undiagnosed because no one taught them their body was worth listening to.</p>
 <p>This is one of the topics I feel most passionately about, because I've seen the harm it causes firsthand — both in my own journey and in the thousands of women I've worked with over the years. Period shame is not a personal failing. It is a public health problem.</p>
 <h2>A History Written in Silence</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/period-shame/img-01" alt="Why We Need To Put An End to Period Shame" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Breaking the cycle of period shame starts with understanding its history</figcaption>
-</figure>
+
 
 <p>Menstrual taboos are not new, and they are not confined to any one culture. Across history and around the world, menstruating women have been considered ritually unclean, dangerous to crops, capable of souring milk, turning wine, and rusting iron — according to Pliny the Elder, at least. In many cultures, women were (and in some places still are) isolated in "menstrual huts" during their periods, separated from community and family. Even in Western medicine, menstruation was framed for centuries as evidence of biological weakness, a monthly purging of excess, a sign of women's fundamental unsuitability for public life.</p>
 <p>These ideas did not vanish. They evolved. Today they look like period-product advertisements that still use blue liquid instead of red. They look like the word "period" being flagged as inappropriate on social media. They look like a 12-year-old learning to hide her tampon up her sleeve on the way to the bathroom so no one knows she has her period. They look like a woman in a doctor's office saying, "Sorry, I know this is gross," before describing her menstrual symptoms.</p>
@@ -43,10 +40,7 @@ const html = `
 <p>Regular ovulatory cycles tell us that the hypothalamus, pituitary, and ovaries are communicating properly — that the entire hormonal feedback loop is functioning. They tell us that estrogen and progesterone are being produced in sufficient amounts to support not just reproductive health, but brain health, bone density, cardiovascular health, mood, sleep, and immune function. <a href="/articles/how-ovulation-works-and-why-its-so-important">Ovulation is the star of the show</a>, and your period is the proof that everything went as planned.</p>
 <p>When cycles become irregular, painful, extremely heavy, or disappear altogether, the body is communicating. It is not punishing you. It is not being dramatic. It is asking for attention. And shame is what keeps women from listening.</p>
 <h2>Body Literacy: What We Were Never Taught</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/period-shame/img-04" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding your cycle through every life stage is essential to body literacy</figcaption>
-</figure>
+
 
 <p>There is a term I use constantly in my work: <strong>body literacy</strong>. It means understanding the language your body speaks — knowing <a href="/articles/what-is-normal-menstrual-cycle-period">what a normal menstrual cycle looks like</a>, recognizing what your symptoms might indicate, and feeling confident enough to advocate for yourself in a clinical setting.</p>
 <p>Body literacy is exactly what period shame destroys. When menstruation is treated as shameful, girls grow up without accurate information about their cycles. They don't learn about <a href="/articles/four-phases-of-your-menstrual-cycle">the four phases of the menstrual cycle</a>. They don't learn that their cycle changes month to month in response to stress, nutrition, sleep, and environment. They don't learn that tracking their cycles is one of the most powerful health practices available to them. And they certainly don't learn that consistent ovulation — not just getting a period — is a marker of optimal health.</p>

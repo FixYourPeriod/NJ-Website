@@ -49,10 +49,7 @@ const html = `
 <a class="btn btn-terra" href="https://fixyourperiod.app/quiz" target="_blank">Take the Free Assessment →</a>
 </div>
 <h2>6. Your cycle changes across your reproductive years</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/10-period-facts/img-04" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Periods change throughout your reproductive years, especially during perimenopause</figcaption>
-</figure>
+
 
 <p>The cycle you have at 16 is not the cycle you will have at 28, and neither looks like what you will experience at 38 or in perimenopause. Understanding that variation is normal — and that the changes at each stage deserve attention — can save years of confusion.</p>
 <p>In the teenage years, cycles are often irregular as the hypothalamic-pituitary-ovarian axis matures. Anovulatory cycles (where no egg is released) are common in the first year or two after the first period. But persistent irregularity, very heavy bleeding, or severe pain during adolescence should not be dismissed as "just puberty." It can be an early marker of PCOS, endometriosis, or thyroid dysfunction.</p>

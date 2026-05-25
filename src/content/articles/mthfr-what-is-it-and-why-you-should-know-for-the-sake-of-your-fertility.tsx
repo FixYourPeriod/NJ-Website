@@ -32,10 +32,7 @@ const html = `
 <p>When MTHFR is functioning well, it converts dietary folate into 5-methyltetrahydrofolate (5-MTHF), the active form your cells can use to drive methylation. When MTHFR is impaired, this conversion is sluggish — and the entire methylation cycle slows down. One of the most important downstream consequences is the buildup of an amino acid called <strong>homocysteine</strong>.</p>
 <p>Homocysteine is a natural byproduct of protein metabolism. Normally, methylation recycles it back into methionine (a beneficial amino acid). When methylation is impaired, homocysteine accumulates in the blood, and elevated homocysteine is associated with increased risk of miscarriage, blood clots, cardiovascular disease, and pregnancy complications.</p>
 <h2>How MTHFR Affects Fertility and Hormonal Health</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/mthfr-what-is-it-and-why-you-should-know-for-the-sake-of-your-fertility/img-01" alt="MTHFR: What is it and why you should know for the sake of your fertility" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding MTHFR can be key to addressing fertility challenges</figcaption>
-</figure>
+
 
 <h3>Folate Metabolism and Pregnancy</h3>
 <p>Folate is essential for preventing neural tube defects and supporting healthy cell division in early pregnancy. But here is the critical nuance that most conventional medicine misses: <strong>women with MTHFR variants cannot efficiently convert folic acid</strong> — the synthetic form found in most <a href="https://amzn.to/1BN7Svb" target="_blank" rel="noopener noreferrer" class="article-link">prenatal vitamin</a>s — into the active 5-MTHF that their bodies actually need.</p>

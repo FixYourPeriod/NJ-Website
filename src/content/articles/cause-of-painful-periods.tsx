@@ -26,10 +26,7 @@ const html = `
 <p>This is not a design flaw. It is a signal. And like all signals the body sends, it deserves to be understood rather than suppressed.</p>
 <p>There are two distinct categories of period pain, and the distinction matters enormously for how you approach it.</p>
 <h2>Primary Dysmenorrhea: Cramping Without an Underlying Condition</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/cause-of-painful-periods/img-01" alt="Why Omega-3 Oils Can Help Relieve Period Pain" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Omega-3 fatty acids help reduce inflammatory prostaglandins that cause menstrual cramping</figcaption>
-</figure>
+
 
 <p>Primary dysmenorrhea is menstrual pain that occurs without an identifiable structural or pathological cause. It typically starts within the first one to three years of menstruation and tends to be most severe in the late teens and early twenties, often (though not always) improving with age or after pregnancy.</p>
 <p>The primary driver of primary dysmenorrhea is <strong>prostaglandins</strong> — specifically the pro-inflammatory prostaglandin E2 (PGE2). In the days before and during menstruation, the uterine lining produces prostaglandins to trigger muscle contractions that expel the lining. Women with dysmenorrhea produce significantly higher levels of PGE2 than women without period pain, and these levels are highest in the first one to two days of the period — which is exactly when pain is worst.</p>

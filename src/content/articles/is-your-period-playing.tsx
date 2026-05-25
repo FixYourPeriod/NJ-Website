@@ -40,10 +40,7 @@ const html = `
 </div>
 <p>True irregularity — the kind that warrants investigation — is when your cycle consistently falls outside the 21–35 day range, when variation exceeds 7–9 days regularly, when periods stop altogether for 3 or more months (amenorrhea), or when new and significant changes appear in your cycle that persist across multiple months without an obvious explanation.</p>
 <h2>The Most Common "Tricks" Your Period Plays — and Why</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/is-your-period-playing/img-06" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Period changes can signal important shifts in your cycle</figcaption>
-</figure>
+
 
 <h3>Your Period Arrives Later Than Expected</h3>
 <p>A late period is one of the most anxiety-inducing cycle changes, and pregnancy is usually the first thing that comes to mind. But a late period that is not pregnancy almost always means one thing: ovulation was delayed.</p>

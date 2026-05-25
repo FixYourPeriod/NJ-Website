@@ -58,10 +58,7 @@ const html = `
 <a class="btn btn-terra" href="https://fixyourperiod.app/quiz" target="_blank">Take the Free Assessment →</a>
 </div>
 <h2>Perimenopause: The Transition That Begins Long Before You Expect It</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-menstrual-life-cycle/img-09" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Perimenopause brings significant changes to your menstrual cycle</figcaption>
-</figure>
+
 
 <p>Perimenopause is the transitional decade leading up to the final period — and it is far more nuanced than the hot-flash narrative most of us grew up with. It unfolds in two distinct phases, each with its own hormonal signature, and understanding the difference can clarify a lot of confusing symptoms.</p>
 <h3>Phase One: Progesterone Drops First</h3>

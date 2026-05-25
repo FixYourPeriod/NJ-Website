@@ -39,10 +39,7 @@ const html = `
 <p>When gluten repeatedly irritates a sensitive gut, the tight junctions between those cells begin to loosen. The holes in the screen widen. Now larger particles — including partially digested gluten proteins, bacterial fragments, and toxins — slip through into the bloodstream. The immune system, encountering proteins it was never meant to see, goes on high alert. What follows is systemic inflammation: chronic, low-grade, and hormonally disruptive.</p>
 <p>This chronic inflammation directly impairs the body's ability to regulate hormones. It taxes the adrenal glands, interferes with blood sugar regulation, disrupts thyroid function, and creates an internal environment where hormonal imbalances are almost inevitable. You can read more about how gut dysfunction maps onto cycle symptoms in the article on <a href="/articles/howyourperiodaffectsdigestivetract">how your period affects your digestive tract</a>.</p>
 <h2>The Hashimoto's-Gluten Connection</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/is-gluten-bad/img-01" alt="The Link Between Gluten And Autoimmune Conditions" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">The link between gluten and autoimmune conditions like Hashimoto's is well-documented</figcaption>
-</figure>
+
 
 <p>Of all the gluten-hormone connections, the link to Hashimoto's thyroiditis is the most well-documented and clinically significant. Hashimoto's is an autoimmune condition in which the immune system attacks the thyroid gland, gradually degrading its ability to produce thyroid hormones. It is the leading cause of hypothyroidism in women — and it has a striking relationship with gluten sensitivity.</p>
 <p>The mechanism is called <strong>molecular mimicry</strong>. The gliadin protein in gluten has a molecular structure that closely resembles the proteins found in thyroid tissue. When the immune system produces antibodies to attack gliadin, those same antibodies can cross-react with thyroid tissue — essentially attacking the thyroid by mistaken identity. In someone who already has a leaky gut, undigested gliadin fragments entering the bloodstream repeatedly provoke this immune response, potentially accelerating thyroid damage.</p>

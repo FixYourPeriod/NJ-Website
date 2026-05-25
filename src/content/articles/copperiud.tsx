@@ -25,10 +25,7 @@ const html = `
 <p>If you have been researching non-hormonal contraception, the copper IUD — sold in the US as Paragard — has probably come up as a top recommendation. It is long-acting, highly effective, reversible, and completely free of synthetic hormones. For many women, it is a genuinely great option. But "non-hormonal" does not mean "no side effects," and the copper IUD has a set of real consequences that rarely get the attention they deserve in a typical provider consultation.</p>
 <p>This article covers how the copper IUD works, why so many women choose it, and — most importantly — the downsides that are often undersold, including what elevated copper does to your body, your mood, your mineral balance, and your cycle. You will also find a guide to who might be a good candidate, who should think carefully before choosing it, and how to support your body if you already have one.</p>
 <h2>What Is the Copper IUD?</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/copperiud/img-01" alt="Can the copper IUD harm your health &amp; fertility?" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding the copper IUD and its effects on your health</figcaption>
-</figure>
+
 
 <p>Paragard is a small, T-shaped device made of plastic and copper wire that is placed inside the uterus by a healthcare provider. It is the only copper IUD approved in the United States and is FDA-approved for up to <strong>10 years</strong> of use — though clinical evidence supports efficacy for up to 12 years in some studies. It is also approved for use as emergency contraception when inserted within 5 days of unprotected sex.</p>
 <p>The copper IUD works through a completely different mechanism than hormonal contraceptives. Rather than altering your hormone levels, it prevents pregnancy via the <strong>spermicidal effect of copper ions</strong>. Copper is toxic to sperm: it impairs sperm motility and viability, alters the uterine and fallopian tube environment to make it inhospitable to fertilization, and may also affect the uterine lining in ways that reduce the likelihood of implantation. The result is over 99% effectiveness — comparable to hormonal methods — without any synthetic hormones involved.</p>

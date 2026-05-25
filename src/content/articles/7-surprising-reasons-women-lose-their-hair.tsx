@@ -25,10 +25,7 @@ const html = `
 <p>Here's what's important to understand: hair follicles are exquisitely sensitive to hormonal signals. The hair growth cycle — with its phases of active growth (anagen), transition (catagen), and resting (telogen) — is regulated by a web of hormones, nutrients, and stress signals. When any part of that web is disrupted, the follicles are often the first to show it.</p>
 <p>Below are seven of the most common root causes of hair loss in women, along with the mechanisms behind each and specific steps you can take to start investigating.</p>
 <h2>1. Thyroid Dysfunction</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/7-surprising-reasons-women-lose-their-hair/img-01" alt="What Causes Hair Loss In Women?" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Hair loss in women often has hormonal root causes</figcaption>
-</figure>
+
 
 <p>The thyroid is one of the most powerful regulators of the hair growth cycle. Both <strong>hypothyroidism</strong> (underactive thyroid) and <strong>hyperthyroidism</strong> (overactive thyroid) can cause diffuse shedding across the entire scalp — the kind where you don't notice a bald patch so much as an overall thinning that creeps up slowly.</p>
 <p>Thyroid hormones — particularly <strong>free T3</strong>, the active form — directly influence the anagen (growth) phase of the hair follicle. When thyroid hormone levels are low, follicles spend more time in the resting phase and less time actively growing. Over time, the result is fewer hairs on your head. Hyperthyroidism can also trigger shedding because the follicle cycle is pushed too fast, burning through the growth phase before hair can fully develop.</p>

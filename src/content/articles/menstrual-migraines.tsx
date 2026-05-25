@@ -25,10 +25,7 @@ const html = `
 <p>You can almost set your calendar by it. Sometime in the two days before your period starts — or right as it begins — a migraine arrives. Not just a bad headache. A throbbing, one-sided, light-and-sound-sensitive, nausea-inducing migraine that takes you out for a day or more. And then, once your period is in full swing, it lifts. Until next month.</p>
 <p>If this pattern sounds familiar, you are dealing with what clinicians call a menstrual migraine — and you are far from alone. Roughly half to two-thirds of women who have migraines report a strong link to their menstrual cycle. The predictability of the pattern is actually useful information: your body is telling you exactly which hormonal shift is responsible. Once you understand what is happening and why, there is quite a bit you can do to intervene.</p>
 <h2>What Are Menstrual Migraines — and When Do They Strike?</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/menstrual-migraines/img-01" alt="Natural Solutions For Menstrual Migraines" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding the pattern of menstrual migraines can help you find relief</figcaption>
-</figure>
+
 
 <p>A menstrual migraine is a migraine that occurs in a predictable window tied to the menstrual cycle, typically starting between two days before menstruation and three days into it. This is often called the <strong>menstrual window</strong>. In true menstrual migraines, attacks occur exclusively or predominantly in this window. In menstrually-related migraines — the more common presentation — attacks cluster around menstruation but can also occur at other points in the cycle.</p>
 <p>What sets menstrual migraines apart from other migraines is not just timing. They tend to be longer in duration, more severe in intensity, more resistant to standard migraine medications, and more likely to recur even after initial treatment. They are also significantly less likely to involve aura — the visual disturbances, tingling, or speech changes that can precede some migraines. This distinct clinical profile is a direct reflection of the specific hormonal mechanism driving them.</p>

@@ -25,10 +25,7 @@ const html = `
 <p>Thyroid dysfunction is one of the most common yet consistently underdiagnosed causes of period problems in women. And the reason it gets missed so often comes down to inadequate testing, overly wide "normal" reference ranges, and a medical culture that treats the thyroid in isolation rather than as part of a deeply connected hormonal ecosystem.</p>
 <p>This guide covers everything you need to understand about the thyroid-cycle connection: how hypothyroidism slows and disrupts your cycle, how hyperthyroidism can make it disappear, why Hashimoto's is almost always overlooked, what testing you actually need, and what you can do to support your thyroid naturally.</p>
 <h2>The Thyroid-Reproductive Hormone Connection</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-your-thyroid-can-cause-period-and-fertility-problems/img-01" alt="How Your Thyroid Can Cause Period and Fertility Problems" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">The thyroid and reproductive hormones are deeply interconnected</figcaption>
-</figure>
+
 
 <p>Think of your body's hormonal system as three overlapping command centers that all share the same headquarters — your hypothalamus and pituitary gland. These are the <strong>hypothalamic-pituitary-adrenal (HPA) axis</strong>, the <strong>hypothalamic-pituitary-thyroid (HPT) axis</strong>, and the <strong>hypothalamic-pituitary-ovarian (HPO) axis</strong>.</p>
 <p>Because all three axes run through the same two master glands, they are in constant communication. When one gets disrupted, the ripple effects move through all three. Chronic stress that overloads the HPA axis will suppress the HPT axis. A sluggish thyroid will dampen the HPO axis. Your period and your thyroid are not separate systems — they are parts of one interconnected whole.</p>

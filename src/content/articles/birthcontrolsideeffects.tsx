@@ -25,9 +25,7 @@ const html = `
 <p>Hormonal birth control is one of the most widely used medications in the world — and one of the least discussed in terms of its systemic effects. For many women, it works without obvious problems. For a significant number of others, it comes with side effects that range from inconvenient to genuinely life-altering, and that are often dismissed or minimized by prescribers.</p>
 <p>This is not an anti-birth-control article. Contraception is a personal decision, and understanding the full picture — the benefits <em>and</em> the potential costs — is what allows you to make an informed choice. If you want to understand <a href="/articles/5-things-must-know-hormonal-birth-control">5 things to know</a> before starting hormonal contraception, that piece covers the fundamentals. Here, we are going deep on the side effects themselves.</p>
 <h2>How Hormonal Birth Control Works (Briefly)</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/birthcontrolsideeffects/img-01" alt="Are Birth Control Side Effects Ruining Your Life?" width="760" height="760" loading="lazy" />
-</figure>
+
 
 <p>All hormonal contraceptive methods — the combined pill, progestin-only mini pill, patch, vaginal ring, hormonal IUD (Mirena, Kyleena, Liletta), implant (Nexplanon), and injectable (Depo-Provera) — work by delivering synthetic hormones that suppress or override the body's natural hormonal cycles.</p>
 <p>The combined pill, patch, and ring contain synthetic estrogen plus a progestin (synthetic progesterone). The mini pill, hormonal IUD, implant, and injectable contain progestin only. The primary mechanism is suppressing ovulation by disrupting the hypothalamic-pituitary-ovarian (HPO) axis — the hormonal signaling chain between the brain and ovaries. Without the brain sending the right signals, the ovaries do not mature follicles or release eggs.</p>

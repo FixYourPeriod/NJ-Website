@@ -25,10 +25,7 @@ const html = `
 <p>If you have been taught that ovulation is only relevant when you are trying to get pregnant, you have been given incomplete information. Ovulation is the most important single event in your monthly cycle — not menstruation. The bleed is simply the downstream effect of what happened at ovulation. Without ovulation, the second half of your cycle cannot function the way it is designed to. Without ovulation, there is no meaningful progesterone. And without progesterone to balance estrogen, the entire hormonal picture shifts in ways that affect not just your <a href="https://amzn.to/2OHfCbO" target="_blank" rel="noopener noreferrer" class="article-link">period</a>, but your mood, your sleep, your cardiovascular health, your bones, and your brain.</p>
 <p>Understanding ovulation — what drives it, what it produces, how to recognize it, and what happens when it is absent — is foundational knowledge for any woman who wants to understand her body. It is also the starting point for addressing a surprising number of period problems, from irregular cycles and PMS to spotting, heavy bleeding, and infertility. Let's walk through the full picture. For broader context on all four phases, see the article on the <a href="/articles/four-phases-of-your-menstrual-cycle">cycle phases</a>.</p>
 <h2>The Physiology of Ovulation: A Step-by-Step Breakdown</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-ovulation-works-and-why-its-so-important/img-01" alt="How Ovulation Works And Why It’s So Important" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding the step-by-step process of ovulation</figcaption>
-</figure>
+
 
 <p>Ovulation is the culmination of a tightly choreographed hormonal sequence that unfolds over the first half of your cycle. It is not a simple switch that flips — it is the result of weeks of preparation, multiple feedback loops, and precise hormonal thresholds being met in the right order.</p>
 <h3>Step 1: The Hypothalamus Sets Things in Motion</h3>

@@ -42,10 +42,7 @@ const html = `
 <p>Within the normal range, there is variation. A consistent 4-day period is just as healthy as a consistent 6-day period, provided the flow volume is appropriate — roughly 35–80 ml of blood total across the cycle — and you are not passing large clots or soaking through protection rapidly. The key word is consistent. A sudden shift in your usual pattern — even if the new length still falls within "normal" — is worth paying attention to.</p>
 <p>The two ends of the spectrum, under 2 days and over 7 days, both point to something specific. They are not opposite problems caused by the same thing; they tend to have distinct root causes and require different approaches.</p>
 <h2>What Causes a Very Short Period (1–2 Days)?</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/how-long-should-your-period-be/img-05" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Period length can change significantly during perimenopause</figcaption>
-</figure>
+
 
 <p>A period that comes and goes within a day or two is often interpreted as a good thing. Less mess, less disruption. But a very short bleed is almost never a sign that your body is running efficiently. In most cases, it reflects a uterine lining that is too thin to sustain more than a day or two of shedding — and that thinness is driven by one or more of the following:</p>
 <div class="causes-grid">

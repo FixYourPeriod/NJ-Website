@@ -26,10 +26,7 @@ const html = `
 <p>The good news is that most women do recover fully after stopping the pill. The less-talked-about reality is that recovery is rarely instant, and without the right support it can take far longer than it needs to. This article will walk you through exactly what is happening in your body, what to expect in the months ahead, and the full protocol I use in my practice to help women come off the pill smoothly and completely.</p>
 <p>For a deeper look at why hormonal birth control affects your body the way it does, see my article on <a href="/articles/5-things-must-know-hormonal-birth-control">hormonal birth control</a>.</p>
 <h2>Why Coming Off the Pill Can Be Challenging</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/come-birth-control-pill-right-way/img-01" alt="Get off the birth control pill the right way" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Supporting your body through the transition off hormonal birth control</figcaption>
-</figure>
+
 
 <p>The combined oral contraceptive pill works by shutting down the hypothalamic-pituitary-ovarian (HPO) axis — the communication loop between your brain and your ovaries that drives ovulation and the production of estrogen and progesterone. It also suppresses the HPA (hypothalamic-pituitary-adrenal) axis, disrupts the gut microbiome, burdens the liver, and depletes key nutrients. When you stop taking it, all of these systems have to come back online at the same time. That is a lot of recalibration.</p>
 <p>There are four core reasons why the transition requires deliberate support:</p>

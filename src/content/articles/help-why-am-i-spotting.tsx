@@ -25,10 +25,7 @@ const html = `
 <p>Spotting is defined as any light vaginal bleeding that occurs outside of your normal period window. It can show up as pink, red, or brown discharge on toilet paper, in your underwear, or when you wipe — but it is not heavy enough to require a pad or tampon. It might happen once, or it might become a recurring pattern you notice every single cycle.</p>
 <p>Here is the most important thing to understand: spotting is not a diagnosis — it is a symptom. The fact that you are spotting tells you something is going on hormonally, structurally, or locally in the reproductive tract. Where in your cycle the spotting appears is one of the most useful clues you have for figuring out what is driving it.</p>
 <h2>The 6 Types of Spotting — and What Each One Means</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/help-why-am-i-spotting/img-04" alt="Periods in perimenopause" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding your cycle patterns can help identify the cause of spotting</figcaption>
-</figure>
+
 
 <h3>1. Ovulation Spotting (Days 12–16 of a typical cycle)</h3>
 <p>Mid-cycle spotting that coincides with ovulation is one of the most benign forms of spotting and affects roughly 5% of people with regular cycles. It tends to be light pink or streaked with red, lasts only a day or two, and often arrives alongside other ovulation signs like a sharp pelvic twinge (mittelschmerz), a surge in clear stretchy cervical fluid, or an increase in libido.</p>

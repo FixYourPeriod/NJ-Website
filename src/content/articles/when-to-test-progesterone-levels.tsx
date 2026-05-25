@@ -26,10 +26,7 @@ const html = `
 <p>This is one of the most common and most consequential mistakes I see with hormone testing. A woman gets a progesterone test ordered on day 21 of her cycle because that's the standard protocol. She ovulated on day 16, not day 14. That means day 21 is only five days after ovulation — not the ideal seven to eight days post-ovulation when progesterone peaks. The number comes back lower than expected, she's told her progesterone is low, and she's either sent home worried or handed a prescription — all based on a result that was never going to be accurate to begin with.</p>
 <p>Let's fix that.</p>
 <h2>Why the Timing of Your Progesterone Test Matters So Much</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/when-to-test-progesterone-levels/img-01" alt="The Best Time In Your Cycle to Test Progesterone" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding the optimal timing for progesterone testing throughout your cycle</figcaption>
-</figure>
+
 
 <p>Progesterone is what's called an ovulation-dependent hormone. Your body only produces meaningful amounts of it after you ovulate. Before ovulation, progesterone levels are very low — typically below 1.5 ng/mL. After ovulation, the follicle that released the egg transforms into the corpus luteum, which begins pumping out progesterone to prepare the uterine lining for potential implantation.</p>
 <p>Progesterone doesn't spike immediately after ovulation. It climbs over the course of the following week, reaches its peak roughly seven to eight days after ovulation (which is the mid-luteal phase), and then begins to fall in the days before your period. That peak is your window. That's when a progesterone test tells you something real.</p>

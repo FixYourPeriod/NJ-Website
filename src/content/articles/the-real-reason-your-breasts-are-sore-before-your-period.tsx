@@ -30,10 +30,7 @@ const html = `
 <p><strong>Non-cyclic breast pain</strong> is not tied to the menstrual cycle. It may be constant or intermittent, often affects one breast, and can have many causes — from musculoskeletal issues and cysts to benign fibroadenomas. Non-cyclic pain should always be evaluated by a healthcare provider to rule out structural causes.</p>
 <p>If your breast pain is clearly cyclical — comes before your period, goes away when bleeding starts — read on. Your hormones are the key.</p>
 <h2>The Hormonal Picture Behind Breast Tenderness</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/the-real-reason-your-breasts-are-sore-before-your-period/img-01" alt="The Real Reason Your Breasts Are Sore Before Your Period" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">Understanding the hormonal drivers behind cyclical breast tenderness</figcaption>
-</figure>
+
 
 <p>Breast tissue is highly sensitive to hormonal fluctuations. The interplay between estrogen, progesterone, prolactin, and thyroid hormones all shapes what you feel in your breasts across the cycle.</p>
 <h3>Estrogen: the proliferative driver</h3>
