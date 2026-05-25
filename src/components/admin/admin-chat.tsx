@@ -96,10 +96,9 @@ export function AdminChat({
   const [undoable, setUndoable] = useState<UndoCandidate | null>(null)
   const [undoBusy, setUndoBusy] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
-  const fileInputRef = useRef<HTMLInputElement>(null)
+  const fileInputRef = useRef<HTMLInputElement | null>(null)
   const dragDepthRef = useRef(0)
 
-  // Fetch the most-recent undoable admin commit on mount and after agent turns
   const refreshUndoable = useCallback(async () => {
     try {
       const res = await fetch("/api/admin-agent/undo", { method: "GET" })
@@ -113,17 +112,19 @@ export function AdminChat({
 
   useEffect(() => { void refreshUndoable() }, [refreshUndoable])
 
-  // Auto-scroll to latest message
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" })
   }, [messages, busy])
 
-  // Auto-clear attach errors
   useEffect(() => {
     if (!attachError) return
     const t = setTimeout(() => setAttachError(null), 4000)
     return () => clearTimeout(t)
   }, [attachError])
+
+  function removePendingAttachment(id: string) {
+    setPendingAttachments((prev) => prev.filter((a) => a.id !== id))
+  }
 
   async function attachFiles(files: FileList | File[]) {
     const items = Array.from(files)
@@ -182,7 +183,6 @@ export function AdminChat({
     setPendingAttachments([])
     setBusy(true)
 
-    // Build API history — include image attachments as Anthropic content blocks
     const allMessages = [...messages, userMsg]
     const history = allMessages.map((m) => {
       if (m.attachments && m.attachments.length > 0) {
@@ -359,6 +359,7 @@ export function AdminChat({
   }
 
   const showWelcome = messages.length === 0
+  const who = fullName ?? email ?? userId
 
   return (
     <div
@@ -371,158 +372,90 @@ export function AdminChat({
       {/* Drag overlay */}
       {dragActive && (
         <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#5C2D4F]/10 border-2 border-dashed border-[#5C2D4F] rounded-2xl pointer-events-none">
-          <div
-            className="flex flex-col items-center gap-2 text-[#5C2D4F]"
-            style={{ fontFamily: "'DM Sans', sans-serif" }}
-          >
+          <div className="flex flex-col items-center gap-2 text-[#5C2D4F]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
             <ImageIcon className="w-10 h-10" />
             <p className="text-sm font-semibold">Drop image to attach</p>
           </div>
         </div>
       )}
 
-      {/* Undo banner — shown whenever there's a recent admin commit */}
-      {undoable && (
-        <UndoBanner candidate={undoable} busy={undoBusy} onClick={performUndo} />
-      )}
+      {/* Undo banner */}
+      {undoable && <UndoBanner candidate={undoable} busy={undoBusy} onClick={performUndo} />}
 
-      {/* Message log / welcome state */}
-      <div
-        ref={scrollRef}
-        className="flex-1 overflow-y-auto pr-1"
-        style={{ fontFamily: "'DM Sans', sans-serif" }}
-      >
-        {showWelcome ? (
-          <WelcomeState firstName={firstName} email={email} />
-        ) : (
-          <ul className="space-y-5 pb-6">
-            {messages.map((m) => (
-              <li key={m.id} className="space-y-2">
-                <MessageBubble
-                  role={m.role}
-                  content={m.content}
-                  attachments={m.attachments}
-                  isStreaming={m.isStreaming}
-                  initials={initialsFor(fullName, email)}
-                />
-                {m.role === "assistant" && m.toolCalls && m.toolCalls.length > 0 && (
-                  <ToolCallStrip toolCalls={m.toolCalls} />
-                )}
-                {m.role === "assistant" && m.commit && (
-                  <CommitCard commit={m.commit} />
-                )}
-                {m.role === "assistant" && m.undo && (
-                  <UndoCard undo={m.undo} />
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
-      {/* Composer */}
-      <div className="mt-4 border-t border-[rgba(92,45,79,0.1)] pt-4">
-        {pendingAttachments.length > 0 && (
-          <div className="mb-3 flex flex-wrap gap-2">
-            {pendingAttachments.map((a) => (
-              <div
-                key={a.id}
-                className="relative rounded-lg overflow-hidden border border-[rgba(92,45,79,0.15)] bg-white shadow-sm"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={a.previewUrl}
-                  alt={a.fileName}
-                  className="h-16 w-auto max-w-[120px] object-cover block"
-                />
-                <button
-                  type="button"
-                  onClick={() => setPendingAttachments((prev) => prev.filter((x) => x.id !== a.id))}
-                  className="absolute top-1 right-1 flex items-center justify-center w-5 h-5 rounded-full bg-black/60 hover:bg-black/80 text-white"
-                  aria-label={`Remove ${a.fileName}`}
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </div>
-            ))}
+      {showWelcome ? (
+        // Empty state — welcome heading + composer card sit together, vertically centered
+        <div className="flex-1 flex flex-col items-center justify-center">
+          <div className="w-full max-w-2xl">
+            <WelcomeCard firstName={firstName} email={email} />
+            <Composer
+              input={input}
+              setInput={setInput}
+              busy={busy}
+              pendingAttachments={pendingAttachments}
+              onRemovePending={removePendingAttachment}
+              attachError={attachError}
+              fileInputRef={fileInputRef}
+              onAttachFiles={attachFiles}
+              onSubmit={() => send(input)}
+              onPaste={handlePaste}
+            />
+            <FooterLine who={who} />
           </div>
-        )}
-
-        {attachError && (
-          <p
-            className="mb-2 text-xs text-[#B55A3A]"
+        </div>
+      ) : (
+        // Active state — message log fills the workspace, composer docks at bottom
+        <>
+          <div
+            ref={scrollRef}
+            className="flex-1 overflow-y-auto pr-1"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            {attachError}
-          </p>
-        )}
-
-        <form
-          onSubmit={(e) => { e.preventDefault(); send(input) }}
-          className="flex items-end gap-2"
-        >
-          <button
-            type="button"
-            onClick={() => fileInputRef.current?.click()}
-            disabled={busy || pendingAttachments.length >= MAX_ATTACHMENTS}
-            className="inline-flex items-center justify-center w-11 h-11 rounded-full border border-[rgba(92,45,79,0.15)] bg-white hover:bg-[rgba(92,45,79,0.05)] text-[rgba(92,45,79,0.45)] hover:text-[#5C2D4F] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-            aria-label="Attach screenshot"
-            title="Attach screenshot (or paste / drag-and-drop)"
-          >
-            <Paperclip className="w-4 h-4" />
-          </button>
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept={ACCEPTED_MIME.join(",")}
-            multiple
-            className="hidden"
-            onChange={(e) => {
-              if (e.target.files) void attachFiles(e.target.files)
-              e.target.value = ""
-            }}
-          />
-
-          <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && !e.shiftKey) {
-                e.preventDefault()
-                send(input)
-              }
-            }}
-            onPaste={handlePaste}
-            rows={1}
-            placeholder="Describe a change, ask me to draft an article, or paste a screenshot for context…"
-            className="flex-1 resize-none rounded-2xl border border-[rgba(92,45,79,0.15)] bg-white px-4 py-3 text-sm leading-relaxed text-[#2C2520] placeholder:text-[rgba(44,37,32,0.35)] focus:outline-none focus:ring-2 focus:ring-[#5C2D4F]/30 focus:border-[#5C2D4F]"
-            style={{ fontFamily: "'DM Sans', sans-serif", maxHeight: 160 }}
-            disabled={busy}
-          />
-          <button
-            type="submit"
-            disabled={busy || (!input.trim() && pendingAttachments.length === 0)}
-            className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-[#5C2D4F] hover:bg-[#4a2440] text-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow"
-            aria-label="Send"
-          >
-            <Send className="w-4 h-4" />
-          </button>
-        </form>
-        <p
-          className="mt-2 text-[11px] text-[rgba(44,37,32,0.4)]"
-          style={{ fontFamily: "'DM Sans', sans-serif" }}
-        >
-          Signed in as {fullName ?? email ?? userId}. Edits auto-publish to nicolejardim.app.
-          Attach screenshots with the paperclip, paste, or drag-and-drop.
-        </p>
-      </div>
+            <ul className="space-y-5 pb-6">
+              {messages.map((m) => (
+                <li key={m.id} className="space-y-2">
+                  <MessageBubble
+                    role={m.role}
+                    content={m.content}
+                    attachments={m.attachments}
+                    isStreaming={m.isStreaming}
+                    initials={initialsFor(fullName, email)}
+                  />
+                  {m.role === "assistant" && m.toolCalls && m.toolCalls.length > 0 && (
+                    <ToolCallStrip toolCalls={m.toolCalls} />
+                  )}
+                  {m.role === "assistant" && m.commit && <CommitCard commit={m.commit} />}
+                  {m.role === "assistant" && m.undo && <UndoCard undo={m.undo} />}
+                </li>
+              ))}
+              {busy && (
+                <li><ThinkingBubble /></li>
+              )}
+            </ul>
+          </div>
+          <div className="mt-3">
+            <Composer
+              input={input}
+              setInput={setInput}
+              busy={busy}
+              pendingAttachments={pendingAttachments}
+              onRemovePending={removePendingAttachment}
+              attachError={attachError}
+              fileInputRef={fileInputRef}
+              onAttachFiles={attachFiles}
+              onSubmit={() => send(input)}
+              onPaste={handlePaste}
+            />
+            <FooterLine who={who} />
+          </div>
+        </>
+      )}
     </div>
   )
 }
 
 // --- Sub-components ----------------------------------------------------------
 
-function WelcomeState({
+function WelcomeCard({
   firstName,
   email,
 }: {
@@ -531,30 +464,157 @@ function WelcomeState({
 }) {
   const greeting = firstName ?? email?.split("@")[0] ?? "there"
   return (
-    <div className="max-w-2xl mx-auto py-10">
-      <div
-        className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5C2D4F]/10 border border-[#5C2D4F]/25 text-[11px] uppercase tracking-widest text-[#5C2D4F] font-semibold mb-4"
-        style={{ fontFamily: "'DM Sans', sans-serif" }}
-      >
-        <Sparkles className="w-3 h-3" />
-        Admin workspace
-      </div>
+    <div className="text-center mb-6">
       <h1
         className="text-3xl sm:text-4xl text-[#2C2520] font-light leading-tight mb-3"
-        style={{ fontFamily: "'Fraunces', Georgia, serif", fontStyle: "italic" }}
+        style={{ fontFamily: "'Fraunces', Georgia, serif" }}
       >
         Hi {greeting} — what would you like to change today?
       </h1>
       <p
-        className="text-[rgba(44,37,32,0.6)] text-base leading-relaxed"
+        className="text-[rgba(44,37,32,0.6)] text-sm sm:text-base leading-relaxed max-w-xl mx-auto"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
       >
-        Tell me what you want to do in plain English. I can edit existing articles, draft new
-        ones, change page copy, and update the site. Attach a screenshot (paste, drag, or click
-        the paperclip) when it&rsquo;s easier to show than describe. Every change auto-publishes
-        to the live site.
+        Tell me what you want to do in plain English. I can edit articles, draft
+        new ones, change page copy, and update the site. Attach a screenshot when
+        it&rsquo;s easier to show than describe.
       </p>
     </div>
+  )
+}
+
+/**
+ * Composer card — textarea with paperclip + send button tucked into the
+ * bottom corners. Used in both the empty state and docked at the bottom
+ * of the active message view.
+ */
+function Composer({
+  input,
+  setInput,
+  busy,
+  pendingAttachments,
+  onRemovePending,
+  attachError,
+  fileInputRef,
+  onAttachFiles,
+  onSubmit,
+  onPaste,
+}: {
+  input: string
+  setInput: (s: string) => void
+  busy: boolean
+  pendingAttachments: Attachment[]
+  onRemovePending: (id: string) => void
+  attachError: string | null
+  fileInputRef: React.RefObject<HTMLInputElement | null>
+  onAttachFiles: (files: FileList | File[]) => void | Promise<void>
+  onSubmit: () => void
+  onPaste: (e: ClipboardEvent<HTMLTextAreaElement>) => void
+}) {
+  const canAttachMore = pendingAttachments.length < MAX_ATTACHMENTS
+  const canSubmit = !busy && (input.trim().length > 0 || pendingAttachments.length > 0)
+
+  return (
+    <div>
+      {pendingAttachments.length > 0 && (
+        <div className="mb-3 flex flex-wrap gap-2">
+          {pendingAttachments.map((a) => (
+            <div
+              key={a.id}
+              className="relative rounded-lg overflow-hidden border border-[rgba(92,45,79,0.15)] bg-white shadow-sm"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={a.previewUrl} alt={a.fileName} className="h-16 w-auto max-w-[120px] object-cover block" />
+              <button
+                type="button"
+                onClick={() => onRemovePending(a.id)}
+                className="absolute top-1 right-1 flex items-center justify-center w-5 h-5 rounded-full bg-black/60 hover:bg-black/80 text-white"
+                aria-label={`Remove ${a.fileName}`}
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {attachError && (
+        <p className="mb-2 text-xs text-[#B55A3A]" style={{ fontFamily: "'DM Sans', sans-serif" }}>
+          {attachError}
+        </p>
+      )}
+
+      <form onSubmit={(e) => { e.preventDefault(); onSubmit() }} className="relative">
+        <div className="relative rounded-2xl border border-[rgba(92,45,79,0.15)] bg-white shadow-sm focus-within:border-[#5C2D4F]/40 focus-within:shadow-md transition-all">
+          <textarea
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault()
+                onSubmit()
+              }
+            }}
+            onPaste={onPaste}
+            rows={3}
+            placeholder="What would you like to change? Edits, new articles, page copy, screenshots — anything goes."
+            className="block w-full resize-none rounded-2xl bg-transparent px-5 pt-4 pb-14 text-base leading-relaxed text-[#2C2520] placeholder:text-[rgba(44,37,32,0.35)] focus:outline-none"
+            style={{ fontFamily: "'DM Sans', sans-serif", maxHeight: 280 }}
+            disabled={busy}
+          />
+
+          {/* Action row inset at the bottom of the card */}
+          <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-3 pb-3 pointer-events-none">
+            <div className="pointer-events-auto">
+              <button
+                type="button"
+                onClick={() => fileInputRef.current?.click()}
+                disabled={busy || !canAttachMore}
+                className="inline-flex items-center justify-center w-9 h-9 rounded-full text-[rgba(92,45,79,0.45)] hover:text-[#5C2D4F] hover:bg-[#5C2D4F]/8 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                aria-label="Attach screenshot"
+                title="Attach screenshot (or paste / drag-and-drop)"
+              >
+                <Paperclip className="w-4 h-4" />
+              </button>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept={ACCEPTED_MIME.join(",")}
+                multiple
+                className="hidden"
+                onChange={(e) => {
+                  if (e.target.files) void onAttachFiles(e.target.files)
+                  e.target.value = ""
+                }}
+              />
+            </div>
+
+            <div className="pointer-events-auto">
+              <button
+                type="submit"
+                disabled={!canSubmit}
+                className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-[#5C2D4F] hover:bg-[#4a2440] text-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow"
+                aria-label="Send"
+                title="Send (or press Enter)"
+              >
+                <Send className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  )
+}
+
+function FooterLine({ who }: { who: string }) {
+  return (
+    <p
+      className="mt-3 text-center text-[11px] text-[rgba(44,37,32,0.4)]"
+      style={{ fontFamily: "'DM Sans', sans-serif" }}
+    >
+      Signed in as {who}. Every edit auto-publishes — use Undo if you change your mind.
+    </p>
   )
 }
 
@@ -625,6 +685,23 @@ function MessageBubble({
   )
 }
 
+function ThinkingBubble() {
+  return (
+    <div className="flex items-start gap-3">
+      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-[#5C2D4F] to-[#3a1a33] text-white flex items-center justify-center">
+        <Sparkles className="w-4 h-4" />
+      </div>
+      <div className="bg-white border border-[rgba(92,45,79,0.1)] rounded-2xl rounded-tl-sm px-4 py-3">
+        <span className="inline-flex gap-1">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#5C2D4F] animate-bounce [animation-delay:-0.3s]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#5C2D4F] animate-bounce [animation-delay:-0.15s]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#5C2D4F] animate-bounce" />
+        </span>
+      </div>
+    </div>
+  )
+}
+
 function ToolCallStrip({ toolCalls }: { toolCalls: ToolCall[] }) {
   return (
     <div className="ml-11 flex flex-wrap gap-1.5">
@@ -690,14 +767,8 @@ function UndoBanner({
           {candidate.subject}
         </div>
         <div className="mt-1 text-[11px] text-[rgba(44,37,32,0.55)]">
-          {candidate.filesChanged.length} file
-          {candidate.filesChanged.length === 1 ? "" : "s"} changed ·{" "}
-          <a
-            href={candidate.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-[#5C2D4F]"
-          >
+          {candidate.filesChanged.length} file{candidate.filesChanged.length === 1 ? "" : "s"} changed ·{" "}
+          <a href={candidate.url} target="_blank" rel="noopener noreferrer" className="underline hover:text-[#5C2D4F]">
             {candidate.sha.slice(0, 7)}
           </a>
         </div>
