@@ -111,7 +111,9 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0.5em;
 }
 .article-prose p {
-  margin: 0;
+  /* margin: 0 intentionally omitted — Tailwind preflight already resets it,
+     and setting it here would override the > div > * + * spacing rule above
+     (same specificity, later rule wins). Top margin is controlled by * + *. */
   color: var(--charcoal);
 }
 .article-prose a {

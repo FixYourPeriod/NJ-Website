@@ -76,11 +76,37 @@ function cloudinaryUrl(publicId, w = 760) {
   return `https://res.cloudinary.com/${CLOUD}/image/upload/w_${w},f_auto,q_auto/${publicId}`
 }
 
-/** Filter scraped images to quality candidates only */
+// Sitewide promo images that appear as the last 3 images on every article page
+// (scraped from the sidebar/footer of the original WordPress site).
+const SITEWIDE_PROMO_ALTS = new Set([
+  "Better relationships blog",
+  "Perimenopause GLP1",
+  "Periods in perimenopause",
+])
+
+/** Filter scraped images to genuine inline content candidates only.
+ *  Rules (in order):
+ *  1. Must have a Cloudinary ID and URL.
+ *  2. Skip img-01 — always the article title card (designed as a social media
+ *     cover / article thumbnail, not inline content).
+ *  3. Skip the last 3 images — always the three sitewide WordPress sidebar
+ *     promo images ("Better relationships blog", "Perimenopause GLP1",
+ *     "Periods in perimenopause").
+ *  4. Skip images that are too small to be article content.
+ */
 function selectCandidateImages(uploadedImages) {
-  return uploadedImages
-    .filter(img => {
+  // Drop the last 3 (sitewide promos) — they appear on every page
+  const withoutPromos = uploadedImages.slice(0, -3).filter(img =>
+    !SITEWIDE_PROMO_ALTS.has(img.alt)
+  )
+
+  return withoutPromos
+    .filter((img, index) => {
       if (!img.cloudinaryId || !img.cloudinaryUrl) return false
+      // Skip img-01 (index 0) — always the article title card
+      if (index === 0) return false
+      // Skip sitewide promos by alt text (belt + suspenders)
+      if (SITEWIDE_PROMO_ALTS.has(img.alt)) return false
       // Skip very small images (icons, thumbnails)
       if (img.width < 300 || img.height < 150) return false
       // Skip portrait-only images that are too narrow (likely icons)
