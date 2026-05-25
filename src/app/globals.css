@@ -75,7 +75,11 @@ a { text-decoration: none; color: inherit; }
   font-size: 1.05rem;
   line-height: 1.8;
 }
-.article-prose > * + * {
+/* ArticleBody renders via dangerouslySetInnerHTML inside a <div> wrapper,
+   so paragraphs are grandchildren, not direct children of .article-prose.
+   Target both direct children and one level deep to cover both cases. */
+.article-prose > * + *,
+.article-prose > div > * + * {
   margin-top: 1.25em;
 }
 .article-prose h2 {
@@ -289,26 +293,58 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ─── ARTICLE ENRICHMENT ELEMENTS ──────────────────────────────────────── */
+
+/* Images float right so text wraps alongside — editorial/magazine layout.
+   Odd-numbered images float right, even-numbered float left for variety. */
 .article-prose .article-image {
-  margin: 2.5rem 0;
+  float: right;
+  width: 42%;
+  max-width: 300px;
+  margin: 0.25rem 0 1.75rem 2rem;
   border-radius: 8px;
   overflow: hidden;
+  shape-outside: margin-box;
+}
+.article-prose .article-image:nth-of-type(even) {
+  float: left;
+  margin: 0.25rem 2rem 1.75rem 0;
 }
 .article-prose .article-image img {
   width: 100%;
   height: auto;
+  max-height: 300px;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
 }
 .article-prose .article-image-caption {
-  margin-top: 10px;
+  margin-top: 7px;
   font-family: 'DM Sans', sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   color: var(--charcoal);
-  opacity: 0.55;
+  opacity: 0.5;
   text-align: center;
   font-style: italic;
-  line-height: 1.5;
+  line-height: 1.4;
+  padding: 0 2px;
+}
+/* Section headings always clear floats so images stay in their own section */
+.article-prose h2,
+.article-prose h3 {
+  clear: both;
+}
+/* Mobile: full-width stacked images */
+@media (max-width: 600px) {
+  .article-prose .article-image,
+  .article-prose .article-image:nth-of-type(even) {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem 0;
+  }
+  .article-prose .article-image img {
+    max-height: none;
+  }
 }
 .article-prose .article-link {
   color: var(--terra);
