@@ -77,9 +77,11 @@ a { text-decoration: none; color: inherit; }
 }
 /* ArticleBody renders via dangerouslySetInnerHTML inside a <div> wrapper,
    so paragraphs are grandchildren, not direct children of .article-prose.
-   Target both direct children and one level deep to cover both cases. */
+   Level 3 covers paragraphs inside custom wrappers (step-box, device-card,
+   symptom-card, tracker-card, etc.) that sit inside the dangerouslySetInnerHTML div. */
 .article-prose > * + *,
-.article-prose > div > * + * {
+.article-prose > div > * + *,
+.article-prose > div > div > * + * {
   margin-top: 1.25em;
 }
 .article-prose h2 {
