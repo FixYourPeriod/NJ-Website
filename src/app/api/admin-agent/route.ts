@@ -183,13 +183,13 @@ export async function POST(req: Request) {
 
         // Agent loop — runs until model stops calling tools
         while (true) {
-          const response = await client.messages.create({
+          const response = await client.messages.stream({
             model: "claude-opus-4-5",
             max_tokens: 32000,
             system: SYSTEM_PROMPT,
             tools,
             messages: history,
-          })
+          }).finalMessage()
 
           // Stream text blocks
           for (const block of response.content) {
