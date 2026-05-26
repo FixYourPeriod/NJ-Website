@@ -206,13 +206,33 @@ a { text-decoration: none; color: inherit; }
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--plum);
-  margin-bottom: 0.5rem;
+  /* Cancel the general h3 margin-top: 2em so the box has even vertical padding */
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  clear: none;
 }
 .article-prose .article-cta-box p {
   font-size: 1rem;
   line-height: 1.7;
   color: var(--charcoal);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+}
+/* Style the quiz link inside the CTA box as a distinct text link, not inline prose */
+.article-prose .article-cta-box a {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--terra);
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(181,90,58,0.35);
+  padding-bottom: 1px;
+  transition: border-color 0.15s;
+}
+.article-prose .article-cta-box a:hover {
+  border-bottom-color: var(--terra);
+  color: var(--terra);
 }
 
 /* Period-length range bar */
