@@ -161,7 +161,7 @@ export async function POST(req: Request) {
         while (true) {
           const response = await client.messages.create({
             model: "claude-opus-4-5",
-            max_tokens: 8096,
+            max_tokens: 32000,
             system: SYSTEM_PROMPT,
             tools,
             messages: history,
@@ -175,6 +175,11 @@ export async function POST(req: Request) {
           }
 
           if (response.stop_reason === "end_turn") break
+
+          if (response.stop_reason === "max_tokens") {
+            send({ type: "error", message: "Response was cut off — the file may be too large. Try a smaller edit or ask for a specific section to be changed." })
+            break
+          }
 
           if (response.stop_reason !== "tool_use") break
 
