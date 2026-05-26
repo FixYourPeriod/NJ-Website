@@ -34,12 +34,12 @@ ${pageList()}
 - Preserve all inline styles exactly — the design system uses CSS variables
 - When editing HTML in article bodies, keep existing <h2>, <p>, <a> structure intact
 - Always confirm what you changed after committing
+- **Prefer replace_in_file over write_file for targeted edits** — it's much cheaper and faster. Only use write_file when creating a new article or making large structural changes.
 
 ## Workflow
 1. Read the relevant file first to understand current content
-2. Make the requested changes
-3. Write the updated file
-4. Commit — changes go live on nicolejardim.app within ~60 seconds via Vercel
+2. Make the requested changes using replace_in_file (targeted edits) or write_file (new files / large rewrites)
+3. Commit — changes go live on nicolejardim.app within ~60 seconds via Vercel
 
 Be concise and direct. Confirm what was changed after each commit.`
 
@@ -91,6 +91,29 @@ const tools: Anthropic.Tool[] = [
     },
   },
   {
+    name: "replace_in_file",
+    description:
+      "Replace an exact string in a file. Use this for targeted edits (word changes, sentence rewrites, adding/removing a paragraph). Much cheaper than write_file — prefer this whenever possible. The old_str must match exactly including whitespace. If the string appears more than once, add surrounding context to make it unique. Use write_file only for new articles or large structural rewrites.",
+    input_schema: {
+      type: "object" as const,
+      properties: {
+        path: {
+          type: "string",
+          description: "Repo-relative path of the file to edit",
+        },
+        old_str: {
+          type: "string",
+          description: "Exact string to find (must be unique in the file)",
+        },
+        new_str: {
+          type: "string",
+          description: "Replacement string (can be empty string to delete)",
+        },
+      },
+      required: ["path", "old_str", "new_str"],
+    },
+  },
+  {
     name: "list_articles",
     description: "List all article slugs and titles from the article index.",
     input_schema: {
@@ -115,10 +138,11 @@ type IncomingMessage = {
 function toolCallSummary(toolUse: Anthropic.ToolUseBlock): string {
   const input = toolUse.input as Record<string, unknown>
   switch (toolUse.name) {
-    case "read_file":   return `Reading ${input.path}`
-    case "write_file":  return `Writing ${input.path}`
-    case "commit_changes": return `Committing: ${input.message}`
-    case "list_articles": return "Listing articles"
+    case "read_file":       return `Reading ${input.path}`
+    case "write_file":      return `Writing ${input.path}`
+    case "replace_in_file": return `Editing ${input.path}`
+    case "commit_changes":  return `Committing: ${input.message}`
+    case "list_articles":   return "Listing articles"
     default: return toolUse.name
   }
 }
@@ -210,6 +234,26 @@ export async function POST(req: Request) {
                   } else {
                     const { content } = await getFile(path)
                     result = content
+                  }
+                }
+              } else if (toolUse.name === "replace_in_file") {
+                const { path, old_str, new_str } = toolUse.input as {
+                  path: string
+                  old_str: string
+                  new_str: string
+                }
+                if (!isAllowedPath(path)) {
+                  result = `Error: "${path}" is outside the allowed edit scope.`
+                } else {
+                  const current = pendingFiles[path] ?? (await getFile(path)).content
+                  const occurrences = current.split(old_str).length - 1
+                  if (occurrences === 0) {
+                    result = `Error: Could not find that exact string in ${path}. Check whitespace and surrounding context.`
+                  } else if (occurrences > 1) {
+                    result = `Error: Found ${occurrences} occurrences — add more surrounding context to old_str to make it unique.`
+                  } else {
+                    pendingFiles[path] = current.replace(old_str, new_str)
+                    result = `Staged: replaced 1 occurrence in ${path}`
                   }
                 }
               } else if (toolUse.name === "write_file") {
