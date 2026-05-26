@@ -1,52 +1,45 @@
 import Anthropic from "@anthropic-ai/sdk"
 import { auth, currentUser } from "@clerk/nextjs/server"
 import { NextResponse } from "next/server"
-import { getFile, commitFiles } from "@/lib/admin/github-client"
+import { getFile, commitFiles, getRecentAdminCommits } from "@/lib/admin/github-client"
 import { isAllowedPath, ARTICLE_DIR, ARTICLE_INDEX, pageList } from "@/lib/admin/section-registry"
 import { logAudit } from "@/lib/admin/audit-log"
 
 export const maxDuration = 120
 
-const SYSTEM_PROMPT = `You are the Nicole Jardim website admin assistant. You help the NJ team make content updates to nicolejardim.app — a women's hormonal health website built in Next.js.
+const SYSTEM_PROMPT = `You are the Nicole Jardim website admin assistant. You make content edits to nicolejardim.app.
 
-## What you can do
+## Deployment
+This site is deployed on **Vercel**. There are no GitHub Actions. Pushing a commit to the \`nextjs\` branch triggers an automatic Vercel build — changes go live in ~60 seconds.
 
-### Articles (${ARTICLE_DIR}/)
-Each article is a .tsx file with three exports:
-- \`meta\` — ArticleMeta object (slug, title, description, category, publishedAt, readingTime, section)
-- \`faqs\` — array of { q, a } objects shown below the article
-- \`html\` — template literal containing the article body as HTML
+## What you can edit
 
-You can:
-- **Read** any article file
-- **Edit** article content (body, FAQs, meta fields like description or title)
-- **Create** new articles (write the .tsx file AND update the index)
+### Articles
+Files at \`${ARTICLE_DIR}/{slug}.tsx\`. Each has:
+- \`meta\` — slug, title, description, category, publishedAt, readingTime
+- \`faqs\` — array of { q, a } shown below the article
+- \`html\` — template literal with the article body as HTML
 
 ### Pages
-You can read and edit the text content in these page files:
-
 ${pageList()}
 
-### Rules
-- Only read/write files in the allowed scope (articles and registered pages)
-- Never edit navigation, footer, or layout files
-- Keep all TypeScript/JSX valid — the site auto-deploys on commit
-- Preserve all inline styles exactly — the design system uses CSS variables
-- When editing HTML in article bodies, keep existing <h2>, <p>, <a> structure intact
-- Always confirm what you changed after committing
-- **Prefer replace_in_file over write_file for targeted edits** — it's much cheaper and faster. Only use write_file when creating a new article or making large structural changes.
+## How to respond
+- **Be brief.** After a successful commit: one sentence saying what changed + "SHA: [sha]. Live in ~60s." Nothing else.
+- **Never restate the user's request** back to them.
+- **Never speculate** about deployment infrastructure, pipelines, or causes of failures you cannot verify.
+- **If a tool returns an error**, quote the exact error text and ask what to do. Do not add interpretation or suggest fixes you cannot perform.
+- **If asked to verify a change**, use check_recent_commits to confirm it was committed.
 
-## Workflow
+## Editing workflow
+**User provides exact text:** → replace_in_file directly → commit_changes
+**Open-ended edit:** → read_file → replace_in_file or write_file → commit_changes
 
-**When the user provides verbatim quoted text to change:**
-→ Call replace_in_file immediately — no read_file needed. The tool reads the file internally. If the quoted text isn't found you'll get a clear error; only then fall back to read_file to investigate.
-
-**When you need to understand the current content first** (open-ended edits, new articles, large restructuring):
-→ read_file → replace_in_file or write_file → commit_changes
-
-Changes go live on nicolejardim.app within ~60 seconds of committing via Vercel.
-
-Be concise and direct. Confirm what was changed after each commit.`
+## Rules
+- Only edit articles and registered pages — never navigation, layout, or CSS files
+- Keep all TypeScript/JSX valid
+- Preserve all inline styles exactly (CSS variables, no hardcoded colors)
+- Prefer replace_in_file over write_file for all targeted edits
+- When editing HTML in article bodies, keep existing tag structure intact`
 
 const tools: Anthropic.Tool[] = [
   {
@@ -119,6 +112,15 @@ const tools: Anthropic.Tool[] = [
     },
   },
   {
+    name: "check_recent_commits",
+    description: "List the most recent admin commits on the live branch. Use this to verify a change was committed, or to answer questions about what was recently changed.",
+    input_schema: {
+      type: "object" as const,
+      properties: {},
+      required: [],
+    },
+  },
+  {
     name: "list_articles",
     description: "List all article slugs and titles from the article index.",
     input_schema: {
@@ -145,9 +147,10 @@ function toolCallSummary(toolUse: Anthropic.ToolUseBlock): string {
   switch (toolUse.name) {
     case "read_file":       return `Reading ${input.path}`
     case "write_file":      return `Writing ${input.path}`
-    case "replace_in_file": return `Editing ${input.path}`
-    case "commit_changes":  return `Committing: ${input.message}`
-    case "list_articles":   return "Listing articles"
+    case "replace_in_file":       return `Editing ${input.path}`
+    case "commit_changes":        return `Committing: ${input.message}`
+    case "check_recent_commits":  return "Checking recent commits"
+    case "list_articles":         return "Listing articles"
     default: return toolUse.name
   }
 }
@@ -293,6 +296,15 @@ export async function POST(req: Request) {
 
                   send({ type: "committed", sha, files: changedPaths })
                   result = `Committed ${changedPaths.length} file(s). SHA: ${sha.slice(0, 7)}. Vercel will deploy in ~60 seconds.`
+                }
+              } else if (toolUse.name === "check_recent_commits") {
+                const commits = await getRecentAdminCommits(10)
+                if (commits.length === 0) {
+                  result = "No recent admin commits found."
+                } else {
+                  result = commits
+                    .map((c) => `${c.sha.slice(0, 7)} — ${c.message}`)
+                    .join("\n")
                 }
               } else if (toolUse.name === "list_articles") {
                 const { content } = await getFile(ARTICLE_INDEX)
