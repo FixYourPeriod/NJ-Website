@@ -37,9 +37,14 @@ ${pageList()}
 - **Prefer replace_in_file over write_file for targeted edits** — it's much cheaper and faster. Only use write_file when creating a new article or making large structural changes.
 
 ## Workflow
-1. Read the relevant file first to understand current content
-2. Make the requested changes using replace_in_file (targeted edits) or write_file (new files / large rewrites)
-3. Commit — changes go live on nicolejardim.app within ~60 seconds via Vercel
+
+**When the user provides verbatim quoted text to change:**
+→ Call replace_in_file immediately — no read_file needed. The tool reads the file internally. If the quoted text isn't found you'll get a clear error; only then fall back to read_file to investigate.
+
+**When you need to understand the current content first** (open-ended edits, new articles, large restructuring):
+→ read_file → replace_in_file or write_file → commit_changes
+
+Changes go live on nicolejardim.app within ~60 seconds of committing via Vercel.
 
 Be concise and direct. Confirm what was changed after each commit.`
 
