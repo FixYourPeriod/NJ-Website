@@ -23,7 +23,7 @@ export const faqs = [
 
 const html = `
 <p>You track your period carefully. You know roughly when you ovulate. And you have noticed that right around that midcycle window — and again in the days before your period arrives — something else shows up too. Headaches. Hives. A suddenly runny nose. Bloating so bad you look six months pregnant. Maybe anxiety that spikes out of nowhere, or insomnia that leaves you staring at the ceiling. You have a sneaking suspicion it is not a coincidence that these symptoms cluster around the same points in your cycle every single month.</p>
-<p>You are right — it is not a coincidence. What you may be experiencing is <a href="https://us.fullscript.com/protocols/nicolejardim-histamine-help-protocol" target="_blank" rel="noopener noreferrer" class="article-link">histamine intolerance</a> with a pronounced hormonal pattern, and once you understand the mechanism driving it, the whole picture clicks into place.</p>
+<p>You are right — it is not a coincidence. What you may be experiencing is histamine intolerance with a pronounced hormonal pattern, and once you understand the mechanism driving it, the whole picture clicks into place.</p>
 <h2>What Is Histamine Intolerance?</h2>
 
 
@@ -96,7 +96,7 @@ const html = `
 <h3>DAO enzyme supplements</h3>
 <p>Supplemental DAO enzymes, taken with meals, replenish the enzyme directly and help break down histamine from food before it is absorbed. Look for products specifically labeled as containing DAO (diamine oxidase), such as Seeking Health HistaminX or Umbrellux DAO. These are best used as a short-term support tool while working on gut repair and hormonal balance, not as a permanent substitute for addressing root causes.</p>
 <h3>Quercetin</h3>
-<p>Quercetin is a plant flavonoid with well-documented mast-cell stabilizing properties. It inhibits histamine release from mast cells and basophils and has anti-inflammatory effects that are particularly helpful for the skin, respiratory, and digestive manifestations of histamine intolerance. Typical therapeutic doses range from 500–1,000 mg per day, taken with food. It works best when taken consistently rather than just during symptomatic flares.</p>
+<p>Quercetin is a plant flavonoid with well-documented mast-cell stabilizing properties. It inhibits histamine release from mast cells and basophils and has anti-inflammatory effects that are particularly helpful for the skin, respiratory, and digestive manifestations of histamine intolerance. Typical therapeutic doses range from 500–1,000 mg per day, taken with food. It works best when taken consistently rather than just during symptomatic flares. I've put together a <a href="https://us.fullscript.com/protocols/nicolejardim-histamine-help-protocol" target="_blank" rel="noopener noreferrer" class="article-link">Histamine Help Supplement Protocol</a> in my Fullscript dispensary with my specific product recommendations for quercetin and the other supplements in this section.</p>
 <h3>Vitamin C</h3>
 <p>Vitamin C is a natural antihistamine — it degrades histamine in the bloodstream and supports DAO enzyme activity. It is also an essential cofactor for many of the biochemical processes that keep estrogen in balance, making it particularly useful for the estrogen-histamine pattern. Aim for 500–1,000 mg per day from food and supplements combined. Buffered or liposomal forms are easiest on the digestive system.</p>
 <h3>Vitamin B6</h3>
