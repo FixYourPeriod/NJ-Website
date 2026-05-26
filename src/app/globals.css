@@ -289,6 +289,30 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0;
 }
 
+/* Callout box (used in some articles as callout-box normal / callout-box not-normal) */
+.article-prose .callout-box {
+  background: rgba(234, 224, 213, 0.5);
+  border: 1px solid rgba(196, 152, 74, 0.25);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin: 2em 0;
+}
+.article-prose .callout-box p {
+  font-size: 0.95rem;
+}
+
+/* ── Fix for all content boxes: cancel the general h2/h3/h4 top-margin and
+   float-clear that bleeds in from the article prose rules, causing headings
+   to sit too far from the top edge of the box. ─────────────────────────── */
+.article-prose .callout h2,   .article-prose .callout h3,   .article-prose .callout h4,
+.article-prose .callout-box h2, .article-prose .callout-box h3, .article-prose .callout-box h4,
+.article-prose .info-box h2,  .article-prose .info-box h3,  .article-prose .info-box h4,
+.article-prose .warning-box h2, .article-prose .warning-box h3, .article-prose .warning-box h4 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  clear: none;
+}
+
 /* Basic table styling */
 .article-prose table {
   width: 100%;
