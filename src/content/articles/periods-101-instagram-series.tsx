@@ -36,11 +36,6 @@ const html = `
 <p>The purpose of this cycle is not simply reproduction, although that is one of its functions. Regular ovulation — the cycle's main event — drives the production of estrogen and progesterone that your brain, bones, heart, skin, and mood all depend on. When you ovulate consistently, your hormones are working as they should. When ovulation is disrupted, everything downstream is affected.</p>
 <p>This is why understanding your cycle is not just reproductive health. It is whole-body health.</p>
 <h2>The Four Phases of the Menstrual Cycle</h2>
-<figure class="article-image">
-  <img src="https://res.cloudinary.com/dgmg40akd/image/upload/w_760,f_auto,q_auto/nj-articles-original/periods-101-instagram-series/img-04" alt="" width="760" height="760" loading="lazy" />
-  <figcaption class="article-image-caption">The four phases of the menstrual cycle</figcaption>
-</figure>
-
 <p>The menstrual cycle is divided into four phases. Two of them — menstruation and the follicular phase — overlap in the first half of the cycle. The second half belongs entirely to the luteal phase. In the middle sits the brief but pivotal ovulatory phase, which is the event the entire cycle is building toward.</p>
 <div class="phase-grid">
 <div class="phase-card menstruation">
